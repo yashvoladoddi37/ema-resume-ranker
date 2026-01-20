@@ -39,10 +39,13 @@ I chose a **Sequential Hybrid Architecture** combining:
 | **Embeddings (BERT/Sentence-BERT)** | Semantic similarity, no API costs | Requires fine-tuning, less explainable | No labeled data for fine-tuning |
 | **Hybrid (Chosen)** | ✅ Balanced accuracy + explainability | Requires API key, slightly complex | **Best trade-off** |
 
-**Key Advantage of Hybrid:**
-- Deterministic component provides **verifiable baseline** (years of experience, exact skill matches)
-- LLM adds **contextual intelligence** (recognizes "LangChain" as more relevant than generic "API" work)
-- Weighted combination allows **tuning** based on business priorities
+### ❓ Why Not Vector Embeddings (RAG)?
+
+A common alternative is **Semantic Search using Vector Embeddings** (e.g., OpenAI models, BERT). I **deliberately avoided** this for the core scoring engine because:
+
+1.  **Similarity ≠ Suitability**: Embeddings measure semantic proximity. In vector space, *"Senior Java Developer"* is highly similar to *"Senior Python Developer"*. For a hiring decision, however, this small difference is a **disqualification**.
+2.  **Lack of Reasoning**: Embeddings cannot perform calculations (e.g., "Sum the duration of these 3 roles") or logic checks (e.g., "Is this degree actually relevant to Engineering?").
+3.  **Use Case Fit**: Embeddings are ideal for **Retrieval** (finding top 50 candidates from 10,000). For **Banking/Evaluating** a shortlist, an LLM + Deterministic approach provides superior precision and explainability.
 
 ### Feature Engineering & Data Preprocessing
 
