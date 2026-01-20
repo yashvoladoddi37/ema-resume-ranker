@@ -357,48 +357,7 @@ def load_data():
     return jd, resumes
 
 
-# ============================================================
-# MAIN
-# ============================================================
-def main():
-    print("\n" + "="*80)
-    print("🚀 HYBRID RESUME MATCHING ENGINE (LLM + Deterministic)")
-    print(f"   Formula: Final = ({int(WEIGHT_LLM*100)}% × LLM) + ({int(WEIGHT_DETERMINISTIC*100)}% × Deterministic)")
-    print("="*80 + "\n")
-    
-    # Initialize engine
-    engine = HybridEngine()
-    
-    # Load data
-    jd, resumes = load_data()
-    print(f"📄 Loaded JD and {len(resumes)} resumes.\n")
-    
-    # Rank all resumes
-    results = engine.rank_all(jd, resumes)
-    
-    # Display rankings table
-    print("\n" + "="*90)
-    print(f"{'RANK':<5} | {'CANDIDATE':<25} | {'FINAL':<8} | {'LLM':<6} | {'DETERM':<7} | {'YRS EXP':<7}")
-    print("-" * 90)
-    
-    for i, res in enumerate(results, 1):
-        c = res['components']
-        yrs = c['deterministic']['years_experience']
-        print(f"{i:<5} | {res['id']:<25} | {res['final_score']:<8.4f} | "
-              f"{c['llm']['score']:<6.2f} | {c['deterministic']['score']:<7.3f} | {yrs:<7.0f}")
-    
-    print("="*90)
-    
-    # Save detailed results
-    output_path = "results_hybrid.json"
-    with open(output_path, "w") as f:
-        json.dump(results, f, indent=2)
-    print(f"\n✅ Full results saved to {output_path}")
-    
-    # ============================================================
-    # FORMAL EVALUATION: Compare Engine vs Ground Truth
-    # ============================================================
-    print("\n" + "="*80)
+
 def run_formal_evaluation(results: List[Dict[str, Any]], ground_truth_data: Dict[str, Any]) -> Tuple[Dict[str, Any], List[Dict[str, Any]], List[Dict[str, Any]]]:
     """Compare engine results vs ground truth and return metrics."""
     gt_lookup = {}
