@@ -1,0 +1,21 @@
+============================================================
+JAMES WILSON
+Enterprise Java Developer
+============================================================
+
+SUMMARY
+-------
+6 years experience building high-performance Java backends 
+for financial institutions.
+
+EXPERIENCE
+----------
+Senior Java Developer | Banking Corp | 2021 - Present
+• Built high-volume transaction processing systems in Spring Boot.
+• Expert in Oracle DB and microservices reliability.
+
+SKILLS
+------
+Languages: Java, SQL, Kotlin
+Frameworks: Spring Boot, Hibernate
+============================================================

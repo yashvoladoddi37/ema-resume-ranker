@@ -1,0 +1,38 @@
+============================================================
+YASHPREET VOLADODDI
+SDE & AI Engineer
+============================================================
+
+SUMMARY
+-------
+Software Development Engineer with expertise in Golang and Python, 
+focused on scalable backend services and agentic AI platforms. 
+Deep experience with LangGraph, LangChain, and LLM integrations.
+
+EXPERIENCE
+----------
+Software Development Engineer | Kapi AI | 2025 - Present
+• Developed core features for Golang-based agentic CLI platform.
+• Architected privacy-first semantic search using Go and ONNX.
+• Built LLM-powered automated documentation systems using ReAct framework.
+• Contributions: 350+ commits across Golang, Node.js, and Python.
+
+AI Engineer | HeyCoach | 2024 - 2025
+• Developed AI-driven lead generation MVP using Mistral 7B.
+• Integrated RESTful APIs with CRM handling 500+ leads/month.
+• Built AI agent automating social media posts using LangGraph/Claude API.
+
+Backend AI Intern | Lumio TV | 2024 - 2024
+• Built AWS Lambda RESTful APIs in Golang; integrated Redis caching.
+• Provisioned infrastructure using Terraform for IaC.
+
+SKILLS
+------
+Languages: Golang, Python, SQL, TypeScript
+AI/ML: LLM, LangChain, LangGraph, Mistral 7B, Claude API, Prompt Engineering
+Backend: RESTful API, AWS Lambda, DynamoDB, Terraform, Docker, Redis
+Tools: Git, CI/CD, ONNX, ChromaDB
+---
+EDUCATION
+IIT Hyderabad | B.Tech in Computer Science | 2020 - 2024
+============================================================

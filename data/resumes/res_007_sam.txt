@@ -1,0 +1,26 @@
+============================================================
+SAM TAYLOR
+Technical Customer Success Manager
+============================================================
+
+SUMMARY
+-------
+6 years experience in B2B SaaS Customer Success and technical 
+account management.
+
+EXPERIENCE
+----------
+Technical CSM | Enterprise CRM | 2021 - Present
+• Manage technical health for top-tier enterprise accounts.
+• Lead business reviews and technical roadmap planning.
+• Collaborate with engineering on product bug prioritizations.
+
+CSM | Startup Software | 2018 - 2021
+• Managed onboarding for 50+ mid-market clients.
+• Provided basic troubleshooting guidance for API keys.
+
+SKILLS
+------
+Soft Skills: Relationship Management, Communication, Strategy
+Tech: SQL (Basic), Salesforce, Gainsight, ZoomInfo
+============================================================

@@ -1,0 +1,15 @@
+{
+  "job_description_id": "ema_ai_app_eng",
+  "resumes": [
+    {"id": "res_001", "label": 1.0, "reason": "High technical relevancy in Agentic workflows (LangGraph). Strong Python/API skills. Offsets minor tenure gap in support."},
+    {"id": "res_002", "label": 0.5, "reason": "Superior support experience (7 yrs), but no LLM/GenAI exposure. Partial match for AI Applications role."},
+    {"id": "res_003", "label": 1.0, "reason": "Balanced fit: Strong GenAI solutions experience + 4 years customer-facing solutions engineering."},
+    {"id": "res_004", "label": 0.5, "reason": "Good tech (Go/Python APIs), but missing GenAI exposure."},
+    {"id": "res_005", "label": 0.5, "reason": "Fullstack web focus, lacks the specialized support/observability/AI depth required."},
+    {"id": "res_006", "label": 0.5, "reason": "Data Science background (PyTorch/NLP), lacks enterprise support/integration context."},
+    {"id": "res_007", "label": 0.5, "reason": "Strong SaaS support background, but lacks the necessary coding/AI proficiency."},
+    {"id": "res_008", "label": 0.0, "reason": "Frontend focus. No backend, Python, or support domain experience."},
+    {"id": "res_009", "label": 0.0, "reason": "Java background. Domain and stack mismatch for this AI App role."},
+    {"id": "res_010", "label": 0.0, "reason": "Non-technical marketing background."}
+  ]
+}

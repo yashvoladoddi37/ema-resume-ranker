@@ -1,0 +1,26 @@
+============================================================
+ELENA CASTRO
+Technical Support Specialist
+============================================================
+
+SUMMARY
+-------
+Detail-oriented technical support specialist with experience in 
+customer service and basic system administration.
+
+EXPERIENCE
+----------
+IT Support Associate | TechHelp 24/7 | 2020 - Present
+• Resolved hardware and software issues for remote employees.
+• Managed user accounts in Active Directory.
+
+Customer Service Representative | Retail Solutions | 2018 - 2020
+• Assisted customers with order tracking and basic troubleshooting.
+
+SKILLS
+------
+Tools: Wireshark, Nagios, Splunk, Active Directory
+---
+EDUCATION
+Community College of Philadelphia | A.S. in Information Technology | 2014 - 2016
+============================================================
