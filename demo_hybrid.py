@@ -161,7 +161,10 @@ class LLMScorer:
     
     def __init__(self):
         from groq import Groq
-        self.client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+        self.primary_key = os.getenv("GROQ_API_KEY")
+        self.fallback_key = os.getenv("GROQ_API_KEY_2")
+        self.client = Groq(api_key=self.primary_key)
+        self.using_fallback = False
         
     def score(self, job_description: str, resume_text: str, deterministic_context: Dict[str, Any] = None) -> Dict[str, Any]:
         """
@@ -226,8 +229,33 @@ Return ONLY a JSON object:
             )
             return json.loads(completion.choices[0].message.content)
         except Exception as e:
+            error_str = str(e)
+            # Check if it's a rate limit error and we have a fallback key
+            if "rate_limit" in error_str.lower() or "429" in error_str:
+                if self.fallback_key and not self.using_fallback:
+                    logger.warning(f"Primary API key hit rate limit. Switching to fallback key...")
+                    from groq import Groq
+                    self.client = Groq(api_key=self.fallback_key)
+                    self.using_fallback = True
+                    
+                    # Retry with fallback key
+                    try:
+                        completion = self.client.chat.completions.create(
+                            model="llama-3.3-70b-versatile",
+                            messages=[{"role": "user", "content": prompt}],
+                            temperature=0.0,
+                            response_format={"type": "json_object"}
+                        )
+                        logger.info("✅ Successfully used fallback API key")
+                        return json.loads(completion.choices[0].message.content)
+                    except Exception as fallback_error:
+                        logger.error(f"Fallback API key also failed: {fallback_error}")
+                        return {"score": 0.0, "reasoning": f"Both API keys failed. Primary: {error_str}, Fallback: {str(fallback_error)}", "matched_skills": [], "missing_skills": [], "technical_breakdown": {}}
+                else:
+                    logger.error(f"Rate limit hit but no fallback key available or already using fallback")
+            
             logger.error(f"LLM Error: {e}")
-            return {"score": 0.0, "reasoning": str(e), "matched_skills": [], "missing_skills": []}
+            return {"score": 0.0, "reasoning": str(e), "matched_skills": [], "missing_skills": [], "technical_breakdown": {}}
 
 
 # ============================================================
