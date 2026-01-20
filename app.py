@@ -8,8 +8,7 @@ from demo_hybrid import HybridEngine, run_formal_evaluation
 
 # Page config
 st.set_page_config(
-    page_title="AI Resume Matcher - Ema",
-    page_icon="🎯",
+    page_title="Ema Resume Ranker",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -47,9 +46,9 @@ def get_score_class(score):
     return "score-low"
 
 def get_tier_label(score):
-    if score >= 0.7: return "🟢 Good Match"
-    if score >= 0.4: return "🟡 Partial Match"
-    return "🔴 Poor Match"
+    if score >= 0.7: return "Good Match"
+    if score >= 0.4: return "Partial Match"
+    return "Poor Match"
 
 def load_jd():
     jd_path = "data/job_descriptions/ema_ai_apps_engineer.txt"
@@ -58,20 +57,20 @@ def load_jd():
     return "Job description not found."
 
 def main():
-    st.markdown('<div class="main-header">🎯 AI Resume Matcher</div>', unsafe_allow_html=True)
+    st.markdown('<div class="main-header">Ema Resume Ranker</div>', unsafe_allow_html=True)
     st.markdown("_Sequential Hybrid Engine (60% LLM + 40% Deterministic)_")
     
     # Sidebar
-    st.sidebar.title("💻 Engine Config")
+    st.sidebar.title("Configuration")
     api_key = st.sidebar.text_input("Groq API Key", type="password")
     if api_key:
         os.environ["GROQ_API_KEY"] = api_key
     
     st.sidebar.markdown("---")
-    st.sidebar.title("📂 Upload Resumes")
+    st.sidebar.title("Upload Resumes")
     uploaded_files = st.sidebar.file_uploader("Add .txt resumes", type=["txt"], accept_multiple_files=True)
     
-    if st.sidebar.button("🚀 Run Matching Engine", use_container_width=True):
+    if st.sidebar.button("Run Matching Engine", use_container_width=True):
         if not os.getenv("GROQ_API_KEY"):
             st.error("Please provide a Groq API Key in the sidebar.")
         else:
@@ -112,7 +111,7 @@ def main():
     view_mode = st.sidebar.radio("Navigation", ["Overview", "Detailed Rankings", "Individual Analysis", "Job Description"])
 
     if view_mode == "Job Description":
-        st.header("📄 Target Job Description")
+        st.header("Target Job Description")
         st.write(load_jd())
 
     elif view_mode == "Overview":
@@ -132,7 +131,7 @@ def main():
         st.markdown("---")
         
         # Rankings Table
-        st.subheader("🏆 Leaderboard")
+        st.subheader("Leaderboard")
         results = st.session_state.results
         
         # Plotly chart
@@ -167,10 +166,10 @@ def main():
                 
                 c_s1, c_s2 = st.columns(2)
                 with c_s1:
-                    st.markdown("**✅ Matched**")
+                    st.markdown("**Matched**")
                     st.write(", ".join(matched) if matched else "None identified")
                 with c_s2:
-                    st.markdown("**❌ Missing**")
+                    st.markdown("**Missing**")
                     st.write(", ".join(missing) if missing else "None identified")
 
     elif view_mode == "Individual Analysis":
@@ -189,7 +188,7 @@ def main():
         s_c2.metric("Experience Depth", f"{tb.get('experience_depth', 0):.2f}")
         s_c3.metric("Domain Fit", f"{tb.get('domain_fit', 0):.2f}")
         
-        tabs = st.tabs(["💡 AI Reasoning", "📊 Raw Components", "📝 Resume Text"])
+        tabs = st.tabs(["AI Reasoning", "Raw Components", "Resume Text"])
         with tabs[0]:
             st.info(res['components']['llm']['reasoning'])
         with tabs[1]:

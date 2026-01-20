@@ -431,7 +431,7 @@ def run_formal_evaluation(results: List[Dict[str, Any]], ground_truth_data: Dict
 # ============================================================
 def main():
     print("\n" + "="*80)
-    print("🚀 HYBRID RESUME MATCHING ENGINE (LLM + Deterministic)")
+    print("HYBRID RESUME MATCHING ENGINE (LLM + Deterministic)")
     print(f"   Formula: Final = ({int(WEIGHT_LLM*100)}% × LLM) + ({int(WEIGHT_DETERMINISTIC*100)}% × Deterministic)")
     print("="*80 + "\n")
     
@@ -440,7 +440,7 @@ def main():
     
     # Load data
     jd, resumes = load_data()
-    print(f"📄 Loaded JD and {len(resumes)} resumes.\n")
+    print(f"Loaded JD and {len(resumes)} resumes.\n")
     
     # Rank all resumes
     results = engine.rank_all(jd, resumes)
@@ -463,13 +463,13 @@ def main():
     output_path = "results_hybrid.json"
     with open(output_path, "w") as f:
         json.dump(results, f, indent=2)
-    print(f"\n✅ Full results saved to {output_path}")
+    print(f"\nFull results saved to {output_path}")
     
     # ============================================================
     # FORMAL EVALUATION: Compare Engine vs Ground Truth
     # ============================================================
     print("\n" + "="*80)
-    print("📊 FORMAL EVALUATION: Engine vs Ground Truth")
+    print("FORMAL EVALUATION: Engine vs Ground Truth")
     print("="*80)
     
     # Load ground truth labels
@@ -482,33 +482,33 @@ def main():
         # Print Results
         print(f"\n{'Metric':<25} | {'Value':<10} | {'Target':<10} | {'Status'}")
         print("-" * 65)
-        print(f"{'nDCG@3':<25} | {metrics['ndcg3']:<10.3f} | {'≥0.85':<10} | {'✅' if metrics['ndcg3'] >= 0.85 else '❌'}")
-        print(f"{'Precision@1':<25} | {metrics['precision1']:<10.0%} | {'100%':<10} | {'✅' if metrics['precision1'] == 1.0 else '❌'}")
-        print(f"{'Recall@3 (Good matches)':<25} | {metrics['recall3']:<10.0%} | {'100%':<10} | {'✅' if metrics['recall3'] == 1.0 else '❌'}")
-        print(f"{'Pairwise Accuracy':<25} | {metrics['pairwise_acc']:<10.1%} | {'≥85%':<10} | {'✅' if metrics['pairwise_acc'] >= 0.85 else '❌'}")
-        print(f"{'Tier Separation':<25} | {'Yes' if metrics['tier_separation'] else 'No':<10} | {'Yes':<10} | {'✅' if metrics['tier_separation'] else '❌'}")
+        print(f"{'nDCG@3':<25} | {metrics['ndcg3']:<10.3f} | {'≥0.85':<10} | {'PASS' if metrics['ndcg3'] >= 0.85 else 'FAIL'}")
+        print(f"{'Precision@1':<25} | {metrics['precision1']:<10.0%} | {'100%':<10} | {'PASS' if metrics['precision1'] == 1.0 else 'FAIL'}")
+        print(f"{'Recall@3 (Good matches)':<25} | {metrics['recall3']:<10.0%} | {'100%':<10} | {'PASS' if metrics['recall3'] == 1.0 else 'FAIL'}")
+        print(f"{'Pairwise Accuracy':<25} | {metrics['pairwise_acc']:<10.1%} | {'≥85%':<10} | {'PASS' if metrics['pairwise_acc'] >= 0.85 else 'FAIL'}")
+        print(f"{'Tier Separation':<25} | {'Yes' if metrics['tier_separation'] else 'No':<10} | {'Yes':<10} | {'PASS' if metrics['tier_separation'] else 'FAIL'}")
         
-        print(f"\n📈 Tier Mean Scores:")
+        print(f"\nTier Mean Scores:")
         print(f"   Good (1.0):    {metrics['mean_good_score']:.3f}  ({sum(1 for c in comparison if c['ground_truth'] == 1.0)} candidates)")
         print(f"   Partial (0.5): {metrics['mean_partial_score']:.3f}  ({sum(1 for c in comparison if c['ground_truth'] == 0.5)} candidates)")
         print(f"   Poor (0.0):    {metrics['mean_poor_score']:.3f}  ({sum(1 for c in comparison if c['ground_truth'] == 0.0)} candidates)")
         
-        print("\n📋 Full Comparison Table:")
+        print("\nFull Comparison Table:")
         print(f"{'Rank':<5} | {'Candidate':<25} | {'Predicted':<10} | {'Ground Truth':<12} | {'Match?'}")
         print("-" * 70)
         for rank, c in enumerate(comparison_ranked, 1):
             gt_label = "Good" if c['ground_truth'] == 1.0 else "Partial" if c['ground_truth'] == 0.5 else "Poor"
             # Check if ranking is reasonable
-            match = "✅" if (c['predicted'] >= 0.6 and c['ground_truth'] >= 0.5) or \
+            match = "Yes" if (c['predicted'] >= 0.6 and c['ground_truth'] >= 0.5) or \
                            (c['predicted'] < 0.6 and c['ground_truth'] < 0.5) or \
-                           (c['predicted'] < 0.35 and c['ground_truth'] == 0.0) else "⚠️"
+                           (c['predicted'] < 0.35 and c['ground_truth'] == 0.0) else "No"
             print(f"{rank:<5} | {c['id']:<25} | {c['predicted']:<10.4f} | {gt_label:<12} | {match}")
     else:
-        print("⚠️ Could not match results to ground truth labels.")
+        print("Could not match results to ground truth labels.")
     
     # Show detailed breakdown for top 3
     print("\n" + "="*80)
-    print("📊 TOP 3 CANDIDATES - DETAILED BREAKDOWN")
+    print("TOP 3 CANDIDATES - DETAILED BREAKDOWN")
     print("="*80)
     
     for i, res in enumerate(results[:3], 1):
@@ -522,13 +522,13 @@ def main():
         print("-" * 60)
         
         # LLM Component
-        print(f"  📝 LLM Analysis (weight: {WEIGHT_LLM}):")
+        print(f"  LLM Analysis (weight: {WEIGHT_LLM}):")
         print(f"     Score: {llm['score']:.2f}")
         print(f"     Reasoning: {llm['reasoning']}")
         print(f"     Matched: {', '.join(llm['matched_skills'][:5])}")
         
         # Deterministic Component
-        print(f"\n  🔧 Deterministic Analysis (weight: {WEIGHT_DETERMINISTIC}):")
+        print(f"\n  Deterministic Analysis (weight: {WEIGHT_DETERMINISTIC}):")
         print(f"     Score: {det['score']:.3f}")
         print(f"     Years Experience: {det['years_experience']:.0f}")
         print(f"     Required Skills: {det['required_coverage_pct']}% ({len(det['matched_required'])}/8 matched)")
@@ -537,7 +537,7 @@ def main():
         print(f"     Preferred Skills: {det['preferred_coverage_pct']}% matched")
     
     print("\n" + "="*80)
-    print("💡 KEY INSIGHT: The deterministic component ensures verifiable signals")
+    print("KEY INSIGHT: The deterministic component ensures verifiable signals")
     print("   (years extracted, skill coverage, degree relevance) anchor the LLM's assessment.")
     print("   Zero weight is given to institution prestige to ensure fair, technical evaluation.")
     print("="*80 + "\n")
