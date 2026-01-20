@@ -111,8 +111,27 @@ def main():
     view_mode = st.sidebar.radio("Navigation", ["Overview", "Detailed Rankings", "Individual Analysis", "Job Description"])
 
     if view_mode == "Job Description":
-        st.header("Target Job Description")
-        st.write(load_jd())
+        raw_jd = load_jd()
+        
+        # Parse and format the JD text cleanly
+        lines = []
+        for line in raw_jd.split('\n'):
+            s = line.strip()
+            # Skip pure separator lines (=== or ---)
+            if s and set(s).issubset(set("=-")):
+                continue
+            lines.append(line)
+            
+        clean_text = "\n".join(lines)
+        
+        # Replace specific text headers with Markdown
+        clean_text = clean_text.replace("WHO ARE WE?", "### Who Are We?")
+        clean_text = clean_text.replace("YOU WILL:", "### Responsibilities")
+        clean_text = clean_text.replace("IDEALLY, YOU'D HAVE:", "### Requirements")
+        
+        # Display
+        st.header("Job Description")
+        st.markdown(clean_text)
 
     elif view_mode == "Overview":
         if not st.session_state.results:
