@@ -338,6 +338,21 @@ def show_individual_candidate(results):
                     st.write(f"LLM Contribution: {candidate['components']['llm']['weighted_contribution']}")
                 with cols[1]:
                     st.write(f"Determ. Contribution: {candidate['components']['deterministic']['weighted_contribution']}")
+                
+                # Technical Breakdown
+                if 'technical_breakdown' in candidate['components']['llm']:
+                    st.markdown("#### 🛠️ Technical Scoring Breakdown")
+                    tb = candidate['components']['llm']['technical_breakdown']
+                    
+                    col_b1, col_b2, col_b3 = st.columns(3)
+                    with col_b1:
+                        st.metric("Skill Alignment", f"{tb.get('skill_alignment', 0):.2f}")
+                    with col_b2:
+                        st.metric("Experience Depth", f"{tb.get('experience_depth', 0):.2f}")
+                    with col_b3:
+                        st.metric("Domain Fit", f"{tb.get('domain_fit', 0):.2f}")
+                    
+                    st.caption("These scores represent the LLM's granular assessment before weighting.")
         
         with tab3:
             col1, col2 = st.columns(2)

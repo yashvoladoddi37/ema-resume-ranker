@@ -190,7 +190,10 @@ NOTE: Use these facts as a baseline for your evaluation. Your goal is to provide
    - 0.5-0.7: Partial fit. Has significant experience but lacks some core skills.
    - 0.2-0.4: Weak fit. Some transferable skills but major gaps.
    - 0.0-0.1: No fit. Irrelevant stack or domain entirely.
-4. Reasoning: Provide 2-3 sentence technical justification.
+4. Detailed Reasoning: Provide a technical justification that includes a breakdown of:
+   - Skill Alignment: How well the core tech stack matches.
+   - Experience Depth: Evaluation of the complexity and impact of previous roles.
+   - Domain Fit: Relevance to AI support, SaaS, and GenAI workflows.
 
 ### Job Description:
 {job_description}
@@ -205,6 +208,11 @@ Return ONLY a JSON object:
 {{
   "score": float,
   "reasoning": "string",
+  "technical_breakdown": {{
+    "skill_alignment": float,
+    "experience_depth": float,
+    "domain_fit": float
+  }},
   "matched_skills": ["list"],
   "missing_skills": ["list"]
 }}"""
@@ -267,6 +275,7 @@ class HybridEngine:
                     'weight': WEIGHT_LLM,
                     'weighted_contribution': round(WEIGHT_LLM * llm_score, 4),
                     'reasoning': llm_result['reasoning'],
+                    'technical_breakdown': llm_result.get('technical_breakdown', {}),
                     'matched_skills': llm_result['matched_skills'],
                     'missing_skills': llm_result['missing_skills']
                 },
