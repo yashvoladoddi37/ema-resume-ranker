@@ -4,6 +4,8 @@ import plotly.graph_objects as go
 import plotly.express as px
 from pathlib import Path
 import os
+import time
+from demo_hybrid import HybridEngine, run_formal_evaluation
 
 # Page config
 st.set_page_config(
@@ -16,455 +18,189 @@ st.set_page_config(
 # Custom CSS
 st.markdown("""
 <style>
-    .main-header {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #1f77b4;
-        margin-bottom: 0.5rem;
-    }
-    .sub-header {
-        font-size: 1.2rem;
-        color: #666;
-        margin-bottom: 2rem;
-    }
-    .metric-card {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 1.5rem;
-        border-radius: 10px;
-        color: white;
-        text-align: center;
-    }
-    .candidate-card {
-        border: 2px solid #e0e0e0;
-        border-radius: 10px;
-        padding: 1.5rem;
-        margin: 1rem 0;
-        background: white;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    }
-    .score-badge {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        border-radius: 20px;
-        font-weight: 600;
-        font-size: 1.2rem;
-    }
-    .score-high {
-        background: #4caf50;
-        color: white;
-    }
-    .score-medium {
-        background: #ff9800;
-        color: white;
-    }
-    .score-low {
-        background: #f44336;
-        color: white;
-    }
-    .skill-tag {
-        display: inline-block;
-        padding: 0.3rem 0.8rem;
-        margin: 0.2rem;
-        border-radius: 15px;
-        font-size: 0.85rem;
-    }
-    .skill-matched {
-        background: #e8f5e9;
-        color: #2e7d32;
-        border: 1px solid #4caf50;
-    }
-    .skill-missing {
-        background: #ffebee;
-        color: #c62828;
-        border: 1px solid #f44336;
-    }
+    .main-header { font-size: 2.5rem; font-weight: 700; color: #1f77b4; margin-bottom: 0.5rem; }
+    .candidate-card { border: 1px solid #e0e0e0; border_radius: 10px; padding: 1.5rem; margin: 1rem 0; background: #fdfdfd; }
+    .score-badge { display: inline-block; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 600; font-size: 1.2rem; }
+    .score-high { background: #4caf50; color: white; }
+    .score-medium { background: #ff9800; color: white; }
+    .score-low { background: #f44336; color: white; }
+    .skill-tag { display: inline-block; padding: 0.2rem 0.6rem; margin: 0.2rem; border-radius: 10px; font-size: 0.8rem; }
+    .skill-matched { background: #e8f5e9; color: #2e7d32; border: 1px solid #4caf50; }
+    .skill-missing { background: #ffebee; color: #c62828; border: 1px solid #f44336; }
 </style>
 """, unsafe_allow_html=True)
 
-# Load data
-@st.cache_data
-def load_results():
+# State Management
+if 'results' not in st.session_state:
     if Path("results_hybrid.json").exists():
         with open("results_hybrid.json", "r") as f:
-            return json.load(f)
-    with open("results_llm_only.json", "r") as f:
-        return json.load(f)
+            st.session_state.results = json.load(f)
+    else:
+        st.session_state.results = []
 
-@st.cache_data
-def load_ground_truth():
-    with open("data/labeled_dataset.json", "r") as f:
-        return json.load(f)
-
-@st.cache_data
-def load_resume(resume_id):
-    resume_path = f"data/resumes/{resume_id}.txt"
-    if Path(resume_path).exists():
-        with open(resume_path, "r") as f:
-            return f.read()
-    return "Resume not found"
+if 'metrics' not in st.session_state:
+    st.session_state.metrics = {}
 
 # Helper functions
 def get_score_class(score):
-    if score >= 0.7:
-        return "score-high"
-    elif score >= 0.4:
-        return "score-medium"
-    else:
-        return "score-low"
+    if score >= 0.7: return "score-high"
+    if score >= 0.4: return "score-medium"
+    return "score-low"
 
 def get_tier_label(score):
-    if score >= 0.7:
-        return "🟢 Good Match"
-    elif score >= 0.4:
-        return "🟡 Partial Match"
-    else:
-        return "🔴 Poor Match"
+    if score >= 0.7: return "🟢 Good Match"
+    if score >= 0.4: return "🟡 Partial Match"
+    return "🔴 Poor Match"
 
-# Main app
+def load_jd():
+    jd_path = "data/job_descriptions/ema_ai_apps_engineer.txt"
+    if Path(jd_path).exists():
+        return Path(jd_path).read_text()
+    return "Job description not found."
+
 def main():
-    # Header
     st.markdown('<div class="main-header">🎯 AI Resume Matcher</div>', unsafe_allow_html=True)
-    st.markdown('<div class="sub-header">Ema AI Applications Engineer - Candidate Evaluation Dashboard</div>', unsafe_allow_html=True)
-    
-    # Load data
-    results = load_results()
-    ground_truth = load_ground_truth()
+    st.markdown("_Sequential Hybrid Engine (60% LLM + 40% Deterministic)_")
     
     # Sidebar
-    st.sidebar.title("🚀 Deployment & Config")
-    
-    # API Key Management
-    api_key_input = st.sidebar.text_input("Enter Groq API Key", type="password", help="Needed to run new evaluations. If left blank, we will try to use the environment variable.")
-    
-    if api_key_input:
-        os.environ["GROQ_API_KEY"] = api_key_input
-    
-    if not os.getenv("GROQ_API_KEY"):
-        st.sidebar.warning("⚠️ No Groq API Key found. You can view existing results, but cannot run new evaluations.")
-
-    st.sidebar.markdown("---")
-    st.sidebar.title("📊 Dashboard Controls")
-    
-    view_mode = st.sidebar.radio(
-        "Select View",
-        ["Overview", "Detailed Rankings", "Individual Candidate", "Score Analysis"]
-    )
+    st.sidebar.title("💻 Engine Config")
+    api_key = st.sidebar.text_input("Groq API Key", type="password")
+    if api_key:
+        os.environ["GROQ_API_KEY"] = api_key
     
     st.sidebar.markdown("---")
-    st.sidebar.markdown("### 📈 Quick Stats")
-    st.sidebar.metric("Total Candidates", len(results))
+    st.sidebar.title("📂 Upload Resumes")
+    uploaded_files = st.sidebar.file_uploader("Add .txt resumes", type=["txt"], accept_multiple_files=True)
     
-    # Calculate scores safely
-    scores = [r.get('final_score', r.get('score', 0)) for r in results]
-    avg_score = sum(scores) / len(results) if results else 0
-    st.sidebar.metric("Avg Score", f"{avg_score:.2f}")
-    
-    top_score = max(scores) if scores else 0
-    st.sidebar.metric("Top Score", f"{top_score:.2f}")
-    
-    # Main content based on view mode
-    if view_mode == "Overview":
-        show_overview(results, ground_truth)
-    elif view_mode == "Detailed Rankings":
-        show_detailed_rankings(results)
-    elif view_mode == "Individual Candidate":
-        show_individual_candidate(results)
-    else:
-        show_score_analysis(results, ground_truth)
+    if st.sidebar.button("🚀 Run Matching Engine", use_container_width=True):
+        if not os.getenv("GROQ_API_KEY"):
+            st.error("Please provide a Groq API Key in the sidebar.")
+        else:
+            with st.spinner("Analyzing resumes... (Including rate-limiting delays)"):
+                engine = HybridEngine()
+                jd_text = load_jd()
+                
+                # Load current resumes from data/resumes/
+                all_resumes = []
+                resume_dir = Path("data/resumes/")
+                for f in resume_dir.glob("*.txt"):
+                    all_resumes.append({"id": f.stem, "text": f.read_text()})
+                
+                # Add uploaded ones
+                for uploaded_file in uploaded_files:
+                    text = uploaded_file.read().decode("utf-8")
+                    name = uploaded_file.name.replace(".txt", "").lower().replace(" ", "_")
+                    all_resumes.append({"id": name, "text": text})
+                
+                # Run engine
+                results = engine.rank_all(jd_text, all_resumes)
+                st.session_state.results = results
+                
+                # Formal Evaluation if possible
+                try:
+                    with open("data/labeled_dataset.json", "r") as f:
+                        gt_data = json.load(f)
+                    metrics, _, _ = run_formal_evaluation(results, gt_data)
+                    st.session_state.metrics = metrics
+                except Exception as e:
+                    st.warning(f"Could not calculate evaluation metrics: {e}")
+                
+                # Save results
+                with open("results_hybrid.json", "w") as f:
+                    json.dump(results, f, indent=2)
+                st.success(f"Successfully evaluated {len(all_resumes)} resumes!")
 
-def show_overview(results, ground_truth):
-    st.header("📊 Overview")
-    
-    # Top 3 candidates
-    col1, col2, col3 = st.columns(3)
-    
-    for i, (col, candidate) in enumerate(zip([col1, col2, col3], results[:3])):
-        with col:
-            rank_emoji = ["🥇", "🥈", "🥉"][i]
-            st.markdown(f"### {rank_emoji} Rank {i+1}")
-            st.markdown(f"**{candidate['id'].replace('_', ' ').title()}**")
-            score = candidate.get('final_score', candidate.get('score', 0))
-            score_class = get_score_class(score)
-            st.markdown(f'<div class="score-badge {score_class}">{score:.2f}</div>', 
-                       unsafe_allow_html=True)
-            st.markdown(f"_{get_tier_label(score)}_")
-    
-    st.markdown("---")
-    
-    # Score distribution chart
-    col1, col2 = st.columns([2, 1])
-    
-    with col1:
-        st.subheader("📈 Score Distribution")
-        fig = go.Figure()
-        
-        colors = [get_score_class(r.get('final_score', r.get('score', 0))) for r in results]
-        color_map = {
-            'score-high': '#4caf50',
-            'score-medium': '#ff9800',
-            'score-low': '#f44336'
-        }
-        
-        fig.add_trace(go.Bar(
-            x=[r['id'].replace('res_', '').replace('_', ' ').title() for r in results],
-            y=[r.get('final_score', r.get('score', 0)) for r in results],
-            marker_color=[color_map[c] for c in colors],
-            text=[f"{r.get('final_score', r.get('score', 0)):.2f}" for r in results],
-            textposition='outside'
-        ))
-        
-        fig.update_layout(
-            title="Candidate Scores",
-            xaxis_title="Candidate",
-            yaxis_title="Score",
-            yaxis_range=[0, 1],
-            height=400,
-            showlegend=False
-        )
-        
-        st.plotly_chart(fig, use_container_width=True)
-    
-    with col2:
-        st.subheader("🎯 Tier Distribution")
-        
-        tier_counts = {
-            "Good (≥0.7)": sum(1 for r in results if r.get('final_score', r.get('score', 0)) >= 0.7),
-            "Partial (0.4-0.7)": sum(1 for r in results if 0.4 <= r.get('final_score', r.get('score', 0)) < 0.7),
-            "Poor (<0.4)": sum(1 for r in results if r.get('final_score', r.get('score', 0)) < 0.4)
-        }
-        
-        fig_pie = go.Figure(data=[go.Pie(
-            labels=list(tier_counts.keys()),
-            values=list(tier_counts.values()),
-            marker_colors=['#4caf50', '#ff9800', '#f44336'],
-            hole=0.4
-        )])
-        
-        fig_pie.update_layout(height=400)
-        st.plotly_chart(fig_pie, use_container_width=True)
+    view_mode = st.sidebar.radio("Navigation", ["Overview", "Detailed Rankings", "Individual Analysis", "Job Description"])
 
-def show_detailed_rankings(results):
-    st.header("🏆 Detailed Rankings")
-    
-    for i, candidate in enumerate(results, 1):
-        with st.container():
-            st.markdown(f'<div class="candidate-card">', unsafe_allow_html=True)
-            
-            col1, col2 = st.columns([3, 1])
-            
-            with col1:
-                st.markdown(f"### #{i} - {candidate['id'].replace('_', ' ').title()}")
-                candidate_score = candidate.get('final_score', candidate.get('score', 0))
-                st.markdown(f"**{get_tier_label(candidate_score)}**")
-            
-            with col2:
-                score = candidate.get('final_score', candidate.get('score', 0))
-                score_class = get_score_class(score)
-                st.markdown(f'<div class="score-badge {score_class}">{score:.2f}</div>', 
-                           unsafe_allow_html=True)
-            
-            # Hybrid Breakdown
-            if 'components' in candidate:
-                c = candidate['components']
-                col_h1, col_h2 = st.columns(2)
-                with col_h1:
-                    st.markdown(f"**LLM Component ({int(c['llm']['weight']*100)}%)**")
-                    st.progress(c['llm']['score'])
-                    st.caption(f"Raw Score: {c['llm']['score']:.2f}")
-                with col_h2:
-                    st.markdown(f"**Deterministic ({int(c['deterministic']['weight']*100)}%)**")
-                    st.progress(c['deterministic']['score'])
-                    st.caption(f"Raw Score: {c['deterministic']['score']:.3f} | Exp: {c['deterministic']['years_experience']}y")
+    if view_mode == "Job Description":
+        st.header("📄 Target Job Description")
+        st.write(load_jd())
 
-            # Reasoning
-            st.markdown("#### 💭 AI Assessment")
-            reasoning = candidate.get('components', {}).get('llm', {}).get('reasoning', candidate.get('reasoning', ''))
-            st.info(reasoning)
-            
-            # Skills
-            col1, col2 = st.columns(2)
-            
-            matched = candidate.get('components', {}).get('llm', {}).get('matched_skills', candidate.get('matched_skills', []))
-            missing = candidate.get('components', {}).get('llm', {}).get('missing_skills', candidate.get('missing_skills', []))
-            
-            with col1:
-                st.markdown("#### ✅ Matched Skills")
-                if matched:
-                    skills_html = "".join([
-                        f'<span class="skill-tag skill-matched">{skill}</span>'
-                        for skill in matched
-                    ])
-                    st.markdown(skills_html, unsafe_allow_html=True)
-                else:
-                    st.markdown("_No matched skills identified_")
-            
-            with col2:
-                st.markdown("#### ❌ Missing Skills")
-                if missing:
-                    skills_html = "".join([
-                        f'<span class="skill-tag skill-missing">{skill}</span>'
-                        for skill in missing
-                    ])
-                    st.markdown(skills_html, unsafe_allow_html=True)
-                else:
-                    st.markdown("_No critical gaps identified_")
-            
-            st.markdown('</div>', unsafe_allow_html=True)
-            st.markdown("")
+    elif view_mode == "Overview":
+        if not st.session_state.results:
+            st.info("No results yet. Run the engine from the sidebar.")
+            return
 
-def show_individual_candidate(results):
-    st.header("👤 Individual Candidate Analysis")
-    
-    candidate_names = [r['id'].replace('_', ' ').title() for r in results]
-    selected = st.selectbox("Select Candidate", candidate_names)
-    
-    # Find selected candidate
-    selected_id = selected.lower().replace(' ', '_')
-    candidate = next((r for r in results if r['id'] == selected_id), None)
-    
-    if candidate:
-        # Header with score
-        col1, col2 = st.columns([3, 1])
-        with col1:
-            st.markdown(f"## {selected}")
-            score = candidate.get('final_score', candidate.get('score', 0))
-            st.markdown(f"**{get_tier_label(score)}**")
-        with col2:
-            score_class = get_score_class(score)
-            st.markdown(f'<div class="score-badge {score_class}" style="font-size: 2rem; padding: 1rem 2rem;">{score:.2f}</div>', 
-                       unsafe_allow_html=True)
+        # Metrics Row
+        if st.session_state.metrics:
+            m = st.session_state.metrics
+            c1, c2, c3, c4 = st.columns(4)
+            c1.metric("nDCG@3", f"{m.get('ndcg3', 0):.3f}", help="Ranking quality vs ground truth")
+            c2.metric("Precision@1", f"{m.get('precision1', 0)*100:.0f}%", help="Is top candidate a Good Match?")
+            c3.metric("Recall@3", f"{m.get('recall3', 0)*100:.0f}%", help="Are all Good candidates in top 3?")
+            c4.metric("Pairwise Accuracy", f"{m.get('pairwise_acc', 0)*100:.1f}%", help="How often is the better candidate ranked higher?")
         
         st.markdown("---")
         
-        # Tabs for different views
-        tab1, tab2, tab3 = st.tabs(["📝 Resume", "💭 Analysis", "📊 Skills Breakdown"])
+        # Rankings Table
+        st.subheader("🏆 Leaderboard")
+        results = st.session_state.results
         
-        with tab1:
-            resume_text = load_resume(candidate['id'])
-            st.text_area("Resume Content", resume_text, height=400)
+        # Plotly chart
+        fig = go.Figure()
+        names = [r['id'].replace('_', ' ').title() for r in results]
+        scores = [r['final_score'] for r in results]
+        colors = ['#4caf50' if s >= 0.7 else '#ff9800' if s >= 0.4 else '#f44336' for s in scores]
         
-        with tab2:
-            st.markdown("### Decision Reasoning")
-            reasoning = candidate.get('components', {}).get('llm', {}).get('reasoning', candidate.get('reasoning', ''))
-            st.info(reasoning)
-            
-            st.markdown("### Score Breakdown")
-            score = candidate.get('final_score', candidate.get('score', 0))
-            st.progress(score)
-            st.caption(f"Final Score: {score:.2f} / 1.00")
-            
-            if 'components' in candidate:
-                cols = st.columns(2)
-                with cols[0]:
-                    st.write(f"LLM Contribution: {candidate['components']['llm']['weighted_contribution']}")
-                with cols[1]:
-                    st.write(f"Determ. Contribution: {candidate['components']['deterministic']['weighted_contribution']}")
-                
-                # Technical Breakdown
-                if 'technical_breakdown' in candidate['components']['llm']:
-                    st.markdown("#### 🛠️ Technical Scoring Breakdown")
-                    tb = candidate['components']['llm']['technical_breakdown']
-                    
-                    col_b1, col_b2, col_b3 = st.columns(3)
-                    with col_b1:
-                        st.metric("Skill Alignment", f"{tb.get('skill_alignment', 0):.2f}")
-                    with col_b2:
-                        st.metric("Experience Depth", f"{tb.get('experience_depth', 0):.2f}")
-                    with col_b3:
-                        st.metric("Domain Fit", f"{tb.get('domain_fit', 0):.2f}")
-                    
-                    st.caption("These scores represent the LLM's granular assessment before weighting.")
-        
-        with tab3:
-            col1, col2 = st.columns(2)
-            
-            matched = candidate.get('components', {}).get('llm', {}).get('matched_skills', candidate.get('matched_skills', []))
-            missing = candidate.get('components', {}).get('llm', {}).get('missing_skills', candidate.get('missing_skills', []))
-            
-            with col1:
-                st.markdown("### ✅ Matched Skills")
-                if matched:
-                    for skill in matched:
-                        st.markdown(f"- {skill}")
-                else:
-                    st.markdown("_No matched skills_")
-            
-            with col2:
-                st.markdown("### ❌ Missing Skills")
-                if missing:
-                    for skill in missing:
-                        st.markdown(f"- {skill}")
-                else:
-                    st.markdown("_No missing skills_")
+        fig.add_trace(go.Bar(x=names, y=scores, marker_color=colors, text=[f"{s:.2f}" for s in scores], textposition='auto'))
+        fig.update_layout(title="Candidate Scores", yaxis_range=[0, 1], height=400)
+        st.plotly_chart(fig, use_container_width=True)
 
-def show_score_analysis(results, ground_truth):
-    st.header("📈 Score Analysis")
-    
-    # Create comparison dataframe
-    gt_map = {r['id']: r['label'] for r in ground_truth['resumes']}
-    
-    comparison_data = []
-    for r in results:
-        current_score = r.get('final_score', r.get('score', 0))
-        comparison_data.append({
-            'Candidate': r['id'].replace('res_', '').replace('_', ' ').title(),
-            'LLM Score': current_score,
-            'Ground Truth': gt_map.get(r['id'], 0.0)
-        })
-    
-    # Score comparison chart
-    st.subheader("Engine Score vs Ground Truth")
-    
-    fig = go.Figure()
-    
-    candidates = [d['Candidate'] for d in comparison_data]
-    
-    fig.add_trace(go.Bar(
-        name='Engine Score (Hybrid)',
-        x=candidates,
-        y=[d['LLM Score'] for d in comparison_data],
-        marker_color='#1f77b4'
-    ))
-    
-    fig.add_trace(go.Bar(
-        name='Ground Truth',
-        x=candidates,
-        y=[d['Ground Truth'] for d in comparison_data],
-        marker_color='#ff7f0e'
-    ))
-    
-    fig.update_layout(
-        barmode='group',
-        yaxis_range=[0, 1],
-        height=500,
-        xaxis_title="Candidate",
-        yaxis_title="Score"
-    )
-    
-    st.plotly_chart(fig, use_container_width=True)
-    
-    # Correlation analysis
-    st.subheader("📊 Performance Metrics")
-    
-    col1, col2, col3 = st.columns(3)
-    
-    with col1:
-        # Top-K accuracy
-        top_k = 3
-        top_llm = set([r['id'] for r in results[:top_k]])
-        top_gt = set([r['id'] for r in sorted(ground_truth['resumes'], key=lambda x: x['label'], reverse=True)[:top_k]])
-        accuracy = len(top_llm & top_gt) / top_k * 100
-        st.metric(f"Top-{top_k} Accuracy", f"{accuracy:.0f}%")
-    
-    with col2:
-        # Good candidates in top positions
-        good_in_top = sum(1 for r in results[:3] if gt_map.get(r['id'], 0) >= 0.7)
-        st.metric("Good Matches in Top 3", f"{good_in_top}/2")
-    
-    with col3:
-        # Average score difference
-        avg_diff = sum(abs(r.get('final_score', r.get('score', 0)) - gt_map.get(r['id'], 0)) for r in results) / len(results)
-        st.metric("Avg Score Difference", f"{avg_diff:.2f}")
+    elif view_mode == "Detailed Rankings":
+        for i, res in enumerate(st.session_state.results, 1):
+            score = res['final_score']
+            with st.expander(f"#{i} - {res['id'].replace('_', ' ').title()} ({score:.2f})"):
+                st.markdown(f"### {get_tier_label(score)}")
+                
+                col1, col2 = st.columns(2)
+                with col1:
+                    st.markdown("**LLM Assessment**")
+                    st.info(res['components']['llm']['reasoning'])
+                with col2:
+                    st.markdown("**Deterministic Extraction**")
+                    det = res['components']['deterministic']
+                    st.write(f"Experience: {det.get('years_experience', 0)} years")
+                    st.write(f"Skill Coverage: {det.get('required_coverage_pct', 0)}%")
+                
+                # Skills
+                matched = res['components']['llm'].get('matched_skills', [])
+                missing = res['components']['llm'].get('missing_skills', [])
+                
+                c_s1, c_s2 = st.columns(2)
+                with c_s1:
+                    st.markdown("**✅ Matched**")
+                    st.write(", ".join(matched) if matched else "None identified")
+                with c_s2:
+                    st.markdown("**❌ Missing**")
+                    st.write(", ".join(missing) if missing else "None identified")
+
+    elif view_mode == "Individual Analysis":
+        results = st.session_state.results
+        if not results:
+            st.info("Run engine first.")
+            return
+        
+        selected_name = st.selectbox("Select Candidate", [r['id'].replace('_', ' ').title() for r in results])
+        res = next(r for r in results if r['id'].replace('_', ' ').title() == selected_name)
+        
+        st.header(selected_name)
+        s_c1, s_c2, s_c3 = st.columns(3)
+        tb = res['components']['llm'].get('technical_breakdown', {})
+        s_c1.metric("Skill Alignment", f"{tb.get('skill_alignment', 0):.2f}")
+        s_c2.metric("Experience Depth", f"{tb.get('experience_depth', 0):.2f}")
+        s_c3.metric("Domain Fit", f"{tb.get('domain_fit', 0):.2f}")
+        
+        tabs = st.tabs(["💡 AI Reasoning", "📊 Raw Components", "📝 Resume Text"])
+        with tabs[0]:
+            st.info(res['components']['llm']['reasoning'])
+        with tabs[1]:
+            st.json(res['components'])
+        with tabs[2]:
+            path = Path(f"data/resumes/{res['id']}.txt")
+            if path.exists():
+                st.text_area("Resume Content", path.read_text(), height=400)
+            else:
+                st.write("Original file not available in standard directory.")
 
 if __name__ == "__main__":
     main()

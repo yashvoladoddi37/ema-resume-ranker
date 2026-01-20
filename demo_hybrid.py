@@ -365,21 +365,13 @@ def main():
     # FORMAL EVALUATION: Compare Engine vs Ground Truth
     # ============================================================
     print("\n" + "="*80)
-    print("📊 FORMAL EVALUATION: Engine vs Ground Truth")
-    print("="*80)
-    
-    # Load ground truth labels
-    with open("data/labeled_dataset.json", "r") as f:
-        labeled_data = json.load(f)
-    
-    # Create lookup: resume_id -> ground truth label
+def run_formal_evaluation(results: List[Dict[str, Any]], ground_truth_data: Dict[str, Any]) -> Tuple[Dict[str, Any], List[Dict[str, Any]], List[Dict[str, Any]]]:
+    """Compare engine results vs ground truth and return metrics."""
     gt_lookup = {}
-    for item in labeled_data["resumes"]:
-        # Map res_001 -> res_001_yashpreet (handle ID format differences)
+    for item in ground_truth_data["resumes"]:
         base_id = item["id"]
         gt_lookup[base_id] = item["label"]
     
-    # Map results to ground truth (match by prefix)
     comparison = []
     for res in results:
         res_id = res['id']
@@ -393,25 +385,22 @@ def main():
                 'ground_truth': gt_label
             })
     
+    metrics = {}
     if len(comparison) > 0:
-        # Sort by predicted score (descending) for ranking metrics
         comparison_ranked = sorted(comparison, key=lambda x: x['predicted'], reverse=True)
-        
         predicted_scores = [c['predicted'] for c in comparison_ranked]
         ground_truth = [c['ground_truth'] for c in comparison_ranked]
         
         # 1. nDCG@3 (Ranking Quality)
-        # Using industry-standard sklearn implementation
-        ndcg3 = ndcg_score([ground_truth], [predicted_scores], k=3)
+        metrics['ndcg3'] = float(ndcg_score([ground_truth], [predicted_scores], k=3))
 
-        
         # 2. Precision@1 (Is top result a "Good" match?)
-        precision_1 = 1.0 if ground_truth[0] == 1.0 else 0.0
+        metrics['precision1'] = 1.0 if ground_truth[0] == 1.0 else 0.0
         
         # 3. Recall@3 (Are all "Good" matches in top 3?)
         good_matches_total = sum(1 for gt in ground_truth if gt == 1.0)
         good_matches_in_top3 = sum(1 for gt in ground_truth[:3] if gt == 1.0)
-        recall_3 = good_matches_in_top3 / good_matches_total if good_matches_total > 0 else 0.0
+        metrics['recall3'] = good_matches_in_top3 / good_matches_total if good_matches_total > 0 else 0.0
         
         # 4. Pairwise Accuracy (Correct ordering of pairs)
         correct_pairs = 0
@@ -422,9 +411,9 @@ def main():
                 if gt_i != gt_j:  # Only count pairs with different labels
                     total_pairs += 1
                     # Since i < j and sorted by predicted desc, we expect gt_i >= gt_j
-                    if gt_i > gt_j or gt_i == gt_j:
+                    if gt_i >= gt_j: # This condition is correct for a descending sort
                         correct_pairs += 1
-        pairwise_acc = correct_pairs / total_pairs if total_pairs > 0 else 0.0
+        metrics['pairwise_acc'] = correct_pairs / total_pairs if total_pairs > 0 else 0.0
         
         # 5. Tier Separation (Mean score per tier)
         good_scores = [c['predicted'] for c in comparison if c['ground_truth'] == 1.0]
@@ -435,21 +424,81 @@ def main():
         mean_partial = sum(partial_scores) / len(partial_scores) if partial_scores else 0
         mean_poor = sum(poor_scores) / len(poor_scores) if poor_scores else 0
         
-        tier_separation = mean_good > mean_partial > mean_poor
+        metrics['mean_good_score'] = mean_good
+        metrics['mean_partial_score'] = mean_partial
+        metrics['mean_poor_score'] = mean_poor
+        metrics['tier_separation'] = mean_good > mean_partial > mean_poor
         
+        return metrics, comparison_ranked, comparison
+    else:
+        return metrics, [], []
+
+# ============================================================
+# MAIN
+# ============================================================
+def main():
+    print("\n" + "="*80)
+    print("🚀 HYBRID RESUME MATCHING ENGINE (LLM + Deterministic)")
+    print(f"   Formula: Final = ({int(WEIGHT_LLM*100)}% × LLM) + ({int(WEIGHT_DETERMINISTIC*100)}% × Deterministic)")
+    print("="*80 + "\n")
+    
+    # Initialize engine
+    engine = HybridEngine()
+    
+    # Load data
+    jd, resumes = load_data()
+    print(f"📄 Loaded JD and {len(resumes)} resumes.\n")
+    
+    # Rank all resumes
+    results = engine.rank_all(jd, resumes)
+    
+    # Display rankings table
+    print("\n" + "="*90)
+    print(f"{'RANK':<5} | {'CANDIDATE':<25} | {'FINAL':<8} | {'LLM':<6} | {'DETERM':<7} | {'YRS EXP':<7}")
+    print("-" * 90)
+    
+    for i, res in enumerate(results, 1):
+        c = res['components']
+        det = c['deterministic']
+        yrs = det.get('years_experience', 0) # Use .get() for safety
+        print(f"{i:<5} | {res['id']:<25} | {res['final_score']:<8.4f} | "
+              f"{c['llm']['score']:<6.2f} | {c['deterministic']['score']:<7.3f} | {yrs:<7.0f}")
+    
+    print("="*90)
+    
+    # Save detailed results
+    output_path = "results_hybrid.json"
+    with open(output_path, "w") as f:
+        json.dump(results, f, indent=2)
+    print(f"\n✅ Full results saved to {output_path}")
+    
+    # ============================================================
+    # FORMAL EVALUATION: Compare Engine vs Ground Truth
+    # ============================================================
+    print("\n" + "="*80)
+    print("📊 FORMAL EVALUATION: Engine vs Ground Truth")
+    print("="*80)
+    
+    # Load ground truth labels
+    with open("data/labeled_dataset.json", "r") as f:
+        labeled_data = json.load(f)
+    
+    metrics, comparison_ranked, comparison = run_formal_evaluation(results, labeled_data)
+
+    if len(comparison) > 0:
         # Print Results
         print(f"\n{'Metric':<25} | {'Value':<10} | {'Target':<10} | {'Status'}")
         print("-" * 65)
-        print(f"{'nDCG@3':<25} | {ndcg3:<10.3f} | {'≥0.85':<10} | {'✅' if ndcg3 >= 0.85 else '❌'}")
-        print(f"{'Precision@1':<25} | {precision_1:<10.0%} | {'100%':<10} | {'✅' if precision_1 == 1.0 else '❌'}")
-        print(f"{'Recall@3 (Good matches)':<25} | {recall_3:<10.0%} | {'100%':<10} | {'✅' if recall_3 == 1.0 else '❌'}")
-        print(f"{'Pairwise Accuracy':<25} | {pairwise_acc:<10.1%} | {'≥85%':<10} | {'✅' if pairwise_acc >= 0.85 else '❌'}")
-        print(f"{'Tier Separation':<25} | {'Yes' if tier_separation else 'No':<10} | {'Yes':<10} | {'✅' if tier_separation else '❌'}")
+        print(f"{'nDCG@3':<25} | {metrics['ndcg3']:<10.3f} | {'≥0.85':<10} | {'✅' if metrics['ndcg3'] >= 0.85 else '❌'}")
+        print(f"{'Precision@1':<25} | {metrics['precision1']:<10.0%} | {'100%':<10} | {'✅' if metrics['precision1'] == 1.0 else '❌'}")
+        print(f"{'Recall@3 (Good matches)':<25} | {metrics['recall3']:<10.0%} | {'100%':<10} | {'✅' if metrics['recall3'] == 1.0 else '❌'}")
+        print(f"{'Pairwise Accuracy':<25} | {metrics['pairwise_acc']:<10.1%} | {'≥85%':<10} | {'✅' if metrics['pairwise_acc'] >= 0.85 else '❌'}")
+        print(f"{'Tier Separation':<25} | {'Yes' if metrics['tier_separation'] else 'No':<10} | {'Yes':<10} | {'✅' if metrics['tier_separation'] else '❌'}")
         
         print(f"\n📈 Tier Mean Scores:")
-        print(f"   Good (1.0):    {mean_good:.3f}  ({len(good_scores)} candidates)")
-        print(f"   Partial (0.5): {mean_partial:.3f}  ({len(partial_scores)} candidates)")
-        print(f"   Poor (0.0):    {mean_poor:.3f}  ({len(poor_scores)} candidates)")
+        print(f"   Good (1.0):    {metrics['mean_good_score']:.3f}  ({sum(1 for c in comparison if c['ground_truth'] == 1.0)} candidates)")
+        print(f"   Partial (0.5): {metrics['mean_partial_score']:.3f}  ({sum(1 for c in comparison if c['ground_truth'] == 0.5)} candidates)")
+        print(f"   Poor (0.0):    {metrics['mean_poor_score']:.3f}  ({sum(1 for c in comparison if c['ground_truth'] == 0.0)} candidates)")
         
         print("\n📋 Full Comparison Table:")
         print(f"{'Rank':<5} | {'Candidate':<25} | {'Predicted':<10} | {'Ground Truth':<12} | {'Match?'}")
