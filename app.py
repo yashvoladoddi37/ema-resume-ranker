@@ -198,7 +198,7 @@ def show_overview(results, ground_truth):
         st.subheader("📈 Score Distribution")
         fig = go.Figure()
         
-        colors = [get_score_class(r['score']) for r in results]
+        colors = [get_score_class(r.get('final_score', r.get('score', 0))) for r in results]
         color_map = {
             'score-high': '#4caf50',
             'score-medium': '#ff9800',
@@ -254,7 +254,8 @@ def show_detailed_rankings(results):
             
             with col1:
                 st.markdown(f"### #{i} - {candidate['id'].replace('_', ' ').title()}")
-                st.markdown(f"**{get_tier_label(candidate['score'])}**")
+                candidate_score = candidate.get('final_score', candidate.get('score', 0))
+                st.markdown(f"**{get_tier_label(candidate_score)}**")
             
             with col2:
                 score = candidate.get('final_score', candidate.get('score', 0))
