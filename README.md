@@ -16,6 +16,20 @@ The solution demonstrates:
 ### 1. Model & Algorithm Selection: Sequential Hybrid Orchestration
 For the core matching task, I implemented a **Sequential Hybrid Engine** (60% LLM + 40% Deterministic).
 
+```mermaid
+graph TD
+    JD[Job Description] --> Engine
+    Res[Raw Resumes] --> Engine
+    
+    subgraph Engine [Sequential Hybrid Scorer]
+        step1[1. Deterministic Layer] --> facts[System Facts: Exp, Skills, Degree]
+        facts --> step2[2. LLM Contextual Layer]
+        step2 --> hybrid[3. Weighted Aggregation]
+    end
+    
+    hybrid --> Ranking[Final Scored Ranking]
+```
+
 **The Workflow:**
 1. **Deterministic Stage (Ground Truth)**: Python extracts verifiable facts (years, skills, keyword density).
 2. **Context Enrichment**: These facts are injected into the LLM prompt as "System Detected Facts."
@@ -53,6 +67,13 @@ To clean and prepare the text data:
 ---
 
 ## 📊 Evaluation Results
+
+```mermaid
+graph LR
+    Engine[Engine Rankings] --> Comparer[Evaluation Calculator]
+    GT[Ground Truth Labels] --> Comparer
+    Comparer --> Metrics[nDCG@3, Precision@1, Pairwise Acc]
+```
 
 ### Dataset
 **10 synthetic resumes** representing three tiers:

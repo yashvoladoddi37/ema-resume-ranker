@@ -13,7 +13,8 @@ reproducible deterministic baseline that anchors the scoring.
 import os
 import json
 import logging
-from typing import Dict, List, Any
+import time
+from typing import List, Dict, Any, Tuple
 from dotenv import load_dotenv
 from sklearn.metrics import ndcg_score
 
@@ -283,6 +284,8 @@ class HybridEngine:
         """Evaluate and rank all resumes."""
         results = []
         for i, resume in enumerate(resumes, 1):
+            if i > 1:
+                time.sleep(2)  # Rate limit prevention
             logger.info(f"[{i}/{len(resumes)}] Evaluating: {resume['id']}")
             result = self.evaluate(job_description, resume)
             results.append(result)
