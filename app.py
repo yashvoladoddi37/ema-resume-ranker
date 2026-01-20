@@ -130,6 +130,19 @@ def main():
     ground_truth = load_ground_truth()
     
     # Sidebar
+    st.sidebar.title("🚀 Deployment & Config")
+    
+    # API Key Management
+    api_key_input = st.sidebar.text_input("Enter Groq API Key", type="password", help="Needed to run new evaluations. If left blank, we will try to use the environment variable.")
+    
+    if api_key_input:
+        import os
+        os.environ["GROQ_API_KEY"] = api_key_input
+    
+    if not os.getenv("GROQ_API_KEY"):
+        st.sidebar.warning("⚠️ No Groq API Key found. You can view existing results, but cannot run new evaluations.")
+
+    st.sidebar.markdown("---")
     st.sidebar.title("📊 Dashboard Controls")
     
     view_mode = st.sidebar.radio(
@@ -140,9 +153,13 @@ def main():
     st.sidebar.markdown("---")
     st.sidebar.markdown("### 📈 Quick Stats")
     st.sidebar.metric("Total Candidates", len(results))
-    avg_score = sum(r.get('final_score', r.get('score', 0)) for r in results) / len(results)
+    
+    # Calculate scores safely
+    scores = [r.get('final_score', r.get('score', 0)) for r in results]
+    avg_score = sum(scores) / len(results) if results else 0
     st.sidebar.metric("Avg Score", f"{avg_score:.2f}")
-    top_score = max(r.get('final_score', r.get('score', 0)) for r in results)
+    
+    top_score = max(scores) if scores else 0
     st.sidebar.metric("Top Score", f"{top_score:.2f}")
     
     # Main content based on view mode

@@ -165,7 +165,24 @@ python demo_hybrid.py
 streamlit run app.py
 ```
 
-## 🧪 Testing Your Own Resume
+## 🐳 Dockerization
+
+To run the entire suite in a containerized environment (no local Python setup required):
+
+```bash
+# Build the image
+docker build -t ema-ranker .
+
+# Run the container (Passes your .env automatically)
+docker run -p 8501:8501 --env-file .env ema-ranker
+```
+*The dashboard will be available at `http://localhost:8501`.*
+
+## 🚀 Production Hosting (Zero-Setup URL)
+
+If you are hosting this on **Streamlit Cloud** or **Hugging Face Spaces**:
+1.  **Stored Results**: External users can view the cached `results_hybrid.json` instantly without an API key.
+2.  **Dynamic Evaluation**: If they want to test a new resume, they can enter their **Groq API Key** directly in the sidebar of the web interface.
 
 Want to see how you rank?
 1. Drop your resume as a `.txt` file into `data/resumes/`
