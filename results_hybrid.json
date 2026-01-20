@@ -1,14 +1,14 @@
 [
   {
     "id": "res_003_maya",
-    "final_score": 0.7664,
-    "score_formula": "(0.6 \u00d7 0.85) + (0.4 \u00d7 0.641) = 0.7664",
+    "final_score": 0.8064,
+    "score_formula": "(0.6 \u00d7 0.85) + (0.4 \u00d7 0.741) = 0.8064",
     "components": {
       "llm": {
         "score": 0.85,
         "weight": 0.6,
         "weighted_contribution": 0.51,
-        "reasoning": "The candidate, Maya Gupta, has a strong background in AI solutions engineering with a focus on Generative AI and automation flows. Her experience in configuring and integrating AI/GenAI workflows, troubleshooting production LLM performance, and translating customer requirements into technical GenAI specs aligns well with the job requirements. Although she lacks direct experience in SaaS and technical support, her skills in API integration, logging, and dashboard creation are transferable. Her proficiency in Python, JSON, and REST APIs also matches the job requirements.",
+        "reasoning": "The candidate, Maya Gupta, has a strong background in AI solutions engineering with a focus on Generative AI and automation flows. Her experience in configuring and integrating AI/GenAI workflows, troubleshooting production LLM performance, and translating customer requirements into technical GenAI specs aligns well with the job description. Although she lacks direct experience in SaaS and technical support, her skills in API integration, logging, and dashboard creation are transferable. Her proficiency in Python, JSON, and REST APIs also matches the required skills.",
         "technical_breakdown": {
           "skill_alignment": 0.9,
           "experience_depth": 0.8,
@@ -28,12 +28,12 @@
         ]
       },
       "deterministic": {
-        "score": 0.641,
+        "score": 0.741,
         "weight": 0.4,
-        "weighted_contribution": 0.2564,
+        "weighted_contribution": 0.2964,
         "experience_component": 0.15,
         "skill_component": 0.191,
-        "ai_relevance_component": 0.2,
+        "ai_relevance_component": 0.3,
         "support_relevance_component": 0.0,
         "education_component": 0.1,
         "years_experience": 10.0,
@@ -64,8 +64,8 @@
   },
   {
     "id": "res_002_sarah",
-    "final_score": 0.7244,
-    "score_formula": "(0.6 \u00d7 0.85) + (0.4 \u00d7 0.536) = 0.7244",
+    "final_score": 0.698,
+    "score_formula": "(0.6 \u00d7 0.85) + (0.4 \u00d7 0.470) = 0.6980",
     "components": {
       "llm": {
         "score": 0.85,
@@ -91,13 +91,13 @@
         ]
       },
       "deterministic": {
-        "score": 0.536,
+        "score": 0.47,
         "weight": 0.4,
-        "weighted_contribution": 0.2144,
+        "weighted_contribution": 0.188,
         "experience_component": 0.15,
         "skill_component": 0.199,
         "ai_relevance_component": 0.0,
-        "support_relevance_component": 0.087,
+        "support_relevance_component": 0.022,
         "education_component": 0.1,
         "years_experience": 15.0,
         "has_relevant_degree": true,
@@ -123,9 +123,69 @@
     }
   },
   {
+    "id": "res_test_A",
+    "final_score": 0.6116,
+    "score_formula": "(0.6 \u00d7 0.60) + (0.4 \u00d7 0.629) = 0.6116",
+    "components": {
+      "llm": {
+        "score": 0.6,
+        "weight": 0.6,
+        "weighted_contribution": 0.36,
+        "reasoning": "The candidate has a strong foundation in software engineering and has recently transitioned into AI support and technical success. With 2 years of experience in AI support, they have developed skills in troubleshooting production LLM issues and configuring API integrations. However, their experience in AI support is limited compared to the required 3+ years. Additionally, they lack experience with JSON and REST, which are essential skills for the role. Their proficiency in Python and Java is a plus, but their experience in GenAI and SaaS is still developing.",
+        "technical_breakdown": {
+          "skill_alignment": 0.7,
+          "experience_depth": 0.5,
+          "domain_fit": 0.6
+        },
+        "matched_skills": [
+          "api",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "missing_skills": [
+          "json",
+          "rest"
+        ]
+      },
+      "deterministic": {
+        "score": 0.629,
+        "weight": 0.4,
+        "weighted_contribution": 0.2516,
+        "experience_component": 0.15,
+        "skill_component": 0.199,
+        "ai_relevance_component": 0.146,
+        "support_relevance_component": 0.035,
+        "education_component": 0.1,
+        "years_experience": 12.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "api",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "matched_preferred": [
+          "genai",
+          "llm"
+        ],
+        "missing_required": [
+          "json",
+          "rest"
+        ],
+        "required_coverage_pct": 75.0,
+        "preferred_coverage_pct": 14.3
+      }
+    }
+  },
+  {
     "id": "res_001_yashpreet",
-    "final_score": 0.5728,
-    "score_formula": "(0.6 \u00d7 0.60) + (0.4 \u00d7 0.532) = 0.5728",
+    "final_score": 0.6076,
+    "score_formula": "(0.6 \u00d7 0.60) + (0.4 \u00d7 0.619) = 0.6076",
     "components": {
       "llm": {
         "score": 0.6,
@@ -135,7 +195,7 @@
         "technical_breakdown": {
           "skill_alignment": 0.7,
           "experience_depth": 0.8,
-          "domain_fit": 0.4
+          "domain_fit": 0.5
         },
         "matched_skills": [
           "api",
@@ -151,12 +211,12 @@
         ]
       },
       "deterministic": {
-        "score": 0.532,
+        "score": 0.619,
         "weight": 0.4,
-        "weighted_contribution": 0.2128,
+        "weighted_contribution": 0.2476,
         "experience_component": 0.15,
         "skill_component": 0.106,
-        "ai_relevance_component": 0.175,
+        "ai_relevance_component": 0.263,
         "support_relevance_component": 0.0,
         "education_component": 0.1,
         "years_experience": 6.0,
@@ -188,18 +248,18 @@
   },
   {
     "id": "res_004_david",
-    "final_score": 0.5728,
-    "score_formula": "(0.6 \u00d7 0.65) + (0.4 \u00d7 0.457) = 0.5728",
+    "final_score": 0.568,
+    "score_formula": "(0.6 \u00d7 0.65) + (0.4 \u00d7 0.445) = 0.5680",
     "components": {
       "llm": {
         "score": 0.65,
         "weight": 0.6,
         "weighted_contribution": 0.39,
-        "reasoning": "The candidate has significant experience in building and troubleshooting backend integrations and data sync pipelines, which aligns with the job requirements. However, the candidate lacks direct experience in technical support or customer success for SaaS, and proficiency in troubleshooting production issues and diagnosing ML performance. The candidate's experience with APIs, REST, and integration with CRMs or ATS tools is a strong plus. The candidate's education in Computer Science is also relevant.",
+        "reasoning": "The candidate, David Kim, has a strong background in building and troubleshooting backend integrations and data sync pipelines, which aligns with the requirements of the AI Applications Engineer role at Ema. His experience in troubleshooting production issues and diagnosing performance bottlenecks is valuable. However, he lacks direct experience in technical support or customer success for SaaS, and his proficiency in JSON and production issues is not explicitly mentioned. His education in Computer Science is relevant, and his skills in Python, REST, and API integration are a good match.",
         "technical_breakdown": {
           "skill_alignment": 0.7,
           "experience_depth": 0.6,
-          "domain_fit": 0.55
+          "domain_fit": 0.6
         },
         "matched_skills": [
           "api",
@@ -215,13 +275,13 @@
         ]
       },
       "deterministic": {
-        "score": 0.457,
+        "score": 0.445,
         "weight": 0.4,
-        "weighted_contribution": 0.1828,
+        "weighted_contribution": 0.178,
         "experience_component": 0.15,
         "skill_component": 0.191,
         "ai_relevance_component": 0.0,
-        "support_relevance_component": 0.016,
+        "support_relevance_component": 0.004,
         "education_component": 0.1,
         "years_experience": 11.0,
         "has_relevant_degree": true,
@@ -250,15 +310,72 @@
     }
   },
   {
+    "id": "res_010_elena",
+    "final_score": 0.3388,
+    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.397) = 0.3388",
+    "components": {
+      "llm": {
+        "score": 0.3,
+        "weight": 0.6,
+        "weighted_contribution": 0.18,
+        "reasoning": "The candidate has some transferable skills from their experience in technical support and customer service, but lacks significant experience in the core tech stack required for the AI Applications Engineer role, such as proficiency in APIs, JSON, REST, and Python. Their experience depth is limited to basic system administration and customer service, which does not align well with the complexity and impact of the role. The domain fit is also weak, as the candidate's experience is not directly related to AI support, SaaS, or GenAI workflows.",
+        "technical_breakdown": {
+          "skill_alignment": 0.2,
+          "experience_depth": 0.4,
+          "domain_fit": 0.1
+        },
+        "matched_skills": [
+          "technical support",
+          "troubleshooting"
+        ],
+        "missing_skills": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas"
+        ]
+      },
+      "deterministic": {
+        "score": 0.397,
+        "weight": 0.4,
+        "weighted_contribution": 0.1588,
+        "experience_component": 0.15,
+        "skill_component": 0.061,
+        "ai_relevance_component": 0.065,
+        "support_relevance_component": 0.022,
+        "education_component": 0.1,
+        "years_experience": 10.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "technical support",
+          "troubleshooting"
+        ],
+        "matched_preferred": [],
+        "missing_required": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas"
+        ],
+        "required_coverage_pct": 25.0,
+        "preferred_coverage_pct": 0.0
+      }
+    }
+  },
+  {
     "id": "res_005_mike",
-    "final_score": 0.3316,
-    "score_formula": "(0.6 \u00d7 0.40) + (0.4 \u00d7 0.229) = 0.3316",
+    "final_score": 0.3356,
+    "score_formula": "(0.6 \u00d7 0.40) + (0.4 \u00d7 0.239) = 0.3356",
     "components": {
       "llm": {
         "score": 0.4,
         "weight": 0.6,
         "weighted_contribution": 0.24,
-        "reasoning": "The candidate has some transferable skills, such as proficiency in Python and experience with REST APIs, but lacks significant experience in technical support, SaaS, and GenAI workflows. The candidate's background in full-stack web development provides a foundation for understanding APIs and integration, but the depth of experience in troubleshooting production issues and diagnosing ML performance is limited. The candidate's education in Physics provides a strong analytical foundation, but the relevance to AI support and SaaS is indirect.",
+        "reasoning": "The candidate has some transferable skills, such as proficiency in Python and experience with REST APIs, but lacks significant experience in technical support, SaaS, and GenAI workflows. The candidate's background in full-stack web development is not directly relevant to the AI Applications Engineer role, but some skills like API development and data automation can be applied. However, major gaps in required skills like API integration, production issue troubleshooting, and technical support experience are notable.",
         "technical_breakdown": {
           "skill_alignment": 0.3,
           "experience_depth": 0.2,
@@ -278,12 +395,12 @@
         ]
       },
       "deterministic": {
-        "score": 0.229,
+        "score": 0.239,
         "weight": 0.4,
-        "weighted_contribution": 0.0916,
+        "weighted_contribution": 0.0956,
         "experience_component": 0.15,
         "skill_component": 0.061,
-        "ai_relevance_component": 0.018,
+        "ai_relevance_component": 0.027,
         "support_relevance_component": 0.0,
         "education_component": 0.0,
         "years_experience": 11.0,
@@ -307,9 +424,66 @@
     }
   },
   {
+    "id": "res_test_B",
+    "final_score": 0.3352,
+    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.388) = 0.3352",
+    "components": {
+      "llm": {
+        "score": 0.3,
+        "weight": 0.6,
+        "weighted_contribution": 0.18,
+        "reasoning": "The candidate has some transferable skills from their experience in software development, particularly with REST APIs, but lacks significant experience in AI, GenAI workflows, and SaaS. Their background in building scalable web applications could be beneficial, but the gap in required skills such as Python, JSON, and technical support is substantial. The candidate's education in Software Engineering is relevant, but the overall fit for the AI Applications Engineer role at Ema is weak due to the missing core skills and lack of direct experience in the domain.",
+        "technical_breakdown": {
+          "skill_alignment": 0.2,
+          "experience_depth": 0.4,
+          "domain_fit": 0.1
+        },
+        "matched_skills": [
+          "api",
+          "rest"
+        ],
+        "missing_skills": [
+          "json",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ]
+      },
+      "deterministic": {
+        "score": 0.388,
+        "weight": 0.4,
+        "weighted_contribution": 0.1552,
+        "experience_component": 0.15,
+        "skill_component": 0.061,
+        "ai_relevance_component": 0.071,
+        "support_relevance_component": 0.006,
+        "education_component": 0.1,
+        "years_experience": 8.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "api",
+          "rest"
+        ],
+        "matched_preferred": [],
+        "missing_required": [
+          "json",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "required_coverage_pct": 25.0,
+        "preferred_coverage_pct": 0.0
+      }
+    }
+  },
+  {
     "id": "res_006_priya",
-    "final_score": 0.29,
-    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.275) = 0.2900",
+    "final_score": 0.3056,
+    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.314) = 0.3056",
     "components": {
       "llm": {
         "score": 0.3,
@@ -335,12 +509,12 @@
         ]
       },
       "deterministic": {
-        "score": 0.275,
+        "score": 0.314,
         "weight": 0.4,
-        "weighted_contribution": 0.11,
+        "weighted_contribution": 0.1256,
         "experience_component": 0.15,
         "skill_component": 0.046,
-        "ai_relevance_component": 0.079,
+        "ai_relevance_component": 0.119,
         "support_relevance_component": 0.0,
         "education_component": 0.0,
         "years_experience": 7.0,
@@ -367,159 +541,41 @@
     }
   },
   {
-    "id": "res_test_A",
-    "final_score": 0.274,
-    "score_formula": "(0.6 \u00d7 0.00) + (0.4 \u00d7 0.685) = 0.2740",
+    "id": "res_007_sam",
+    "final_score": 0.2944,
+    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.286) = 0.2944",
     "components": {
       "llm": {
-        "score": 0.0,
+        "score": 0.3,
         "weight": 0.6,
-        "weighted_contribution": 0.0,
-        "reasoning": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jp33vzrmf17v17x8znynac5x` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99833, Requested 960. Please try again in 11m25.151999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-        "technical_breakdown": {},
-        "matched_skills": [],
-        "missing_skills": []
-      },
-      "deterministic": {
-        "score": 0.685,
-        "weight": 0.4,
-        "weighted_contribution": 0.274,
-        "experience_component": 0.15,
-        "skill_component": 0.199,
-        "ai_relevance_component": 0.097,
-        "support_relevance_component": 0.139,
-        "education_component": 0.1,
-        "years_experience": 12.0,
-        "has_relevant_degree": true,
-        "matched_required": [
+        "weighted_contribution": 0.18,
+        "reasoning": "The candidate has some experience in B2B SaaS customer success and technical account management, but lacks significant technical skills required for the AI Applications Engineer role. The candidate's experience in managing technical health for enterprise accounts and collaborating with engineering on product bug prioritizations is valuable, but not directly applicable to the role. The candidate also lacks proficiency in required technical skills such as Python, JSON, REST, and production issue troubleshooting.",
+        "technical_breakdown": {
+          "skill_alignment": 0.2,
+          "experience_depth": 0.4,
+          "domain_fit": 0.5
+        },
+        "matched_skills": [
           "api",
-          "production",
-          "python",
           "saas",
-          "technical support",
           "troubleshooting"
         ],
-        "matched_preferred": [
-          "genai",
-          "llm"
-        ],
-        "missing_required": [
-          "json",
-          "rest"
-        ],
-        "required_coverage_pct": 75.0,
-        "preferred_coverage_pct": 14.3
-      }
-    }
-  },
-  {
-    "id": "res_010_elena",
-    "final_score": 0.176,
-    "score_formula": "(0.6 \u00d7 0.00) + (0.4 \u00d7 0.440) = 0.1760",
-    "components": {
-      "llm": {
-        "score": 0.0,
-        "weight": 0.6,
-        "weighted_contribution": 0.0,
-        "reasoning": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jp33vzrmf17v17x8znynac5x` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99835, Requested 879. Please try again in 10m16.896s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-        "technical_breakdown": {},
-        "matched_skills": [],
-        "missing_skills": []
-      },
-      "deterministic": {
-        "score": 0.44,
-        "weight": 0.4,
-        "weighted_contribution": 0.176,
-        "experience_component": 0.15,
-        "skill_component": 0.061,
-        "ai_relevance_component": 0.043,
-        "support_relevance_component": 0.086,
-        "education_component": 0.1,
-        "years_experience": 10.0,
-        "has_relevant_degree": true,
-        "matched_required": [
-          "technical support",
-          "troubleshooting"
-        ],
-        "matched_preferred": [],
-        "missing_required": [
-          "api",
+        "missing_skills": [
           "json",
           "production",
           "python",
           "rest",
-          "saas"
-        ],
-        "required_coverage_pct": 25.0,
-        "preferred_coverage_pct": 0.0
-      }
-    }
-  },
-  {
-    "id": "res_test_B",
-    "final_score": 0.1528,
-    "score_formula": "(0.6 \u00d7 0.00) + (0.4 \u00d7 0.382) = 0.1528",
-    "components": {
-      "llm": {
-        "score": 0.0,
-        "weight": 0.6,
-        "weighted_contribution": 0.0,
-        "reasoning": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jp33vzrmf17v17x8znynac5x` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99830, Requested 873. Please try again in 10m7.392s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-        "technical_breakdown": {},
-        "matched_skills": [],
-        "missing_skills": []
+          "technical support"
+        ]
       },
       "deterministic": {
-        "score": 0.382,
+        "score": 0.286,
         "weight": 0.4,
-        "weighted_contribution": 0.1528,
-        "experience_component": 0.15,
-        "skill_component": 0.061,
-        "ai_relevance_component": 0.047,
-        "support_relevance_component": 0.024,
-        "education_component": 0.1,
-        "years_experience": 8.0,
-        "has_relevant_degree": true,
-        "matched_required": [
-          "api",
-          "rest"
-        ],
-        "matched_preferred": [],
-        "missing_required": [
-          "json",
-          "production",
-          "python",
-          "saas",
-          "technical support",
-          "troubleshooting"
-        ],
-        "required_coverage_pct": 25.0,
-        "preferred_coverage_pct": 0.0
-      }
-    }
-  },
-  {
-    "id": "res_007_sam",
-    "final_score": 0.1164,
-    "score_formula": "(0.6 \u00d7 0.00) + (0.4 \u00d7 0.291) = 0.1164",
-    "components": {
-      "llm": {
-        "score": 0.0,
-        "weight": 0.6,
-        "weighted_contribution": 0.0,
-        "reasoning": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jp33vzrmf17v17x8znynac5x` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99842, Requested 882. Please try again in 10m25.536s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-        "technical_breakdown": {},
-        "matched_skills": [],
-        "missing_skills": []
-      },
-      "deterministic": {
-        "score": 0.291,
-        "weight": 0.4,
-        "weighted_contribution": 0.1164,
+        "weighted_contribution": 0.1144,
         "experience_component": 0.15,
         "skill_component": 0.099,
-        "ai_relevance_component": 0.021,
-        "support_relevance_component": 0.021,
+        "ai_relevance_component": 0.032,
+        "support_relevance_component": 0.005,
         "education_component": 0.0,
         "years_experience": 8.0,
         "has_relevant_degree": false,
@@ -545,25 +601,38 @@
   },
   {
     "id": "res_008_jordan",
-    "final_score": 0.0948,
-    "score_formula": "(0.6 \u00d7 0.00) + (0.4 \u00d7 0.237) = 0.0948",
+    "final_score": 0.172,
+    "score_formula": "(0.6 \u00d7 0.10) + (0.4 \u00d7 0.280) = 0.1720",
     "components": {
       "llm": {
-        "score": 0.0,
+        "score": 0.1,
         "weight": 0.6,
-        "weighted_contribution": 0.0,
-        "reasoning": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jp33vzrmf17v17x8znynac5x` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99840, Requested 846. Please try again in 9m52.704s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-        "technical_breakdown": {},
+        "weighted_contribution": 0.06,
+        "reasoning": "The candidate lacks relevant experience in AI applications, technical support, and SaaS, with no proficiency in required skills such as API integration, Python, or troubleshooting. Their background in frontend development with React and TypeScript does not align with the job requirements.",
+        "technical_breakdown": {
+          "skill_alignment": 0.0,
+          "experience_depth": 0.2,
+          "domain_fit": 0.0
+        },
         "matched_skills": [],
-        "missing_skills": []
+        "missing_skills": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ]
       },
       "deterministic": {
-        "score": 0.237,
+        "score": 0.28,
         "weight": 0.4,
-        "weighted_contribution": 0.0948,
+        "weighted_contribution": 0.112,
         "experience_component": 0.15,
         "skill_component": 0.0,
-        "ai_relevance_component": 0.087,
+        "ai_relevance_component": 0.13,
         "support_relevance_component": 0.0,
         "education_component": 0.0,
         "years_experience": 6.0,
@@ -587,17 +656,30 @@
   },
   {
     "id": "res_009_james",
-    "final_score": 0.06,
-    "score_formula": "(0.6 \u00d7 0.00) + (0.4 \u00d7 0.150) = 0.0600",
+    "final_score": 0.12,
+    "score_formula": "(0.6 \u00d7 0.10) + (0.4 \u00d7 0.150) = 0.1200",
     "components": {
       "llm": {
-        "score": 0.0,
+        "score": 0.1,
         "weight": 0.6,
-        "weighted_contribution": 0.0,
-        "reasoning": "Error code: 429 - {'error': {'message': 'Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01jp33vzrmf17v17x8znynac5x` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99837, Requested 826. Please try again in 9m32.832s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing', 'type': 'tokens', 'code': 'rate_limit_exceeded'}}",
-        "technical_breakdown": {},
+        "weighted_contribution": 0.06,
+        "reasoning": "The candidate lacks direct experience in the required skills for the AI Applications Engineer role, with no mention of proficiency in APIs, JSON, production issue troubleshooting, or Python. The candidate's experience is primarily in Java development for financial institutions, which, although relevant in terms of software development, does not align closely with the specific requirements of the role. The candidate's skills in Java, SQL, and Spring Boot, while valuable in a general software development context, do not directly apply to the needs of the position, which emphasizes AI/GenAI workflows, API integration, and troubleshooting.",
+        "technical_breakdown": {
+          "skill_alignment": 0.0,
+          "experience_depth": 0.6,
+          "domain_fit": 0.1
+        },
         "matched_skills": [],
-        "missing_skills": []
+        "missing_skills": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ]
       },
       "deterministic": {
         "score": 0.15,
