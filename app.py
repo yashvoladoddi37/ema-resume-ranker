@@ -1,7 +1,6 @@
 import streamlit as st
 import json
 import plotly.graph_objects as go
-import plotly.express as px
 from pathlib import Path
 import os
 import time
