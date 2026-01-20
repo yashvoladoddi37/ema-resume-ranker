@@ -3,6 +3,7 @@ import json
 import plotly.graph_objects as go
 import plotly.express as px
 from pathlib import Path
+import os
 
 # Page config
 st.set_page_config(
@@ -136,7 +137,6 @@ def main():
     api_key_input = st.sidebar.text_input("Enter Groq API Key", type="password", help="Needed to run new evaluations. If left blank, we will try to use the environment variable.")
     
     if api_key_input:
-        import os
         os.environ["GROQ_API_KEY"] = api_key_input
     
     if not os.getenv("GROQ_API_KEY"):
