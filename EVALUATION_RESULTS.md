@@ -8,16 +8,16 @@ Successfully evaluated 10 candidates using **Groq's llama-3.3-70b-versatile** mo
 
 | Rank | Candidate | Score | Label (Ground Truth) | Match? |
 |------|-----------|-------|---------------------|--------|
-| 1 | Maya Gupta | 0.85 | Good (1.0) | ✅ |
-| 2 | Yashpreet Voladoddi | 0.80 | Good (1.0) | ✅ |
-| 3 | Sarah Johnson | 0.80 | Partial (0.5) | ⚠️ |
-| 4 | David Kim | 0.70 | Partial (0.5) | ✅ |
-| 5 | Priya Sharma | 0.60 | Partial (0.5) | ✅ |
-| 6 | Mike Rodriguez | 0.40 | Partial (0.5) | ✅ |
-| 7 | Sam Taylor | 0.40 | Partial (0.5) | ✅ |
-| 8 | James Wilson | 0.20 | Poor (0.0) | ✅ |
-| 9 | Jordan Lee | 0.10 | Poor (0.0) | ✅ |
-| 10 | Elena Rossi | 0.00 | Poor (0.0) | ✅ |
+| 1 | Maya Gupta | 0.77 | Good (1.0) | ✅ |
+| 2 | Sarah Johnson | 0.63 | Partial (0.5) | ✅ |
+| 3 | David Kim | 0.60 | Partial (0.5) | ✅ |
+| 4 | Yashpreet Voladoddi | 0.57 | Good (1.0) | ⚠️ |
+| 5 | Mike Rodriguez | 0.33 | Partial (0.5) | ⚠️ |
+| 6 | Sam Taylor | 0.30 | Partial (0.5) | ⚠️ |
+| 7 | Elena Rossi | 0.30 | Poor (0.0) | ✅ |
+| 8 | Priya Sharma | 0.29 | Partial (0.5) | ⚠️ |
+| 9 | James Wilson | 0.18 | Poor (0.0) | ✅ |
+| 10 | Jordan Lee | 0.15 | Poor (0.0) | ✅ |
 
 ## Key Insights
 

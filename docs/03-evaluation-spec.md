@@ -1,8 +1,8 @@
 # Resume Matching Engine - Evaluation Specification
 
-> **Version**: 1.0  
-> **Status**: DRAFT - Pending Review  
-> **Last Updated**: 2026-01-19
+> **Version**: 1.1  
+> **Status**: FINAL  
+> **Last Updated**: 2026-01-20
 
 ---
 

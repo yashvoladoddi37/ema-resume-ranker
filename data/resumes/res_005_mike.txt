@@ -23,5 +23,8 @@ SKILLS
 ------
 Languages: Python, JavaScript, HTML, CSS
 Frameworks: Flask, React, Node.js
-Tools: Git, SQL, Heroku
+TMonitoring: CloudWatch, DataDog
+---
+EDUCATION
+Imperial College London | M.Sc. in Physics | 2012 - 2016
 ============================================================

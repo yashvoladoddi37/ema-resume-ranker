@@ -15,6 +15,7 @@ import json
 import logging
 from typing import Dict, List, Any
 from dotenv import load_dotenv
+from sklearn.metrics import ndcg_score
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -66,6 +67,11 @@ class DeterministicScorer:
         'incident', 'ticket', 'escalation', 'customer-facing'
     }
     
+    RELEVANT_DEGREES = {
+        'computer science', 'software engineering', 'information technology',
+        'computer engineering', 'electrical engineering', 'data science'
+    }
+    
     def score(self, resume_text: str) -> Dict[str, Any]:
         """Returns deterministic score with full breakdown."""
         import re
@@ -108,25 +114,32 @@ class DeterministicScorer:
         ai_relevance = min(ai_count / total_words * 10, 1.0)
         support_relevance = min(support_count / total_words * 10, 1.0)
         
-        # 4. Calculate final deterministic score
+        # 4. Degree Relevance (Strictly by degree, not institution)
+        has_relevant_degree = any(re.search(rf'\b{re.escape(d)}\b', text_lower) for d in self.RELEVANT_DEGREES)
+        edu_score = 1.0 if has_relevant_degree else 0.0
+
+        # 5. Calculate final deterministic score
         exp_score = min(years_exp / 3.0, 1.0)  # 3+ years = full points
         final_score = (
-            0.20 * exp_score +
-            0.40 * skill_score +
+            0.15 * exp_score +
+            0.35 * skill_score +
             0.20 * ai_relevance +
-            0.20 * support_relevance
+            0.20 * support_relevance +
+            0.10 * edu_score
         )
         
         return {
             'score': round(final_score, 3),
             'breakdown': {
-                'experience_component': round(0.20 * exp_score, 3),
-                'skill_component': round(0.40 * skill_score, 3),
+                'experience_component': round(0.15 * exp_score, 3),
+                'skill_component': round(0.35 * skill_score, 3),
                 'ai_relevance_component': round(0.20 * ai_relevance, 3),
-                'support_relevance_component': round(0.20 * support_relevance, 3)
+                'support_relevance_component': round(0.20 * support_relevance, 3),
+                'education_component': round(0.10 * edu_score, 3)
             },
             'extracted_data': {
                 'years_experience': years_exp,
+                'has_relevant_degree': has_relevant_degree,
                 'matched_required': sorted(list(matched_required)),
                 'matched_preferred': sorted(list(matched_preferred)),
                 'missing_required': sorted(list(missing_required)),
@@ -170,12 +183,13 @@ NOTE: Use these facts as a baseline for your evaluation. Your goal is to provide
 
 ### Instructions:
 1. Analyze with Nuance: Look beyond keyword matching. Evaluate depth of experience, seniority, and domain relevance.
-2. Score (0.0 - 1.0):
+2. Degree over Institution: EVALUATE BY DEGREE RELEVANCE ONLY (e.g., Computer Science, Engineering). IGNORE INSTITUTION PRESTIGE OR RANKINGS. Do not bias scores toward Ivy League or equivalent status colleges.
+3. Score (0.0 - 1.0):
    - 0.8-1.0: Excellent fit. Meets nearly all requirements with specific relevant experience.
    - 0.5-0.7: Partial fit. Has significant experience but lacks some core skills.
    - 0.2-0.4: Weak fit. Some transferable skills but major gaps.
    - 0.0-0.1: No fit. Irrelevant stack or domain entirely.
-3. Reasoning: Provide 2-3 sentence technical justification.
+4. Reasoning: Provide 2-3 sentence technical justification.
 
 ### Job Description:
 {job_description}
@@ -335,6 +349,109 @@ def main():
         json.dump(results, f, indent=2)
     print(f"\n✅ Full results saved to {output_path}")
     
+    # ============================================================
+    # FORMAL EVALUATION: Compare Engine vs Ground Truth
+    # ============================================================
+    print("\n" + "="*80)
+    print("📊 FORMAL EVALUATION: Engine vs Ground Truth")
+    print("="*80)
+    
+    # Load ground truth labels
+    with open("data/labeled_dataset.json", "r") as f:
+        labeled_data = json.load(f)
+    
+    # Create lookup: resume_id -> ground truth label
+    gt_lookup = {}
+    for item in labeled_data["resumes"]:
+        # Map res_001 -> res_001_yashpreet (handle ID format differences)
+        base_id = item["id"]
+        gt_lookup[base_id] = item["label"]
+    
+    # Map results to ground truth (match by prefix)
+    comparison = []
+    for res in results:
+        res_id = res['id']
+        # Extract base ID (e.g., res_001_yashpreet -> res_001)
+        base_id = '_'.join(res_id.split('_')[:2])
+        gt_label = gt_lookup.get(base_id, None)
+        if gt_label is not None:
+            comparison.append({
+                'id': res_id,
+                'predicted': res['final_score'],
+                'ground_truth': gt_label
+            })
+    
+    if len(comparison) > 0:
+        # Sort by predicted score (descending) for ranking metrics
+        comparison_ranked = sorted(comparison, key=lambda x: x['predicted'], reverse=True)
+        
+        predicted_scores = [c['predicted'] for c in comparison_ranked]
+        ground_truth = [c['ground_truth'] for c in comparison_ranked]
+        
+        # 1. nDCG@3 (Ranking Quality)
+        # Using industry-standard sklearn implementation
+        ndcg3 = ndcg_score([ground_truth], [predicted_scores], k=3)
+
+        
+        # 2. Precision@1 (Is top result a "Good" match?)
+        precision_1 = 1.0 if ground_truth[0] == 1.0 else 0.0
+        
+        # 3. Recall@3 (Are all "Good" matches in top 3?)
+        good_matches_total = sum(1 for gt in ground_truth if gt == 1.0)
+        good_matches_in_top3 = sum(1 for gt in ground_truth[:3] if gt == 1.0)
+        recall_3 = good_matches_in_top3 / good_matches_total if good_matches_total > 0 else 0.0
+        
+        # 4. Pairwise Accuracy (Correct ordering of pairs)
+        correct_pairs = 0
+        total_pairs = 0
+        for i in range(len(comparison_ranked)):
+            for j in range(i + 1, len(comparison_ranked)):
+                gt_i, gt_j = comparison_ranked[i]['ground_truth'], comparison_ranked[j]['ground_truth']
+                if gt_i != gt_j:  # Only count pairs with different labels
+                    total_pairs += 1
+                    # Since i < j and sorted by predicted desc, we expect gt_i >= gt_j
+                    if gt_i > gt_j or gt_i == gt_j:
+                        correct_pairs += 1
+        pairwise_acc = correct_pairs / total_pairs if total_pairs > 0 else 0.0
+        
+        # 5. Tier Separation (Mean score per tier)
+        good_scores = [c['predicted'] for c in comparison if c['ground_truth'] == 1.0]
+        partial_scores = [c['predicted'] for c in comparison if c['ground_truth'] == 0.5]
+        poor_scores = [c['predicted'] for c in comparison if c['ground_truth'] == 0.0]
+        
+        mean_good = sum(good_scores) / len(good_scores) if good_scores else 0
+        mean_partial = sum(partial_scores) / len(partial_scores) if partial_scores else 0
+        mean_poor = sum(poor_scores) / len(poor_scores) if poor_scores else 0
+        
+        tier_separation = mean_good > mean_partial > mean_poor
+        
+        # Print Results
+        print(f"\n{'Metric':<25} | {'Value':<10} | {'Target':<10} | {'Status'}")
+        print("-" * 65)
+        print(f"{'nDCG@3':<25} | {ndcg3:<10.3f} | {'≥0.85':<10} | {'✅' if ndcg3 >= 0.85 else '❌'}")
+        print(f"{'Precision@1':<25} | {precision_1:<10.0%} | {'100%':<10} | {'✅' if precision_1 == 1.0 else '❌'}")
+        print(f"{'Recall@3 (Good matches)':<25} | {recall_3:<10.0%} | {'100%':<10} | {'✅' if recall_3 == 1.0 else '❌'}")
+        print(f"{'Pairwise Accuracy':<25} | {pairwise_acc:<10.1%} | {'≥85%':<10} | {'✅' if pairwise_acc >= 0.85 else '❌'}")
+        print(f"{'Tier Separation':<25} | {'Yes' if tier_separation else 'No':<10} | {'Yes':<10} | {'✅' if tier_separation else '❌'}")
+        
+        print(f"\n📈 Tier Mean Scores:")
+        print(f"   Good (1.0):    {mean_good:.3f}  ({len(good_scores)} candidates)")
+        print(f"   Partial (0.5): {mean_partial:.3f}  ({len(partial_scores)} candidates)")
+        print(f"   Poor (0.0):    {mean_poor:.3f}  ({len(poor_scores)} candidates)")
+        
+        print("\n📋 Full Comparison Table:")
+        print(f"{'Rank':<5} | {'Candidate':<25} | {'Predicted':<10} | {'Ground Truth':<12} | {'Match?'}")
+        print("-" * 70)
+        for rank, c in enumerate(comparison_ranked, 1):
+            gt_label = "Good" if c['ground_truth'] == 1.0 else "Partial" if c['ground_truth'] == 0.5 else "Poor"
+            # Check if ranking is reasonable
+            match = "✅" if (c['predicted'] >= 0.6 and c['ground_truth'] >= 0.5) or \
+                           (c['predicted'] < 0.6 and c['ground_truth'] < 0.5) or \
+                           (c['predicted'] < 0.35 and c['ground_truth'] == 0.0) else "⚠️"
+            print(f"{rank:<5} | {c['id']:<25} | {c['predicted']:<10.4f} | {gt_label:<12} | {match}")
+    else:
+        print("⚠️ Could not match results to ground truth labels.")
+    
     # Show detailed breakdown for top 3
     print("\n" + "="*80)
     print("📊 TOP 3 CANDIDATES - DETAILED BREAKDOWN")
@@ -367,7 +484,8 @@ def main():
     
     print("\n" + "="*80)
     print("💡 KEY INSIGHT: The deterministic component ensures verifiable signals")
-    print("   (years extracted, skill coverage) anchor the LLM's contextual assessment.")
+    print("   (years extracted, skill coverage, degree relevance) anchor the LLM's assessment.")
+    print("   Zero weight is given to institution prestige to ensure fair, technical evaluation.")
     print("="*80 + "\n")
 
 

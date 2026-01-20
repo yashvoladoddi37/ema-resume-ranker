@@ -1,0 +1,23 @@
+============================================================
+TEST CANDIDATE B (Mid-Level SDE)
+3 Years Exp | Pure SDE (No AI/Support)
+============================================================
+
+SUMMARY
+-------
+Software Developer with 3 years of experience building scalable 
+web applications. Expert in frontend and backend technologies.
+
+EXPERIENCE
+----------
+Software Developer | WebBuild | 2022 - Present
+• Built React frontends and Node.js backends.
+• Integrated REST APIs for e-commerce platforms. (3 years)
+
+SKILLS
+------
+JavaScript, React, Node.js, REST API, SQL, CSS, HTML
+---
+EDUCATION
+Global Technical Institute | B.S. in Software Engineering | 2018 - 2022
+============================================================

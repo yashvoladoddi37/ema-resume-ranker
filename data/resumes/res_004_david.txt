@@ -23,5 +23,8 @@ SKILLS
 ------
 Languages: Go, Python, SQL
 Tech: REST, SOAP, Webhooks, AWS (S3, RDS)
-Tools: Prometheus, Kibana, Splunk
+Tools: Prometheus, Kibana, Splunk, Git, Docker, Kubernetes
+---
+EDUCATION
+Seattle University | B.S. in Computer Science | 2014 - 2018
 ============================================================

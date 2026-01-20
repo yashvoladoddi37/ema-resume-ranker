@@ -366,21 +366,22 @@ def show_score_analysis(results, ground_truth):
     
     comparison_data = []
     for r in results:
+        current_score = r.get('final_score', r.get('score', 0))
         comparison_data.append({
             'Candidate': r['id'].replace('res_', '').replace('_', ' ').title(),
-            'LLM Score': r['score'],
+            'LLM Score': current_score,
             'Ground Truth': gt_map.get(r['id'], 0.0)
         })
     
     # Score comparison chart
-    st.subheader("LLM Score vs Ground Truth")
+    st.subheader("Engine Score vs Ground Truth")
     
     fig = go.Figure()
     
     candidates = [d['Candidate'] for d in comparison_data]
     
     fig.add_trace(go.Bar(
-        name='LLM Score',
+        name='Engine Score (Hybrid)',
         x=candidates,
         y=[d['LLM Score'] for d in comparison_data],
         marker_color='#1f77b4'
@@ -423,7 +424,7 @@ def show_score_analysis(results, ground_truth):
     
     with col3:
         # Average score difference
-        avg_diff = sum(abs(r['score'] - gt_map.get(r['id'], 0)) for r in results) / len(results)
+        avg_diff = sum(abs(r.get('final_score', r.get('score', 0)) - gt_map.get(r['id'], 0)) for r in results) / len(results)
         st.metric("Avg Score Difference", f"{avg_diff:.2f}")
 
 if __name__ == "__main__":

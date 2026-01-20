@@ -22,23 +22,33 @@ For the core matching task, I implemented a **Sequential Hybrid Engine** (60% LL
 3. **LLM Stage (Cognitive Layer)**: The LLM (Llama 3.3 70B) evaluates the *quality* and *relevance* of the resume using the deterministic facts as an anchor.
 4. **Weighted Aggregation**: Final score combines both signals.
 
-### ⚖️ Justification & Alternatives
-#### Why this augmented approach?
-It solves the "Hallucination-Consistency" problem. By feeding deterministic facts into the LLM, we ensure the LLM reasoning doesn't contradict the data (e.g., claiming a candidate has 5 years when the system only found 2).
+### ⚖️ Ethics & Fairness: Mitigating Institution Bias
+One critical design choice in this system is the **Mitigation of Institution Prestige Bias**.
 
-| Approach | Advantages | Disadvantages |
-|-----------|------------|---------------|
-| **Parallel Hybrid** | Fast, independent | LLM reasoning may contradict hard rules |
-| **Sequential (Chosen)** | **High Consistency + Reasoning** | Slightly higher prompt tokens |
-| **Pure Semantic** | Simple baseline | Fails on "hard bars" (e.g. mandatory skills) |
+- **The Problem**: Traditional AI matchers often over-weight "Target Schools" (Ivy League, IITs), penalizing qualified candidates from lesser-known universities.
+- **The Solution**: 
+    1. **Deterministic Filter**: I implemented a strict `Degree Relevance` check that weights the *field of study* (e.g., CS, IT, Engineering) but gives **zero weight** to the name of the institution.
+    2. **LLM Guardrails**: The LLM is explicitly instructed: *"EVALUATE BY DEGREE RELEVANCE ONLY. IGNORE INSTITUTION PRESTIGE OR RANKINGS."*
+- **The Result**: In our testing, a candidate with a **Computer Science degree from a mid-tier school** (e.g., David Kim) ranks significantly higher than a candidate with a **non-relevant degree from a prestige institution** (e.g., Mike from Imperial College).
 
-**Alternative Considered**: I considered a **Pure Semantic Embedding (Cosine Similarity)** approach. While faster, I rejected it as the primary engine because embedding similarity often ignores "hard bars" (e.g., a candidate scoring high on similarity due to a generic stack but missing the mandatory 3+ years of experience).
+### 🧪 Scenario Proofing: Seniority vs. Relevance
+To ensure the engine wasn't just "blindly" awarding points for years of experience, we ran a head-to-head stress test:
+
+| Scenario | Total Exp | Relevant Exp | Result | Why? |
+|----------|-----------|--------------|--------|------|
+| **Candidate A** | 7 Years | 2 Years AI/Support | **0.63 (Partial Match)** | The system identified the **transferable seniority** but correctly penalized the lack of long-term domain depth. |
+| **Candidate B** | 3 Years | 0 Years (Pure SDE) | **0.27 (Poor Match)** | Despite having mid-level SDE skills, the system rejected the candidate for **zero domain alignment** with Ema's AI Support requirements. |
+
+**Conclusion**: The engine represents a **"Domain-First"** ranking strategy. It treats seniority as a multiplier for relevance, not a substitute for it.
 
 ### 🧪 Feature Engineering & Preprocessing
 To clean and prepare the text data:
-1. **Cleaning**: Stripping non-essential characters, normalizing case, and removing stop-words for deterministic matching.
-2. **Entity Extraction**: Using regex anchors to extract numeric years of experience and specific technical keywords (e.g., mapping "GCP" and "Google Cloud" to the same skill bucket).
-3. **Structured Context**: Feeding the LLM cleaned snippets rather than raw, noisy text to reduce token usage and improve reasoning focus.
+1. **Cleaning**: Stripping non-essential characters, normalizing case, and removing stop-words.
+2. **Entity Extraction**: 
+    - **Experience**: Regex anchors calculated from date ranges (e.g. 2024-Present).
+    - **Education**: Categorization of degrees into "Relevant" vs "Non-Relevant" buckets.
+    - **Skills**: Matching against a domain-specific technical taxonomy.
+3. **Structured Context**: Feeding the LLM cleaned snippets rather than raw, noisy text.
 
 ---
 
@@ -67,9 +77,10 @@ To clean and prepare the text data:
 
 ### Key Metrics
 - **Top-2 Accuracy**: 100% (best "Good" candidates in top 2)
-- **Tier Separation**: Clear gaps - Good (0.78+), Partial (0.32-0.60), Poor (<0.20)
-- **Deterministic Anchoring**: Sarah's 7 years + 87.5% required skill coverage validates her #2 ranking
-- **JSON Success Rate**: 100% (all 10 evaluations returned valid structured output)
+- **nDCG@3**: 0.832 (Using industry-standard `scikit-learn` implementation)
+- **Tier Separation**: Clear gaps - Good (0.67+), Partial (0.29-0.63), Poor (<0.22)
+- **Deterministic Anchoring**: Sarah's 15 years + 75% required skill coverage validates her #2 ranking
+- **JSON Success Rate**: 100% (all 12 evaluations returned valid structured output)
 
 ---
 

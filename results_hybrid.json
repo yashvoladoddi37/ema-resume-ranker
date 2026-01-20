@@ -1,0 +1,655 @@
+[
+  {
+    "id": "res_003_maya",
+    "final_score": 0.6764,
+    "score_formula": "(0.6 \u00d7 0.70) + (0.4 \u00d7 0.641) = 0.6764",
+    "components": {
+      "llm": {
+        "score": 0.7,
+        "weight": 0.6,
+        "weighted_contribution": 0.42,
+        "reasoning": "The candidate has significant experience in technical solutions engineering with a focus on Generative AI and automation flows, and has worked with relevant technologies such as LangChain, prompt engineering, and API integration. However, the candidate lacks direct experience in SaaS technical support and customer success, which are key requirements for the AI Applications Engineer role.",
+        "matched_skills": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest"
+        ],
+        "missing_skills": [
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ]
+      },
+      "deterministic": {
+        "score": 0.641,
+        "weight": 0.4,
+        "weighted_contribution": 0.2564,
+        "experience_component": 0.15,
+        "skill_component": 0.191,
+        "ai_relevance_component": 0.2,
+        "support_relevance_component": 0.0,
+        "education_component": 0.1,
+        "years_experience": 10.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest"
+        ],
+        "matched_preferred": [
+          "genai",
+          "integration",
+          "langchain",
+          "llm",
+          "prompt engineering"
+        ],
+        "missing_required": [
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "required_coverage_pct": 62.5,
+        "preferred_coverage_pct": 35.7
+      }
+    }
+  },
+  {
+    "id": "res_002_sarah",
+    "final_score": 0.6344,
+    "score_formula": "(0.6 \u00d7 0.70) + (0.4 \u00d7 0.536) = 0.6344",
+    "components": {
+      "llm": {
+        "score": 0.7,
+        "weight": 0.6,
+        "weighted_contribution": 0.42,
+        "reasoning": "The candidate has significant experience in technical support and customer success for SaaS, with a strong background in troubleshooting production issues and diagnosing API configuration problems. However, the candidate lacks direct experience with GenAI automation flows and JSON/REST APIs, which are crucial for the AI Applications Engineer role. The candidate's proficiency in Python, API integrations, and dashboard creation using Python and SQL are notable strengths.",
+        "matched_skills": [
+          "api",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "missing_skills": [
+          "json",
+          "rest",
+          "genai",
+          "ml performance diagnosis"
+        ]
+      },
+      "deterministic": {
+        "score": 0.536,
+        "weight": 0.4,
+        "weighted_contribution": 0.2144,
+        "experience_component": 0.15,
+        "skill_component": 0.199,
+        "ai_relevance_component": 0.0,
+        "support_relevance_component": 0.087,
+        "education_component": 0.1,
+        "years_experience": 15.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "api",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "matched_preferred": [
+          "aws",
+          "integration"
+        ],
+        "missing_required": [
+          "json",
+          "rest"
+        ],
+        "required_coverage_pct": 75.0,
+        "preferred_coverage_pct": 14.3
+      }
+    }
+  },
+  {
+    "id": "res_test_A",
+    "final_score": 0.634,
+    "score_formula": "(0.6 \u00d7 0.60) + (0.4 \u00d7 0.685) = 0.6340",
+    "components": {
+      "llm": {
+        "score": 0.6,
+        "weight": 0.6,
+        "weighted_contribution": 0.36,
+        "reasoning": "The candidate has relevant experience in AI support and technical success, with proficiency in troubleshooting production issues and configuring API integrations, but lacks significant experience in SaaS technical support and GenAI automation flows, and has limited experience with JSON and REST APIs.",
+        "matched_skills": [
+          "api",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "missing_skills": [
+          "json",
+          "rest",
+          "genai automation flows"
+        ]
+      },
+      "deterministic": {
+        "score": 0.685,
+        "weight": 0.4,
+        "weighted_contribution": 0.274,
+        "experience_component": 0.15,
+        "skill_component": 0.199,
+        "ai_relevance_component": 0.097,
+        "support_relevance_component": 0.139,
+        "education_component": 0.1,
+        "years_experience": 12.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "api",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "matched_preferred": [
+          "genai",
+          "llm"
+        ],
+        "missing_required": [
+          "json",
+          "rest"
+        ],
+        "required_coverage_pct": 75.0,
+        "preferred_coverage_pct": 14.3
+      }
+    }
+  },
+  {
+    "id": "res_004_david",
+    "final_score": 0.6028,
+    "score_formula": "(0.6 \u00d7 0.70) + (0.4 \u00d7 0.457) = 0.6028",
+    "components": {
+      "llm": {
+        "score": 0.7,
+        "weight": 0.6,
+        "weighted_contribution": 0.42,
+        "reasoning": "The candidate has significant experience in building and troubleshooting backend integrations and data sync pipelines, with proficiency in REST, Python, and troubleshooting, which aligns with the job requirements. However, the candidate lacks direct experience in technical support or customer success for SaaS, and has limited exposure to JSON and production issue resolution, resulting in a partial fit.",
+        "matched_skills": [
+          "api",
+          "python",
+          "rest",
+          "saas",
+          "troubleshooting"
+        ],
+        "missing_skills": [
+          "json",
+          "production",
+          "technical support"
+        ]
+      },
+      "deterministic": {
+        "score": 0.457,
+        "weight": 0.4,
+        "weighted_contribution": 0.1828,
+        "experience_component": 0.15,
+        "skill_component": 0.191,
+        "ai_relevance_component": 0.0,
+        "support_relevance_component": 0.016,
+        "education_component": 0.1,
+        "years_experience": 11.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "api",
+          "python",
+          "rest",
+          "saas",
+          "troubleshooting"
+        ],
+        "matched_preferred": [
+          "ats",
+          "aws",
+          "crm",
+          "integration",
+          "soap"
+        ],
+        "missing_required": [
+          "json",
+          "production",
+          "technical support"
+        ],
+        "required_coverage_pct": 62.5,
+        "preferred_coverage_pct": 35.7
+      }
+    }
+  },
+  {
+    "id": "res_001_yashpreet",
+    "final_score": 0.5728,
+    "score_formula": "(0.6 \u00d7 0.60) + (0.4 \u00d7 0.532) = 0.5728",
+    "components": {
+      "llm": {
+        "score": 0.6,
+        "weight": 0.6,
+        "weighted_contribution": 0.36,
+        "reasoning": "The candidate has a strong background in software development and AI engineering, with experience in integrating RESTful APIs and working with AI/ML technologies such as LLM and LangGraph. However, they lack direct experience in technical support or customer success for SaaS, and their experience with JSON, production issues, and troubleshooting is limited.",
+        "matched_skills": [
+          "api",
+          "python",
+          "rest"
+        ],
+        "missing_skills": [
+          "json",
+          "production",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ]
+      },
+      "deterministic": {
+        "score": 0.532,
+        "weight": 0.4,
+        "weighted_contribution": 0.2128,
+        "experience_component": 0.15,
+        "skill_component": 0.106,
+        "ai_relevance_component": 0.175,
+        "support_relevance_component": 0.0,
+        "education_component": 0.1,
+        "years_experience": 6.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "api",
+          "python"
+        ],
+        "matched_preferred": [
+          "aws",
+          "crm",
+          "langchain",
+          "llm",
+          "ml",
+          "prompt engineering"
+        ],
+        "missing_required": [
+          "json",
+          "production",
+          "rest",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "required_coverage_pct": 25.0,
+        "preferred_coverage_pct": 42.9
+      }
+    }
+  },
+  {
+    "id": "res_005_mike",
+    "final_score": 0.3316,
+    "score_formula": "(0.6 \u00d7 0.40) + (0.4 \u00d7 0.229) = 0.3316",
+    "components": {
+      "llm": {
+        "score": 0.4,
+        "weight": 0.6,
+        "weighted_contribution": 0.24,
+        "reasoning": "The candidate has some transferable skills such as proficiency in Python and experience with REST APIs, but lacks significant experience in technical support, SaaS, and troubleshooting production issues, which are core requirements for the AI Applications Engineer role at Ema. Additionally, the candidate's background is more focused on full-stack web development rather than AI or GenAI workflows. The candidate's education in Physics may provide a foundation in analytical thinking, but it does not directly align with the job requirements.",
+        "matched_skills": [
+          "python",
+          "rest"
+        ],
+        "missing_skills": [
+          "api",
+          "json",
+          "production",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ]
+      },
+      "deterministic": {
+        "score": 0.229,
+        "weight": 0.4,
+        "weighted_contribution": 0.0916,
+        "experience_component": 0.15,
+        "skill_component": 0.061,
+        "ai_relevance_component": 0.018,
+        "support_relevance_component": 0.0,
+        "education_component": 0.0,
+        "years_experience": 11.0,
+        "has_relevant_degree": false,
+        "matched_required": [
+          "python",
+          "rest"
+        ],
+        "matched_preferred": [],
+        "missing_required": [
+          "api",
+          "json",
+          "production",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "required_coverage_pct": 25.0,
+        "preferred_coverage_pct": 0.0
+      }
+    }
+  },
+  {
+    "id": "res_007_sam",
+    "final_score": 0.2964,
+    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.291) = 0.2964",
+    "components": {
+      "llm": {
+        "score": 0.3,
+        "weight": 0.6,
+        "weighted_contribution": 0.18,
+        "reasoning": "The candidate has significant experience in technical customer success and account management, but lacks core skills required for the AI Applications Engineer role, such as proficiency in Python, JSON, REST, and troubleshooting production issues related to ML performance. The candidate's technical skills are mostly focused on CRM tools and basic SQL, which may not be directly applicable to the role.",
+        "matched_skills": [
+          "api",
+          "saas",
+          "troubleshooting"
+        ],
+        "missing_skills": [
+          "json",
+          "production",
+          "python",
+          "rest",
+          "technical support",
+          "ml performance"
+        ]
+      },
+      "deterministic": {
+        "score": 0.291,
+        "weight": 0.4,
+        "weighted_contribution": 0.1164,
+        "experience_component": 0.15,
+        "skill_component": 0.099,
+        "ai_relevance_component": 0.021,
+        "support_relevance_component": 0.021,
+        "education_component": 0.0,
+        "years_experience": 8.0,
+        "has_relevant_degree": false,
+        "matched_required": [
+          "api",
+          "saas",
+          "troubleshooting"
+        ],
+        "matched_preferred": [
+          "crm"
+        ],
+        "missing_required": [
+          "json",
+          "production",
+          "python",
+          "rest",
+          "technical support"
+        ],
+        "required_coverage_pct": 37.5,
+        "preferred_coverage_pct": 7.1
+      }
+    }
+  },
+  {
+    "id": "res_010_elena",
+    "final_score": 0.296,
+    "score_formula": "(0.6 \u00d7 0.20) + (0.4 \u00d7 0.440) = 0.2960",
+    "components": {
+      "llm": {
+        "score": 0.2,
+        "weight": 0.6,
+        "weighted_contribution": 0.12,
+        "reasoning": "The candidate has some transferable skills from technical support experience, but lacks significant experience in SaaS, API integration, and proficiency in Python, which are core requirements for the AI Applications Engineer role. The candidate's education in Information Technology is relevant, but the skill set is not aligned with the job description.",
+        "matched_skills": [
+          "technical support",
+          "troubleshooting"
+        ],
+        "missing_skills": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas"
+        ]
+      },
+      "deterministic": {
+        "score": 0.44,
+        "weight": 0.4,
+        "weighted_contribution": 0.176,
+        "experience_component": 0.15,
+        "skill_component": 0.061,
+        "ai_relevance_component": 0.043,
+        "support_relevance_component": 0.086,
+        "education_component": 0.1,
+        "years_experience": 10.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "technical support",
+          "troubleshooting"
+        ],
+        "matched_preferred": [],
+        "missing_required": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas"
+        ],
+        "required_coverage_pct": 25.0,
+        "preferred_coverage_pct": 0.0
+      }
+    }
+  },
+  {
+    "id": "res_006_priya",
+    "final_score": 0.29,
+    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.275) = 0.2900",
+    "components": {
+      "llm": {
+        "score": 0.3,
+        "weight": 0.6,
+        "weighted_contribution": 0.18,
+        "reasoning": "The candidate has a strong background in data science and machine learning, but lacks direct experience in technical support, SaaS, and API integration, which are crucial for the AI Applications Engineer role. While the candidate has experience with Python, the required skills for the role, such as API, JSON, and troubleshooting, are not adequately covered in their resume.",
+        "matched_skills": [
+          "python"
+        ],
+        "missing_skills": [
+          "api",
+          "json",
+          "production",
+          "rest",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ]
+      },
+      "deterministic": {
+        "score": 0.275,
+        "weight": 0.4,
+        "weighted_contribution": 0.11,
+        "experience_component": 0.15,
+        "skill_component": 0.046,
+        "ai_relevance_component": 0.079,
+        "support_relevance_component": 0.0,
+        "education_component": 0.0,
+        "years_experience": 7.0,
+        "has_relevant_degree": false,
+        "matched_required": [
+          "python"
+        ],
+        "matched_preferred": [
+          "aws",
+          "ml"
+        ],
+        "missing_required": [
+          "api",
+          "json",
+          "production",
+          "rest",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "required_coverage_pct": 12.5,
+        "preferred_coverage_pct": 14.3
+      }
+    }
+  },
+  {
+    "id": "res_test_B",
+    "final_score": 0.2728,
+    "score_formula": "(0.6 \u00d7 0.20) + (0.4 \u00d7 0.382) = 0.2728",
+    "components": {
+      "llm": {
+        "score": 0.2,
+        "weight": 0.6,
+        "weighted_contribution": 0.12,
+        "reasoning": "The candidate has some transferable skills such as experience with REST APIs, but lacks major skills required for the AI Applications Engineer role, including proficiency in Python, troubleshooting production issues, and experience with SaaS or technical support. The candidate's background is primarily in software development with no direct experience in AI or GenAI workflows.",
+        "matched_skills": [
+          "REST API"
+        ],
+        "missing_skills": [
+          "Python",
+          "JSON",
+          "SaaS",
+          "Technical Support",
+          "Troubleshooting",
+          "Production Issue Resolution"
+        ]
+      },
+      "deterministic": {
+        "score": 0.382,
+        "weight": 0.4,
+        "weighted_contribution": 0.1528,
+        "experience_component": 0.15,
+        "skill_component": 0.061,
+        "ai_relevance_component": 0.047,
+        "support_relevance_component": 0.024,
+        "education_component": 0.1,
+        "years_experience": 8.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "api",
+          "rest"
+        ],
+        "matched_preferred": [],
+        "missing_required": [
+          "json",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "required_coverage_pct": 25.0,
+        "preferred_coverage_pct": 0.0
+      }
+    }
+  },
+  {
+    "id": "res_009_james",
+    "final_score": 0.18,
+    "score_formula": "(0.6 \u00d7 0.20) + (0.4 \u00d7 0.150) = 0.1800",
+    "components": {
+      "llm": {
+        "score": 0.2,
+        "weight": 0.6,
+        "weighted_contribution": 0.12,
+        "reasoning": "The candidate has 6 years of experience in building high-performance Java backends, but lacks direct experience in AI applications, technical support, and proficiency in required skills such as Python, APIs, and SaaS. However, their experience in building high-volume transaction processing systems and expertise in microservices reliability may provide some transferable skills.",
+        "matched_skills": [],
+        "missing_skills": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ]
+      },
+      "deterministic": {
+        "score": 0.15,
+        "weight": 0.4,
+        "weighted_contribution": 0.06,
+        "experience_component": 0.15,
+        "skill_component": 0.0,
+        "ai_relevance_component": 0.0,
+        "support_relevance_component": 0.0,
+        "education_component": 0.0,
+        "years_experience": 6.0,
+        "has_relevant_degree": false,
+        "matched_required": [],
+        "matched_preferred": [],
+        "missing_required": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "required_coverage_pct": 0.0,
+        "preferred_coverage_pct": 0.0
+      }
+    }
+  },
+  {
+    "id": "res_008_jordan",
+    "final_score": 0.1548,
+    "score_formula": "(0.6 \u00d7 0.10) + (0.4 \u00d7 0.237) = 0.1548",
+    "components": {
+      "llm": {
+        "score": 0.1,
+        "weight": 0.6,
+        "weighted_contribution": 0.06,
+        "reasoning": "The candidate lacks experience in technical support, SaaS, and proficiency in APIs, JSON, and Python, which are crucial for the AI Applications Engineer role at Ema, with their background being primarily in frontend development with React and TypeScript.",
+        "matched_skills": [],
+        "missing_skills": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ]
+      },
+      "deterministic": {
+        "score": 0.237,
+        "weight": 0.4,
+        "weighted_contribution": 0.0948,
+        "experience_component": 0.15,
+        "skill_component": 0.0,
+        "ai_relevance_component": 0.087,
+        "support_relevance_component": 0.0,
+        "education_component": 0.0,
+        "years_experience": 6.0,
+        "has_relevant_degree": false,
+        "matched_required": [],
+        "matched_preferred": [],
+        "missing_required": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "required_coverage_pct": 0.0,
+        "preferred_coverage_pct": 0.0
+      }
+    }
+  }
+]
