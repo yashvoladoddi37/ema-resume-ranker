@@ -137,12 +137,21 @@ LLM_MODEL=llama-3.3-70b-versatile
 
 ### Running the Demo
 ```bash
-# Hybrid Engine (LLM + Deterministic)
+# Hybrid-Only Run (For detailed metrics)
 python demo_hybrid.py
 
-# LLM-Only (minimal dependencies)
-python demo_minimal.py
+# Launch the Dashboard
+streamlit run app.py
 ```
+
+## 🧪 Testing Your Own Resume
+
+Want to see how you rank?
+1. Drop your resume as a `.txt` file into `data/resumes/`
+2. Run `python demo_hybrid.py`
+3. Launch the dashboard to see your score and the AI's feedback!
+
+See the [Reviewer's Guide](file:///home/yashpreet-voladoddi/Desktop/ema/REVIEWER_GUIDE.md) for a step-by-step walkthrough.
 
 **Output**: 
 - Console table with rankings
