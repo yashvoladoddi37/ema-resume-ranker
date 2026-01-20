@@ -299,10 +299,82 @@ class HybridEngine:
         # Weighted combination
         final_score = (WEIGHT_LLM * llm_score) + (WEIGHT_DETERMINISTIC * det_score)
         
+        # Extract deterministic breakdown for detailed calculations
+        det_breakdown = det_result['breakdown']
+        det_data = det_result['extracted_data']
+        
+        # Generate Detailed Mathematical Explanation
+        explanation = (
+            f"## Final Score Calculation: {final_score:.4f}\n\n"
+            f"**Formula:** `Final = (LLM_Weight × LLM_Score) + (Det_Weight × Det_Score)`\n\n"
+            f"**Calculation:** `({WEIGHT_LLM} × {llm_score:.2f}) + ({WEIGHT_DETERMINISTIC} × {det_score:.3f}) = {final_score:.4f}`\n\n"
+            
+            f"---\n\n"
+            
+            f"### 1️⃣ LLM Component (Weight: {int(WEIGHT_LLM*100)}%)\n\n"
+            f"**Score:** {llm_score:.2f} → **Contribution:** {WEIGHT_LLM * llm_score:.4f}\n\n"
+            f"The LLM evaluates three dimensions:\n"
+            f"- **Skill Alignment:** {llm_result.get('technical_breakdown', {}).get('skill_alignment', 0):.2f}\n"
+            f"- **Experience Depth:** {llm_result.get('technical_breakdown', {}).get('experience_depth', 0):.2f}\n"
+            f"- **Domain Fit:** {llm_result.get('technical_breakdown', {}).get('domain_fit', 0):.2f}\n\n"
+            f"**Reasoning:** \"{llm_result.get('reasoning', 'No reasoning provided')[:150]}...\"\n\n"
+            
+            f"---\n\n"
+            
+            f"### 2️⃣ Deterministic Component (Weight: {int(WEIGHT_DETERMINISTIC*100)}%)\n\n"
+            f"**Score:** {det_score:.3f} → **Contribution:** {WEIGHT_DETERMINISTIC * det_score:.4f}\n\n"
+            
+            f"#### Step-by-Step Calculation:\n\n"
+            
+            f"**A. Technical Skills (35% weight)**\n"
+            f"- Required skills matched: {len(det_data['matched_required'])}/8 = {len(det_data['matched_required'])/8:.3f}\n"
+            f"- Preferred skills matched: {len(det_data.get('matched_preferred', []))}/{len(self.deterministic_scorer.PREFERRED_SKILLS)} = {len(det_data.get('matched_preferred', []))/len(self.deterministic_scorer.PREFERRED_SKILLS):.3f}\n"
+            f"- Skill score = (0.7 × {len(det_data['matched_required'])/8:.3f}) + (0.3 × {len(det_data.get('matched_preferred', []))/len(self.deterministic_scorer.PREFERRED_SKILLS):.3f}) = {(0.7 * len(det_data['matched_required'])/8) + (0.3 * len(det_data.get('matched_preferred', []))/len(self.deterministic_scorer.PREFERRED_SKILLS)):.3f}\n"
+            f"- **Component contribution:** 0.35 × {(0.7 * len(det_data['matched_required'])/8) + (0.3 * len(det_data.get('matched_preferred', []))/len(self.deterministic_scorer.PREFERRED_SKILLS)):.3f} = **{det_breakdown['skill_component']:.3f}**\n\n"
+            
+            f"**B. AI Relevance (35% weight)**\n"
+            f"- Years of experience: {det_data['years_experience']:.1f} years\n"
+            f"- Experience score = min({det_data['years_experience']:.1f} / 3.0, 1.0) = {min(det_data['years_experience'] / 3.0, 1.0):.3f}\n"
+            f"- **Component contribution:** 0.35 × (AI keyword density) = **{det_breakdown['ai_relevance_component']:.3f}**\n\n"
+            
+            f"**C. Experience (15% weight)**\n"
+            f"- Experience score: {min(det_data['years_experience'] / 3.0, 1.0):.3f}\n"
+            f"- **Component contribution:** 0.15 × {min(det_data['years_experience'] / 3.0, 1.0):.3f} = **{det_breakdown['experience_component']:.3f}**\n\n"
+            
+            f"**D. Education (10% weight)**\n"
+            f"- Relevant degree: {'Yes' if det_data['has_relevant_degree'] else 'No'} → Score: {1.0 if det_data['has_relevant_degree'] else 0.0}\n"
+            f"- **Component contribution:** 0.10 × {1.0 if det_data['has_relevant_degree'] else 0.0} = **{det_breakdown['education_component']:.3f}**\n\n"
+            
+            f"**E. Support Relevance (5% weight)**\n"
+            f"- Support keyword density score\n"
+            f"- **Component contribution:** 0.05 × (support density) = **{det_breakdown['support_relevance_component']:.3f}**\n\n"
+            
+            f"**Deterministic Total:**\n"
+            f"```\n"
+            f"{det_breakdown['skill_component']:.3f} (skills)\n"
+            f"+ {det_breakdown['ai_relevance_component']:.3f} (AI relevance)\n"
+            f"+ {det_breakdown['experience_component']:.3f} (experience)\n"
+            f"+ {det_breakdown['education_component']:.3f} (education)\n"
+            f"+ {det_breakdown['support_relevance_component']:.3f} (support)\n"
+            f"= {det_score:.3f}\n"
+            f"```\n\n"
+            
+            f"---\n\n"
+            
+            f"### 🎯 Final Weighted Sum\n\n"
+            f"```\n"
+            f"LLM contribution:    {WEIGHT_LLM} × {llm_score:.2f} = {WEIGHT_LLM * llm_score:.4f}\n"
+            f"Det contribution:  + {WEIGHT_DETERMINISTIC} × {det_score:.3f} = {WEIGHT_DETERMINISTIC * det_score:.4f}\n"
+            f"                    {'─' * 35}\n"
+            f"FINAL SCORE:                      {final_score:.4f}\n"
+            f"```"
+        )
+
         return {
             'id': resume['id'],
             'final_score': round(final_score, 4),
             'score_formula': f"({WEIGHT_LLM} × {llm_score:.2f}) + ({WEIGHT_DETERMINISTIC} × {det_score:.3f}) = {final_score:.4f}",
+            'score_explanation': explanation,
             'components': {
                 'llm': {
                     'score': llm_score,
