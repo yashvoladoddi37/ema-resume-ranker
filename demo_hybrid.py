@@ -120,9 +120,9 @@ class DeterministicScorer:
         edu_score = 1.0 if has_relevant_degree else 0.0
 
         # 5. Calculate final deterministic score
-        # Updated weighting based on JD analysis:
+        # Updated weighting based on JD analysis (totals 100%):
         # - Technical Skills: 35% (APIs, Python - foundation)
-        # - AI Relevance: 30% (GenAI/LLM - differentiator)
+        # - AI Relevance: 35% (GenAI/LLM - core differentiator)
         # - Experience: 15% (3+ years preferred)
         # - Support Relevance: 5% (preferred, not required)
         # - Education: 10% (relevant degree)
@@ -130,7 +130,7 @@ class DeterministicScorer:
         final_score = (
             0.15 * exp_score +
             0.35 * skill_score +
-            0.30 * ai_relevance +
+            0.35 * ai_relevance +
             0.05 * support_relevance +
             0.10 * edu_score
         )
@@ -140,7 +140,7 @@ class DeterministicScorer:
             'breakdown': {
                 'experience_component': round(0.15 * exp_score, 3),
                 'skill_component': round(0.35 * skill_score, 3),
-                'ai_relevance_component': round(0.30 * ai_relevance, 3),
+                'ai_relevance_component': round(0.35 * ai_relevance, 3),
                 'support_relevance_component': round(0.05 * support_relevance, 3),
                 'education_component': round(0.10 * edu_score, 3)
             },
