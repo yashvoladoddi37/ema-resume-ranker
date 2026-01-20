@@ -284,12 +284,15 @@ def show_detailed_rankings(results):
             # Skills
             col1, col2 = st.columns(2)
             
+            matched = candidate.get('components', {}).get('llm', {}).get('matched_skills', candidate.get('matched_skills', []))
+            missing = candidate.get('components', {}).get('llm', {}).get('missing_skills', candidate.get('missing_skills', []))
+            
             with col1:
                 st.markdown("#### ✅ Matched Skills")
-                if candidate['matched_skills']:
+                if matched:
                     skills_html = "".join([
                         f'<span class="skill-tag skill-matched">{skill}</span>'
-                        for skill in candidate['matched_skills']
+                        for skill in matched
                     ])
                     st.markdown(skills_html, unsafe_allow_html=True)
                 else:
@@ -297,10 +300,10 @@ def show_detailed_rankings(results):
             
             with col2:
                 st.markdown("#### ❌ Missing Skills")
-                if candidate['missing_skills']:
+                if missing:
                     skills_html = "".join([
                         f'<span class="skill-tag skill-missing">{skill}</span>'
-                        for skill in candidate['missing_skills']
+                        for skill in missing
                     ])
                     st.markdown(skills_html, unsafe_allow_html=True)
                 else:
@@ -375,18 +378,21 @@ def show_individual_candidate(results):
         with tab3:
             col1, col2 = st.columns(2)
             
+            matched = candidate.get('components', {}).get('llm', {}).get('matched_skills', candidate.get('matched_skills', []))
+            missing = candidate.get('components', {}).get('llm', {}).get('missing_skills', candidate.get('missing_skills', []))
+            
             with col1:
                 st.markdown("### ✅ Matched Skills")
-                if candidate['matched_skills']:
-                    for skill in candidate['matched_skills']:
+                if matched:
+                    for skill in matched:
                         st.markdown(f"- {skill}")
                 else:
                     st.markdown("_No matched skills_")
             
             with col2:
                 st.markdown("### ❌ Missing Skills")
-                if candidate['missing_skills']:
-                    for skill in candidate['missing_skills']:
+                if missing:
+                    for skill in missing:
                         st.markdown(f"- {skill}")
                 else:
                     st.markdown("_No missing skills_")
