@@ -1,0 +1,39 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"JAMES WILSON\",\n   \"skills\": [\n      \"Java\",\n      \"SQL\",\n      \"Kotlin\",\n      \"Spring Boot\",\n      \"Hibernate\",\n      \"Oracle DB\",\n      \"Microservices\"\n   ],\n   \"total_years_experience\": 4.0,\n   \"experience\": [\n      {\n         \"title\": \"Senior Java Developer\",\n         \"company\": \"Banking Corp\",\n         \"duration_years\": 4.0,\n         \"start_date\": \"2021\",\n         \"end_date\": \"January 2025\",\n         \"key_responsibilities\": [\n            \"Built high-volume transaction processing systems in Spring Boot\",\n            \"Expert in Oracle DB and microservices reliability\"\n         ]\n      }\n   ],\n   \"education\": {\n      \"degree\": \"\",\n      \"field\": \"\",\n      \"institution\": \"\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n      \"Financial Services\",\n      \"Cloud Infrastructure\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "JAMES WILSON",
+    "skills": [
+      "Java",
+      "SQL",
+      "Kotlin",
+      "Spring Boot",
+      "Hibernate",
+      "Oracle DB",
+      "Microservices"
+    ],
+    "total_years_experience": 4.0,
+    "experience": [
+      {
+        "title": "Senior Java Developer",
+        "company": "Banking Corp",
+        "duration_years": 4.0,
+        "start_date": "2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built high-volume transaction processing systems in Spring Boot",
+          "Expert in Oracle DB and microservices reliability"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "",
+      "field": "",
+      "institution": ""
+    },
+    "certifications": [],
+    "domains": [
+      "Financial Services",
+      "Cloud Infrastructure"
+    ]
+  }
+}

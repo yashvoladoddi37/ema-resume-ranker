@@ -1,0 +1,31 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.8,\n     \"reasoning\": \"The candidate has proficiency in Python, APIs (Zendesk APIs), and experience with logging and dashboard creation tools (DataDog, Grafana), but lacks direct experience with GenAI, ML performance diagnosis, and specific CRM/ATS integrations beyond Salesforce and Zendesk.\",\n     \"matched_skills\": [\n       \"Python\",\n       \"APIs\",\n       \"DataDog\",\n       \"Grafana\",\n       \"Zendesk APIs\"\n     ],\n     \"missing_skills\": [\n       \"GenAI\",\n       \"ML performance diagnosis\",\n       \"SOAP\",\n       \"SOAP API integration\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate has 8 years of experience, exceeding the required 3+ years, with relevant experience in technical support and customer success for SaaS, which aligns well with the job requirements.\"\n   },\n   \"domain_fit\": {\n     \"score\": 0.7,\n     \"reasoning\": \"The candidate's background in SaaS, customer support, and API integration aligns moderately well with the role of an AI Applications Engineer, but lacks direct experience in AI/ML.\"\n   },\n   \"overall_assessment\": \"Sarah Johnson is a strong candidate with a good balance of technical skills and relevant experience, but may require additional training or support to fully meet the AI/ML aspects of the role.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.8,
+      "reasoning": "The candidate has proficiency in Python, APIs (Zendesk APIs), and experience with logging and dashboard creation tools (DataDog, Grafana), but lacks direct experience with GenAI, ML performance diagnosis, and specific CRM/ATS integrations beyond Salesforce and Zendesk.",
+      "matched_skills": [
+        "Python",
+        "APIs",
+        "DataDog",
+        "Grafana",
+        "Zendesk APIs"
+      ],
+      "missing_skills": [
+        "GenAI",
+        "ML performance diagnosis",
+        "SOAP",
+        "SOAP API integration"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.9,
+      "reasoning": "The candidate has 8 years of experience, exceeding the required 3+ years, with relevant experience in technical support and customer success for SaaS, which aligns well with the job requirements."
+    },
+    "domain_fit": {
+      "score": 0.7,
+      "reasoning": "The candidate's background in SaaS, customer support, and API integration aligns moderately well with the role of an AI Applications Engineer, but lacks direct experience in AI/ML."
+    },
+    "overall_assessment": "Sarah Johnson is a strong candidate with a good balance of technical skills and relevant experience, but may require additional training or support to fully meet the AI/ML aspects of the role."
+  }
+}

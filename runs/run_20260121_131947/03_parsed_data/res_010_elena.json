@@ -1,0 +1,50 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"ELENA CASTRO\",\n   \"skills\": [\n       \"Wireshark\",\n       \"Nagios\",\n       \"Splunk\",\n       \"Active Directory\",\n       \"System Administration\",\n       \"Troubleshooting\",\n       \"Customer Service\"\n   ],\n   \"total_years_experience\": 5.0,\n   \"experience\": [\n       {\n           \"title\": \"IT Support Associate\",\n           \"company\": \"TechHelp 24/7\",\n           \"duration_years\": 5.0,\n           \"start_date\": \"January 2020\",\n           \"end_date\": \"January 2025\",\n           \"key_responsibilities\": [\n               \"Resolved hardware and software issues for remote employees\",\n               \"Managed user accounts in Active Directory\"\n           ]\n       },\n       {\n           \"title\": \"Customer Service Representative\",\n           \"company\": \"Retail Solutions\",\n           \"duration_years\": 2.0,\n           \"start_date\": \"January 2018\",\n           \"end_date\": \"January 2020\",\n           \"key_responsibilities\": [\n               \"Assisted customers with order tracking and basic troubleshooting\"\n           ]\n       }\n   ],\n   \"education\": {\n       \"degree\": \"A.S.\",\n       \"field\": \"Information Technology\",\n       \"institution\": \"Community College of Philadelphia\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n       \"Customer Support\",\n       \"IT Support\",\n       \"System Administration\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "ELENA CASTRO",
+    "skills": [
+      "Wireshark",
+      "Nagios",
+      "Splunk",
+      "Active Directory",
+      "System Administration",
+      "Troubleshooting",
+      "Customer Service"
+    ],
+    "total_years_experience": 5.0,
+    "experience": [
+      {
+        "title": "IT Support Associate",
+        "company": "TechHelp 24/7",
+        "duration_years": 5.0,
+        "start_date": "January 2020",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Resolved hardware and software issues for remote employees",
+          "Managed user accounts in Active Directory"
+        ]
+      },
+      {
+        "title": "Customer Service Representative",
+        "company": "Retail Solutions",
+        "duration_years": 2.0,
+        "start_date": "January 2018",
+        "end_date": "January 2020",
+        "key_responsibilities": [
+          "Assisted customers with order tracking and basic troubleshooting"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "A.S.",
+      "field": "Information Technology",
+      "institution": "Community College of Philadelphia"
+    },
+    "certifications": [],
+    "domains": [
+      "Customer Support",
+      "IT Support",
+      "System Administration"
+    ]
+  }
+}

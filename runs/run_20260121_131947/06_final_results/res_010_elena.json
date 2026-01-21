@@ -1,0 +1,93 @@
+{
+  "id": "res_010_elena",
+  "candidate_name": "ELENA CASTRO",
+  "final_score": 0.36,
+  "parsed_data": {
+    "candidate_name": "ELENA CASTRO",
+    "skills": [
+      "Wireshark",
+      "Nagios",
+      "Splunk",
+      "Active Directory",
+      "System Administration",
+      "Troubleshooting",
+      "Customer Service"
+    ],
+    "total_years_experience": 5.0,
+    "experience": [
+      {
+        "title": "IT Support Associate",
+        "company": "TechHelp 24/7",
+        "duration_years": 5.0,
+        "start_date": "January 2020",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Resolved hardware and software issues for remote employees",
+          "Managed user accounts in Active Directory"
+        ]
+      },
+      {
+        "title": "Customer Service Representative",
+        "company": "Retail Solutions",
+        "duration_years": 2.0,
+        "start_date": "January 2018",
+        "end_date": "January 2020",
+        "key_responsibilities": [
+          "Assisted customers with order tracking and basic troubleshooting"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "A.S.",
+      "field": "Information Technology",
+      "institution": "Community College of Philadelphia"
+    },
+    "certifications": [],
+    "domains": [
+      "Customer Support",
+      "IT Support",
+      "System Administration"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.2,
+      "reasoning": "The candidate lacks most of the required technical skills such as proficiency in APIs, Python, and experience with ML performance troubleshooting.",
+      "matched_skills": [
+        "Troubleshooting",
+        "Customer Service"
+      ],
+      "missing_skills": [
+        "APIs",
+        "Python",
+        "ML performance troubleshooting",
+        "GenAI"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.6,
+      "reasoning": "The candidate has 5 years of experience, exceeding the 3+ years required, but the experience is not highly relevant to the AI Applications Engineer role."
+    },
+    "domain_fit": {
+      "score": 0.4,
+      "reasoning": "The candidate's background in IT Support and Customer Service is somewhat related to the role, but lacks direct experience in AI/ML or similar technical domains."
+    },
+    "overall_assessment": "Elena Castro has some relevant experience, but her skill set and domain background do not strongly align with the requirements of the AI Applications Engineer role, making her a less competitive candidate."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [
+    "Troubleshooting",
+    "Customer Service"
+  ],
+  "missing_skills": [
+    "APIs",
+    "Python",
+    "ML performance troubleshooting",
+    "GenAI"
+  ],
+  "processing_time_seconds": 9.34
+}

@@ -1,0 +1,83 @@
+You are a resume parser. Extract structured information from the following resume.
+
+RESUME TEXT:
+============================================================
+TEST CANDIDATE A (Senior Generalist)
+7 Years Exp | Only 2 Years AI/Support
+============================================================
+
+SUMMARY
+-------
+Experienced Software Engineer with a total of 7 years in the industry. 
+Spent the last 2 years transitioning into AI Support and Technical Success.
+
+EXPERIENCE
+----------
+AI Support Engineer | NewScale AI | 2024 - Present
+• Troubleshooting production LLM issues for SaaS customers. (1 year)
+• Configured API integrations for customer chatbots.
+
+Technical Support Lead | StartupX | 2023 - 2024
+• Managing customer tickets and escalation for API products. (1 year)
+
+Software Engineer | LegacyCorp | 2018 - 2023
+• Developed Java backend services for financial systems. (5 years)
+• Focused on general backend development, no AI or Support focus.
+
+SKILLS
+------
+Python, Java, API, Troubleshooting, Technical Support, GenAI
+---
+EDUCATION
+State University | B.S. or B.Tech in Computer Science | 2014 - 2018
+============================================================
+
+
+TASK:
+Extract and return ONLY a valid JSON object with this EXACT structure:
+
+{
+  "candidate_name": "Full Name",
+  "skills": ["skill1", "skill2", "skill3"],
+  "total_years_experience": 0.0,
+  "experience": [
+    {
+      "title": "Job Title",
+      "company": "Company Name",
+      "duration_years": 0.0,
+      "start_date": "Month Year",
+      "end_date": "Month Year or Present",
+      "key_responsibilities": ["responsibility1", "responsibility2"]
+    }
+  ],
+  "education": {
+    "degree": "Degree Name",
+    "field": "Field of Study",
+    "institution": "University Name"
+  },
+  "certifications": ["cert1", "cert2"],
+  "domains": ["domain1", "domain2"]
+}
+
+CRITICAL INSTRUCTIONS:
+1. **Date Handling:**
+   - If end_date is "Present", "Current", or missing, use "January 2025"
+   - Calculate duration_years accurately (e.g., "Jan 2023 - Jan 2025" = 2.0 years)
+
+2. **Skills Extraction:**
+   - Extract ALL technical skills (languages, frameworks, tools, platforms)
+   - Include synonyms where applicable
+
+3. **Total Experience:**
+   - Sum all duration_years from experience array
+   - Do NOT count overlapping periods twice
+
+4. **Domains:**
+   - Infer from experience (e.g., "built chatbot" → "Conversational AI")
+   - Common domains: "AI/ML", "Customer Support", "SaaS", "Cloud Infrastructure"
+
+5. **Output Format:**
+   - Return ONLY valid JSON
+   - NO markdown, NO backticks
+
+Begin parsing now:

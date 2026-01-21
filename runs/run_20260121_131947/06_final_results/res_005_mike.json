@@ -1,0 +1,96 @@
+{
+  "id": "res_005_mike",
+  "candidate_name": "MIKE RODRIGUEZ",
+  "final_score": 0.42,
+  "parsed_data": {
+    "candidate_name": "MIKE RODRIGUEZ",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Flask",
+      "React",
+      "Node.js",
+      "CloudWatch",
+      "DataDog",
+      "WordPress",
+      "PHP",
+      "Stripe"
+    ],
+    "total_years_experience": 4.0,
+    "experience": [
+      {
+        "title": "Full-Stack Developer",
+        "company": "SocialApp",
+        "duration_years": 4.0,
+        "start_date": "2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built responsive UI features using React and Flask",
+          "Developed REST APIs for user profiles and social feeds",
+          "Integrated Stripe for payment processing"
+        ]
+      },
+      {
+        "title": "Web Developer",
+        "company": "Local Business Solutions",
+        "duration_years": 2.0,
+        "start_date": "2019",
+        "end_date": "2021",
+        "key_responsibilities": [
+          "Created e-commerce sites using WordPress and custom PHP",
+          "Light Python scripts for data entry automation"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "M.Sc.",
+      "field": "Physics",
+      "institution": "Imperial College London"
+    },
+    "certifications": [],
+    "domains": [
+      "Web Development",
+      "E-commerce",
+      "Cloud Infrastructure"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.4,
+      "reasoning": "The candidate has Python as a required skill but lacks experience in APIs (JSON, REST, SOAP), ML performance diagnosis, and logging/dashboard creation tools.",
+      "matched_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "APIs (JSON, REST, SOAP)",
+        "ML performance diagnosis",
+        "logging/dashboard creation tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.6,
+      "reasoning": "The candidate has 4 years of experience, which meets the requirement of 3+ years, but the experience is more focused on web development rather than technical support or customer success for SaaS."
+    },
+    "domain_fit": {
+      "score": 0.2,
+      "reasoning": "The candidate's background is in web development and e-commerce, which is not directly related to AI applications engineering."
+    },
+    "overall_assessment": "The candidate has some relevant skills and sufficient years of experience, but the domain fit is low, making them a less strong candidate for the AI Applications Engineer role."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [
+    "Python"
+  ],
+  "missing_skills": [
+    "APIs (JSON, REST, SOAP)",
+    "ML performance diagnosis",
+    "logging/dashboard creation tools"
+  ],
+  "processing_time_seconds": 2.39
+}

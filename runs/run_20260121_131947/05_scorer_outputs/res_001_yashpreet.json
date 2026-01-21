@@ -1,0 +1,28 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.6,\n     \"reasoning\": \"The candidate has most required skills such as proficiency in Python, familiarity with APIs (RESTful API), and experience with AI/ML technologies, but lacks direct experience with GenAI, platform APIs, and customer data integration.\",\n     \"matched_skills\": [\n       \"Python\",\n       \"RESTful API\",\n       \"AI/ML\"\n     ],\n     \"missing_skills\": [\n       \"GenAI\",\n       \"platform APIs\",\n       \"customer data integration\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.4,\n     \"reasoning\": \"The candidate has 1.5 years of experience, which is less than the required 3+ years, but has relevant experience in AI engineering and API integration.\"\n   },\n   \"domain_fit\": {\n     \"score\": 0.8,\n     \"reasoning\": \"The candidate's background in AI/ML and experience in SaaS and cloud infrastructure align well with the role domain of AI Applications Engineer.\"\n   },\n   \"overall_assessment\": \"The candidate has a strong technical foundation and domain alignment, but lacks the required years of experience and some specific skills, making them a potential fit with additional training and development.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.6,
+      "reasoning": "The candidate has most required skills such as proficiency in Python, familiarity with APIs (RESTful API), and experience with AI/ML technologies, but lacks direct experience with GenAI, platform APIs, and customer data integration.",
+      "matched_skills": [
+        "Python",
+        "RESTful API",
+        "AI/ML"
+      ],
+      "missing_skills": [
+        "GenAI",
+        "platform APIs",
+        "customer data integration"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.4,
+      "reasoning": "The candidate has 1.5 years of experience, which is less than the required 3+ years, but has relevant experience in AI engineering and API integration."
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate's background in AI/ML and experience in SaaS and cloud infrastructure align well with the role domain of AI Applications Engineer."
+    },
+    "overall_assessment": "The candidate has a strong technical foundation and domain alignment, but lacks the required years of experience and some specific skills, making them a potential fit with additional training and development."
+  }
+}

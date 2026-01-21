@@ -1,0 +1,28 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.0,\n     \"reasoning\": \"The candidate lacks all required skills such as proficiency in APIs, ML performance diagnosis, and Python.\",\n     \"matched_skills\": [],\n     \"missing_skills\": [\"APIs\", \"ML performance diagnosis\", \"Python\", \"troubleshooting production issues\", \"logging\", \"dashboard creation\", \"alerting tools\"]\n   },\n   \"experience_depth\": {\n     \"score\": 0.4,\n     \"reasoning\": \"The candidate has 3+ years of experience but it is not relevant to the AI Applications Engineer role, with most experience in frontend development.\"\n   },\n   \"domain_fit\": {\n     \"score\": 0.0,\n     \"reasoning\": \"The candidate's background in frontend development does not align with the AI Applications Engineer role domain.\"\n   },\n   \"overall_assessment\": \"The candidate is not a strong fit for the AI Applications Engineer role due to a lack of relevant skills and experience in the AI/ML domain.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.0,
+      "reasoning": "The candidate lacks all required skills such as proficiency in APIs, ML performance diagnosis, and Python.",
+      "matched_skills": [],
+      "missing_skills": [
+        "APIs",
+        "ML performance diagnosis",
+        "Python",
+        "troubleshooting production issues",
+        "logging",
+        "dashboard creation",
+        "alerting tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.4,
+      "reasoning": "The candidate has 3+ years of experience but it is not relevant to the AI Applications Engineer role, with most experience in frontend development."
+    },
+    "domain_fit": {
+      "score": 0.0,
+      "reasoning": "The candidate's background in frontend development does not align with the AI Applications Engineer role domain."
+    },
+    "overall_assessment": "The candidate is not a strong fit for the AI Applications Engineer role due to a lack of relevant skills and experience in the AI/ML domain."
+  }
+}

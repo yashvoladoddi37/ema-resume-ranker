@@ -1,0 +1,31 @@
+============================================================
+MAYA GUPTA
+AI Solutions Engineer
+============================================================
+
+SUMMARY
+-------
+4 years experience in technical solutions engineering with a focus 
+on Generative AI and automation flows.
+
+EXPERIENCE
+----------
+Solutions Engineer | GenAI Automate | 2022 - Present
+• Configure and integrate AI/GenAI workflows for enterprise clients.
+• Expert in LangChain and prompt engineering for RAG pipelines.
+• Translate customer requirements into technical GenAI specs.
+• Troubleshoot production LLM performance and hallucination issues.
+
+Systems Analyst | Tech Solutions Ltd | 2020 - 2022
+• Integrated third-party APIs with internal ERP systems.
+• Managed data mapping and REST integration flows.
+
+SKILLS
+------
+Languages: Python, JavaScript, JSON-RPC
+AI: Prompt Engineering, LangChain, RAG, OpenAI API, Anthropic
+Tools: ELK Stack, Jenkins, Docker, Terraform
+
+EDUCATION
+UC Berkeley | B.S. in Electrical Engineering & Computer Science | 2018 - 2022
+============================================================

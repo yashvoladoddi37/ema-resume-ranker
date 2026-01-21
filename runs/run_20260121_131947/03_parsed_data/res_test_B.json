@@ -1,0 +1,39 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"TEST CANDIDATE B\",\n   \"skills\": [\n      \"JavaScript\",\n      \"React\",\n      \"Node.js\",\n      \"REST API\",\n      \"SQL\",\n      \"CSS\",\n      \"HTML\"\n   ],\n   \"total_years_experience\": 3.0,\n   \"experience\": [\n      {\n         \"title\": \"Software Developer\",\n         \"company\": \"WebBuild\",\n         \"duration_years\": 3.0,\n         \"start_date\": \"2022\",\n         \"end_date\": \"January 2025\",\n         \"key_responsibilities\": [\n            \"Built React frontends and Node.js backends\",\n            \"Integrated REST APIs for e-commerce platforms\"\n         ]\n      }\n   ],\n   \"education\": {\n      \"degree\": \"B.S.\",\n      \"field\": \"Software Engineering\",\n      \"institution\": \"Global Technical Institute\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n      \"SaaS\",\n      \"Web Development\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "TEST CANDIDATE B",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST API",
+      "SQL",
+      "CSS",
+      "HTML"
+    ],
+    "total_years_experience": 3.0,
+    "experience": [
+      {
+        "title": "Software Developer",
+        "company": "WebBuild",
+        "duration_years": 3.0,
+        "start_date": "2022",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built React frontends and Node.js backends",
+          "Integrated REST APIs for e-commerce platforms"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Software Engineering",
+      "institution": "Global Technical Institute"
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Web Development"
+    ]
+  }
+}

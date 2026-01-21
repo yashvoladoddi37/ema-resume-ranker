@@ -1,0 +1,79 @@
+You are a resume parser. Extract structured information from the following resume.
+
+RESUME TEXT:
+============================================================
+ELENA CASTRO
+Technical Support Specialist
+============================================================
+
+SUMMARY
+-------
+Detail-oriented technical support specialist with experience in 
+customer service and basic system administration.
+
+EXPERIENCE
+----------
+IT Support Associate | TechHelp 24/7 | 2020 - Present
+• Resolved hardware and software issues for remote employees.
+• Managed user accounts in Active Directory.
+
+Customer Service Representative | Retail Solutions | 2018 - 2020
+• Assisted customers with order tracking and basic troubleshooting.
+
+SKILLS
+------
+Tools: Wireshark, Nagios, Splunk, Active Directory
+---
+EDUCATION
+Community College of Philadelphia | A.S. in Information Technology | 2014 - 2016
+============================================================
+
+
+TASK:
+Extract and return ONLY a valid JSON object with this EXACT structure:
+
+{
+  "candidate_name": "Full Name",
+  "skills": ["skill1", "skill2", "skill3"],
+  "total_years_experience": 0.0,
+  "experience": [
+    {
+      "title": "Job Title",
+      "company": "Company Name",
+      "duration_years": 0.0,
+      "start_date": "Month Year",
+      "end_date": "Month Year or Present",
+      "key_responsibilities": ["responsibility1", "responsibility2"]
+    }
+  ],
+  "education": {
+    "degree": "Degree Name",
+    "field": "Field of Study",
+    "institution": "University Name"
+  },
+  "certifications": ["cert1", "cert2"],
+  "domains": ["domain1", "domain2"]
+}
+
+CRITICAL INSTRUCTIONS:
+1. **Date Handling:**
+   - If end_date is "Present", "Current", or missing, use "January 2025"
+   - Calculate duration_years accurately (e.g., "Jan 2023 - Jan 2025" = 2.0 years)
+
+2. **Skills Extraction:**
+   - Extract ALL technical skills (languages, frameworks, tools, platforms)
+   - Include synonyms where applicable
+
+3. **Total Experience:**
+   - Sum all duration_years from experience array
+   - Do NOT count overlapping periods twice
+
+4. **Domains:**
+   - Infer from experience (e.g., "built chatbot" → "Conversational AI")
+   - Common domains: "AI/ML", "Customer Support", "SaaS", "Cloud Infrastructure"
+
+5. **Output Format:**
+   - Return ONLY valid JSON
+   - NO markdown, NO backticks
+
+Begin parsing now:

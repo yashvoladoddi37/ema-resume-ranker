@@ -1,0 +1,57 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"MIKE RODRIGUEZ\",\n   \"skills\": [\n       \"Python\",\n       \"JavaScript\",\n       \"HTML\",\n       \"CSS\",\n       \"Flask\",\n       \"React\",\n       \"Node.js\",\n       \"CloudWatch\",\n       \"DataDog\",\n       \"WordPress\",\n       \"PHP\",\n       \"Stripe\"\n   ],\n   \"total_years_experience\": 4.0,\n   \"experience\": [\n       {\n           \"title\": \"Full-Stack Developer\",\n           \"company\": \"SocialApp\",\n           \"duration_years\": 4.0,\n           \"start_date\": \"2021\",\n           \"end_date\": \"January 2025\",\n           \"key_responsibilities\": [\n               \"Built responsive UI features using React and Flask\",\n               \"Developed REST APIs for user profiles and social feeds\",\n               \"Integrated Stripe for payment processing\"\n           ]\n       },\n       {\n           \"title\": \"Web Developer\",\n           \"company\": \"Local Business Solutions\",\n           \"duration_years\": 2.0,\n           \"start_date\": \"2019\",\n           \"end_date\": \"2021\",\n           \"key_responsibilities\": [\n               \"Created e-commerce sites using WordPress and custom PHP\",\n               \"Light Python scripts for data entry automation\"\n           ]\n       }\n   ],\n   \"education\": {\n       \"degree\": \"M.Sc.\",\n       \"field\": \"Physics\",\n       \"institution\": \"Imperial College London\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n       \"Web Development\",\n       \"E-commerce\",\n       \"Cloud Infrastructure\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "MIKE RODRIGUEZ",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Flask",
+      "React",
+      "Node.js",
+      "CloudWatch",
+      "DataDog",
+      "WordPress",
+      "PHP",
+      "Stripe"
+    ],
+    "total_years_experience": 4.0,
+    "experience": [
+      {
+        "title": "Full-Stack Developer",
+        "company": "SocialApp",
+        "duration_years": 4.0,
+        "start_date": "2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built responsive UI features using React and Flask",
+          "Developed REST APIs for user profiles and social feeds",
+          "Integrated Stripe for payment processing"
+        ]
+      },
+      {
+        "title": "Web Developer",
+        "company": "Local Business Solutions",
+        "duration_years": 2.0,
+        "start_date": "2019",
+        "end_date": "2021",
+        "key_responsibilities": [
+          "Created e-commerce sites using WordPress and custom PHP",
+          "Light Python scripts for data entry automation"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "M.Sc.",
+      "field": "Physics",
+      "institution": "Imperial College London"
+    },
+    "certifications": [],
+    "domains": [
+      "Web Development",
+      "E-commerce",
+      "Cloud Infrastructure"
+    ]
+  }
+}

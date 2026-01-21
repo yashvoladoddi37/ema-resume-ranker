@@ -1,0 +1,80 @@
+{
+  "id": "res_test_B",
+  "candidate_name": "TEST CANDIDATE B",
+  "final_score": 0.35,
+  "parsed_data": {
+    "candidate_name": "TEST CANDIDATE B",
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "REST API",
+      "SQL",
+      "CSS",
+      "HTML"
+    ],
+    "total_years_experience": 3.0,
+    "experience": [
+      {
+        "title": "Software Developer",
+        "company": "WebBuild",
+        "duration_years": 3.0,
+        "start_date": "2022",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built React frontends and Node.js backends",
+          "Integrated REST APIs for e-commerce platforms"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Software Engineering",
+      "institution": "Global Technical Institute"
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Web Development"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.2,
+      "reasoning": "The candidate lacks most of the required skills such as proficiency in Python, APIs (JSON, REST, SOAP), and experience with ML performance troubleshooting.",
+      "matched_skills": [
+        "REST API"
+      ],
+      "missing_skills": [
+        "Python",
+        "SOAP API",
+        "ML performance troubleshooting",
+        "logging, dashboard creation, and alerting tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.7,
+      "reasoning": "The candidate has 3 years of experience, which meets the job requirement of 3+ years, but the experience is in software development, not directly in AI applications or technical support."
+    },
+    "domain_fit": {
+      "score": 0.2,
+      "reasoning": "The candidate's background in web development and SaaS does not strongly align with the role domain of AI applications engineering."
+    },
+    "overall_assessment": "The candidate does not have the required skills and experience for the AI Applications Engineer role, but has some relevant years of experience."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [
+    "REST API"
+  ],
+  "missing_skills": [
+    "Python",
+    "SOAP API",
+    "ML performance troubleshooting",
+    "logging, dashboard creation, and alerting tools"
+  ],
+  "processing_time_seconds": 8.32
+}

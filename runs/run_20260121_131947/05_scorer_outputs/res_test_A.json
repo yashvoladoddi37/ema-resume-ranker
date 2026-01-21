@@ -1,0 +1,30 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.8,\n     \"reasoning\": \"The candidate has most of the required skills such as Python, API, and troubleshooting, but lacks explicit experience with JSON, REST, SOAP, and logging tools.\",\n     \"matched_skills\": [\n       \"Python\",\n       \"API\",\n       \"Troubleshooting\",\n       \"GenAI\"\n     ],\n     \"missing_skills\": [\n       \"JSON\",\n       \"REST\",\n       \"SOAP\",\n       \"logging tools\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate has 7 years of experience, exceeding the 3+ years requirement, with relevant experience in AI support and technical support, which aligns well with the job description.\"\n   },\n   \"domain_fit\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate's background in AI/ML and customer support aligns well with the role of AI Applications Engineer, indicating a strong domain fit.\"\n   },\n   \"overall_assessment\": \"The candidate is a strong fit for the AI Applications Engineer role, with a good balance of required skills, relevant experience, and domain alignment, but may require some additional training on specific tools and technologies.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.8,
+      "reasoning": "The candidate has most of the required skills such as Python, API, and troubleshooting, but lacks explicit experience with JSON, REST, SOAP, and logging tools.",
+      "matched_skills": [
+        "Python",
+        "API",
+        "Troubleshooting",
+        "GenAI"
+      ],
+      "missing_skills": [
+        "JSON",
+        "REST",
+        "SOAP",
+        "logging tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.9,
+      "reasoning": "The candidate has 7 years of experience, exceeding the 3+ years requirement, with relevant experience in AI support and technical support, which aligns well with the job description."
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate's background in AI/ML and customer support aligns well with the role of AI Applications Engineer, indicating a strong domain fit."
+    },
+    "overall_assessment": "The candidate is a strong fit for the AI Applications Engineer role, with a good balance of required skills, relevant experience, and domain alignment, but may require some additional training on specific tools and technologies."
+  }
+}

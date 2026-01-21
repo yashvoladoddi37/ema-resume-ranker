@@ -1,0 +1,58 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"Maya Gupta\",\n   \"skills\": [\n      \"Python\",\n      \"JavaScript\",\n      \"JSON-RPC\",\n      \"LangChain\",\n      \"Prompt Engineering\",\n      \"RAG\",\n      \"OpenAI API\",\n      \"Anthropic\",\n      \"ELK Stack\",\n      \"Jenkins\",\n      \"Docker\",\n      \"Terraform\"\n   ],\n   \"total_years_experience\": 4.0,\n   \"experience\": [\n      {\n         \"title\": \"Solutions Engineer\",\n         \"company\": \"GenAI Automate\",\n         \"duration_years\": 3.0,\n         \"start_date\": \"2022\",\n         \"end_date\": \"January 2025\",\n         \"key_responsibilities\": [\n            \"Configure and integrate AI/GenAI workflows for enterprise clients\",\n            \"Expert in LangChain and prompt engineering for RAG pipelines\",\n            \"Translate customer requirements into technical GenAI specs\",\n            \"Troubleshoot production LLM performance and hallucination issues\"\n         ]\n      },\n      {\n         \"title\": \"Systems Analyst\",\n         \"company\": \"Tech Solutions Ltd\",\n         \"duration_years\": 2.0,\n         \"start_date\": \"2020\",\n         \"end_date\": \"2022\",\n         \"key_responsibilities\": [\n            \"Integrated third-party APIs with internal ERP systems\",\n            \"Managed data mapping and REST integration flows\"\n         ]\n      }\n   ],\n   \"education\": {\n      \"degree\": \"B.S.\",\n      \"field\": \"Electrical Engineering & Computer Science\",\n      \"institution\": \"UC Berkeley\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n      \"AI/ML\",\n      \"Cloud Infrastructure\",\n      \"Automation\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "Maya Gupta",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "JSON-RPC",
+      "LangChain",
+      "Prompt Engineering",
+      "RAG",
+      "OpenAI API",
+      "Anthropic",
+      "ELK Stack",
+      "Jenkins",
+      "Docker",
+      "Terraform"
+    ],
+    "total_years_experience": 4.0,
+    "experience": [
+      {
+        "title": "Solutions Engineer",
+        "company": "GenAI Automate",
+        "duration_years": 3.0,
+        "start_date": "2022",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Configure and integrate AI/GenAI workflows for enterprise clients",
+          "Expert in LangChain and prompt engineering for RAG pipelines",
+          "Translate customer requirements into technical GenAI specs",
+          "Troubleshoot production LLM performance and hallucination issues"
+        ]
+      },
+      {
+        "title": "Systems Analyst",
+        "company": "Tech Solutions Ltd",
+        "duration_years": 2.0,
+        "start_date": "2020",
+        "end_date": "2022",
+        "key_responsibilities": [
+          "Integrated third-party APIs with internal ERP systems",
+          "Managed data mapping and REST integration flows"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Electrical Engineering & Computer Science",
+      "institution": "UC Berkeley"
+    },
+    "certifications": [],
+    "domains": [
+      "AI/ML",
+      "Cloud Infrastructure",
+      "Automation"
+    ]
+  }
+}
