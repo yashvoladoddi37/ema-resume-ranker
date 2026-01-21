@@ -4,6 +4,7 @@ import logging
 from typing import Dict, Any
 from dotenv import load_dotenv
 from src.deterministic import DeterministicExtractor
+from src.prompts import RESUME_SCORING_PROMPT
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
@@ -46,8 +47,16 @@ class HybridScorer:
             years_exp, skill_profile, domain_relevance
         )
         
-        # 2. LLM Analysis (Contextual understanding)
-        llm_result = self._call_llm(job_description, resume_text)
+        # 2. LLM Analysis (Contextual understanding with Facts)
+        # Format deterministic facts for the LLM
+        det_context_str = (
+            f"Extracted Years of Experience: {years_exp} (Target: 3+)\n"
+            f"Matched Skills: {', '.join(skill_profile.matched_required)}\n"
+            f"Missing Required Skills: {', '.join(skill_profile.missing_required)}\n"
+            f"Rule-Based Score: {deterministic_score:.2f}/1.0"
+        )
+        
+        llm_result = self._call_llm(job_description, resume_text, det_context_str)
         
         # 3. Hybrid Combination
         final_score = (
@@ -88,32 +97,13 @@ class HybridScorer:
             }
         }
     
-    def _call_llm(self, job_description: str, resume_text: str) -> dict:
-        """LLM scoring (same as before)"""
-        prompt = f"""You are a Principal AI Applications Engineer at Ema. Evaluate this candidate's Resume against the Job Description.
-
-### Instructions:
-1. Analyze with Nuance: Look beyond keyword matching. Evaluate depth of experience, seniority, and domain relevance.
-2. Score (0.0 - 1.0):
-   - 1.0: Perfect fit. Meets all primary requirements with specific relevant experience.
-   - 0.5: Partial fit. Significant experience but lacks core skills.
-   - 0.0: No fit. Irrelevant stack or domain.
-3. Reasoning: Provide 2-3 sentence technical justification.
-
-### Job Description:
-{job_description}
-
-### Candidate Resume:
-{resume_text}
-
-### Output Format:
-You MUST return ONLY a JSON object with this schema:
-{{
-  "score": float,
-  "reasoning": "string",
-  "matched_skills": ["list", "of", "skills"],
-  "missing_skills": ["list", "of", "critical", "gaps"]
-}}"""
+    def _call_llm(self, job_description: str, resume_text: str, deterministic_context: str) -> dict:
+        """LLM scoring using the centralized prompt with verified facts."""
+        prompt = RESUME_SCORING_PROMPT.format(
+            job_description=job_description,
+            deterministic_context=deterministic_context,
+            resume_text=resume_text
+        )
 
         try:
             completion = self.client.chat.completions.create(

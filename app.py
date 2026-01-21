@@ -207,12 +207,17 @@ def main():
         s_c2.metric("Experience Depth", f"{tb.get('experience_depth', 0):.2f}")
         s_c3.metric("Domain Fit", f"{tb.get('domain_fit', 0):.2f}")
         
-        tabs = st.tabs(["AI Reasoning", "Raw Components", "Resume Text"])
+        tabs = st.tabs(["AI Reasoning", "Score Logic", "Raw Components", "Resume Text"])
         with tabs[0]:
             st.info(res['components']['llm']['reasoning'])
         with tabs[1]:
-            st.json(res['components'])
+            if 'score_explanation' in res:
+                st.markdown(res['score_explanation'])
+            else:
+                st.write("Detailed explanation not available for this run.")
         with tabs[2]:
+            st.json(res['components'])
+        with tabs[3]:
             path = Path(f"data/resumes/{res['id']}.txt")
             if path.exists():
                 st.text_area("Resume Content", path.read_text(), height=400)

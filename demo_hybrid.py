@@ -17,6 +17,7 @@ import time
 from typing import List, Dict, Any, Tuple
 from dotenv import load_dotenv
 from sklearn.metrics import ndcg_score
+from src.prompts import RESUME_SCORING_PROMPT
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -176,55 +177,24 @@ class LLMScorer:
         """
         Evaluate resume with optional deterministic 'ground truth' context.
         """
-        context_str = ""
         if deterministic_context:
             ext = deterministic_context.get('extracted_data', {})
-            context_str = f"""
-### System Detected Facts (Ground Truth):
-- Detected Experience: {ext.get('years_experience', 0)} years
-- Required Skills Matched: {', '.join(ext.get('matched_required', [])) or 'None'}
-- Required Skills Missing: {', '.join(ext.get('missing_required', [])) or 'None'}
-- Skill Coverage: {ext.get('required_coverage_pct', 0)}%
+            # Format cleanly for the new prompt placeholder {deterministic_context}
+            context_str = (
+                f"- Extracted Years of Experience: {ext.get('years_experience', 0)} years\n"
+                f"- Required Skills Matched: {', '.join(ext.get('matched_required', [])) or 'None'}\n"
+                f"- Required Skills Missing: {', '.join(ext.get('missing_required', [])) or 'None'}\n"
+                f"- Skill Coverage: {ext.get('required_coverage_pct', 0)}%"
+            )
+        else:
+            context_str = "No deterministic analysis available."
 
-NOTE: Use these facts as a baseline for your evaluation. Your goal is to provide technical depth beyond these simple matches.
-"""
-
-        prompt = f"""You are a Principal AI Applications Engineer at Ema. Evaluate this candidate's Resume against the Job Description.
-
-### Instructions:
-1. Analyze with Nuance: Look beyond keyword matching. Evaluate depth of experience, seniority, and domain relevance.
-2. Degree over Institution: EVALUATE BY DEGREE RELEVANCE ONLY (e.g., Computer Science, Engineering). IGNORE INSTITUTION PRESTIGE OR RANKINGS. Do not bias scores toward Ivy League or equivalent status colleges.
-3. Score (0.0 - 1.0):
-   - 0.8-1.0: Excellent fit. Meets nearly all requirements with specific relevant experience.
-   - 0.5-0.7: Partial fit. Has significant experience but lacks some core skills.
-   - 0.2-0.4: Weak fit. Some transferable skills but major gaps.
-   - 0.0-0.1: No fit. Irrelevant stack or domain entirely.
-4. Detailed Reasoning: Provide a technical justification that includes a breakdown of:
-   - Skill Alignment: How well the core tech stack matches.
-   - Experience Depth: Evaluation of the complexity and impact of previous roles.
-   - Domain Fit: Relevance to AI support, SaaS, and GenAI workflows.
-
-### Job Description:
-{job_description}
-
-{context_str}
-
-### Candidate Resume:
-{resume_text}
-
-### Output Format:
-Return ONLY a JSON object:
-{{
-  "score": float,
-  "reasoning": "string",
-  "technical_breakdown": {{
-    "skill_alignment": float,
-    "experience_depth": float,
-    "domain_fit": float
-  }},
-  "matched_skills": ["list"],
-  "missing_skills": ["list"]
-}}"""
+        # Use the centralized prompt from src/prompts.py
+        prompt = RESUME_SCORING_PROMPT.format(
+            job_description=job_description,
+            deterministic_context=context_str,
+            resume_text=resume_text
+        )
 
         try:
             completion = self.client.chat.completions.create(

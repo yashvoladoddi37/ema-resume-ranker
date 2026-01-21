@@ -1,0 +1,65 @@
+Pramuk Dine sh
+[(+91) 748-351-7194]
+
+linkedin.com
+
+pramuk@duck.com
+
+Experience
+Business Analyst, Jar
+
+Sept 2024 - Present
+
+• Defined and analyzed cohorts for StepUp, enabling targeted scaling decisions that contributed to
+₹12 Cr GMV in 3 months.
+• Built a comprehensive user capability scoring model using financial behavior indicators such as
+investment frequency, savings patterns, city tier, and app adoption.
+• Created an Hour-on-Hour (HoH) performance tracker, consolidating data streams and
+transforming them into actionable business metrics for real-time decision-making.
+Scientist Engineer Intern, ISRO
+
+Jan 2024 - May 2024
+
+• Automated the backup structure design of a parabolic reflector antenna using Grasshopper +
+Galapagos, optimizing stiffness and minimizing deflection via Genetic Algorithms.
+• Built a Python-based truss analysis software using the Stiffness Matrix Method (SMM) to
+improve structural evaluation efficiency.
+• Conducted exploratory data analysis on project and departmental budgets to derive insights for
+resource planning.
+Research Intern, CABS DRDO
+
+June 2024 - Aug 2024
+
+• Conducted a detailed study on vibration isolator selection for airborne equipment racks used in
+AEW&C aircraft.
+• Analyzed mechanical constraints, performance requirements, and vibration profiles to
+recommend optimal isolator configurations.
+• Applied data analysis and research-driven evaluation to support engineering and strategic
+decision-making.
+PES University
+• Conducted experiments to test damping performance and determine vibration characteristics of
+AFOs.
+• Utilized CAD software for design and performed FEM testing using Ansys software.
+• Applied analytical and problem-solving skills to improveproduct performance.
+
+Education
+B.Tech. in Mechanical Engineering
+PES University
+
+Dec 2020 - Aug 2024
+Bangalore, India
+
+Skills
+Technical Skills: Python, Google Sheets (Advanced),Power BI, Product Analytics Tools (e.g.,
+Clevertap, Mixpanel, Amplitude)
+Tools and Frameworks: Cohort Identification, User Segmentation & Scoring Models,
+Experimentation (A/B Testing), Feature & Event Testing, Funnel & Retention Analysis, RCA (Root
+Cause Analysis)
+Languages: English (proficient), Kannada (native), Hindi (proficient)
+
+Publications
+Design, Analysis and Testing of Ankle Foot Orthoses (AFOs) Made of Synthetic Fibre
+Reinforced 3D Printed Polymer Composites
+*Published in Springer — Journal of The Institution of Engineers (India): Series C, 2025*
+
+

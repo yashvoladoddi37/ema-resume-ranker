@@ -1,39 +1,41 @@
 [
   {
     "id": "res_003_maya",
-    "final_score": 0.8064,
-    "score_formula": "(0.6 \u00d7 0.85) + (0.4 \u00d7 0.741) = 0.8064",
+    "final_score": 0.7964,
+    "score_formula": "(0.6 \u00d7 0.80) + (0.4 \u00d7 0.791) = 0.7964",
+    "score_explanation": "## Final Score Calculation: 0.7964\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.80) + (0.4 \u00d7 0.791) = 0.7964`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.80 \u2192 **Contribution:** 0.4800\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate has significant relevant experience in configuring and integrating AI/GenAI workflows, troubleshooting production issues, and proficienc...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.791 \u2192 **Contribution:** 0.3164\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 5/8 = 0.625\n- Preferred skills matched: 5/14 = 0.357\n- Skill score = (0.7 \u00d7 0.625) + (0.3 \u00d7 0.357) = 0.545\n- **Component contribution:** 0.35 \u00d7 0.545 = **0.191**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 10.0 years\n- Experience score = min(10.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.350**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: Yes \u2192 Score: 1.0\n- **Component contribution:** 0.10 \u00d7 1.0 = **0.100**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.000**\n\n**Deterministic Total:**\n```\n0.191 (skills)\n+ 0.350 (AI relevance)\n+ 0.150 (experience)\n+ 0.100 (education)\n+ 0.000 (support)\n= 0.791\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.80 = 0.4800\nDet contribution:  + 0.4 \u00d7 0.791 = 0.3164\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.7964\n```",
     "components": {
       "llm": {
-        "score": 0.85,
+        "score": 0.8,
         "weight": 0.6,
-        "weighted_contribution": 0.51,
-        "reasoning": "The candidate, Maya Gupta, has a strong background in AI solutions engineering with a focus on Generative AI and automation flows. Her experience in configuring and integrating AI/GenAI workflows, troubleshooting production LLM performance, and translating customer requirements into technical GenAI specs aligns well with the job description. Although she lacks direct experience in SaaS and technical support, her skills in API integration, logging, and dashboard creation are transferable. Her proficiency in Python, JSON, and REST APIs also matches the required skills.",
-        "technical_breakdown": {
-          "skill_alignment": 0.9,
-          "experience_depth": 0.8,
-          "domain_fit": 0.85
-        },
+        "weighted_contribution": 0.48,
+        "reasoning": "The candidate has significant relevant experience in configuring and integrating AI/GenAI workflows, troubleshooting production issues, and proficiency in APIs and integration tools, but lacks direct experience in SaaS technical support or customer success. However, their experience in solutions engineering and systems analysis provides a strong foundation for the role.",
+        "technical_breakdown": {},
         "matched_skills": [
           "api",
           "json",
           "production",
           "python",
-          "rest"
+          "rest",
+          "troubleshooting",
+          "prompt engineering"
         ],
         "missing_skills": [
           "saas",
           "technical support",
-          "troubleshooting"
+          "customer success",
+          "logging",
+          "dashboard creation",
+          "alerting tools"
         ]
       },
       "deterministic": {
-        "score": 0.741,
+        "score": 0.791,
         "weight": 0.4,
-        "weighted_contribution": 0.2964,
+        "weighted_contribution": 0.3164,
         "experience_component": 0.15,
         "skill_component": 0.191,
-        "ai_relevance_component": 0.3,
+        "ai_relevance_component": 0.35,
         "support_relevance_component": 0.0,
         "education_component": 0.1,
         "years_experience": 10.0,
@@ -64,19 +66,16 @@
   },
   {
     "id": "res_002_sarah",
-    "final_score": 0.698,
-    "score_formula": "(0.6 \u00d7 0.85) + (0.4 \u00d7 0.470) = 0.6980",
+    "final_score": 0.668,
+    "score_formula": "(0.6 \u00d7 0.80) + (0.4 \u00d7 0.470) = 0.6680",
+    "score_explanation": "## Final Score Calculation: 0.6680\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.80) + (0.4 \u00d7 0.470) = 0.6680`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.80 \u2192 **Contribution:** 0.4800\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate has significant experience in technical support and customer success for SaaS, with proficiency in troubleshooting production issues and...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.470 \u2192 **Contribution:** 0.1880\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 6/8 = 0.750\n- Preferred skills matched: 2/14 = 0.143\n- Skill score = (0.7 \u00d7 0.750) + (0.3 \u00d7 0.143) = 0.568\n- **Component contribution:** 0.35 \u00d7 0.568 = **0.199**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 15.0 years\n- Experience score = min(15.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.000**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: Yes \u2192 Score: 1.0\n- **Component contribution:** 0.10 \u00d7 1.0 = **0.100**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.022**\n\n**Deterministic Total:**\n```\n0.199 (skills)\n+ 0.000 (AI relevance)\n+ 0.150 (experience)\n+ 0.100 (education)\n+ 0.022 (support)\n= 0.470\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.80 = 0.4800\nDet contribution:  + 0.4 \u00d7 0.470 = 0.1880\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.6680\n```",
     "components": {
       "llm": {
-        "score": 0.85,
+        "score": 0.8,
         "weight": 0.6,
-        "weighted_contribution": 0.51,
-        "reasoning": "The candidate has a strong background in technical support and customer success for SaaS, with over 7 years of experience. They have expertise in troubleshooting complex production APIs, cloud infrastructure, and data integration issues. Their experience in leading a team of engineers and managing technical onboarding for top-tier SaaS customers demonstrates their ability to work with customers and resolve complex issues. The candidate's proficiency in Python, SQL, and Bash, as well as their experience with AWS, DataDog, Grafana, PagerDuty, and Jenkins, aligns well with the job requirements. However, they lack experience with JSON and REST, which are required skills for the position.",
-        "technical_breakdown": {
-          "skill_alignment": 0.8,
-          "experience_depth": 0.9,
-          "domain_fit": 0.85
-        },
+        "weighted_contribution": 0.48,
+        "reasoning": "The candidate has significant experience in technical support and customer success for SaaS, with proficiency in troubleshooting production issues and diagnosing API performance. However, the candidate lacks explicit experience with GenAI and ML, which is a core requirement for the AI Applications Engineer role.",
+        "technical_breakdown": {},
         "matched_skills": [
           "api",
           "production",
@@ -87,7 +86,9 @@
         ],
         "missing_skills": [
           "json",
-          "rest"
+          "rest",
+          "genai",
+          "ml"
         ]
       },
       "deterministic": {
@@ -123,100 +124,37 @@
     }
   },
   {
-    "id": "res_test_A",
-    "final_score": 0.6116,
-    "score_formula": "(0.6 \u00d7 0.60) + (0.4 \u00d7 0.629) = 0.6116",
-    "components": {
-      "llm": {
-        "score": 0.6,
-        "weight": 0.6,
-        "weighted_contribution": 0.36,
-        "reasoning": "The candidate has a strong foundation in software engineering and has recently transitioned into AI support and technical success. With 2 years of experience in AI support, they have developed skills in troubleshooting production LLM issues and configuring API integrations. However, their experience in AI support is limited compared to the required 3+ years. Additionally, they lack experience with JSON and REST, which are essential skills for the role. Their proficiency in Python and Java is a plus, but their experience in GenAI and SaaS is still developing.",
-        "technical_breakdown": {
-          "skill_alignment": 0.7,
-          "experience_depth": 0.5,
-          "domain_fit": 0.6
-        },
-        "matched_skills": [
-          "api",
-          "production",
-          "python",
-          "saas",
-          "technical support",
-          "troubleshooting"
-        ],
-        "missing_skills": [
-          "json",
-          "rest"
-        ]
-      },
-      "deterministic": {
-        "score": 0.629,
-        "weight": 0.4,
-        "weighted_contribution": 0.2516,
-        "experience_component": 0.15,
-        "skill_component": 0.199,
-        "ai_relevance_component": 0.146,
-        "support_relevance_component": 0.035,
-        "education_component": 0.1,
-        "years_experience": 12.0,
-        "has_relevant_degree": true,
-        "matched_required": [
-          "api",
-          "production",
-          "python",
-          "saas",
-          "technical support",
-          "troubleshooting"
-        ],
-        "matched_preferred": [
-          "genai",
-          "llm"
-        ],
-        "missing_required": [
-          "json",
-          "rest"
-        ],
-        "required_coverage_pct": 75.0,
-        "preferred_coverage_pct": 14.3
-      }
-    }
-  },
-  {
     "id": "res_001_yashpreet",
-    "final_score": 0.6076,
-    "score_formula": "(0.6 \u00d7 0.60) + (0.4 \u00d7 0.619) = 0.6076",
+    "final_score": 0.5652,
+    "score_formula": "(0.6 \u00d7 0.50) + (0.4 \u00d7 0.663) = 0.5652",
+    "score_explanation": "## Final Score Calculation: 0.5652\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.50) + (0.4 \u00d7 0.663) = 0.5652`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.50 \u2192 **Contribution:** 0.3000\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate has significant relevant experience in AI and backend development, with proficiency in Python and experience with RESTful APIs, but lack...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.663 \u2192 **Contribution:** 0.2652\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 2/8 = 0.250\n- Preferred skills matched: 6/14 = 0.429\n- Skill score = (0.7 \u00d7 0.250) + (0.3 \u00d7 0.429) = 0.304\n- **Component contribution:** 0.35 \u00d7 0.304 = **0.106**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 6.0 years\n- Experience score = min(6.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.307**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: Yes \u2192 Score: 1.0\n- **Component contribution:** 0.10 \u00d7 1.0 = **0.100**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.000**\n\n**Deterministic Total:**\n```\n0.106 (skills)\n+ 0.307 (AI relevance)\n+ 0.150 (experience)\n+ 0.100 (education)\n+ 0.000 (support)\n= 0.663\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.50 = 0.3000\nDet contribution:  + 0.4 \u00d7 0.663 = 0.2652\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.5652\n```",
     "components": {
       "llm": {
-        "score": 0.6,
+        "score": 0.5,
         "weight": 0.6,
-        "weighted_contribution": 0.36,
-        "reasoning": "The candidate has a strong background in software development and AI engineering, with experience in languages such as Golang and Python. They have worked on various projects involving AI-driven lead generation, semantic search, and automated documentation systems. However, their experience in technical support or customer success for SaaS is limited, and they lack proficiency in troubleshooting production issues and diagnosing ML performance. The candidate's skills in API integration, logging, and dashboard creation are also not explicitly mentioned.",
-        "technical_breakdown": {
-          "skill_alignment": 0.7,
-          "experience_depth": 0.8,
-          "domain_fit": 0.5
-        },
+        "weighted_contribution": 0.3,
+        "reasoning": "The candidate has significant relevant experience in AI and backend development, with proficiency in Python and experience with RESTful APIs, but lacks direct experience in technical support, SaaS, and troubleshooting production issues, which are core requirements for the AI Applications Engineer role.",
+        "technical_breakdown": {},
         "matched_skills": [
           "api",
-          "python"
+          "python",
+          "rest"
         ],
         "missing_skills": [
           "json",
           "production",
-          "rest",
           "saas",
           "technical support",
           "troubleshooting"
         ]
       },
       "deterministic": {
-        "score": 0.619,
+        "score": 0.663,
         "weight": 0.4,
-        "weighted_contribution": 0.2476,
+        "weighted_contribution": 0.2652,
         "experience_component": 0.15,
         "skill_component": 0.106,
-        "ai_relevance_component": 0.263,
+        "ai_relevance_component": 0.307,
         "support_relevance_component": 0.0,
         "education_component": 0.1,
         "years_experience": 6.0,
@@ -247,20 +185,76 @@
     }
   },
   {
-    "id": "res_004_david",
-    "final_score": 0.568,
-    "score_formula": "(0.6 \u00d7 0.65) + (0.4 \u00d7 0.445) = 0.5680",
+    "id": "res_test_A",
+    "final_score": 0.5616,
+    "score_formula": "(0.6 \u00d7 0.50) + (0.4 \u00d7 0.654) = 0.5616",
+    "score_explanation": "## Final Score Calculation: 0.5616\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.50) + (0.4 \u00d7 0.654) = 0.5616`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.50 \u2192 **Contribution:** 0.3000\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate has significant relevant experience in AI support and technical success, with skills in API, production, python, and troubleshooting, bu...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.654 \u2192 **Contribution:** 0.2616\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 6/8 = 0.750\n- Preferred skills matched: 2/14 = 0.143\n- Skill score = (0.7 \u00d7 0.750) + (0.3 \u00d7 0.143) = 0.568\n- **Component contribution:** 0.35 \u00d7 0.568 = **0.199**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 12.0 years\n- Experience score = min(12.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.170**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: Yes \u2192 Score: 1.0\n- **Component contribution:** 0.10 \u00d7 1.0 = **0.100**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.035**\n\n**Deterministic Total:**\n```\n0.199 (skills)\n+ 0.170 (AI relevance)\n+ 0.150 (experience)\n+ 0.100 (education)\n+ 0.035 (support)\n= 0.654\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.50 = 0.3000\nDet contribution:  + 0.4 \u00d7 0.654 = 0.2616\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.5616\n```",
     "components": {
       "llm": {
-        "score": 0.65,
+        "score": 0.5,
         "weight": 0.6,
-        "weighted_contribution": 0.39,
-        "reasoning": "The candidate, David Kim, has a strong background in building and troubleshooting backend integrations and data sync pipelines, which aligns with the requirements of the AI Applications Engineer role at Ema. His experience in troubleshooting production issues and diagnosing performance bottlenecks is valuable. However, he lacks direct experience in technical support or customer success for SaaS, and his proficiency in JSON and production issues is not explicitly mentioned. His education in Computer Science is relevant, and his skills in Python, REST, and API integration are a good match.",
-        "technical_breakdown": {
-          "skill_alignment": 0.7,
-          "experience_depth": 0.6,
-          "domain_fit": 0.6
-        },
+        "weighted_contribution": 0.3,
+        "reasoning": "The candidate has significant relevant experience in AI support and technical success, with skills in API, production, python, and troubleshooting, but lacks core skills such as JSON and REST, and has limited experience in SaaS and GenAI compared to the required 3+ years.",
+        "technical_breakdown": {},
+        "matched_skills": [
+          "api",
+          "production",
+          "python",
+          "troubleshooting",
+          "technical support",
+          "GenAI"
+        ],
+        "missing_skills": [
+          "json",
+          "rest",
+          "saas experience",
+          "extended experience in AI/GenAI"
+        ]
+      },
+      "deterministic": {
+        "score": 0.654,
+        "weight": 0.4,
+        "weighted_contribution": 0.2616,
+        "experience_component": 0.15,
+        "skill_component": 0.199,
+        "ai_relevance_component": 0.17,
+        "support_relevance_component": 0.035,
+        "education_component": 0.1,
+        "years_experience": 12.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "api",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "matched_preferred": [
+          "genai",
+          "llm"
+        ],
+        "missing_required": [
+          "json",
+          "rest"
+        ],
+        "required_coverage_pct": 75.0,
+        "preferred_coverage_pct": 14.3
+      }
+    }
+  },
+  {
+    "id": "res_004_david",
+    "final_score": 0.478,
+    "score_formula": "(0.6 \u00d7 0.50) + (0.4 \u00d7 0.445) = 0.4780",
+    "score_explanation": "## Final Score Calculation: 0.4780\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.50) + (0.4 \u00d7 0.445) = 0.4780`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.50 \u2192 **Contribution:** 0.3000\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate has significant relevant experience in building and troubleshooting backend integrations, data sync pipelines, and REST services, but la...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.445 \u2192 **Contribution:** 0.1780\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 5/8 = 0.625\n- Preferred skills matched: 5/14 = 0.357\n- Skill score = (0.7 \u00d7 0.625) + (0.3 \u00d7 0.357) = 0.545\n- **Component contribution:** 0.35 \u00d7 0.545 = **0.191**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 11.0 years\n- Experience score = min(11.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.000**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: Yes \u2192 Score: 1.0\n- **Component contribution:** 0.10 \u00d7 1.0 = **0.100**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.004**\n\n**Deterministic Total:**\n```\n0.191 (skills)\n+ 0.000 (AI relevance)\n+ 0.150 (experience)\n+ 0.100 (education)\n+ 0.004 (support)\n= 0.445\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.50 = 0.3000\nDet contribution:  + 0.4 \u00d7 0.445 = 0.1780\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.4780\n```",
+    "components": {
+      "llm": {
+        "score": 0.5,
+        "weight": 0.6,
+        "weighted_contribution": 0.3,
+        "reasoning": "The candidate has significant relevant experience in building and troubleshooting backend integrations, data sync pipelines, and REST services, but lacks core skills in AI/GenAI, JSON, and technical support for SaaS, which are crucial for the AI Applications Engineer role at Ema.",
+        "technical_breakdown": {},
         "matched_skills": [
           "api",
           "python",
@@ -271,7 +265,10 @@
         "missing_skills": [
           "json",
           "production",
-          "technical support"
+          "technical support",
+          "ai",
+          "genai",
+          "ml"
         ]
       },
       "deterministic": {
@@ -310,211 +307,38 @@
     }
   },
   {
-    "id": "res_010_elena",
-    "final_score": 0.3388,
-    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.397) = 0.3388",
-    "components": {
-      "llm": {
-        "score": 0.3,
-        "weight": 0.6,
-        "weighted_contribution": 0.18,
-        "reasoning": "The candidate has some transferable skills from their experience in technical support and customer service, but lacks significant experience in the core tech stack required for the AI Applications Engineer role, such as proficiency in APIs, JSON, REST, and Python. Their experience depth is limited to basic system administration and customer service, which does not align well with the complexity and impact of the role. The domain fit is also weak, as the candidate's experience is not directly related to AI support, SaaS, or GenAI workflows.",
-        "technical_breakdown": {
-          "skill_alignment": 0.2,
-          "experience_depth": 0.4,
-          "domain_fit": 0.1
-        },
-        "matched_skills": [
-          "technical support",
-          "troubleshooting"
-        ],
-        "missing_skills": [
-          "api",
-          "json",
-          "production",
-          "python",
-          "rest",
-          "saas"
-        ]
-      },
-      "deterministic": {
-        "score": 0.397,
-        "weight": 0.4,
-        "weighted_contribution": 0.1588,
-        "experience_component": 0.15,
-        "skill_component": 0.061,
-        "ai_relevance_component": 0.065,
-        "support_relevance_component": 0.022,
-        "education_component": 0.1,
-        "years_experience": 10.0,
-        "has_relevant_degree": true,
-        "matched_required": [
-          "technical support",
-          "troubleshooting"
-        ],
-        "matched_preferred": [],
-        "missing_required": [
-          "api",
-          "json",
-          "production",
-          "python",
-          "rest",
-          "saas"
-        ],
-        "required_coverage_pct": 25.0,
-        "preferred_coverage_pct": 0.0
-      }
-    }
-  },
-  {
-    "id": "res_005_mike",
-    "final_score": 0.3356,
-    "score_formula": "(0.6 \u00d7 0.40) + (0.4 \u00d7 0.239) = 0.3356",
-    "components": {
-      "llm": {
-        "score": 0.4,
-        "weight": 0.6,
-        "weighted_contribution": 0.24,
-        "reasoning": "The candidate has some transferable skills, such as proficiency in Python and experience with REST APIs, but lacks significant experience in technical support, SaaS, and GenAI workflows. The candidate's background in full-stack web development is not directly relevant to the AI Applications Engineer role, but some skills like API development and data automation can be applied. However, major gaps in required skills like API integration, production issue troubleshooting, and technical support experience are notable.",
-        "technical_breakdown": {
-          "skill_alignment": 0.3,
-          "experience_depth": 0.2,
-          "domain_fit": 0.1
-        },
-        "matched_skills": [
-          "python",
-          "rest"
-        ],
-        "missing_skills": [
-          "api",
-          "json",
-          "production",
-          "saas",
-          "technical support",
-          "troubleshooting"
-        ]
-      },
-      "deterministic": {
-        "score": 0.239,
-        "weight": 0.4,
-        "weighted_contribution": 0.0956,
-        "experience_component": 0.15,
-        "skill_component": 0.061,
-        "ai_relevance_component": 0.027,
-        "support_relevance_component": 0.0,
-        "education_component": 0.0,
-        "years_experience": 11.0,
-        "has_relevant_degree": false,
-        "matched_required": [
-          "python",
-          "rest"
-        ],
-        "matched_preferred": [],
-        "missing_required": [
-          "api",
-          "json",
-          "production",
-          "saas",
-          "technical support",
-          "troubleshooting"
-        ],
-        "required_coverage_pct": 25.0,
-        "preferred_coverage_pct": 0.0
-      }
-    }
-  },
-  {
-    "id": "res_test_B",
-    "final_score": 0.3352,
-    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.388) = 0.3352",
-    "components": {
-      "llm": {
-        "score": 0.3,
-        "weight": 0.6,
-        "weighted_contribution": 0.18,
-        "reasoning": "The candidate has some transferable skills from their experience in software development, particularly with REST APIs, but lacks significant experience in AI, GenAI workflows, and SaaS. Their background in building scalable web applications could be beneficial, but the gap in required skills such as Python, JSON, and technical support is substantial. The candidate's education in Software Engineering is relevant, but the overall fit for the AI Applications Engineer role at Ema is weak due to the missing core skills and lack of direct experience in the domain.",
-        "technical_breakdown": {
-          "skill_alignment": 0.2,
-          "experience_depth": 0.4,
-          "domain_fit": 0.1
-        },
-        "matched_skills": [
-          "api",
-          "rest"
-        ],
-        "missing_skills": [
-          "json",
-          "production",
-          "python",
-          "saas",
-          "technical support",
-          "troubleshooting"
-        ]
-      },
-      "deterministic": {
-        "score": 0.388,
-        "weight": 0.4,
-        "weighted_contribution": 0.1552,
-        "experience_component": 0.15,
-        "skill_component": 0.061,
-        "ai_relevance_component": 0.071,
-        "support_relevance_component": 0.006,
-        "education_component": 0.1,
-        "years_experience": 8.0,
-        "has_relevant_degree": true,
-        "matched_required": [
-          "api",
-          "rest"
-        ],
-        "matched_preferred": [],
-        "missing_required": [
-          "json",
-          "production",
-          "python",
-          "saas",
-          "technical support",
-          "troubleshooting"
-        ],
-        "required_coverage_pct": 25.0,
-        "preferred_coverage_pct": 0.0
-      }
-    }
-  },
-  {
     "id": "res_006_priya",
-    "final_score": 0.3056,
-    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.314) = 0.3056",
+    "final_score": 0.4336,
+    "score_formula": "(0.6 \u00d7 0.50) + (0.4 \u00d7 0.334) = 0.4336",
+    "score_explanation": "## Final Score Calculation: 0.4336\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.50) + (0.4 \u00d7 0.334) = 0.4336`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.50 \u2192 **Contribution:** 0.3000\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate has significant experience in data science and machine learning, with proficiency in Python, which is a required skill. However, they la...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.334 \u2192 **Contribution:** 0.1336\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 1/8 = 0.125\n- Preferred skills matched: 2/14 = 0.143\n- Skill score = (0.7 \u00d7 0.125) + (0.3 \u00d7 0.143) = 0.130\n- **Component contribution:** 0.35 \u00d7 0.130 = **0.046**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 7.0 years\n- Experience score = min(7.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.139**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: No \u2192 Score: 0.0\n- **Component contribution:** 0.10 \u00d7 0.0 = **0.000**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.000**\n\n**Deterministic Total:**\n```\n0.046 (skills)\n+ 0.139 (AI relevance)\n+ 0.150 (experience)\n+ 0.000 (education)\n+ 0.000 (support)\n= 0.334\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.50 = 0.3000\nDet contribution:  + 0.4 \u00d7 0.334 = 0.1336\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.4336\n```",
     "components": {
       "llm": {
-        "score": 0.3,
+        "score": 0.5,
         "weight": 0.6,
-        "weighted_contribution": 0.18,
-        "reasoning": "The candidate has some transferable skills, such as proficiency in Python and experience with data pipelines, but lacks significant experience in technical support, SaaS, and GenAI workflows. The candidate's experience is more focused on data science and predictive modeling, which, although relevant to AI, does not directly align with the requirements of the AI Applications Engineer role at Ema.",
-        "technical_breakdown": {
-          "skill_alignment": 0.2,
-          "experience_depth": 0.4,
-          "domain_fit": 0.1
-        },
+        "weighted_contribution": 0.3,
+        "reasoning": "The candidate has significant experience in data science and machine learning, with proficiency in Python, which is a required skill. However, they lack direct experience in technical support, SaaS, and API integration, which are core requirements for the AI Applications Engineer role.",
+        "technical_breakdown": {},
         "matched_skills": [
-          "python"
+          "python",
+          "nlp"
         ],
         "missing_skills": [
           "api",
           "json",
-          "production",
           "rest",
           "saas",
           "technical support",
-          "troubleshooting"
+          "troubleshooting",
+          "production issue resolution"
         ]
       },
       "deterministic": {
-        "score": 0.314,
+        "score": 0.334,
         "weight": 0.4,
-        "weighted_contribution": 0.1256,
+        "weighted_contribution": 0.1336,
         "experience_component": 0.15,
         "skill_component": 0.046,
-        "ai_relevance_component": 0.119,
+        "ai_relevance_component": 0.139,
         "support_relevance_component": 0.0,
         "education_component": 0.0,
         "years_experience": 7.0,
@@ -542,19 +366,16 @@
   },
   {
     "id": "res_007_sam",
-    "final_score": 0.2944,
-    "score_formula": "(0.6 \u00d7 0.30) + (0.4 \u00d7 0.286) = 0.2944",
+    "final_score": 0.4164,
+    "score_formula": "(0.6 \u00d7 0.50) + (0.4 \u00d7 0.291) = 0.4164",
+    "score_explanation": "## Final Score Calculation: 0.4164\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.50) + (0.4 \u00d7 0.291) = 0.4164`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.50 \u2192 **Contribution:** 0.3000\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate has significant experience in technical customer success and account management, but lacks core skills in AI, GenAI, and programming lan...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.291 \u2192 **Contribution:** 0.1164\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 3/8 = 0.375\n- Preferred skills matched: 1/14 = 0.071\n- Skill score = (0.7 \u00d7 0.375) + (0.3 \u00d7 0.071) = 0.284\n- **Component contribution:** 0.35 \u00d7 0.284 = **0.099**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 8.0 years\n- Experience score = min(8.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.037**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: No \u2192 Score: 0.0\n- **Component contribution:** 0.10 \u00d7 0.0 = **0.000**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.005**\n\n**Deterministic Total:**\n```\n0.099 (skills)\n+ 0.037 (AI relevance)\n+ 0.150 (experience)\n+ 0.000 (education)\n+ 0.005 (support)\n= 0.291\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.50 = 0.3000\nDet contribution:  + 0.4 \u00d7 0.291 = 0.1164\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.4164\n```",
     "components": {
       "llm": {
-        "score": 0.3,
+        "score": 0.5,
         "weight": 0.6,
-        "weighted_contribution": 0.18,
-        "reasoning": "The candidate has some experience in B2B SaaS customer success and technical account management, but lacks significant technical skills required for the AI Applications Engineer role. The candidate's experience in managing technical health for enterprise accounts and collaborating with engineering on product bug prioritizations is valuable, but not directly applicable to the role. The candidate also lacks proficiency in required technical skills such as Python, JSON, REST, and production issue troubleshooting.",
-        "technical_breakdown": {
-          "skill_alignment": 0.2,
-          "experience_depth": 0.4,
-          "domain_fit": 0.5
-        },
+        "weighted_contribution": 0.3,
+        "reasoning": "The candidate has significant experience in technical customer success and account management, but lacks core skills in AI, GenAI, and programming languages like Python, and also has limited experience with APIs and integration with CRMs or ATS tools. The candidate's experience in troubleshooting is also limited to basic guidance for API keys.",
+        "technical_breakdown": {},
         "matched_skills": [
           "api",
           "saas",
@@ -565,16 +386,22 @@
           "production",
           "python",
           "rest",
-          "technical support"
+          "technical support",
+          "ai",
+          "genai",
+          "ml",
+          "logging",
+          "dashboard creation",
+          "alerting tools"
         ]
       },
       "deterministic": {
-        "score": 0.286,
+        "score": 0.291,
         "weight": 0.4,
-        "weighted_contribution": 0.1144,
+        "weighted_contribution": 0.1164,
         "experience_component": 0.15,
         "skill_component": 0.099,
-        "ai_relevance_component": 0.032,
+        "ai_relevance_component": 0.037,
         "support_relevance_component": 0.005,
         "education_component": 0.0,
         "years_experience": 8.0,
@@ -600,20 +427,184 @@
     }
   },
   {
-    "id": "res_008_jordan",
-    "final_score": 0.172,
-    "score_formula": "(0.6 \u00d7 0.10) + (0.4 \u00d7 0.280) = 0.1720",
+    "id": "res_005_mike",
+    "final_score": 0.3972,
+    "score_formula": "(0.6 \u00d7 0.50) + (0.4 \u00d7 0.243) = 0.3972",
+    "score_explanation": "## Final Score Calculation: 0.3972\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.50) + (0.4 \u00d7 0.243) = 0.3972`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.50 \u2192 **Contribution:** 0.3000\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate has significant experience in full-stack development and proficiency in Python, which is relevant to the job. However, they lack core sk...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.243 \u2192 **Contribution:** 0.0972\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 2/8 = 0.250\n- Preferred skills matched: 0/14 = 0.000\n- Skill score = (0.7 \u00d7 0.250) + (0.3 \u00d7 0.000) = 0.175\n- **Component contribution:** 0.35 \u00d7 0.175 = **0.061**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 11.0 years\n- Experience score = min(11.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.032**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: No \u2192 Score: 0.0\n- **Component contribution:** 0.10 \u00d7 0.0 = **0.000**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.000**\n\n**Deterministic Total:**\n```\n0.061 (skills)\n+ 0.032 (AI relevance)\n+ 0.150 (experience)\n+ 0.000 (education)\n+ 0.000 (support)\n= 0.243\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.50 = 0.3000\nDet contribution:  + 0.4 \u00d7 0.243 = 0.0972\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.3972\n```",
     "components": {
       "llm": {
-        "score": 0.1,
+        "score": 0.5,
         "weight": 0.6,
-        "weighted_contribution": 0.06,
-        "reasoning": "The candidate lacks relevant experience in AI applications, technical support, and SaaS, with no proficiency in required skills such as API integration, Python, or troubleshooting. Their background in frontend development with React and TypeScript does not align with the job requirements.",
-        "technical_breakdown": {
-          "skill_alignment": 0.0,
-          "experience_depth": 0.2,
-          "domain_fit": 0.0
-        },
+        "weighted_contribution": 0.3,
+        "reasoning": "The candidate has significant experience in full-stack development and proficiency in Python, which is relevant to the job. However, they lack core skills such as experience in technical support, troubleshooting production issues, and familiarity with APIs, JSON, and SaaS, which are critical for the AI Applications Engineer role.",
+        "technical_breakdown": {},
+        "matched_skills": [
+          "python",
+          "rest"
+        ],
+        "missing_skills": [
+          "api",
+          "json",
+          "production",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ]
+      },
+      "deterministic": {
+        "score": 0.243,
+        "weight": 0.4,
+        "weighted_contribution": 0.0972,
+        "experience_component": 0.15,
+        "skill_component": 0.061,
+        "ai_relevance_component": 0.032,
+        "support_relevance_component": 0.0,
+        "education_component": 0.0,
+        "years_experience": 11.0,
+        "has_relevant_degree": false,
+        "matched_required": [
+          "python",
+          "rest"
+        ],
+        "matched_preferred": [],
+        "missing_required": [
+          "api",
+          "json",
+          "production",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "required_coverage_pct": 25.0,
+        "preferred_coverage_pct": 0.0
+      }
+    }
+  },
+  {
+    "id": "res_010_elena",
+    "final_score": 0.1632,
+    "score_formula": "(0.6 \u00d7 0.00) + (0.4 \u00d7 0.408) = 0.1632",
+    "score_explanation": "## Final Score Calculation: 0.1632\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.00) + (0.4 \u00d7 0.408) = 0.1632`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.00 \u2192 **Contribution:** 0.0000\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate lacks core skills required for the AI Applications Engineer role, such as proficiency in APIs, Python, and experience with SaaS, which a...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.408 \u2192 **Contribution:** 0.1632\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 2/8 = 0.250\n- Preferred skills matched: 0/14 = 0.000\n- Skill score = (0.7 \u00d7 0.250) + (0.3 \u00d7 0.000) = 0.175\n- **Component contribution:** 0.35 \u00d7 0.175 = **0.061**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 10.0 years\n- Experience score = min(10.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.075**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: Yes \u2192 Score: 1.0\n- **Component contribution:** 0.10 \u00d7 1.0 = **0.100**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.022**\n\n**Deterministic Total:**\n```\n0.061 (skills)\n+ 0.075 (AI relevance)\n+ 0.150 (experience)\n+ 0.100 (education)\n+ 0.022 (support)\n= 0.408\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.00 = 0.0000\nDet contribution:  + 0.4 \u00d7 0.408 = 0.1632\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.1632\n```",
+    "components": {
+      "llm": {
+        "score": 0.0,
+        "weight": 0.6,
+        "weighted_contribution": 0.0,
+        "reasoning": "The candidate lacks core skills required for the AI Applications Engineer role, such as proficiency in APIs, Python, and experience with SaaS, which are critical for the position. The candidate's experience is more focused on general technical support and customer service, without specific relevance to AI, GenAI, or the required technical skills. The skill coverage is also very low at 25.0%, indicating a significant gap in required skills.",
+        "technical_breakdown": {},
+        "matched_skills": [
+          "technical support",
+          "troubleshooting"
+        ],
+        "missing_skills": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas",
+          "ml",
+          "genai",
+          "logging",
+          "dashboard creation",
+          "alerting tools"
+        ]
+      },
+      "deterministic": {
+        "score": 0.408,
+        "weight": 0.4,
+        "weighted_contribution": 0.1632,
+        "experience_component": 0.15,
+        "skill_component": 0.061,
+        "ai_relevance_component": 0.075,
+        "support_relevance_component": 0.022,
+        "education_component": 0.1,
+        "years_experience": 10.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "technical support",
+          "troubleshooting"
+        ],
+        "matched_preferred": [],
+        "missing_required": [
+          "api",
+          "json",
+          "production",
+          "python",
+          "rest",
+          "saas"
+        ],
+        "required_coverage_pct": 25.0,
+        "preferred_coverage_pct": 0.0
+      }
+    }
+  },
+  {
+    "id": "res_test_B",
+    "final_score": 0.1596,
+    "score_formula": "(0.6 \u00d7 0.00) + (0.4 \u00d7 0.399) = 0.1596",
+    "score_explanation": "## Final Score Calculation: 0.1596\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.00) + (0.4 \u00d7 0.399) = 0.1596`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.00 \u2192 **Contribution:** 0.0000\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate lacks core skills required for the AI Applications Engineer role, including proficiency in Python, experience with JSON, and a backgroun...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.399 \u2192 **Contribution:** 0.1596\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 2/8 = 0.250\n- Preferred skills matched: 0/14 = 0.000\n- Skill score = (0.7 \u00d7 0.250) + (0.3 \u00d7 0.000) = 0.175\n- **Component contribution:** 0.35 \u00d7 0.175 = **0.061**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 8.0 years\n- Experience score = min(8.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.082**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: Yes \u2192 Score: 1.0\n- **Component contribution:** 0.10 \u00d7 1.0 = **0.100**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.006**\n\n**Deterministic Total:**\n```\n0.061 (skills)\n+ 0.082 (AI relevance)\n+ 0.150 (experience)\n+ 0.100 (education)\n+ 0.006 (support)\n= 0.399\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.00 = 0.0000\nDet contribution:  + 0.4 \u00d7 0.399 = 0.1596\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.1596\n```",
+    "components": {
+      "llm": {
+        "score": 0.0,
+        "weight": 0.6,
+        "weighted_contribution": 0.0,
+        "reasoning": "The candidate lacks core skills required for the AI Applications Engineer role, including proficiency in Python, experience with JSON, and a background in technical support or customer success for SaaS, which are critical for the position. The candidate's experience is primarily in building scalable web applications, which does not align with the job requirements. The candidate's skill set is more focused on frontend and backend development rather than AI applications or integration with platform APIs and customer data.",
+        "technical_breakdown": {},
+        "matched_skills": [
+          "rest"
+        ],
+        "missing_skills": [
+          "python",
+          "json",
+          "saas",
+          "technical support",
+          "troubleshooting",
+          "api integration",
+          "ml performance diagnosis"
+        ]
+      },
+      "deterministic": {
+        "score": 0.399,
+        "weight": 0.4,
+        "weighted_contribution": 0.1596,
+        "experience_component": 0.15,
+        "skill_component": 0.061,
+        "ai_relevance_component": 0.082,
+        "support_relevance_component": 0.006,
+        "education_component": 0.1,
+        "years_experience": 8.0,
+        "has_relevant_degree": true,
+        "matched_required": [
+          "api",
+          "rest"
+        ],
+        "matched_preferred": [],
+        "missing_required": [
+          "json",
+          "production",
+          "python",
+          "saas",
+          "technical support",
+          "troubleshooting"
+        ],
+        "required_coverage_pct": 25.0,
+        "preferred_coverage_pct": 0.0
+      }
+    }
+  },
+  {
+    "id": "res_008_jordan",
+    "final_score": 0.1208,
+    "score_formula": "(0.6 \u00d7 0.00) + (0.4 \u00d7 0.302) = 0.1208",
+    "score_explanation": "## Final Score Calculation: 0.1208\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.00) + (0.4 \u00d7 0.302) = 0.1208`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.00 \u2192 **Contribution:** 0.0000\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate lacks core skills required for the AI Applications Engineer role, such as proficiency in APIs, Python, and experience in technical suppo...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.302 \u2192 **Contribution:** 0.1208\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 0/8 = 0.000\n- Preferred skills matched: 0/14 = 0.000\n- Skill score = (0.7 \u00d7 0.000) + (0.3 \u00d7 0.000) = 0.000\n- **Component contribution:** 0.35 \u00d7 0.000 = **0.000**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 6.0 years\n- Experience score = min(6.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.152**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: No \u2192 Score: 0.0\n- **Component contribution:** 0.10 \u00d7 0.0 = **0.000**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.000**\n\n**Deterministic Total:**\n```\n0.000 (skills)\n+ 0.152 (AI relevance)\n+ 0.150 (experience)\n+ 0.000 (education)\n+ 0.000 (support)\n= 0.302\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.00 = 0.0000\nDet contribution:  + 0.4 \u00d7 0.302 = 0.1208\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.1208\n```",
+    "components": {
+      "llm": {
+        "score": 0.0,
+        "weight": 0.6,
+        "weighted_contribution": 0.0,
+        "reasoning": "The candidate lacks core skills required for the AI Applications Engineer role, such as proficiency in APIs, Python, and experience in technical support or customer success for SaaS, and their experience is primarily in frontend development, which is not relevant to the job description.",
+        "technical_breakdown": {},
         "matched_skills": [],
         "missing_skills": [
           "api",
@@ -627,12 +618,12 @@
         ]
       },
       "deterministic": {
-        "score": 0.28,
+        "score": 0.302,
         "weight": 0.4,
-        "weighted_contribution": 0.112,
+        "weighted_contribution": 0.1208,
         "experience_component": 0.15,
         "skill_component": 0.0,
-        "ai_relevance_component": 0.13,
+        "ai_relevance_component": 0.152,
         "support_relevance_component": 0.0,
         "education_component": 0.0,
         "years_experience": 6.0,
@@ -656,19 +647,16 @@
   },
   {
     "id": "res_009_james",
-    "final_score": 0.12,
-    "score_formula": "(0.6 \u00d7 0.10) + (0.4 \u00d7 0.150) = 0.1200",
+    "final_score": 0.06,
+    "score_formula": "(0.6 \u00d7 0.00) + (0.4 \u00d7 0.150) = 0.0600",
+    "score_explanation": "## Final Score Calculation: 0.0600\n\n**Formula:** `Final = (LLM_Weight \u00d7 LLM_Score) + (Det_Weight \u00d7 Det_Score)`\n\n**Calculation:** `(0.6 \u00d7 0.00) + (0.4 \u00d7 0.150) = 0.0600`\n\n---\n\n### 1\ufe0f\u20e3 LLM Component (Weight: 60%)\n\n**Score:** 0.00 \u2192 **Contribution:** 0.0000\n\nThe LLM evaluates three dimensions:\n- **Skill Alignment:** 0.00\n- **Experience Depth:** 0.00\n- **Domain Fit:** 0.00\n\n**Reasoning:** \"The candidate lacks core skills required for the AI Applications Engineer role, such as proficiency in Python, APIs, and experience in technical suppo...\"\n\n---\n\n### 2\ufe0f\u20e3 Deterministic Component (Weight: 40%)\n\n**Score:** 0.150 \u2192 **Contribution:** 0.0600\n\n#### Step-by-Step Calculation:\n\n**A. Technical Skills (35% weight)**\n- Required skills matched: 0/8 = 0.000\n- Preferred skills matched: 0/14 = 0.000\n- Skill score = (0.7 \u00d7 0.000) + (0.3 \u00d7 0.000) = 0.000\n- **Component contribution:** 0.35 \u00d7 0.000 = **0.000**\n\n**B. AI Relevance (35% weight)**\n- Years of experience: 6.0 years\n- Experience score = min(6.0 / 3.0, 1.0) = 1.000\n- **Component contribution:** 0.35 \u00d7 (AI keyword density) = **0.000**\n\n**C. Experience (15% weight)**\n- Experience score: 1.000\n- **Component contribution:** 0.15 \u00d7 1.000 = **0.150**\n\n**D. Education (10% weight)**\n- Relevant degree: No \u2192 Score: 0.0\n- **Component contribution:** 0.10 \u00d7 0.0 = **0.000**\n\n**E. Support Relevance (5% weight)**\n- Support keyword density score\n- **Component contribution:** 0.05 \u00d7 (support density) = **0.000**\n\n**Deterministic Total:**\n```\n0.000 (skills)\n+ 0.000 (AI relevance)\n+ 0.150 (experience)\n+ 0.000 (education)\n+ 0.000 (support)\n= 0.150\n```\n\n---\n\n### \ud83c\udfaf Final Weighted Sum\n\n```\nLLM contribution:    0.6 \u00d7 0.00 = 0.0000\nDet contribution:  + 0.4 \u00d7 0.150 = 0.0600\n                    \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\nFINAL SCORE:                      0.0600\n```",
     "components": {
       "llm": {
-        "score": 0.1,
+        "score": 0.0,
         "weight": 0.6,
-        "weighted_contribution": 0.06,
-        "reasoning": "The candidate lacks direct experience in the required skills for the AI Applications Engineer role, with no mention of proficiency in APIs, JSON, production issue troubleshooting, or Python. The candidate's experience is primarily in Java development for financial institutions, which, although relevant in terms of software development, does not align closely with the specific requirements of the role. The candidate's skills in Java, SQL, and Spring Boot, while valuable in a general software development context, do not directly apply to the needs of the position, which emphasizes AI/GenAI workflows, API integration, and troubleshooting.",
-        "technical_breakdown": {
-          "skill_alignment": 0.0,
-          "experience_depth": 0.6,
-          "domain_fit": 0.1
-        },
+        "weighted_contribution": 0.0,
+        "reasoning": "The candidate lacks core skills required for the AI Applications Engineer role, such as proficiency in Python, APIs, and experience in technical support or customer success for SaaS, which are crucial for the position. The candidate's background in Java development does not align with the job's requirements. The candidate's experience in building high-performance Java backends is not relevant to the AI Applications Engineer role.",
+        "technical_breakdown": {},
         "matched_skills": [],
         "missing_skills": [
           "api",
