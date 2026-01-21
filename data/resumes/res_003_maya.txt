@@ -10,13 +10,13 @@ on Generative AI and automation flows.
 
 EXPERIENCE
 ----------
-Solutions Engineer | GenAI Automate | 2022 - Present
+Solutions Engineer | GenAI Automate | March 2022 - Present
 • Configure and integrate AI/GenAI workflows for enterprise clients.
 • Expert in LangChain and prompt engineering for RAG pipelines.
 • Translate customer requirements into technical GenAI specs.
 • Troubleshoot production LLM performance and hallucination issues.
 
-Systems Analyst | Tech Solutions Ltd | 2020 - 2022
+Systems Analyst | Tech Solutions Ltd | June 2020 - February 2022
 • Integrated third-party APIs with internal ERP systems.
 • Managed data mapping and REST integration flows.
 

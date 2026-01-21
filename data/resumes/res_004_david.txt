@@ -10,12 +10,12 @@ and data sync pipelines.
 
 EXPERIENCE
 ----------
-Integration Engineer | DataBridge | 2021 - Present
+Integration Engineer | DataBridge | February 2021 - Present
 • Troubleshoot produce issues related to complex API syncs (Go/Python).
 • Diagnose performance bottlenecks in distributed data pipelines.
 • Built monitoring alerts for API uptime and data latency.
 
-Backend Developer | Core Systems | 2019 - 2021
+Backend Developer | Core Systems | July 2019 - January 2021
 • Developed REST services and database schemas for SaaS platform.
 • Integrated with various ATS and CRM tools via webhooks.
 

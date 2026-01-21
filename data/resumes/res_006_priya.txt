@@ -10,12 +10,12 @@ NLP, and data pipelines.
 
 EXPERIENCE
 ----------
-Senior Data Scientist | Analytics Lab | 2021 - Present
+Senior Data Scientist | Analytics Lab | May 2021 - Present
 • Developed customer churn models using XGBoost and PyTorch.
 • Built NLP sentiment analysis pipelines for brand monitoring.
 • Managed data workflows using Apache Airflow.
 
-Data Analyst | Retail Insights | 2019 - 2021
+Data Analyst | Retail Insights | September 2019 - April 2021
 • Conducted A/B testing for pricing strategies.
 • Expert in SQL and Tableau for business intelligence.
 
