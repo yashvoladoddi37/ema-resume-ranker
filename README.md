@@ -40,14 +40,16 @@ Resume.txt
 
 ---
 
-## Results (V2 vs V1)
+## Results (V2 vs V1 - Strict Benchmark)
 
 | Metric | V1 (Pure LLM) | V2 (Deterministic) | Delta |
 |--------|---------------|--------------------|-------|
-| **nDCG@3** | 0.837 | 0.828 | -1% (acceptable trade-off) |
-| **Precision@1** | 1.000 | 1.000 | Maintained |
+| **nDCG@3** | 0.717 | **0.965** | **+35% (Superior)** |
+| **Precision@1** | 0.000 | **1.000** | **Perfect** |
 | **Cost / 1k resumes** | ~$20.00 | $0.00 | 100% reduction |
-| **Latency / resume** | ~3.5s | ~0.5s | 7x faster |
+| **Latency / resume** | ~13s | <0.1s | 130x faster |
+
+*Based on strict evaluation excluding test files.*
 
 ---
 
