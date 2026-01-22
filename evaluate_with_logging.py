@@ -43,10 +43,12 @@ class AuditedMatchingEngine:
         (run_folder / "05_scorer_outputs").mkdir(exist_ok=True)
         (run_folder / "06_final_results").mkdir(exist_ok=True)
         
+        # Priority: Skills > Domain Fit (AI focus) > Experience
+        # Support experience is preferred, not required
         self.weights = {
-            'skill_match': 0.50,
-            'experience_depth': 0.30,
-            'domain_fit': 0.20
+            'skill_match': 0.55,       # Most important: Python, AI/GenAI, APIs
+            'domain_fit': 0.30,        # AI/GenAI domain alignment
+            'experience_depth': 0.15   # Years matter less than skills
         }
     
     def _save_json(self, folder: str, filename: str, data: dict):
@@ -160,6 +162,10 @@ Begin parsing now:"""
     def score_resume(self, job_description: str, parsed_resume: dict, resume_id: str) -> dict:
         """Stage 2: Score resume with full logging."""
         
+        # Extract skills for explicit cross-reference
+        candidate_skills = parsed_resume.get("skills", [])
+        skills_list = ", ".join(candidate_skills) if candidate_skills else "None listed"
+        
         prompt = f"""You are evaluating a candidate for a job opening.
 
 JOB DESCRIPTION:
@@ -169,52 +175,90 @@ CANDIDATE PROFILE (extracted from resume):
 {json.dumps(parsed_resume, indent=2)}
 
 TASK:
-Evaluate the candidate on three dimensions and return ONLY a JSON object:
+Evaluate the candidate on three dimensions and return ONLY a JSON object.
+
+**CRITICAL: SKILL MATCHING INSTRUCTIONS**
+
+The candidate has these skills: [{skills_list}]
+
+For skill_match, you MUST:
+1. Go through EACH skill in the candidate's list above
+2. For EACH skill, determine if it satisfies ANY JD requirement (even if wording differs)
+3. Use SEMANTIC matching:
+   - "Prometheus" satisfies "logging tools" and "alerting tools"
+   - "LangChain" satisfies "GenAI workflows"
+   - "REST" satisfies "APIs (JSON, REST, SOAP)"
+4. matched_skills = skills FROM THE CANDIDATE'S LIST that match JD requirements
+5. missing_skills = skills FROM THE JD that the candidate does NOT have
+
+**CRITICAL: PER-EXPERIENCE RELEVANCE SCORING**
+
+For experience_depth, you MUST:
+1. Evaluate EACH experience block INDIVIDUALLY
+2. For EACH, assign a relevance_score (0.0-1.0) based on:
+   - Does the role involve AI/GenAI, SaaS, technical support, or customer success?
+   - Does it involve Python, APIs, troubleshooting, or integrations?
+3. Calculate relevant_years = SUM of (duration_years * relevance_score)
+4. Base the final score on RELEVANT YEARS, not total years
+5. Career switchers with 10y total but 1y relevant should score LOW
+
+**CRITICAL: REQUIRED VS PREFERRED QUALIFICATIONS**
+
+If the JD has "Required" and "Preferred" sections:
+- Missing REQUIRED skills: heavy penalty (each missing = -0.15 from skill_match)
+- Missing PREFERRED skills: light penalty (each missing = -0.05)
+- Weight required skills 2x higher than preferred in final calculation
+
+**CRITICAL: FORMULA AND REASONING**
+
+For EACH dimension, include a "formula" key showing exact calculation.
+
+OUTPUT FORMAT:
 
 {{
   "skill_match": {{
     "score": 0.0,
-    "reasoning": "Brief explanation of skill alignment",
+    "reasoning": "Brief explanation",
+    "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = X",
     "matched_skills": ["skill1", "skill2"],
-    "missing_skills": ["skill3", "skill4"]
+    "missing_skills": ["skill3"]
   }},
   "experience_depth": {{
     "score": 0.0,
-    "reasoning": "Brief explanation including years comparison"
+    "reasoning": "Brief explanation with relevant_years vs total_years",
+    "formula": "relevant_years = (role1_years * rel1) + (role2_years * rel2) = X. Score = min(1.0, X/3)",
+    "total_years": 0.0,
+    "relevant_years": 0.0,
+    "experience_breakdown": [
+      {{"role": "Title", "years": 0.0, "relevance": 0.0, "relevance_reasoning": "Why"}}
+    ]
   }},
   "domain_fit": {{
     "score": 0.0,
-    "reasoning": "Brief explanation of domain alignment"
+    "reasoning": "Brief explanation",
+    "formula": "domain_matches/total_required_domains = X"
   }},
-  "overall_assessment": "1-2 sentence summary of candidacy"
+  "overall_assessment": "1-2 sentence summary"
 }}
 
 SCORING GUIDELINES:
 
 1. **skill_match (0.0-1.0):**
-   - 1.0 = Has ALL required skills + most preferred skills
-   - 0.8 = Has ALL required skills, some preferred
-   - 0.6 = Has MOST required skills
-   - 0.4 = Has SOME required skills
-   - 0.2 = Has FEW required skills
-   - 0.0 = Has NO required skills
+   - 1.0 = ALL required + most preferred
+   - 0.8 = ALL required, some preferred
+   - 0.6 = MOST required
+   - 0.4 = SOME required
+   - 0.0 = NO required skills
 
 2. **experience_depth (0.0-1.0):**
-   - Consider BOTH years AND relevance
-   - If JD requires "3+ years" and candidate has 3+: score ≥ 0.7
-   - If JD requires "3+ years" and candidate has 2 years: score ≤ 0.6
-   - Relevant experience is worth more than total years
+   - Based on RELEVANT YEARS ONLY
+   - JD requires "3+ years" with 3+ relevant: ≥ 0.7
+   - Career switcher (10y total, 1y relevant): ≤ 0.4
 
 3. **domain_fit (0.0-1.0):**
-   - How well does candidate's background align with role domain?
-   - For AI Applications Engineer: AI/ML background + customer-facing = high
-   - Related domains = medium-high
-   - Unrelated domains = low
-
-CRITICAL RULES:
-- Use the FULL 0.0-1.0 scale
-- Be critical but fair
-- Return ONLY valid JSON
+   - AI/ML + customer-facing = high
+   - Related domains = medium
+   - Unrelated = low
 
 Begin evaluation now:"""
         
