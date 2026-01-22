@@ -1,8 +1,14 @@
 import os
 import json
+import logging
 from typing import Dict, Any, List
 from src.deterministic_engine import DeterministicEngine
 from src.scorers.llm import LLMScorer
+from src.config import config
+
+# Configure logging
+logging.basicConfig(level=config.LOG_LEVEL)
+logger = logging.getLogger(__name__)
 
 class HybridEngine:
     """
@@ -18,9 +24,10 @@ class HybridEngine:
         self.det_engine = DeterministicEngine()
         self.llm_scorer = LLMScorer()
         
-        # V3 Weights
-        self.weight_llm = 0.6
-        self.weight_det = 0.4
+        # V3 Weights from config
+        self.weight_llm = config.WEIGHT_LLM_V3
+        self.weight_det = config.WEIGHT_DET_V3
+        logger.info(f"Initialized HybridEngine with weights: LLM={self.weight_llm}, Det={self.weight_det}")
         
     def evaluate(self, job_description: str, resume_text: str) -> Dict[str, Any]:
         """
