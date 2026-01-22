@@ -1,12 +1,13 @@
-"""
-Matching Engine - Orchestrates two-stage pipeline and aggregates scores.
-"""
-
 import time
+import logging
 from typing import Dict, List, Any
 from .resume_parser import ResumeParser
 from .resume_scorer import ResumeScorer
+from .config import config
 
+# Configure logging
+logging.basicConfig(level=config.LOG_LEVEL)
+logger = logging.getLogger(__name__)
 
 class TwoStageMatchingEngine:
     """
@@ -30,12 +31,13 @@ class TwoStageMatchingEngine:
         self.scorer = ResumeScorer(api_key=api_key)
         self.backup_key = backup_key
         
-        # Configurable weights (sum = 1.0)
+        # Configurable weights from centralized config
         self.weights = {
-            'skill_match': 0.50,
-            'experience_depth': 0.30,
-            'domain_fit': 0.20
+            'skill_match': config.WEIGHT_SKILL,
+            'experience_depth': config.WEIGHT_EXPERIENCE,
+            'domain_fit': config.WEIGHT_DOMAIN
         }
+        logger.info(f"Initialized MatchingEngine with weights: {self.weights}")
     
     def evaluate(
         self, 
@@ -67,22 +69,31 @@ class TwoStageMatchingEngine:
         """
         
         start_time = time.time()
-        
-        print(f"📄 Evaluating {resume_id}...")
+        logger.info(f"📄 Evaluating resume_id={resume_id}...")
         
         # STAGE 1: Parse resume
-        print(f"  ⚙️  Stage 1: Parsing resume...")
-        parsed_data = self.parser.parse(resume_text)
+        logger.info("  ⚙️  Stage 1: Parsing resume...")
+        try:
+            parsed_data = self.parser.parse(resume_text)
+            logger.debug(f"Parsed data keys: {list(parsed_data.keys())}")
+        except Exception as e:
+            logger.error(f"Stage 1 Parsing Failed: {str(e)}")
+            raise
         
         # Brief pause to avoid rate limits
         time.sleep(0.5)
         
         # STAGE 2: Score against JD
-        print(f"  ⚙️  Stage 2: Scoring resume...")
-        dimension_scores = self.scorer.score(job_description, parsed_data)
+        logger.info("  ⚙️  Stage 2: Scoring resume...")
+        try:
+            dimension_scores = self.scorer.score(job_description, parsed_data)
+            logger.debug(f"Dimension scores computed for: {list(dimension_scores.keys())}")
+        except Exception as e:
+            logger.error(f"Stage 2 Scoring Failed: {str(e)}")
+            raise
         
         # STAGE 3: Aggregate
-        print(f"  ⚙️  Stage 3: Computing final score...")
+        logger.info("  ⚙️  Stage 3: Computing final score...")
         final_score = self._compute_final_score(dimension_scores)
         
         # Build explanation
@@ -93,7 +104,7 @@ class TwoStageMatchingEngine:
         )
         
         processing_time = time.time() - start_time
-        print(f"  ✅ Complete! Score: {final_score:.3f} ({processing_time:.1f}s)")
+        logger.info(f"  ✅ Complete! Score: {final_score:.3f} ({processing_time:.1f}s)")
         
         return {
             "id": resume_id,
@@ -113,46 +124,39 @@ class TwoStageMatchingEngine:
         job_description: str,
         resumes: List[Dict[str, str]]
     ) -> List[Dict[str, Any]]:
-        """
-        Evaluate multiple resumes.
-        
-        Args:
-            job_description: The job posting
-            resumes: List of {"id": str, "text": str}
-            
-        Returns:
-            List of evaluation results, sorted by final_score (descending)
-        """
+        """Evaluate multiple resumes."""
         
         results = []
         total = len(resumes)
         
-        print(f"\n🚀 Starting batch evaluation of {total} resumes...")
-        print(f"⚙️  Weights: Skills={self.weights['skill_match']}, "
-              f"Experience={self.weights['experience_depth']}, "
-              f"Domain={self.weights['domain_fit']}\n")
+        logger.info(f"\n🚀 Starting batch evaluation of {total} resumes...")
+        logger.info(f"⚙️  Weights: {self.weights}\n")
         
         for i, resume in enumerate(resumes, 1):
-            print(f"[{i}/{total}] ", end="")
+            logger.info(f"[{i}/{total}] Processing {resume.get('id', 'unknown')}")
             
-            result = self.evaluate(
-                job_description,
-                resume["text"],
-                resume["id"]
-            )
+            try:
+                result = self.evaluate(
+                    job_description,
+                    resume["text"],
+                    resume["id"]
+                )
+                results.append(result)
+            except Exception as e:
+                logger.error(f"Failed to evaluate {resume.get('id')}: {str(e)}")
             
-            results.append(result)
-            
-            # Rate limiting: 1 second between API calls
+            # Rate limiting
             if i < total:
                 time.sleep(1)
         
         # Sort by final_score descending
         results.sort(key=lambda x: x["final_score"], reverse=True)
         
-        print(f"\n✅ Batch evaluation complete!")
-        print(f"📊 Score range: {results[-1]['final_score']:.3f} - "
-              f"{results[0]['final_score']:.3f}")
+        if results:
+            logger.info(f"\n✅ Batch evaluation complete!")
+            logger.info(f"📊 Score range: {results[-1]['final_score']:.3f} - {results[0]['final_score']:.3f}")
+        else:
+            logger.warning("Batch evaluation completed with NO results.")
         
         return results
     
