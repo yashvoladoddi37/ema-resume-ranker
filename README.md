@@ -1,20 +1,18 @@
-# 🎯 Resume Matcher V1: Two-Stage LLM Pipeline
+# Resume Matcher V1: Two-Stage LLM Pipeline
 
-> **Version 1 of 3** — A journey through iterative improvements in AI-powered resume matching
+> **Version 1 of 3** — Iterative development of an AI-powered resume matching system
 
-## The Hypothesis
+## Hypothesis
 
-**"Let the LLM handle everything."**
+**"Delegate all extraction and scoring to the LLM."**
 
-With powerful LLMs like Llama 3.3 70B, why not just ask it to parse resumes AND score them? Two LLM calls should be enough:
-1. **Stage 1 (Parser):** Extract structured data from messy resume text
+With capable LLMs like Llama 3.3 70B, a two-call pipeline should suffice:
+1. **Stage 1 (Parser):** Extract structured data from unstructured resume text
 2. **Stage 2 (Scorer):** Evaluate parsed data against job requirements
-
-Clean, simple, modern.
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 Resume.txt
@@ -56,7 +54,7 @@ Final Score = Σ(dimension × weight)
 
 ---
 
-## 📊 Results
+## Results
 
 Evaluated on 12 labeled resumes for the "AI Applications Engineer" role.
 
@@ -79,7 +77,7 @@ Evaluated on 12 labeled resumes for the "AI Applications Engineer" role.
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Setup
@@ -104,9 +102,9 @@ streamlit run app.py
 
 ---
 
-## 🔍 What I Learned
+## Findings
 
-### ✅ What Worked
+### What Worked
 
 1. **Nuanced reasoning** — LLM understood context:
    - "3 years in GenAI support" > "5 years in unrelated backend dev"
@@ -116,7 +114,7 @@ streamlit run app.py
 
 3. **Decent accuracy** — nDCG@3 of 0.837 is solid for a first approach
 
-### ❌ What Broke
+### What Failed
 
 #### 1. **Hallucinations**
 
@@ -150,7 +148,7 @@ For batch processing, this doesn't scale.
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ema-resume-ranker/
@@ -171,7 +169,7 @@ ema-resume-ranker/
 
 ---
 
-## 🔬 Audit Trail
+## Audit Trail
 
 Every run saves complete LLM I/O for debugging:
 
@@ -196,7 +194,7 @@ This transparency is crucial for debugging, but it exposes the core issue: **the
 
 ---
 
-## 💡 Next Steps: Version 2
+## Next Steps: Version 2
 
 The V1 hypothesis was: **"LLMs can do it all."**
 
@@ -218,12 +216,12 @@ What I learned: **They can, but they shouldn't.**
 - **Keyword matching:** Skills against a fixed taxonomy
 
 **Expected tradeoffs:**
-- ✅ Fast, cheap, fully reproducible
-- ❌ Rigid, misses synonyms, can't understand nuance
+- Fast, cheap, fully reproducible
+- Trade-off: inflexible, misses synonyms, lacks contextual understanding
 
 ---
 
-## 🛠️ Technical Details
+## Technical Details
 
 ### LLM Configuration
 
@@ -254,7 +252,7 @@ We treat this as an **Information Retrieval** problem, not classification:
 
 ---
 
-## 📝 Reflections
+## Reflections
 
 **What I'd do differently:**
 1. Start with a deterministic baseline (not LLM)
@@ -269,7 +267,7 @@ We treat this as an **Information Retrieval** problem, not classification:
 
 ---
 
-## 📊 Full Results
+## Full Results
 
 See `runs/run_20260121_131947/all_results.json` for complete output.
 
