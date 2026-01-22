@@ -1,82 +1,76 @@
+import os
 import json
-import logging
-from typing import Dict, Any, Optional
-from src.config import config
-from src.prompts import RESUME_SCORING_PROMPT
 
-# Configure logging
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from groq import Groq
+from dotenv import load_dotenv
+from typing import Dict, Any
 
 class LLMScorer:
     """
-    Interfaces with LLM providers (Groq/Gemini) to perform nuanced resume evaluation.
+    Interfaces with LLM providers to perform nuanced resume evaluation.
+    Updated for V3 to support Grounded Reasoning.
     """
     
-    def __init__(self, provider: str = config.LLM_PROVIDER):
+    def __init__(self, provider: str = "groq"):
+        load_dotenv()
         self.provider = provider.lower()
-        self.api_key = config.GROQ_API_KEY if self.provider == "groq" else config.GEMINI_API_KEY
-        
-        if not self.api_key:
-            logger.warning(f"No API key found for {self.provider}. Scorer will fail.")
-
-    def _call_groq(self, prompt: str) -> str:
-        from groq import Groq
-        client = Groq(api_key=self.api_key)
-        completion = client.chat.completions.create(
-            model=config.LLM_MODEL,
-            messages=[{"role": "user", "content": prompt}],
-            temperature=config.TEMPERATURE,
-            response_format={"type": "json_object"}
-        )
-        return completion.choices[0].message.content
-
-    def _call_gemini(self, prompt: str) -> str:
-        import google.generativeai as genai
-        genai.configure(api_key=self.api_key)
-        model = genai.GenerativeModel("gemini-1.5-flash") # Fallback to flash for speed
-        response = model.generate_content(
-            prompt,
-            generation_config=genai.types.GenerationConfig(
-                temperature=config.TEMPERATURE,
-                response_mime_type="application/json"
-            )
-        )
-        return response.text
+        self.api_key = os.getenv("GROQ_API_KEY")
+        self.client = Groq(api_key=self.api_key)
+        self.model = os.getenv("MODEL_NAME", "llama-3.3-70b-versatile")
+        self.temperature = 0.0
 
     def score(self, job_description: str, resume_text: str) -> Dict[str, Any]:
+        """Standard scoring without context (V1 style)"""
+        return self.score_with_context(job_description, resume_text, None)
+
+    def score_with_context(self, job_description: str, resume_text: str, det_context: Dict[str, Any] = None) -> Dict[str, Any]:
         """
-        Executes the LLM scoring pipeline.
+        Grounded scoring using deterministic ground truth.
         """
-        prompt = RESUME_SCORING_PROMPT.format(
-            job_description=job_description,
-            resume_text=resume_text
-        )
+        prompt = self._build_prompt(job_description, resume_text, det_context)
         
         try:
-            if self.provider == "groq":
-                raw_response = self._call_groq(prompt)
-            elif self.provider == "gemini":
-                raw_response = self._call_gemini(prompt)
-            else:
-                raise ValueError(f"Unsupported provider: {self.provider}")
-            
-            # Parse and validate JSON
-            data = json.loads(raw_response)
-            
-            # Ensure required fields exist
-            required_keys = ["score", "reasoning", "matched_skills", "missing_skills"]
-            for key in required_keys:
-                if key not in data:
-                    data[key] = 0.0 if key == "score" else "N/A" if key == "reasoning" else []
-            
-            return data
-            
+            response = self.client.chat.completions.create(
+                model=self.model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=self.temperature,
+                response_format={"type": "json_object"}
+            )
+            return json.loads(response.choices[0].message.content)
         except Exception as e:
-            logger.error(f"LLM Scoring Error: {e}")
-            return {
-                "score": 0.0,
-                "reasoning": f"Error during scoring: {str(e)}",
-                "matched_skills": [],
-                "missing_skills": []
-            }
+            print(f"LLM Error: {e}")
+            return {"score": 0.5, "reasoning": "Error in LLM scoring"}
+
+    def _build_prompt(self, jd: str, resume: str, context: Dict[str, Any]) -> str:
+        context_str = ""
+        if context:
+            context_str = f"""
+VERIFIED FACTS (from deterministic extraction):
+- Years of Experience: {context['years_experience']}
+- Matched Skills: {', '.join(context['matched_skills'])}
+- Missing Required Skills: {', '.join(context['missing_required_skills'])}
+
+USE THESE FACTS AS GROUND TRUTH. Do not contradict them. If the resume has additional evidence for skills not listed above, you may consider them, but stay critical.
+"""
+
+        return f"""You are a senior technical recruiter evaluating a candidate for an AI Applications Engineer role.
+
+JOB DESCRIPTION:
+{jd}
+
+RESUME TEXT:
+{resume}
+{context_str}
+
+TASK:
+Provide a nuanced evaluation of the candidate. Bridge the gap between raw text and JD requirements.
+Example: If the resume lists "Prometheus" and JD asks for "logging tools", confirm this as a match.
+
+Return ONLY a JSON object:
+{{
+  "score": 0.0-1.0,
+  "reasoning": "Nuanced explanation (2-3 sentences)",
+  "matched_skills": ["List specific matched skills"],
+  "missing_skills": ["List missing critical skills"]
+}}
+"""
