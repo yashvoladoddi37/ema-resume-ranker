@@ -1,51 +1,57 @@
-# 🎯 AI-Powered Resume Matcher (Ema Edition)
+# AI-Powered Resume Matching Engine
 
-A professional-grade resume ranking engine built for the **AI Applications Engineer** role at Ema. This system uses a **Sequential Hybrid Scoring** architecture to provide nuanced, auditable, and high-precision candidate matching.
+A production-grade resume ranking system built for the **AI Applications Engineer** role at Ema. The system employs a **Sequential Hybrid Scoring** architecture that combines deterministic extraction with LLM-based contextual reasoning to deliver auditable, high-precision candidate rankings.
 
-## 🚀 Live Demo & Interaction
-This project is designed for interactive evaluation via **Streamlit**.
+## Live Demo
 
-### [Click Here to Open Streamlit Dashboard](https://share.streamlit.io/yashvoladoddi37/ema-resume-ranker/main/app.py)
-*(Note: You will need a Groq API Key to run new evaluations. Existing results are visible by default.)*
+An interactive Streamlit dashboard is available for evaluation:
 
-### Key Features:
-*   **Sequential Hybrid Scoring**: Combines rule-based deterministic extraction (40%) with nuanced LLM reasoning (60%).
-*   **Interactive Testing**: **Upload your own resumes** (.txt) in the sidebar and see them ranked against our dataset in real-time.
-*   **Live Evaluation Metrics**: Formal IR metrics (**nDCG@3**, **Precision@1**, **Recall@3**) are computed on-the-fly to validate engine accuracy.
-*   **Transparent Reasoning**: Every score is accompanied by a technical breakdown of *Skill Alignment*, *Experience Depth*, and *Domain Fit*.
+**[Open Streamlit Dashboard](https://share.streamlit.io/yashvoladoddi37/ema-resume-ranker/main/app.py)**
+
+*Note: A Groq API Key is required to run new evaluations. Cached results are available by default.*
+
+### Capabilities
+
+- **Sequential Hybrid Scoring**: Combines rule-based deterministic extraction (40%) with LLM reasoning (60%)
+- **Interactive Testing**: Upload custom resumes (.txt) via the sidebar for real-time ranking
+- **Formal Evaluation Metrics**: nDCG@3, Precision@1, and Recall@3 computed on-the-fly
+- **Transparent Scoring**: Each score includes a detailed breakdown of skill alignment, experience depth, and domain fit
 
 ---
 
-## 🛠️ Technical Approach & Justification
+## Technical Approach
 
-### Model Selection
+### Architecture Selection
 
-I chose a **Sequential Hybrid Architecture** combining:
-1. **Deterministic Scorer (40%)**: Rule-based extraction using regex and keyword matching
-2. **LLM Scorer (60%)**: Llama-3.3-70B (via Groq API) for contextual evaluation
+The system uses a **Sequential Hybrid Architecture**:
 
-**Why Llama-3.3-70B?**
-- Strong instruction-following for structured JSON output
-- Excellent at nuanced reasoning (differentiates "senior generalist" vs "domain expert")
-- Fast inference via Groq (< 2s per resume)
-- Cost-effective compared to GPT-4 ($0.59/M tokens vs $30/M)
+1. **Deterministic Scorer (40% weight)**: Rule-based extraction using regex patterns and keyword matching
+2. **LLM Scorer (60% weight)**: Llama-3.3-70B via Groq API for contextual evaluation
 
-### Comparison to Alternatives
+**Rationale for Llama-3.3-70B:**
+- Reliable instruction-following for structured JSON output
+- Strong contextual reasoning (distinguishes domain expertise from general seniority)
+- Low latency via Groq infrastructure (< 2s per resume)
+- Cost-effective at $0.59/M tokens (vs. $30/M for GPT-4)
 
-| Approach | Advantages | Disadvantages | Why Not Chosen |
-|:---------|:-----------|:--------------|:---------------|
-| **Pure LLM** | High accuracy, understands context | Expensive, non-deterministic, black box | Fails auditability requirement |
-| **Pure Keyword Matching** | Fast, cheap, reproducible | Misses context, can't differentiate seniority | Too simplistic for nuanced matching |
-| **Embeddings (BERT/Sentence-BERT)** | Semantic similarity, no API costs | Requires fine-tuning, less explainable | No labeled data for fine-tuning |
-| **Hybrid (Chosen)** | ✅ Balanced accuracy + explainability | Requires API key, slightly complex | **Best trade-off** |
+### Alternative Approaches Considered
 
-### ❓ Why Not Vector Embeddings (RAG)?
+| Approach | Advantages | Disadvantages | Decision |
+|:---------|:-----------|:--------------|:---------|
+| **Pure LLM** | High accuracy, contextual understanding | Expensive, non-deterministic, opaque | Rejected: fails auditability requirement |
+| **Keyword Matching** | Fast, reproducible, zero cost | No context, cannot assess seniority | Rejected: insufficient for nuanced matching |
+| **Vector Embeddings (SBERT)** | Semantic similarity, no API costs | Requires fine-tuning, limited explainability | Rejected: no labeled data available |
+| **Hybrid (Selected)** | Balanced accuracy and explainability | Requires API key | Best trade-off for this use case |
 
-A common alternative is **Semantic Search using Vector Embeddings** (e.g., OpenAI models, BERT). I **deliberately avoided** this for the core scoring engine because:
+### Why Not Vector Embeddings?
 
-1.  **Similarity ≠ Suitability**: Embeddings measure semantic proximity. In vector space, *"Senior Java Developer"* is highly similar to *"Senior Python Developer"*. For a hiring decision, however, this small difference is a **disqualification**.
-2.  **Lack of Reasoning**: Embeddings cannot perform calculations (e.g., "Sum the duration of these 3 roles") or logic checks (e.g., "Is this degree actually relevant to Engineering?").
-3.  **Use Case Fit**: Embeddings are ideal for **Retrieval** (finding top 50 candidates from 10,000). For **Banking/Evaluating** a shortlist, an LLM + Deterministic approach provides superior precision and explainability.
+Semantic search via vector embeddings was deliberately excluded from the core scoring engine:
+
+1. **Similarity does not imply suitability**: In embedding space, "Senior Java Developer" and "Senior Python Developer" appear highly similar. For hiring purposes, this distinction is often disqualifying.
+
+2. **No reasoning capability**: Embeddings cannot perform calculations (e.g., aggregating role durations) or logical validation (e.g., verifying degree relevance).
+
+3. **Use case mismatch**: Embeddings excel at retrieval (filtering 10,000 candidates to 50). For evaluating a shortlist, LLM + deterministic scoring provides superior precision and explainability.
 
 ### Feature Engineering & Data Preprocessing
 
@@ -82,18 +88,18 @@ A common alternative is **Semantic Search using Vector Embeddings** (e.g., OpenA
 
 ---
 
-## 📊 Evaluation & Metrics
+## Evaluation Metrics
 
-### Current Evaluation (12 Labeled Resumes)
+### Benchmark Results (12 Labeled Resumes)
 
-The engine is benchmarked against a labeled dataset of 12 synthetic candidates with varied profiles (Senior AI, Mid-level Search, Support-focused, etc.).
+The engine is evaluated against a labeled dataset of 12 synthetic candidates with varied profiles (senior AI specialists, mid-level engineers, support-focused roles, etc.).
 
 | Metric | Score | Target | Status |
 |:-------|:------|:-------|:-------|
-| **nDCG@3** | 0.954 | ≥ 0.85 | ✅ Excellent |
-| **Precision@1** | 100% | 100% | ✅ Perfect |
-| **Recall@3** | 100% | 100% | ✅ Perfect |
-| **Pairwise Accuracy** | 94.7% | ≥ 85% | ✅ Strong |
+| **nDCG@3** | 0.954 | ≥ 0.85 | Passed |
+| **Precision@1** | 100% | 100% | Passed |
+| **Recall@3** | 100% | 100% | Passed |
+| **Pairwise Accuracy** | 94.7% | ≥ 85% | Passed |
 
 ### Why These Metrics?
 
@@ -135,7 +141,7 @@ The engine is benchmarked against a labeled dataset of 12 synthetic candidates w
 
 ---
 
-## 🛠️ Technical Architecture
+## Architecture
 
 ```mermaid
 graph TD
@@ -155,9 +161,7 @@ graph TD
 
 ---
 
-## 💻 Local Setup
-
-If you wish to run this locally:
+## Local Setup
 
 1.  **Clone & Install**:
     ```bash
@@ -179,12 +183,25 @@ If you wish to run this locally:
     streamlit run app.py
     ```
 
-## 📂 Project Structure
-*   `app.py`: Main interactive dashboard.
-*   `demo_hybrid.py`: Core scoring engine and evaluation logic.
-*   `data/`: Raw resumes, job descriptions, and ground truth labels.
-*   `results_hybrid.json`: Cached benchmarking results.
+## Project Structure
+
+| Path | Description |
+|:-----|:------------|
+| `app.py` | Interactive Streamlit dashboard |
+| `demo_hybrid.py` | Core scoring engine and evaluation logic |
+| `data/` | Resumes, job descriptions, and ground truth labels |
+| `results_hybrid.json` | Cached benchmark results |
 
 ---
 
-**Built with ❤️ for the Ema AI Team.**
+## Development Journey
+
+This solution evolved through three iterations:
+
+| Version | Approach | nDCG@3 | Key Learning |
+|:--------|:---------|:-------|:-------------|
+| V1 | Pure LLM (two-stage pipeline) | 0.837 | LLM hallucination, inter-stage context loss |
+| V2 | Deterministic + Embeddings | 0.828 | Fast but inflexible, no contextual reasoning |
+| **V3 (main)** | **Sequential Hybrid** | **0.954** | **Grounded LLM with deterministic anchoring** |
+
+Branches `v1-llm-pipeline`, `v2-deterministic`, and `v3-hybrid` are preserved for reference.
