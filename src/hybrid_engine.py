@@ -3,7 +3,7 @@ import json
 import logging
 from typing import Dict, Any, List
 from src.deterministic_engine import DeterministicEngine
-from src.scorers.llm import LLMScorer
+from src.matching_engine import TwoStageMatchingEngine  # V1 Logic
 from src.config import config
 
 # Configure logging
@@ -12,61 +12,58 @@ logger = logging.getLogger(__name__)
 
 class HybridEngine:
     """
-    V3 Engine: Sequential Hybrid Approach.
+    V3 Engine: Parallel Ensemble (Hybrid).
     
-    Architecture:
-    1. Deterministic Extraction (Regex/Embeddings) provides "Ground Truth".
-    2. LLM reasons about candidate fit, grounded by the deterministic facts.
-    3. Final score = 60% LLM + 40% Deterministic.
+    Combines:
+    1. V1: LLM Pipeline (TwoStageMatchingEngine) - High reasoning, high hallucination risk.
+    2. V2: Deterministic Engine (Regex/Embeddings) - Strict, no hallucination.
+    
+    Score = Weighted Average (V1, V2).
     """
     
     def __init__(self):
-        self.det_engine = DeterministicEngine()
-        self.llm_scorer = LLMScorer()
+        self.v1_engine = TwoStageMatchingEngine()  # The exact V1 architecture
+        self.v2_engine = DeterministicEngine()     # The exact V2 architecture
         
         # V3 Weights from config
-        self.weight_llm = config.WEIGHT_LLM_V3
-        self.weight_det = config.WEIGHT_DET_V3
-        logger.info(f"Initialized HybridEngine with weights: LLM={self.weight_llm}, Det={self.weight_det}")
+        self.weight_v1 = config.WEIGHT_LLM_V3  # e.g. 0.6
+        self.weight_v2 = config.WEIGHT_DET_V3  # e.g. 0.4
+        logger.info(f"Initialized HybridEngine Ensemble: V1={self.weight_v1}, V2={self.weight_v2}")
         
     def evaluate(self, job_description: str, resume_text: str) -> Dict[str, Any]:
         """
-        Evaluate a resume using sequential hybrid logic.
+        Evaluate using both engines and ensemble the results.
         """
-        # 1. Stage 1: Deterministic "Ground Truth"
-        det_results = self.det_engine.evaluate(job_description, resume_text)
+        # 1. Run V2 (Deterministic)
+        try:
+            v2_result = self.v2_engine.evaluate(job_description, resume_text)
+            v2_score = v2_result['final_score']
+        except Exception as e:
+            logger.error(f"V2 Evaluation failed: {e}")
+            v2_score = 0.5
+            v2_result = {}
+
+        # 2. Run V1 (LLM)
+        try:
+            # We don't have resume_id here easily, passing generic
+            v1_result = self.v1_engine.evaluate(job_description, resume_text, resume_id="hybrid_eval")
+            v1_score = v1_result['final_score']
+        except Exception as e:
+            logger.error(f"V1 Evaluation failed: {e}")
+            v1_score = 0.5
+            v1_result = {}
         
-        # 2. Stage 2: Grounded LLM Reasoning
-        # We enrich the prompt with deterministic facts to prevent hallucinations
-        det_context = {
-            "years_experience": det_results['extracts']['years_experience'],
-            "matched_skills": det_results['extracts']['matched_required_skills'] + det_results['extracts']['matched_preferred_skills'],
-            "missing_required_skills": det_results['extracts']['missing_required_skills']
-        }
-        
-        # We need a special score method for LLM that accepts context
-        # I'll update src/scorers/llm.py or pass it as part of the resume text
-        llm_results = self.llm_scorer.score_with_context(
-            job_description, 
-            resume_text, 
-            det_context
-        )
-        
-        # 3. Aggregation
-        llm_score = llm_results.get('score', 0.5)
-        det_score = det_results['final_score']
-        
-        final_score = (self.weight_llm * llm_score) + (self.weight_det * det_score)
+        # 3. Ensemble
+        final_score = (self.weight_v1 * v1_score) + (self.weight_v2 * v2_score)
         
         return {
             "final_score": round(final_score, 3),
-            "llm_score": llm_score,
-            "deterministic_score": det_score,
-            "reasoning": llm_results.get('reasoning', ''),
-            "matched_skills": llm_results.get('matched_skills', []),
-            "missing_skills": llm_results.get('missing_skills', []),
-            "det_extracts": det_results['extracts'],
-            "det_breakdown": det_results['breakdown']
+            "v1_score": v1_score,
+            "v2_score": v2_score,
+            "v1_breakdown": v1_result.get('score_breakdown', ''),
+            "v2_breakdown": v2_result.get('breakdown', {}),
+            "reasoning": f"Ensemble Score: {self.weight_v1*100}% V1 ({v1_score}) + {self.weight_v2*100}% V2 ({v2_score})",
+            "matched_skills": list(set(v1_result.get('matched_skills', []) + v2_result.get('extracts', {}).get('matched_required_skills', [])))
         }
 
     def evaluate_batch(self, job_description: str, resumes: List[Dict[str, str]]) -> List[Dict[str, Any]]:
