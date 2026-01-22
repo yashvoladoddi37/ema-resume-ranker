@@ -118,6 +118,22 @@ For skill_match, you MUST:
 
 DO NOT list a skill as "missing" if the candidate has an equivalent tool.
 
+**CRITICAL: PER-EXPERIENCE RELEVANCE SCORING**
+
+For experience_depth, you MUST:
+1. Evaluate EACH experience block in the candidate's profile INDIVIDUALLY
+2. For EACH experience block, assign a relevance_score (0.0-1.0) based on:
+   - Does the role involve AI/GenAI, SaaS, technical support, or customer success?
+   - Does it involve Python, APIs, troubleshooting, or integrations?
+3. Calculate relevant_years = SUM of (duration_years * relevance_score) for each experience
+4. total_years = SUM of all duration_years (for reference)
+5. The final experience_depth score should be based on RELEVANT YEARS, not total years
+
+EXAMPLE:
+- "AI Support Engineer, 2 years" → relevance: 0.95 → contributes 1.9 relevant years
+- "Java Developer at Bank, 5 years" → relevance: 0.2 → contributes 1.0 relevant years
+- Total: 7 years, but Relevant: ~3 years → experience_depth score based on 3y, NOT 7y
+
 OUTPUT FORMAT:
 
 {{
@@ -129,7 +145,12 @@ OUTPUT FORMAT:
   }},
   "experience_depth": {{
     "score": 0.0,
-    "reasoning": "Brief explanation including years comparison"
+    "reasoning": "Brief explanation with relevant_years vs total_years",
+    "total_years": 0.0,
+    "relevant_years": 0.0,
+    "experience_breakdown": [
+      {{"role": "Job Title", "years": 0.0, "relevance": 0.0}}
+    ]
   }},
   "domain_fit": {{
     "score": 0.0,
@@ -149,11 +170,11 @@ SCORING GUIDELINES:
    - 0.0 = Has NO required skills
 
 2. **experience_depth (0.0-1.0):**
-   - Consider BOTH years AND relevance
-   - If JD requires "3+ years" and candidate has 3+: score ≥ 0.7
-   - If JD requires "3+ years" and candidate has 2 years: score ≤ 0.6
-   - Relevant experience is worth more than total years
-   - Senior roles with junior experience: score ≤ 0.5
+   - Based on RELEVANT YEARS ONLY (not total years!)
+   - If JD requires "3+ years" and candidate has 3+ RELEVANT: score ≥ 0.7
+   - If JD requires "3+ years" and candidate has 2 RELEVANT: score ≤ 0.6
+   - Career switchers with 10y total but 1y relevant: score ≤ 0.4
+   - Directly relevant experience is worth FAR MORE than tangential experience
 
 3. **domain_fit (0.0-1.0):**
    - How well does candidate's background align with role domain?
@@ -170,6 +191,7 @@ CRITICAL RULES:
 - Reasoning should be 1-2 sentences max per dimension
 
 Begin evaluation now:"""
+
     
     def _validate_scores(self, scores: Dict) -> Dict:
         """Validate score structure and ranges."""
@@ -195,11 +217,22 @@ Begin evaluation now:"""
         if "missing_skills" not in scores.get("skill_match", {}):
             scores["skill_match"]["missing_skills"] = []
         
+        # Ensure experience_depth has new per-experience fields
+        exp_depth = scores.get("experience_depth", {})
+        if "total_years" not in exp_depth:
+            exp_depth["total_years"] = 0.0
+        if "relevant_years" not in exp_depth:
+            exp_depth["relevant_years"] = 0.0
+        if "experience_breakdown" not in exp_depth:
+            exp_depth["experience_breakdown"] = []
+        scores["experience_depth"] = exp_depth
+        
         # Ensure overall_assessment exists
         if "overall_assessment" not in scores:
             scores["overall_assessment"] = "Evaluation completed"
         
         return scores
+
     
     def _get_default_scores(self) -> Dict:
         """Return default scores on failure."""
