@@ -1,0 +1,61 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"TEST CANDIDATE A\",\n   \"skills\": [\n      \"Python\",\n      \"Java\",\n      \"API\",\n      \"Troubleshooting\",\n      \"Technical Support\",\n      \"GenAI\"\n   ],\n   \"total_years_experience\": 7.0,\n   \"experience\": [\n      {\n         \"title\": \"AI Support Engineer\",\n         \"company\": \"NewScale AI\",\n         \"duration_years\": 1.0,\n         \"start_date\": \"January 2024\",\n         \"end_date\": \"January 2025\",\n         \"key_responsibilities\": [\n            \"Troubleshooting production LLM issues for SaaS customers\",\n            \"Configured API integrations for customer chatbots\"\n         ]\n      },\n      {\n         \"title\": \"Technical Support Lead\",\n         \"company\": \"StartupX\",\n         \"duration_years\": 1.0,\n         \"start_date\": \"January 2023\",\n         \"end_date\": \"December 2023\",\n         \"key_responsibilities\": [\n            \"Managing customer tickets and escalation for API products\"\n         ]\n      },\n      {\n         \"title\": \"Software Engineer\",\n         \"company\": \"LegacyCorp\",\n         \"duration_years\": 5.0,\n         \"start_date\": \"August 2018\",\n         \"end_date\": \"December 2022\",\n         \"key_responsibilities\": [\n            \"Developed Java backend services for financial systems\",\n            \"Focused on general backend development, no AI or Support focus\"\n         ]\n      }\n   ],\n   \"education\": {\n      \"degree\": \"B.S.\",\n      \"field\": \"Computer Science\",\n      \"institution\": \"State University\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n      \"AI/ML\",\n      \"Customer Support\",\n      \"SaaS\",\n      \"Cloud Infrastructure\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "TEST CANDIDATE A",
+    "skills": [
+      "Python",
+      "Java",
+      "API",
+      "Troubleshooting",
+      "Technical Support",
+      "GenAI"
+    ],
+    "total_years_experience": 7.0,
+    "experience": [
+      {
+        "title": "AI Support Engineer",
+        "company": "NewScale AI",
+        "duration_years": 1.0,
+        "start_date": "January 2024",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Troubleshooting production LLM issues for SaaS customers",
+          "Configured API integrations for customer chatbots"
+        ]
+      },
+      {
+        "title": "Technical Support Lead",
+        "company": "StartupX",
+        "duration_years": 1.0,
+        "start_date": "January 2023",
+        "end_date": "December 2023",
+        "key_responsibilities": [
+          "Managing customer tickets and escalation for API products"
+        ]
+      },
+      {
+        "title": "Software Engineer",
+        "company": "LegacyCorp",
+        "duration_years": 5.0,
+        "start_date": "August 2018",
+        "end_date": "December 2022",
+        "key_responsibilities": [
+          "Developed Java backend services for financial systems",
+          "Focused on general backend development, no AI or Support focus"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Computer Science",
+      "institution": "State University"
+    },
+    "certifications": [],
+    "domains": [
+      "AI/ML",
+      "Customer Support",
+      "SaaS",
+      "Cloud Infrastructure"
+    ]
+  }
+}

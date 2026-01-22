@@ -1,0 +1,37 @@
+============================================================
+SARAH JOHNSON
+Senior Technical Support Engineer | SaaS & API Specialist
+============================================================
+
+SUMMARY
+-------
+Senior engineer with over 7 years of experience in B2B SaaS technical 
+support and customer success. Expert in troubleshooting complex production 
+APIs, cloud infrastructure, and data integration issues.
+
+EXPERIENCE
+----------
+Technical Support Lead | CloudSync Solutions | January 2021 - Present
+• Lead a team of 5 engineers resolving Tier 3 support tickets for 
+  enterprise clients.
+• Diagnosed and fixed hundreds of API configuration problems involving 
+  Salesforce and Zendesk integrations.
+• Built internal dashboards using Python and SQL to monitor API health.
+
+Customer Success Engineer | DataFlow Inc | March 2018 - December 2020
+• Managed technical onboarding for top-tier SaaS customers.
+• Reduced churn by 15% through proactive technical account management.
+
+Technical Support Engineer | WebStack | June 2017 - February 2018
+• Provided 24/7 support for cloud hosting platform issues.
+
+SKILLS
+------
+Languages: Python, SQL, Bash
+DevOps/Ops: AWS, DataDog, Grafana, PagerDuty, Jenkins
+Integrations: Salesforce, HubSpot, Zendesk APIs
+---
+EDUCATION
+Stanford University | M.S. in Computer Science | 2015 - 2017
+Georgia Tech | B.S. in Computer Science | 2011 - 2015
+============================================================

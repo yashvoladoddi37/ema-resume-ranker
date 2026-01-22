@@ -1,0 +1,77 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"Yashpreet Voladoddi\",\n   \"skills\": [\n       \"Golang\",\n       \"Python\",\n       \"SQL\",\n       \"TypeScript\",\n       \"LLM\",\n       \"LangChain\",\n       \"LangGraph\",\n       \"Mistral 7B\",\n       \"Claude API\",\n       \"Prompt Engineering\",\n       \"RESTful API\",\n       \"AWS Lambda\",\n       \"DynamoDB\",\n       \"Terraform\",\n       \"Docker\",\n       \"Redis\",\n       \"Git\",\n       \"CI/CD\",\n       \"ONNX\",\n       \"ChromaDB\"\n   ],\n   \"total_years_experience\": 1.75,\n   \"experience\": [\n       {\n           \"title\": \"SDE & AI Engineer\",\n           \"company\": \"Kapi AI\",\n           \"duration_years\": 0.75,\n           \"start_date\": \"April 2024\",\n           \"end_date\": \"January 2025\",\n           \"key_responsibilities\": [\n               \"Developed core features for Golang-based agentic CLI platform\",\n               \"Architected privacy-first semantic search using Go and ONNX\",\n               \"Built LLM-powered automated documentation systems using ReAct framework\"\n           ]\n       },\n       {\n           \"title\": \"AI Engineer\",\n           \"company\": \"HeyCoach\",\n           \"duration_years\": 0.75,\n           \"start_date\": \"June 2024\",\n           \"end_date\": \"March 2025\",\n           \"key_responsibilities\": [\n               \"Developed AI-driven lead generation MVP using Mistral 7B\",\n               \"Integrated RESTful APIs with CRM handling 500+ leads/month\",\n               \"Built AI agent automating social media posts using LangGraph/Claude API\"\n           ]\n       },\n       {\n           \"title\": \"Backend AI Intern\",\n           \"company\": \"Lumio TV\",\n           \"duration_years\": 0.25,\n           \"start_date\": \"January 2024\",\n           \"end_date\": \"May 2024\",\n           \"key_responsibilities\": [\n               \"Built AWS Lambda RESTful APIs in Golang; integrated Redis caching\",\n               \"Provisioned infrastructure using Terraform for IaC\"\n           ]\n       }\n   ],\n   \"education\": {\n       \"degree\": \"B.Tech\",\n       \"field\": \"Computer Science\",\n       \"institution\": \"IIT Hyderabad\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n       \"AI/ML\",\n       \"Cloud Infrastructure\",\n       \"SaaS\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "Yashpreet Voladoddi",
+    "skills": [
+      "Golang",
+      "Python",
+      "SQL",
+      "TypeScript",
+      "LLM",
+      "LangChain",
+      "LangGraph",
+      "Mistral 7B",
+      "Claude API",
+      "Prompt Engineering",
+      "RESTful API",
+      "AWS Lambda",
+      "DynamoDB",
+      "Terraform",
+      "Docker",
+      "Redis",
+      "Git",
+      "CI/CD",
+      "ONNX",
+      "ChromaDB"
+    ],
+    "total_years_experience": 1.75,
+    "experience": [
+      {
+        "title": "SDE & AI Engineer",
+        "company": "Kapi AI",
+        "duration_years": 0.75,
+        "start_date": "April 2024",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Developed core features for Golang-based agentic CLI platform",
+          "Architected privacy-first semantic search using Go and ONNX",
+          "Built LLM-powered automated documentation systems using ReAct framework"
+        ]
+      },
+      {
+        "title": "AI Engineer",
+        "company": "HeyCoach",
+        "duration_years": 0.75,
+        "start_date": "June 2024",
+        "end_date": "March 2025",
+        "key_responsibilities": [
+          "Developed AI-driven lead generation MVP using Mistral 7B",
+          "Integrated RESTful APIs with CRM handling 500+ leads/month",
+          "Built AI agent automating social media posts using LangGraph/Claude API"
+        ]
+      },
+      {
+        "title": "Backend AI Intern",
+        "company": "Lumio TV",
+        "duration_years": 0.25,
+        "start_date": "January 2024",
+        "end_date": "May 2024",
+        "key_responsibilities": [
+          "Built AWS Lambda RESTful APIs in Golang; integrated Redis caching",
+          "Provisioned infrastructure using Terraform for IaC"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.Tech",
+      "field": "Computer Science",
+      "institution": "IIT Hyderabad"
+    },
+    "certifications": [],
+    "domains": [
+      "AI/ML",
+      "Cloud Infrastructure",
+      "SaaS"
+    ]
+  }
+}

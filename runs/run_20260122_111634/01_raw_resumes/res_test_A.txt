@@ -1,0 +1,30 @@
+============================================================
+TEST CANDIDATE A (Senior Generalist)
+7 Years Exp | Only 2 Years AI/Support
+============================================================
+
+SUMMARY
+-------
+Experienced Software Engineer with a total of 7 years in the industry. 
+Spent the last 2 years transitioning into AI Support and Technical Success.
+
+EXPERIENCE
+----------
+AI Support Engineer | NewScale AI | January 2024 - Present
+• Troubleshooting production LLM issues for SaaS customers.
+• Configured API integrations for customer chatbots.
+
+Technical Support Lead | StartupX | January 2023 - December 2023
+• Managing customer tickets and escalation for API products.
+
+Software Engineer | LegacyCorp | August 2018 - December 2022
+• Developed Java backend services for financial systems.
+• Focused on general backend development, no AI or Support focus.
+
+SKILLS
+------
+Python, Java, API, Troubleshooting, Technical Support, GenAI
+---
+EDUCATION
+State University | B.S. in Computer Science | 2014 - 2018
+============================================================

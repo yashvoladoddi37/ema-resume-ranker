@@ -1,0 +1,90 @@
+{
+  "id": "res_008_jordan",
+  "candidate_name": "Jordan Lee",
+  "final_score": 0.12,
+  "parsed_data": {
+    "candidate_name": "Jordan Lee",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Figma",
+      "Jest",
+      "HTML",
+      "CSS",
+      "jQuery"
+    ],
+    "total_years_experience": 4.67,
+    "experience": [
+      {
+        "title": "Frontend Dev",
+        "company": "Design Dynamics",
+        "duration_years": 3.33,
+        "start_date": "March 2022",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built high-performance React components for design system",
+          "Optimized frontend bundle sizes and accessibility"
+        ]
+      },
+      {
+        "title": "Junior Dev",
+        "company": "Web Agency",
+        "duration_years": 1.67,
+        "start_date": "June 2020",
+        "end_date": "February 2022",
+        "key_responsibilities": [
+          "HTML/CSS slicing",
+          "jQuery maintenance"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "",
+      "field": "",
+      "institution": ""
+    },
+    "certifications": [],
+    "domains": [
+      "Frontend Development",
+      "Web Development"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.0,
+      "reasoning": "The candidate lacks all required skills such as proficiency in APIs, ML performance diagnosis, and Python.",
+      "matched_skills": [],
+      "missing_skills": [
+        "APIs (JSON, REST, SOAP)",
+        "ML performance diagnosis",
+        "Python",
+        "troubleshooting production issues",
+        "logging, dashboard creation, and alerting tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.4,
+      "reasoning": "The candidate has 4.67 years of experience but it is not relevant to the AI Applications Engineer role, with no experience in technical support or customer success for SaaS."
+    },
+    "domain_fit": {
+      "score": 0.0,
+      "reasoning": "The candidate's background in Frontend Development and Web Development does not align with the AI Applications Engineer role."
+    },
+    "overall_assessment": "The candidate is not a strong fit for the AI Applications Engineer role due to a lack of relevant skills and experience."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [],
+  "missing_skills": [
+    "APIs (JSON, REST, SOAP)",
+    "ML performance diagnosis",
+    "Python",
+    "troubleshooting production issues",
+    "logging, dashboard creation, and alerting tools"
+  ],
+  "processing_time_seconds": 9.15
+}
