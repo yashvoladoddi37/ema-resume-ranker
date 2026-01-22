@@ -1,21 +1,19 @@
-# 🛠️ Resume Matcher V2: Pure Deterministic Approach
+# Resume Matcher V2: Deterministic Approach
 
-> **Version 2 of 3** — Moving from "Black Box" reasoning to "Auditable Facts"
+> **Version 2 of 3** — Transitioning from opaque LLM reasoning to auditable rule-based extraction
 
-## The Pivot
+## Motivation
 
-V1 taught us a painful lesson: **LLMs struggle with reliability.** 
+V1 revealed fundamental limitations of pure LLM pipelines:
+- **Inter-stage context loss:** Parser extracted a skill, Scorer reported it missing
+- **Semantic drift:** Failed to match tools like Prometheus as "logging infrastructure"
+- **Cost:** $0.02/resume is prohibitive for batch processing
 
-Even with 70B parameter models and aggressive prompt engineering, V1 suffered from:
-- **Inter-stage amnesia:** Parser extracted a skill, Scorer called it "missing".
-- **Semantic drift:** Missing simple tool matches (e.g., missed Prometheus as a "logging tool").
-- **High cost:** $0.02/resume is too much for batch processing.
-
-**V2 Motto: "If it can be a regex, it should be a regex."**
+**V2 Principle: "If it can be expressed as a pattern, use a pattern."
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 V2 removes the LLM entirely, replacing it with a hybrid of rule-based extraction and vector similarity.
 
@@ -42,45 +40,47 @@ Resume.txt
 
 ---
 
-## 📊 Results (V2 vs V1)
+## Results (V2 vs V1)
 
-| Metric | V1 (Pure LLM) | V2 (Deterministic) | Improvement |
-|--------|---------------|--------------------|-------------|
-| **nDCG@3** | 0.837 | **0.828** | -1% (slight trade-off) |
-| **Precision@1** | 1.000 | **1.000** | ✅ Maintained |
-| **Cost / 1k** | ~$20.00 | **$0.00** | **100% cheaper** 🎯 |
-| **Latency / Res** | ~3.5s | **~0.5s** | **87x faster** 🚀 |
-
----
-
-## 🔎 Why This is Better
-
-1. **Zero Hallucination:** If the resume says "Python", the system finds "Python". No imaginary skills.
-2. **Infinite Auditability:** Every point in the score is traceable to a specific line in the resume text via regex or keyword density.
-3. **Hyper-Scale:** You can process 10,000 resumes in seconds on a single CPU.
+| Metric | V1 (Pure LLM) | V2 (Deterministic) | Delta |
+|--------|---------------|--------------------|-------|
+| **nDCG@3** | 0.837 | 0.828 | -1% (acceptable trade-off) |
+| **Precision@1** | 1.000 | 1.000 | Maintained |
+| **Cost / 1k resumes** | ~$20.00 | $0.00 | 100% reduction |
+| **Latency / resume** | ~3.5s | ~0.5s | 7x faster |
 
 ---
 
-## 📂 New Components
+## Advantages
 
-- **`src/deterministic.py`**: The "Fact Extractor". Uses complex regex patterns for dates and a curated skill taxonomy.
-- **`src/scorers/semantic.py`**: Uses `all-MiniLM-L6-v2` embeddings to catch the "vibe" of the resume that regex misses.
-- **`src/deterministic_engine.py`**: The orchestrator that merges the two signals.
-
----
-
-## 💡 The Tradeoffs (The "V3" Setup)
-
-While V2 is reliable, it is **rigid**:
-- ❌ **No Nuance:** It doesn't know that "3 years of GenAI" is better than "10 years of COBOL".
-- ❌ **Taxonomy Bound:** If a skill isn't in our `REQUIRED_SKILLS` list, it doesn't count, even if it's a perfect synonym.
-- ❌ **Context Blind:** It counts "Python" even if it says "I want to learn Python".
-
-**The Goal for V3:** Use V2 as the "Ground Truth" foundation, and let the LLM do the high-level reasoning *only* using those validated facts.
+1. **No hallucination:** If the resume states "Python", the system matches "Python". No inferred skills.
+2. **Full auditability:** Every score component traces to specific text via regex or keyword density.
+3. **Scalability:** Process 10,000 resumes in seconds on a single CPU.
 
 ---
 
-## 🚀 Run V2
+## Components
+
+| File | Purpose |
+|:-----|:--------|
+| `src/deterministic.py` | Rule-based extraction: regex patterns for dates, curated skill taxonomy |
+| `src/scorers/semantic.py` | Semantic similarity via `all-MiniLM-L6-v2` embeddings |
+| `src/deterministic_engine.py` | Orchestrator combining both signals |
+
+---
+
+## Limitations
+
+V2 is reliable but inflexible:
+- **No contextual reasoning:** Cannot distinguish "3 years of GenAI" from "10 years of COBOL"
+- **Taxonomy-bound:** Skills outside `REQUIRED_SKILLS` are ignored, even valid synonyms
+- **Context-blind:** Matches "Python" even in "I want to learn Python"
+
+**V3 Goal:** Use V2 as the ground truth foundation, with LLM reasoning constrained to validated facts.
+
+---
+
+## Usage
 
 ```bash
 git checkout v2-deterministic
