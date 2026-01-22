@@ -134,30 +134,41 @@ EXAMPLE:
 - "Java Developer at Bank, 5 years" → relevance: 0.2 → contributes 1.0 relevant years
 - Total: 7 years, but Relevant: ~3 years → experience_depth score based on 3y, NOT 7y
 
+**CRITICAL: FORMULA AND REASONING**
+
+For EACH dimension, you MUST include a "formula" key that shows:
+1. The exact mathematical calculation used
+2. The reasoning behind the numbers chosen
+3. How the final score was derived
+
 OUTPUT FORMAT:
 
 {{
   "skill_match": {{
     "score": 0.0,
     "reasoning": "Brief explanation of skill alignment",
+    "formula": "matched_skills / total_required = X/Y = score. [Reason for each match/miss]",
     "matched_skills": ["skill1", "skill2"],
     "missing_skills": ["skill3", "skill4"]
   }},
   "experience_depth": {{
     "score": 0.0,
     "reasoning": "Brief explanation with relevant_years vs total_years",
+    "formula": "relevant_years = (role1_years * rel1) + (role2_years * rel2) = X. JD requires 3y, candidate has X relevant → score = X/3 = Y",
     "total_years": 0.0,
     "relevant_years": 0.0,
     "experience_breakdown": [
-      {{"role": "Job Title", "years": 0.0, "relevance": 0.0}}
+      {{"role": "Job Title", "years": 0.0, "relevance": 0.0, "relevance_reasoning": "Why this relevance score"}}
     ]
   }},
   "domain_fit": {{
     "score": 0.0,
-    "reasoning": "Brief explanation of domain alignment"
+    "reasoning": "Brief explanation of domain alignment",
+    "formula": "domain_overlap = [list domains]. Match count = X/Y total JD domains = score"
   }},
   "overall_assessment": "1-2 sentence summary of candidacy"
 }}
+
 
 SCORING GUIDELINES:
 
