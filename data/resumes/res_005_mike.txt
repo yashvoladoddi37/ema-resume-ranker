@@ -10,14 +10,15 @@ and JavaScript.
 
 EXPERIENCE
 ----------
-Full-Stack Developer | SocialApp | 2021 - Present
+Full-Stack Developer | SocialApp | April 2021 - Present
 • Built responsive UI features using React and Flask.
 • Developed REST APIs for user profiles and social feeds.
 • Integrated Stripe for payment processing.
 
-Web Developer | Local Business Solutions | 2019 - 2021
+Web Developer | Local Business Solutions | June 2019 - March 2021
 • Created e-commerce sites using WordPress and custom PHP.
 • Light Python scripts for data entry automation.
+
 
 SKILLS
 ------

@@ -10,14 +10,15 @@ account management.
 
 EXPERIENCE
 ----------
-Technical CSM | Enterprise CRM | 2021 - Present
+Technical CSM | Enterprise CRM | March 2021 - Present
 • Manage technical health for top-tier enterprise accounts.
 • Lead business reviews and technical roadmap planning.
 • Collaborate with engineering on product bug prioritizations.
 
-CSM | Startup Software | 2018 - 2021
+CSM | Startup Software | October 2018 - February 2021
 • Managed onboarding for 50+ mid-market clients.
 • Provided basic troubleshooting guidance for API keys.
+
 
 SKILLS
 ------

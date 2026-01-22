@@ -1,0 +1,32 @@
+============================================================
+EDGE CASE: CAREER SWITCHER (Finance to Tech)
+10 Years Finance | 1 Year AI/Tech
+============================================================
+
+SUMMARY
+-------
+Experienced financial analyst transitioning into technology. 
+Strong analytical background with recent hands-on AI/ML experience.
+Total: 11 years professional experience.
+
+EXPERIENCE
+----------
+AI Solutions Specialist | FinTech Startup | January 2025 - Present
+• Building LLM-powered financial document analysis tools.
+• Integrating OpenAI APIs with Python for automated reporting.
+• Troubleshooting production issues for enterprise clients.
+
+Senior Financial Analyst | Investment Bank | March 2015 - December 2024
+• Led quantitative analysis for portfolio management (10 years).
+• Built Excel/VBA-based risk models.
+• No Python, no API work, no customer-facing role.
+
+SKILLS
+------
+Languages: Python (1 year), VBA, SQL
+AI/ML: OpenAI API, LangChain (basic)
+Finance: Risk Analysis, Quantitative Modeling, Bloomberg Terminal
+---
+EDUCATION
+University of Chicago | MBA in Finance | 2012 - 2014
+============================================================
