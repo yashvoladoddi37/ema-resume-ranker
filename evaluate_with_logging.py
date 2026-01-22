@@ -124,7 +124,7 @@ Extract and return ONLY a valid JSON object with this EXACT structure:
 
 CRITICAL INSTRUCTIONS:
 1. **Date Handling:**
-   - If end_date is "Present", "Current", or missing, use "January 2025"
+   - If end_date is "Present", "Current", or missing, use "January 2026"
    - Calculate duration_years accurately (e.g., "Jan 2023 - Jan 2025" = 2.0 years)
 
 2. **Skills Extraction:**
