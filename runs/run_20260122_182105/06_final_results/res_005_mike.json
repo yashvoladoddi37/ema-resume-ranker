@@ -1,0 +1,122 @@
+{
+  "id": "res_005_mike",
+  "candidate_name": "MIKE RODRIGUEZ",
+  "final_score": 0.212,
+  "parsed_data": {
+    "candidate_name": "MIKE RODRIGUEZ",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "Flask",
+      "Node.js",
+      "CloudWatch",
+      "DataDog",
+      "WordPress",
+      "PHP",
+      "Stripe"
+    ],
+    "total_years_experience": 5.5,
+    "experience": [
+      {
+        "title": "Full-Stack Developer",
+        "company": "SocialApp",
+        "duration_years": 4.0,
+        "start_date": "April 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built responsive UI features using React and Flask",
+          "Developed REST APIs for user profiles and social feeds",
+          "Integrated Stripe for payment processing"
+        ]
+      },
+      {
+        "title": "Web Developer",
+        "company": "Local Business Solutions",
+        "duration_years": 1.5,
+        "start_date": "August 2019",
+        "end_date": "March 2021",
+        "key_responsibilities": [
+          "Created e-commerce sites using WordPress and custom PHP",
+          "Light Python scripts for data entry automation"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "M.Sc.",
+      "field": "Physics",
+      "institution": "Imperial College London"
+    },
+    "certifications": [],
+    "domains": [
+      "Web Development",
+      "E-commerce",
+      "Cloud Infrastructure",
+      "Payment Processing"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.35,
+      "reasoning": "The candidate has Python, which matches the required skill, but lacks direct experience with AI/GenAI workflows, APIs (JSON, REST), and data integration. However, they have experience with REST APIs and Python, which partially matches the requirements.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 1/7 * 0.7 + 0/6 * 0.3 = 0.1. Adjusted for missing required skills: 0.1 - (6 * 0.15) = -0.65, but since it can't be negative, we consider the presence of Python and adjust manually to 0.35",
+      "matched_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "AI/GenAI workflows",
+        "APIs (JSON, REST, SOAP)",
+        "data integration",
+        "troubleshooting production issues",
+        "designing A/A experiments",
+        "logging, dashboard creation, and alerting tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.13,
+      "reasoning": "The candidate has 5.5 years of experience, but most of it is not directly relevant to the job requirements. Only a small portion of their experience involves skills that could be tangentially related to the job, such as building REST APIs and using Python.",
+      "formula": "relevant_years = (4 * 0.1) + (1.5 * 0.05) = 0.4 + 0.075 = 0.475. Score = min(1.0, 0.475/3) = 0.1583, rounded to 0.13 for simplicity",
+      "total_years": 5.5,
+      "relevant_years": 0.475,
+      "experience_breakdown": [
+        {
+          "role": "Full-Stack Developer",
+          "years": 4.0,
+          "relevance": 0.1,
+          "relevance_reasoning": "Some relevance due to REST API and Python experience"
+        },
+        {
+          "role": "Web Developer",
+          "years": 1.5,
+          "relevance": 0.05,
+          "relevance_reasoning": "Minimal relevance, mostly web development"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.0,
+      "reasoning": "The candidate's domains (Web Development, E-commerce, Cloud Infrastructure, Payment Processing) do not match the required domain of AI/GenAI and customer-facing technologies.",
+      "formula": "domain_matches/total_required_domains = 0/2 = 0"
+    },
+    "overall_assessment": "The candidate lacks direct experience in AI/GenAI workflows, APIs, and data integration, and their domain expertise does not align with the job requirements, making them a less strong fit for the position."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "Python"
+  ],
+  "missing_skills": [
+    "AI/GenAI workflows",
+    "APIs (JSON, REST, SOAP)",
+    "data integration",
+    "troubleshooting production issues",
+    "designing A/A experiments",
+    "logging, dashboard creation, and alerting tools"
+  ],
+  "processing_time_seconds": 7.8
+}

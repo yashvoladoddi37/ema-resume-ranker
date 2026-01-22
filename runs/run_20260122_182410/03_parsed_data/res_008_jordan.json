@@ -1,0 +1,51 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"Jordan Lee\",\n   \"skills\": [\n      \"React\",\n      \"TypeScript\",\n      \"Tailwind\",\n      \"Figma\",\n      \"Jest\",\n      \"HTML\",\n      \"CSS\",\n      \"jQuery\"\n   ],\n   \"total_years_experience\": 4.5,\n   \"experience\": [\n      {\n         \"title\": \"Frontend Dev\",\n         \"company\": \"Design Dynamics\",\n         \"duration_years\": 3.0,\n         \"start_date\": \"March 2022\",\n         \"end_date\": \"January 2025\",\n         \"key_responsibilities\": [\n            \"Built high-performance React components for design system\",\n            \"Optimized frontend bundle sizes and accessibility\"\n         ]\n      },\n      {\n         \"title\": \"Junior Dev\",\n         \"company\": \"Web Agency\",\n         \"duration_years\": 1.5,\n         \"start_date\": \"June 2020\",\n         \"end_date\": \"February 2022\",\n         \"key_responsibilities\": [\n            \"HTML/CSS slicing\",\n            \"jQuery maintenance\"\n         ]\n      }\n   ],\n   \"education\": {\n      \"degree\": \"\",\n      \"field\": \"\",\n      \"institution\": \"\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n      \"Frontend Development\",\n      \"Web Development\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "Jordan Lee",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Figma",
+      "Jest",
+      "HTML",
+      "CSS",
+      "jQuery"
+    ],
+    "total_years_experience": 4.5,
+    "experience": [
+      {
+        "title": "Frontend Dev",
+        "company": "Design Dynamics",
+        "duration_years": 3.0,
+        "start_date": "March 2022",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built high-performance React components for design system",
+          "Optimized frontend bundle sizes and accessibility"
+        ]
+      },
+      {
+        "title": "Junior Dev",
+        "company": "Web Agency",
+        "duration_years": 1.5,
+        "start_date": "June 2020",
+        "end_date": "February 2022",
+        "key_responsibilities": [
+          "HTML/CSS slicing",
+          "jQuery maintenance"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "",
+      "field": "",
+      "institution": ""
+    },
+    "certifications": [],
+    "domains": [
+      "Frontend Development",
+      "Web Development"
+    ]
+  }
+}

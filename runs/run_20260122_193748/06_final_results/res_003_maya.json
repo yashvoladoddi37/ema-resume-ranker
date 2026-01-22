@@ -1,0 +1,122 @@
+{
+  "id": "res_003_maya",
+  "candidate_name": "MAYA GUPTA",
+  "final_score": 0.862,
+  "parsed_data": {
+    "candidate_name": "MAYA GUPTA",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "JSON-RPC",
+      "Prompt Engineering",
+      "LangChain",
+      "RAG",
+      "OpenAI API",
+      "Anthropic",
+      "ELK Stack",
+      "Jenkins",
+      "Docker",
+      "Terraform"
+    ],
+    "total_years_experience": 4.0,
+    "experience": [
+      {
+        "title": "Solutions Engineer",
+        "company": "GenAI Automate",
+        "duration_years": 3.0,
+        "start_date": "March 2022",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Configure and integrate AI/GenAI workflows for enterprise clients",
+          "Expert in LangChain and prompt engineering for RAG pipelines",
+          "Translate customer requirements into technical GenAI specs",
+          "Troubleshoot production LLM performance and hallucination issues"
+        ]
+      },
+      {
+        "title": "Systems Analyst",
+        "company": "Tech Solutions Ltd",
+        "duration_years": 1.67,
+        "start_date": "June 2020",
+        "end_date": "February 2022",
+        "key_responsibilities": [
+          "Integrated third-party APIs with internal ERP systems",
+          "Managed data mapping and REST integration flows"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Electrical Engineering & Computer Science",
+      "institution": "UC Berkeley"
+    },
+    "certifications": [],
+    "domains": [
+      "AI/ML",
+      "Cloud Infrastructure",
+      "Automation"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including proficiency in Python, APIs (JSON-RPC), and experience with GenAI workflows (LangChain, RAG). However, the candidate is missing explicit experience with SOAP APIs and CRM/ATS integrations.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "JSON-RPC",
+        "LangChain",
+        "RAG",
+        "OpenAI API"
+      ],
+      "missing_skills": [
+        "SOAP",
+        "CRM/ATS integration"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has a total of 4 years of experience, with 3 years in a highly relevant role as a Solutions Engineer at GenAI Automate, and 1.67 years in a somewhat relevant role as a Systems Analyst at Tech Solutions Ltd.",
+      "formula": "relevant_years = (3 * 0.9) + (1.67 * 0.6) = 2.7 + 1.0 = 3.7. Score = min(1.0, 3.7/3) = 0.83",
+      "total_years": 4.0,
+      "relevant_years": 3.7,
+      "experience_breakdown": [
+        {
+          "role": "Solutions Engineer",
+          "years": 3.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to experience with GenAI workflows and prompt engineering"
+        },
+        {
+          "role": "Systems Analyst",
+          "years": 1.67,
+          "relevance": 0.6,
+          "relevance_reasoning": "Somewhat relevant due to experience with API integration and data mapping"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate has a strong fit with the required domains, including AI/ML and automation, and some experience with cloud infrastructure.",
+      "formula": "domain_matches/total_required_domains = 2/2 = 1.0, but considering some experience in cloud infrastructure, score = 0.9"
+    },
+    "overall_assessment": "The candidate is a strong fit for the AI Applications Engineer role, with a high level of skill matching, relevant experience, and domain fit. However, some minor gaps in skills and experience exist."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "Python",
+    "JSON-RPC",
+    "LangChain",
+    "RAG",
+    "OpenAI API"
+  ],
+  "missing_skills": [
+    "SOAP",
+    "CRM/ATS integration"
+  ],
+  "processing_time_seconds": 15.02
+}

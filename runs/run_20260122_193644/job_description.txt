@@ -1,0 +1,36 @@
+============================================================
+AI APPLICATIONS ENGINEER @ EMA
+Location: Bengaluru, India (or Remote)
+============================================================
+
+WHO ARE WE?
+-----------
+Ema is building the next generation AI technology to empower 
+every employee in the enterprise. Our proprietary tech allows 
+enterprises to delegate repetitive tasks to Ema, the Universal 
+AI employee.
+
+YOU WILL:
+---------
+• Configure and integrate AI/GenAI workflows using platform 
+  APIs and customer data.
+• Troubleshoot and resolve production issues related to platform 
+  APIs, data integration, and workflow configurations.
+• Design, execute, and analyze A/A experiments to enhance 
+  workflow reliability and quality.
+• Monitor workflow performance using observability dashboards 
+  and business metrics.
+• Refine prompts for optimized performance.
+• Translate customer requirements into effective GenAI 
+  automation flows.
+
+IDEALLY, YOU'D HAVE:
+--------------------
+• 3+ years in technical support or customer success for SaaS.
+• Proficiency in troubleshooting production issues and 
+  diagnosing ML performance.
+• Familiarity with APIs (JSON, REST, SOAP) and integration with 
+  CRMs or ATS tools.
+• Competency in logging, dashboard creation, and alerting tools.
+• Strong proficiency in Python.
+============================================================

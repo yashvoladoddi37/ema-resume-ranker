@@ -1,0 +1,122 @@
+{
+  "id": "res_003_maya",
+  "candidate_name": "MAYA GUPTA",
+  "final_score": 0.854,
+  "parsed_data": {
+    "candidate_name": "MAYA GUPTA",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "JSON-RPC",
+      "LangChain",
+      "Prompt Engineering",
+      "RAG",
+      "OpenAI API",
+      "Anthropic",
+      "ELK Stack",
+      "Jenkins",
+      "Docker",
+      "Terraform"
+    ],
+    "total_years_experience": 4.0,
+    "experience": [
+      {
+        "title": "Solutions Engineer",
+        "company": "GenAI Automate",
+        "duration_years": 3.0,
+        "start_date": "March 2022",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Configure and integrate AI/GenAI workflows for enterprise clients",
+          "Expert in LangChain and prompt engineering for RAG pipelines",
+          "Translate customer requirements into technical GenAI specs",
+          "Troubleshoot production LLM performance and hallucination issues"
+        ]
+      },
+      {
+        "title": "Systems Analyst",
+        "company": "Tech Solutions Ltd",
+        "duration_years": 1.67,
+        "start_date": "June 2020",
+        "end_date": "February 2022",
+        "key_responsibilities": [
+          "Integrated third-party APIs with internal ERP systems",
+          "Managed data mapping and REST integration flows"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Electrical Engineering & Computer Science",
+      "institution": "UC Berkeley"
+    },
+    "certifications": [],
+    "domains": [
+      "AI/ML",
+      "Automation",
+      "Cloud Infrastructure"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including proficiency in Python, APIs, and experience with GenAI workflows through LangChain and Prompt Engineering. However, the candidate is missing explicit experience with SOAP APIs and CRM/ATS integrations.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "JSON-RPC",
+        "LangChain",
+        "Prompt Engineering",
+        "OpenAI API"
+      ],
+      "missing_skills": [
+        "SOAP",
+        "CRM/ATS integration"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has a total of 4 years of experience, with 3 years in a highly relevant role as a Solutions Engineer at GenAI Automate, and 1.67 years in a somewhat relevant role as a Systems Analyst at Tech Solutions Ltd. The relevance score for the first role is 0.9 due to its direct involvement with AI/GenAI and SaaS, and 0.6 for the second role due to its involvement with API integration.",
+      "formula": "relevant_years = (3 * 0.9) + (1.67 * 0.6) = 2.7 + 1.0 = 3.7. Score = min(1.0, 3.7/3) = 0.83",
+      "total_years": 4.0,
+      "relevant_years": 3.7,
+      "experience_breakdown": [
+        {
+          "role": "Solutions Engineer",
+          "years": 3.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Direct involvement with AI/GenAI and SaaS"
+        },
+        {
+          "role": "Systems Analyst",
+          "years": 1.67,
+          "relevance": 0.6,
+          "relevance_reasoning": "Involvement with API integration"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate's domains include AI/ML and Automation, which are highly relevant to the job description. The candidate also has experience with Cloud Infrastructure, which is somewhat relevant.",
+      "formula": "domain_matches/total_required_domains = 2/2 = 1.0, but considering the relevance of Cloud Infrastructure as 0.8, the score is adjusted to 0.9"
+    },
+    "overall_assessment": "The candidate is a strong fit for the AI Applications Engineer role at EMA, with a high degree of skill match, relevant experience, and domain fit. However, the candidate may require some additional training or support to fully meet the job requirements."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [
+    "Python",
+    "JSON-RPC",
+    "LangChain",
+    "Prompt Engineering",
+    "OpenAI API"
+  ],
+  "missing_skills": [
+    "SOAP",
+    "CRM/ATS integration"
+  ],
+  "processing_time_seconds": 3.2
+}

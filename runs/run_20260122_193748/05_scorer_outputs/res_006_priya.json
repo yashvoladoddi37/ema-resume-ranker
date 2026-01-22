@@ -1,0 +1,47 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.85,\n     \"reasoning\": \"The candidate has Python, which matches the JD requirement for proficiency in Python. Additionally, the candidate's experience with APIs (through skills like REST) and integration tools (like Airflow) aligns with the JD's requirements for API integration and workflow configuration. However, the candidate lacks direct experience with GenAI workflows and customer success in SaaS, which are preferred skills.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (3/4) * 0.7 + (2/4) * 0.3 = 0.85\",\n     \"matched_skills\": [\n       \"Python\",\n       \"Airflow\",\n       \"APIs (through REST)\"\n     ],\n     \"missing_skills\": [\n       \"GenAI workflows\",\n       \"SOAP\",\n       \"direct customer success experience\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.83,\n     \"reasoning\": \"The candidate has a total of 5.67 years of experience, with 3.67 years as a Senior Data Scientist and 1.67 years as a Data Analyst. The Senior Data Scientist role has high relevance to the JD, involving AI/ML, data workflows, and NLP, which aligns with the JD's requirements. The Data Analyst role has moderate relevance, involving SQL, Tableau, and A/B testing, which partially aligns with the JD's requirements.\",\n     \"formula\": \"relevant_years = (3.67 * 0.9) + (1.67 * 0.5) = 3.30 + 0.835 = 4.135. Score = min(1.0, 4.135/3) = 0.83\",\n     \"total_years\": 5.67,\n     \"relevant_years\": 4.135,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Senior Data Scientist\",\n         \"years\": 3.67,\n         \"relevance\": 0.9,\n         \"relevance_reasoning\": \"High relevance due to AI/ML, data workflows, and NLP experience\"\n       },\n       {\n         \"role\": \"Data Analyst\",\n         \"years\": 1.67,\n         \"relevance\": 0.5,\n         \"relevance_reasoning\": \"Moderate relevance due to SQL, Tableau, and A/B testing experience\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate's domains include AI/ML, Data Science, Predictive Modeling, NLP, and Business Intelligence, which are highly relevant to the JD's requirements for AI applications and GenAI workflows.\",\n     \"formula\": \"domain_matches/total_required_domains = 4/5 = 0.8, adjusted for high relevance of AI/ML and NLP = 0.9\"\n   },\n   \"overall_assessment\": \"The candidate has a strong skill match, deep experience in relevant domains, and a high domain fit, making them a strong candidate for the AI Applications Engineer role at EMA.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has Python, which matches the JD requirement for proficiency in Python. Additionally, the candidate's experience with APIs (through skills like REST) and integration tools (like Airflow) aligns with the JD's requirements for API integration and workflow configuration. However, the candidate lacks direct experience with GenAI workflows and customer success in SaaS, which are preferred skills.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (3/4) * 0.7 + (2/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "Airflow",
+        "APIs (through REST)"
+      ],
+      "missing_skills": [
+        "GenAI workflows",
+        "SOAP",
+        "direct customer success experience"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has a total of 5.67 years of experience, with 3.67 years as a Senior Data Scientist and 1.67 years as a Data Analyst. The Senior Data Scientist role has high relevance to the JD, involving AI/ML, data workflows, and NLP, which aligns with the JD's requirements. The Data Analyst role has moderate relevance, involving SQL, Tableau, and A/B testing, which partially aligns with the JD's requirements.",
+      "formula": "relevant_years = (3.67 * 0.9) + (1.67 * 0.5) = 3.30 + 0.835 = 4.135. Score = min(1.0, 4.135/3) = 0.83",
+      "total_years": 5.67,
+      "relevant_years": 4.135,
+      "experience_breakdown": [
+        {
+          "role": "Senior Data Scientist",
+          "years": 3.67,
+          "relevance": 0.9,
+          "relevance_reasoning": "High relevance due to AI/ML, data workflows, and NLP experience"
+        },
+        {
+          "role": "Data Analyst",
+          "years": 1.67,
+          "relevance": 0.5,
+          "relevance_reasoning": "Moderate relevance due to SQL, Tableau, and A/B testing experience"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate's domains include AI/ML, Data Science, Predictive Modeling, NLP, and Business Intelligence, which are highly relevant to the JD's requirements for AI applications and GenAI workflows.",
+      "formula": "domain_matches/total_required_domains = 4/5 = 0.8, adjusted for high relevance of AI/ML and NLP = 0.9"
+    },
+    "overall_assessment": "The candidate has a strong skill match, deep experience in relevant domains, and a high domain fit, making them a strong candidate for the AI Applications Engineer role at EMA."
+  }
+}

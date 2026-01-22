@@ -3,25 +3,15 @@ import json
 import time
 from datetime import datetime
 from src.hybrid_engine import HybridEngine
-from src.utils import calculate_metrics
+from src.utils import calculate_metrics, load_resumes, load_job_description
 
 def run_evaluation():
     print("🚀 Starting V3 Sequential Hybrid Evaluation...")
     engine = HybridEngine()
     
     # Load data
-    with open("data/job_descriptions/ema_ai_apps_engineer.txt", "r") as f:
-        jd = f.read()
-        
-    resumes_dir = "data/resumes"
-    resumes = []
-    for filename in os.listdir(resumes_dir):
-        if filename.endswith(".txt"):
-            with open(os.path.join(resumes_dir, filename), "r") as f:
-                resumes.append({
-                    "id": filename.replace(".txt", ""),
-                    "text": f.read()
-                })
+    jd = load_job_description()
+    resumes = load_resumes()
                 
     # Evaluate
     start_time = time.time()

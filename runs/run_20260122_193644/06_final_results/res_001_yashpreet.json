@@ -1,0 +1,118 @@
+{
+  "id": "res_001_yashpreet",
+  "candidate_name": "Yashpreet Voladoddi",
+  "final_score": 0.58,
+  "parsed_data": {
+    "candidate_name": "Yashpreet Voladoddi",
+    "skills": [
+      "Golang",
+      "Python",
+      "SQL",
+      "TypeScript",
+      "LLM",
+      "LangChain",
+      "LangGraph",
+      "Mistral 7B",
+      "Claude API",
+      "Prompt Engineering",
+      "RESTful API",
+      "AWS Lambda",
+      "DynamoDB",
+      "Terraform",
+      "Docker",
+      "Redis",
+      "Git",
+      "CI/CD",
+      "ONNX",
+      "ChromaDB"
+    ],
+    "total_years_experience": 1.5,
+    "experience": [
+      {
+        "title": "SDE & AI Engineer",
+        "company": "Kapi AI",
+        "duration_years": 0.5,
+        "start_date": "April 2025",
+        "end_date": "January 2026",
+        "key_responsibilities": [
+          "Developed core features for Golang-based agentic CLI platform",
+          "Architected privacy-first semantic search using Go and ONNX",
+          "Built LLM-powered automated documentation systems using ReAct framework"
+        ]
+      },
+      {
+        "title": "AI Engineer",
+        "company": "HeyCoach",
+        "duration_years": 0.75,
+        "start_date": "June 2024",
+        "end_date": "March 2025",
+        "key_responsibilities": [
+          "Developed AI-driven lead generation MVP using Mistral 7B",
+          "Integrated RESTful APIs with CRM handling 500+ leads/month",
+          "Built AI agent automating social media posts using LangGraph/Claude API"
+        ]
+      },
+      {
+        "title": "Backend AI Intern",
+        "company": "Lumio TV",
+        "duration_years": 0.25,
+        "start_date": "January 2024",
+        "end_date": "May 2024",
+        "key_responsibilities": [
+          "Built AWS Lambda RESTful APIs in Golang; integrated Redis caching",
+          "Provisioned infrastructure using Terraform for IaC"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.Tech",
+      "field": "Computer Science",
+      "institution": "IIT Hyderabad"
+    },
+    "certifications": [],
+    "domains": [
+      "AI/ML",
+      "Cloud Infrastructure",
+      "SaaS"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.6,
+      "reasoning": "The candidate has most required skills such as proficiency in Python, familiarity with APIs (RESTful API), and experience with integration tools, but lacks direct experience with GenAI, platform APIs, and customer data integration.",
+      "matched_skills": [
+        "Python",
+        "RESTful API"
+      ],
+      "missing_skills": [
+        "GenAI",
+        "platform APIs",
+        "customer data integration"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.4,
+      "reasoning": "The candidate has 1.5 years of experience, which is less than the required 3+ years, but has relevant experience in AI engineering and integration, which is worth considering."
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate's background in AI/ML and experience in SaaS align well with the role domain, and their experience in customer-facing roles is a plus."
+    },
+    "overall_assessment": "The candidate shows promise with a strong skill set and domain fit, but lacks the required years of experience; further evaluation and potential training could make them a strong fit for the AI Applications Engineer role."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [
+    "Python",
+    "RESTful API"
+  ],
+  "missing_skills": [
+    "GenAI",
+    "platform APIs",
+    "customer data integration"
+  ],
+  "processing_time_seconds": 2.59
+}

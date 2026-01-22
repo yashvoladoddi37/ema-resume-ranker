@@ -1,0 +1,54 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.85,\n     \"reasoning\": \"The candidate has most of the required skills, including proficiency in Python, RESTful API, and experience with APIs. However, they lack direct experience with SOAP and specific CRM or ATS tools integration.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (4/4) * 0.3 = 0.85\",\n     \"matched_skills\": [\n       \"Python\",\n       \"RESTful API\",\n       \"APIs\",\n       \"Prompt Engineering\",\n       \"LangChain\"\n     ],\n     \"missing_skills\": [\n       \"SOAP\",\n       \"CRMs or ATS tools\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.45,\n     \"reasoning\": \"The candidate has a total of 1.75 years of experience, with most of it being relevant to the job description. However, they lack the required 3+ years of experience.\",\n     \"formula\": \"relevant_years = (0.5 * 0.8) + (0.75 * 0.9) + (0.5 * 0.7) = 0.4 + 0.675 + 0.35 = 1.425. Score = min(1.0, 1.425/3) = 0.475, adjusted for relevance and years = 0.45\",\n     \"total_years\": 1.75,\n     \"relevant_years\": 1.425,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"SDE & AI Engineer\",\n         \"years\": 0.5,\n         \"relevance\": 0.8,\n         \"relevance_reasoning\": \"Involved AI and API work, but not directly related to customer success or technical support.\"\n       },\n       {\n         \"role\": \"AI Engineer\",\n         \"years\": 0.75,\n         \"relevance\": 0.9,\n         \"relevance_reasoning\": \"Involved AI-driven lead generation and integration with CRM, highly relevant.\"\n       },\n       {\n         \"role\": \"Backend AI Intern\",\n         \"years\": 0.5,\n         \"relevance\": 0.7,\n         \"relevance_reasoning\": \"Involved building RESTful APIs and infrastructure, somewhat relevant.\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate has a strong background in AI/ML and experience in SaaS, which is a high fit for the job description.\",\n     \"formula\": \"domain_matches/total_required_domains = 2/2 = 1.0, adjusted for partial match in customer-facing experience = 0.9\"\n   },\n   \"overall_assessment\": \"The candidate has a strong skill set and domain fit, but lacks the required years of experience. They are a promising candidate, but may require additional training or mentorship to fill the experience gap.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including proficiency in Python, RESTful API, and experience with APIs. However, they lack direct experience with SOAP and specific CRM or ATS tools integration.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (4/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "RESTful API",
+        "APIs",
+        "Prompt Engineering",
+        "LangChain"
+      ],
+      "missing_skills": [
+        "SOAP",
+        "CRMs or ATS tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.45,
+      "reasoning": "The candidate has a total of 1.75 years of experience, with most of it being relevant to the job description. However, they lack the required 3+ years of experience.",
+      "formula": "relevant_years = (0.5 * 0.8) + (0.75 * 0.9) + (0.5 * 0.7) = 0.4 + 0.675 + 0.35 = 1.425. Score = min(1.0, 1.425/3) = 0.475, adjusted for relevance and years = 0.45",
+      "total_years": 1.75,
+      "relevant_years": 1.425,
+      "experience_breakdown": [
+        {
+          "role": "SDE & AI Engineer",
+          "years": 0.5,
+          "relevance": 0.8,
+          "relevance_reasoning": "Involved AI and API work, but not directly related to customer success or technical support."
+        },
+        {
+          "role": "AI Engineer",
+          "years": 0.75,
+          "relevance": 0.9,
+          "relevance_reasoning": "Involved AI-driven lead generation and integration with CRM, highly relevant."
+        },
+        {
+          "role": "Backend AI Intern",
+          "years": 0.5,
+          "relevance": 0.7,
+          "relevance_reasoning": "Involved building RESTful APIs and infrastructure, somewhat relevant."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate has a strong background in AI/ML and experience in SaaS, which is a high fit for the job description.",
+      "formula": "domain_matches/total_required_domains = 2/2 = 1.0, adjusted for partial match in customer-facing experience = 0.9"
+    },
+    "overall_assessment": "The candidate has a strong skill set and domain fit, but lacks the required years of experience. They are a promising candidate, but may require additional training or mentorship to fill the experience gap."
+  }
+}

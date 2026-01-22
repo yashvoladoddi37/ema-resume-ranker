@@ -1,0 +1,146 @@
+You are evaluating a candidate for a job opening.
+
+JOB DESCRIPTION:
+============================================================
+AI APPLICATIONS ENGINEER @ EMA
+Location: Bengaluru, India (or Remote)
+============================================================
+
+WHO ARE WE?
+-----------
+Ema is building the next generation AI technology to empower 
+every employee in the enterprise. Our proprietary tech allows 
+enterprises to delegate repetitive tasks to Ema, the Universal 
+AI employee.
+
+YOU WILL:
+---------
+• Configure and integrate AI/GenAI workflows using platform 
+  APIs and customer data.
+• Troubleshoot and resolve production issues related to platform 
+  APIs, data integration, and workflow configurations.
+• Design, execute, and analyze A/A experiments to enhance 
+  workflow reliability and quality.
+• Monitor workflow performance using observability dashboards 
+  and business metrics.
+• Refine prompts for optimized performance.
+• Translate customer requirements into effective GenAI 
+  automation flows.
+
+IDEALLY, YOU'D HAVE:
+--------------------
+• 3+ years in technical support or customer success for SaaS.
+• Proficiency in troubleshooting production issues and 
+  diagnosing ML performance.
+• Familiarity with APIs (JSON, REST, SOAP) and integration with 
+  CRMs or ATS tools.
+• Competency in logging, dashboard creation, and alerting tools.
+• Strong proficiency in Python.
+============================================================
+
+
+CANDIDATE PROFILE (extracted from resume):
+{
+  "candidate_name": "MIKE RODRIGUEZ",
+  "skills": [
+    "Python",
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Flask",
+    "React",
+    "Node.js",
+    "CloudWatch",
+    "DataDog",
+    "WordPress",
+    "PHP",
+    "Stripe"
+  ],
+  "total_years_experience": 5.5,
+  "experience": [
+    {
+      "title": "Full-Stack Developer",
+      "company": "SocialApp",
+      "duration_years": 4.0,
+      "start_date": "April 2021",
+      "end_date": "January 2025",
+      "key_responsibilities": [
+        "Built responsive UI features using React and Flask",
+        "Developed REST APIs for user profiles and social feeds",
+        "Integrated Stripe for payment processing"
+      ]
+    },
+    {
+      "title": "Web Developer",
+      "company": "Local Business Solutions",
+      "duration_years": 1.5,
+      "start_date": "August 2019",
+      "end_date": "March 2021",
+      "key_responsibilities": [
+        "Created e-commerce sites using WordPress and custom PHP",
+        "Light Python scripts for data entry automation"
+      ]
+    }
+  ],
+  "education": {
+    "degree": "M.Sc.",
+    "field": "Physics",
+    "institution": "Imperial College London"
+  },
+  "certifications": [],
+  "domains": [
+    "Web Development",
+    "E-commerce",
+    "Cloud Infrastructure"
+  ]
+}
+
+TASK:
+Evaluate the candidate on three dimensions and return ONLY a JSON object:
+
+{
+  "skill_match": {
+    "score": 0.0,
+    "reasoning": "Brief explanation of skill alignment",
+    "matched_skills": ["skill1", "skill2"],
+    "missing_skills": ["skill3", "skill4"]
+  },
+  "experience_depth": {
+    "score": 0.0,
+    "reasoning": "Brief explanation including years comparison"
+  },
+  "domain_fit": {
+    "score": 0.0,
+    "reasoning": "Brief explanation of domain alignment"
+  },
+  "overall_assessment": "1-2 sentence summary of candidacy"
+}
+
+SCORING GUIDELINES:
+
+1. **skill_match (0.0-1.0):**
+   - 1.0 = Has ALL required skills + most preferred skills
+   - 0.8 = Has ALL required skills, some preferred
+   - 0.6 = Has MOST required skills
+   - 0.4 = Has SOME required skills
+   - 0.2 = Has FEW required skills
+   - 0.0 = Has NO required skills
+
+2. **experience_depth (0.0-1.0):**
+   - Consider BOTH years AND relevance
+   - If JD requires "3+ years" and candidate has 3+: score ≥ 0.7
+   - If JD requires "3+ years" and candidate has 2 years: score ≤ 0.6
+   - Relevant experience is worth more than total years
+
+3. **domain_fit (0.0-1.0):**
+   - How well does candidate's background align with role domain?
+   - For AI Applications Engineer: AI/ML background + customer-facing = high
+   - Related domains = medium-high
+   - Unrelated domains = low
+
+CRITICAL RULES:
+- Use the FULL 0.0-1.0 scale
+- Be critical but fair
+- Return ONLY valid JSON
+
+Begin evaluation now:

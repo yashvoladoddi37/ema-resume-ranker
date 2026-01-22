@@ -1,0 +1,96 @@
+{
+  "id": "res_007_sam",
+  "candidate_name": "SAM TAYLOR",
+  "final_score": 0.56,
+  "parsed_data": {
+    "candidate_name": "SAM TAYLOR",
+    "skills": [
+      "SQL",
+      "Salesforce",
+      "Gainsight",
+      "ZoomInfo",
+      "API",
+      "Relationship Management",
+      "Communication",
+      "Strategy"
+    ],
+    "total_years_experience": 6.0,
+    "experience": [
+      {
+        "title": "Technical CSM",
+        "company": "Enterprise CRM",
+        "duration_years": 4.0,
+        "start_date": "January 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Manage technical health for top-tier enterprise accounts",
+          "Lead business reviews and technical roadmap planning",
+          "Collaborate with engineering on product bug prioritizations"
+        ]
+      },
+      {
+        "title": "CSM",
+        "company": "Startup Software",
+        "duration_years": 2.75,
+        "start_date": "March 2018",
+        "end_date": "December 2020",
+        "key_responsibilities": [
+          "Managed onboarding for 50+ mid-market clients",
+          "Provided basic troubleshooting guidance for API keys"
+        ]
+      }
+    ],
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Customer Success",
+      "Technical Account Management"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.4,
+      "reasoning": "The candidate has some required skills like API, but lacks critical skills such as Python, JSON, REST, SOAP, and experience with ML performance troubleshooting.",
+      "matched_skills": [
+        "API"
+      ],
+      "missing_skills": [
+        "Python",
+        "JSON",
+        "REST",
+        "SOAP",
+        "ML performance troubleshooting"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.8,
+      "reasoning": "The candidate has 6 years of experience, exceeding the required 3+ years, and has relevant experience in technical support and customer success for SaaS, which aligns well with the job requirements."
+    },
+    "domain_fit": {
+      "score": 0.6,
+      "reasoning": "The candidate's background in SaaS, customer success, and technical account management provides some alignment with the role domain, but lacks direct experience in AI/ML and GenAI automation."
+    },
+    "overall_assessment": "The candidate has a strong experience background but lacks critical skills required for the AI Applications Engineer role, making them a potential candidate with significant upskilling needs."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [
+    "API"
+  ],
+  "missing_skills": [
+    "Python",
+    "JSON",
+    "REST",
+    "SOAP",
+    "ML performance troubleshooting"
+  ],
+  "processing_time_seconds": 7.25
+}

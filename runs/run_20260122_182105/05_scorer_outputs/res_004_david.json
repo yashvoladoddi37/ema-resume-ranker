@@ -1,0 +1,51 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.73,\n     \"reasoning\": \"The candidate has Python, REST, and SOAP which match the required skills. They also have experience with logging and alerting tools like Prometheus, Kibana, and Splunk, which match some of the preferred skills.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (4/5) * 0.7 + (3/6) * 0.3 = 0.73\",\n     \"matched_skills\": [\n       \"Python\",\n       \"REST\",\n       \"SOAP\",\n       \"Prometheus\",\n       \"Kibana\",\n       \"Splunk\"\n     ],\n     \"missing_skills\": [\n       \"AI/GenAI workflows\",\n       \"LLM\",\n       \"RAG\",\n       \"CRMs or ATS tools integration\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.67,\n     \"reasoning\": \"The candidate has 5.5 years of total experience, with 4 years as an Integration Engineer and 1.5 years as a Backend Developer. The Integration Engineer role is highly relevant, while the Backend Developer role is somewhat relevant.\",\n     \"formula\": \"relevant_years = (4 * 0.9) + (1.5 * 0.6) = 3.6 + 0.9 = 4.5. Score = min(1.0, 4.5/3) = 0.67 * (4.5/5.5) = 0.55, adjusted for relevance and years\",\n     \"total_years\": 5.5,\n     \"relevant_years\": 4.5,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Integration Engineer\",\n         \"years\": 4.0,\n         \"relevance\": 0.9,\n         \"relevance_reasoning\": \"Highly relevant due to experience with API integration and troubleshooting\"\n       },\n       {\n         \"role\": \"Backend Developer\",\n         \"years\": 1.5,\n         \"relevance\": 0.6,\n         \"relevance_reasoning\": \"Somewhat relevant due to experience with REST services and database schemas\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.8,\n     \"reasoning\": \"The candidate has experience in Cloud Infrastructure, SaaS, and API Integration, which are related to the job requirements.\",\n     \"formula\": \"domain_matches/total_required_domains = 2/3 = 0.67, adjusted for relevance and years, score = 0.8\"\n   },\n   \"overall_assessment\": \"The candidate has a strong skill match and experience depth, with a good domain fit, making them a suitable candidate for the AI Applications Engineer role.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.73,
+      "reasoning": "The candidate has Python, REST, and SOAP which match the required skills. They also have experience with logging and alerting tools like Prometheus, Kibana, and Splunk, which match some of the preferred skills.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (4/5) * 0.7 + (3/6) * 0.3 = 0.73",
+      "matched_skills": [
+        "Python",
+        "REST",
+        "SOAP",
+        "Prometheus",
+        "Kibana",
+        "Splunk"
+      ],
+      "missing_skills": [
+        "AI/GenAI workflows",
+        "LLM",
+        "RAG",
+        "CRMs or ATS tools integration"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.67,
+      "reasoning": "The candidate has 5.5 years of total experience, with 4 years as an Integration Engineer and 1.5 years as a Backend Developer. The Integration Engineer role is highly relevant, while the Backend Developer role is somewhat relevant.",
+      "formula": "relevant_years = (4 * 0.9) + (1.5 * 0.6) = 3.6 + 0.9 = 4.5. Score = min(1.0, 4.5/3) = 0.67 * (4.5/5.5) = 0.55, adjusted for relevance and years",
+      "total_years": 5.5,
+      "relevant_years": 4.5,
+      "experience_breakdown": [
+        {
+          "role": "Integration Engineer",
+          "years": 4.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to experience with API integration and troubleshooting"
+        },
+        {
+          "role": "Backend Developer",
+          "years": 1.5,
+          "relevance": 0.6,
+          "relevance_reasoning": "Somewhat relevant due to experience with REST services and database schemas"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate has experience in Cloud Infrastructure, SaaS, and API Integration, which are related to the job requirements.",
+      "formula": "domain_matches/total_required_domains = 2/3 = 0.67, adjusted for relevance and years, score = 0.8"
+    },
+    "overall_assessment": "The candidate has a strong skill match and experience depth, with a good domain fit, making them a suitable candidate for the AI Applications Engineer role."
+  }
+}

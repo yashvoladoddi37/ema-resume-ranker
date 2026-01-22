@@ -1,0 +1,28 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.2,\n     \"reasoning\": \"The candidate lacks most of the required technical skills such as proficiency in APIs, Python, and experience with ML performance troubleshooting.\",\n     \"matched_skills\": [\"Troubleshooting\", \"Customer Service\"],\n     \"missing_skills\": [\"APIs\", \"Python\", \"ML performance troubleshooting\", \"GenAI\"]\n   },\n   \"experience_depth\": {\n     \"score\": 0.6,\n     \"reasoning\": \"The candidate has 4.5 years of experience, which meets the 3+ years requirement, but the experience is not highly relevant to the AI Applications Engineer role.\"\n   },\n   \"domain_fit\": {\n     \"score\": 0.4,\n     \"reasoning\": \"The candidate's background in customer support and technical support is somewhat related to the role, but lacks direct experience in AI/ML or similar domains.\"\n   },\n   \"overall_assessment\": \"Elena Castro has some relevant experience in customer-facing roles and technical support, but lacks the required technical skills for the AI Applications Engineer position, making her a less strong candidate.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.2,
+      "reasoning": "The candidate lacks most of the required technical skills such as proficiency in APIs, Python, and experience with ML performance troubleshooting.",
+      "matched_skills": [
+        "Troubleshooting",
+        "Customer Service"
+      ],
+      "missing_skills": [
+        "APIs",
+        "Python",
+        "ML performance troubleshooting",
+        "GenAI"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.6,
+      "reasoning": "The candidate has 4.5 years of experience, which meets the 3+ years requirement, but the experience is not highly relevant to the AI Applications Engineer role."
+    },
+    "domain_fit": {
+      "score": 0.4,
+      "reasoning": "The candidate's background in customer support and technical support is somewhat related to the role, but lacks direct experience in AI/ML or similar domains."
+    },
+    "overall_assessment": "Elena Castro has some relevant experience in customer-facing roles and technical support, but lacks the required technical skills for the AI Applications Engineer position, making her a less strong candidate."
+  }
+}

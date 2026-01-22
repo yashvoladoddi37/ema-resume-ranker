@@ -1,0 +1,47 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n       \"score\": 0.15,\n       \"reasoning\": \"The candidate has Splunk, which matches with logging, dashboard creation, and alerting tools. However, the candidate is missing most required skills such as Python, AI/GenAI workflows, and APIs.\",\n       \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/5 * 0.7 + 1/5 * 0.3 = 0.15\",\n       \"matched_skills\": [\n           \"Splunk\"\n       ],\n       \"missing_skills\": [\n           \"Python\",\n           \"AI/GenAI workflows\",\n           \"APIs (JSON, REST)\",\n           \"Familiarity with APIs (JSON, REST) and data integration\",\n           \"Ability to troubleshoot production issues\"\n       ]\n   },\n   \"experience_depth\": {\n       \"score\": 0.0,\n       \"reasoning\": \"The candidate has 4.5 years of experience in IT Support and Customer Service, but none of it is directly relevant to the job requirements of AI/GenAI workflows, SaaS, technical support, or customer success involving AI/GenAI.\",\n       \"formula\": \"relevant_years = (0 * 0) + (0 * 0) = 0. Score = min(1.0, 0/3) = 0\",\n       \"total_years\": 6.25,\n       \"relevant_years\": 0.0,\n       \"experience_breakdown\": [\n           {\n               \"role\": \"IT Support Associate\",\n               \"years\": 4.5,\n               \"relevance\": 0.0,\n               \"relevance_reasoning\": \"No direct relevance to AI/GenAI workflows, SaaS, or technical support involving AI/GenAI.\"\n           },\n           {\n               \"role\": \"Customer Service Representative\",\n               \"years\": 1.75,\n               \"relevance\": 0.0,\n               \"relevance_reasoning\": \"No direct relevance to AI/GenAI workflows, SaaS, or technical support involving AI/GenAI.\"\n           }\n       ]\n   },\n   \"domain_fit\": {\n       \"score\": 0.0,\n       \"reasoning\": \"The candidate's domains are Customer Support and IT Support, which are not directly related to AI/ML or customer-facing roles involving AI/GenAI.\",\n       \"formula\": \"domain_matches/total_required_domains = 0/2 = 0\"\n   },\n   \"overall_assessment\": \"The candidate lacks the required skills and relevant experience for the AI Applications Engineer role, making them a poor fit for the position.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.15,
+      "reasoning": "The candidate has Splunk, which matches with logging, dashboard creation, and alerting tools. However, the candidate is missing most required skills such as Python, AI/GenAI workflows, and APIs.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/5 * 0.7 + 1/5 * 0.3 = 0.15",
+      "matched_skills": [
+        "Splunk"
+      ],
+      "missing_skills": [
+        "Python",
+        "AI/GenAI workflows",
+        "APIs (JSON, REST)",
+        "Familiarity with APIs (JSON, REST) and data integration",
+        "Ability to troubleshoot production issues"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.0,
+      "reasoning": "The candidate has 4.5 years of experience in IT Support and Customer Service, but none of it is directly relevant to the job requirements of AI/GenAI workflows, SaaS, technical support, or customer success involving AI/GenAI.",
+      "formula": "relevant_years = (0 * 0) + (0 * 0) = 0. Score = min(1.0, 0/3) = 0",
+      "total_years": 6.25,
+      "relevant_years": 0.0,
+      "experience_breakdown": [
+        {
+          "role": "IT Support Associate",
+          "years": 4.5,
+          "relevance": 0.0,
+          "relevance_reasoning": "No direct relevance to AI/GenAI workflows, SaaS, or technical support involving AI/GenAI."
+        },
+        {
+          "role": "Customer Service Representative",
+          "years": 1.75,
+          "relevance": 0.0,
+          "relevance_reasoning": "No direct relevance to AI/GenAI workflows, SaaS, or technical support involving AI/GenAI."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.0,
+      "reasoning": "The candidate's domains are Customer Support and IT Support, which are not directly related to AI/ML or customer-facing roles involving AI/GenAI.",
+      "formula": "domain_matches/total_required_domains = 0/2 = 0"
+    },
+    "overall_assessment": "The candidate lacks the required skills and relevant experience for the AI Applications Engineer role, making them a poor fit for the position."
+  }
+}

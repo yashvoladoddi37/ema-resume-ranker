@@ -1,0 +1,30 @@
+============================================================
+DAVID KIM
+Backend / Integration Engineer
+============================================================
+
+SUMMARY
+-------
+5 years experience building and troubleshooting backend integrations 
+and data sync pipelines.
+
+EXPERIENCE
+----------
+Integration Engineer | DataBridge | February 2021 - Present
+• Troubleshoot produce issues related to complex API syncs (Go/Python).
+• Diagnose performance bottlenecks in distributed data pipelines.
+• Built monitoring alerts for API uptime and data latency.
+
+Backend Developer | Core Systems | July 2019 - January 2021
+• Developed REST services and database schemas for SaaS platform.
+• Integrated with various ATS and CRM tools via webhooks.
+
+SKILLS
+------
+Languages: Go, Python, SQL
+Tech: REST, SOAP, Webhooks, AWS (S3, RDS)
+Tools: Prometheus, Kibana, Splunk, Git, Docker, Kubernetes
+---
+EDUCATION
+Seattle University | B.S. in Computer Science | 2014 - 2018
+============================================================

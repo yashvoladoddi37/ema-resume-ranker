@@ -1,0 +1,12 @@
+{
+  "nDCG@3": 1.0,
+  "Precision@1": 1.0,
+  "Recall@3": 1.0,
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "run_folder": "runs/run_20260122_182410",
+  "timestamp": "20260122_182410"
+}

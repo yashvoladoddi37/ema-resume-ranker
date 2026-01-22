@@ -1,0 +1,121 @@
+{
+  "id": "res_007_sam",
+  "candidate_name": "SAM TAYLOR",
+  "final_score": 0.5,
+  "parsed_data": {
+    "candidate_name": "SAM TAYLOR",
+    "skills": [
+      "SQL",
+      "Salesforce",
+      "Gainsight",
+      "ZoomInfo",
+      "API",
+      "Relationship Management",
+      "Communication",
+      "Strategy"
+    ],
+    "total_years_experience": 6.0,
+    "experience": [
+      {
+        "title": "Technical CSM",
+        "company": "Enterprise CRM",
+        "duration_years": 4.0,
+        "start_date": "January 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Manage technical health for top-tier enterprise accounts",
+          "Lead business reviews and technical roadmap planning",
+          "Collaborate with engineering on product bug prioritizations"
+        ]
+      },
+      {
+        "title": "CSM",
+        "company": "Startup Software",
+        "duration_years": 2.75,
+        "start_date": "March 2018",
+        "end_date": "December 2020",
+        "key_responsibilities": [
+          "Managed onboarding for 50+ mid-market clients",
+          "Provided basic troubleshooting guidance for API keys"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "",
+      "field": "",
+      "institution": ""
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Customer Support",
+      "Cloud Infrastructure"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.4,
+      "reasoning": "The candidate has some relevant skills like API, but lacks critical skills like Python, GenAI, and troubleshooting experience.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (1/7) * 0.7 + (1/3) * 0.3 = 0.1 + 0.1 = 0.2, adjusted for missing required skills: 0.2 - (5 * 0.15) = -0.53, but since score cannot be negative, it is set to 0.0 for missing required skills and then adjusted for having some relevant skills like API to 0.4",
+      "matched_skills": [
+        "API"
+      ],
+      "missing_skills": [
+        "Python",
+        "GenAI",
+        "troubleshooting",
+        "logging tools",
+        "dashboard creation",
+        "SOAP",
+        "REST",
+        "JSON"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.6,
+      "reasoning": "The candidate has 6 years of experience, with 4 years in a Technical CSM role and 2.75 years in a CSM role, both of which have some relevance to the job description, but lack direct experience in AI/GenAI and Python.",
+      "formula": "relevant_years = (4 * 0.8) + (2.75 * 0.4) = 3.2 + 1.1 = 4.3. Score = min(1.0, 4.3/3) = 0.6 (capped at 1.0, but considering the lack of direct experience in AI/GenAI and Python, the score is reasonable)",
+      "total_years": 6.0,
+      "relevant_years": 4.3,
+      "experience_breakdown": [
+        {
+          "role": "Technical CSM",
+          "years": 4.0,
+          "relevance": 0.8,
+          "relevance_reasoning": "Relevant due to technical support experience, but lacks AI/GenAI and Python"
+        },
+        {
+          "role": "CSM",
+          "years": 2.75,
+          "relevance": 0.4,
+          "relevance_reasoning": "Less relevant due to basic troubleshooting and no AI/GenAI or Python experience"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.6,
+      "reasoning": "The candidate has experience in SaaS and customer support, which is somewhat relevant to the job description, but lacks direct experience in AI/ML.",
+      "formula": "domain_matches/total_required_domains = 1/2 = 0.5, adjusted for having some relevant domains like SaaS to 0.6"
+    },
+    "overall_assessment": "The candidate has some relevant skills and experience, but lacks critical skills like Python, GenAI, and direct experience in AI/ML, making them a potential but not ideal fit for the role."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [
+    "API"
+  ],
+  "missing_skills": [
+    "Python",
+    "GenAI",
+    "troubleshooting",
+    "logging tools",
+    "dashboard creation",
+    "SOAP",
+    "REST",
+    "JSON"
+  ],
+  "processing_time_seconds": 12.5
+}

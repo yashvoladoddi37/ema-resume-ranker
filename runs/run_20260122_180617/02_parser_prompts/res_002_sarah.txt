@@ -1,0 +1,90 @@
+You are a resume parser. Extract structured information from the following resume.
+
+RESUME TEXT:
+============================================================
+SARAH JOHNSON
+Senior Technical Support Engineer | SaaS & API Specialist
+============================================================
+
+SUMMARY
+-------
+Senior engineer with over 7 years of experience in B2B SaaS technical 
+support and customer success. Expert in troubleshooting complex production 
+APIs, cloud infrastructure, and data integration issues.
+
+EXPERIENCE
+----------
+Technical Support Lead | CloudSync Solutions | January 2021 - Present
+• Lead a team of 5 engineers resolving Tier 3 support tickets for 
+  enterprise clients.
+• Diagnosed and fixed hundreds of API configuration problems involving 
+  Salesforce and Zendesk integrations.
+• Built internal dashboards using Python and SQL to monitor API health.
+
+Customer Success Engineer | DataFlow Inc | March 2018 - December 2020
+• Managed technical onboarding for top-tier SaaS customers.
+• Reduced churn by 15% through proactive technical account management.
+
+Technical Support Engineer | WebStack | June 2017 - February 2018
+• Provided 24/7 support for cloud hosting platform issues.
+
+SKILLS
+------
+Languages: Python, SQL, Bash
+DevOps/Ops: AWS, DataDog, Grafana, PagerDuty, Jenkins
+Integrations: Salesforce, HubSpot, Zendesk APIs
+---
+EDUCATION
+Stanford University | M.S. in Computer Science | 2015 - 2017
+Georgia Tech | B.S. in Computer Science | 2011 - 2015
+============================================================
+
+
+TASK:
+Extract and return ONLY a valid JSON object with this EXACT structure:
+
+{
+  "candidate_name": "Full Name",
+  "skills": ["skill1", "skill2", "skill3"],
+  "total_years_experience": 0.0,
+  "experience": [
+    {
+      "title": "Job Title",
+      "company": "Company Name",
+      "duration_years": 0.0,
+      "start_date": "Month Year",
+      "end_date": "Month Year or Present",
+      "key_responsibilities": ["responsibility1", "responsibility2"]
+    }
+  ],
+  "education": {
+    "degree": "Degree Name",
+    "field": "Field of Study",
+    "institution": "University Name"
+  },
+  "certifications": ["cert1", "cert2"],
+  "domains": ["domain1", "domain2"]
+}
+
+CRITICAL INSTRUCTIONS:
+1. **Date Handling:**
+   - If end_date is "Present", "Current", or missing, use "January 2025"
+   - Calculate duration_years accurately (e.g., "Jan 2023 - Jan 2025" = 2.0 years)
+
+2. **Skills Extraction:**
+   - Extract ALL technical skills (languages, frameworks, tools, platforms)
+   - Include synonyms where applicable
+
+3. **Total Experience:**
+   - Sum all duration_years from experience array
+   - Do NOT count overlapping periods twice
+
+4. **Domains:**
+   - Infer from experience (e.g., "built chatbot" → "Conversational AI")
+   - Common domains: "AI/ML", "Customer Support", "SaaS", "Cloud Infrastructure"
+
+5. **Output Format:**
+   - Return ONLY valid JSON
+   - NO markdown, NO backticks
+
+Begin parsing now:

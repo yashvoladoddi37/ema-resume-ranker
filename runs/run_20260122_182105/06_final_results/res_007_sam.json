@@ -1,0 +1,122 @@
+{
+  "id": "res_007_sam",
+  "candidate_name": "SAM TAYLOR",
+  "final_score": 0.355,
+  "parsed_data": {
+    "candidate_name": "SAM TAYLOR",
+    "skills": [
+      "SQL",
+      "Salesforce",
+      "Gainsight",
+      "ZoomInfo",
+      "API",
+      "Relationship Management",
+      "Communication",
+      "Strategy"
+    ],
+    "total_years_experience": 6.0,
+    "experience": [
+      {
+        "title": "Technical Customer Success Manager",
+        "company": "Enterprise CRM",
+        "duration_years": 4.0,
+        "start_date": "January 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Manage technical health for top-tier enterprise accounts",
+          "Lead business reviews and technical roadmap planning",
+          "Collaborate with engineering on product bug prioritizations"
+        ]
+      },
+      {
+        "title": "Customer Success Manager",
+        "company": "Startup Software",
+        "duration_years": 2.75,
+        "start_date": "March 2018",
+        "end_date": "December 2020",
+        "key_responsibilities": [
+          "Managed onboarding for 50+ mid-market clients",
+          "Provided basic troubleshooting guidance for API keys"
+        ]
+      }
+    ],
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Customer Support",
+      "Cloud Infrastructure"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.25,
+      "reasoning": "The candidate has API skills which match the JD requirement for APIs (JSON, REST, SOAP), but lacks critical skills like Python, AI/GenAI workflows, and data integration.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (1/6) * 0.7 + 0/4 * 0.3 = 0.117. Adjusted for missing required skills: 0.117 - (5 * 0.15) = -0.583, but since score cannot be negative, it is set to 0.25 due to having some relevant skills",
+      "matched_skills": [
+        "API"
+      ],
+      "missing_skills": [
+        "Python",
+        "AI/GenAI workflows",
+        "data integration",
+        "troubleshooting",
+        "GenAI"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.45,
+      "reasoning": "The candidate has 6 years of experience, but most of it is in customer success and technical support, which is somewhat relevant. However, there is no direct experience in AI/GenAI, Python, or data integration.",
+      "formula": "relevant_years = (4 * 0.6) + (2.75 * 0.2) = 2.4 + 0.55 = 2.95. Score = min(1.0, 2.95/3) = 0.9833, adjusted for lack of direct relevance: 0.45",
+      "total_years": 6.0,
+      "relevant_years": 2.95,
+      "experience_breakdown": [
+        {
+          "role": "Technical Customer Success Manager",
+          "years": 4.0,
+          "relevance": 0.6,
+          "relevance_reasoning": "Involved technical support and customer success, somewhat relevant"
+        },
+        {
+          "role": "Customer Success Manager",
+          "years": 2.75,
+          "relevance": 0.2,
+          "relevance_reasoning": "Less relevant due to focus on basic troubleshooting and onboarding"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.5,
+      "reasoning": "The candidate's domains include SaaS and customer support, which are somewhat relevant to the AI applications engineer role.",
+      "formula": "domain_matches/total_required_domains = 1/2 = 0.5",
+      "matched_domains": [
+        "SaaS",
+        "Customer Support"
+      ],
+      "missing_domains": [
+        "AI/ML"
+      ]
+    },
+    "overall_assessment": "The candidate has some relevant skills and experience, but lacks critical technical skills and direct experience in AI/GenAI. With additional training, they could be a good fit, but currently, they are not the strongest candidate."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "API"
+  ],
+  "missing_skills": [
+    "Python",
+    "AI/GenAI workflows",
+    "data integration",
+    "troubleshooting",
+    "GenAI"
+  ],
+  "processing_time_seconds": 16.52
+}

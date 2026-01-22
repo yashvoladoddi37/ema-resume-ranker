@@ -1,0 +1,180 @@
+You are evaluating a candidate for a job opening.
+
+JOB DESCRIPTION:
+============================================================
+AI APPLICATIONS ENGINEER @ EMA
+Location: Bengaluru, India (or Remote)
+============================================================
+
+WHO ARE WE?
+-----------
+Ema is building the next generation AI technology to empower 
+every employee in the enterprise. Our proprietary tech allows 
+enterprises to delegate repetitive tasks to Ema, the Universal 
+AI employee.
+
+YOU WILL:
+---------
+• Configure and integrate AI/GenAI workflows using platform 
+  APIs and customer data.
+• Troubleshoot and resolve production issues related to platform 
+  APIs, data integration, and workflow configurations.
+• Design, execute, and analyze A/A experiments to enhance 
+  workflow reliability and quality.
+• Monitor workflow performance using observability dashboards 
+  and business metrics.
+• Refine prompts for optimized performance.
+• Translate customer requirements into effective GenAI 
+  automation flows.
+
+IDEALLY, YOU'D HAVE:
+--------------------
+• 3+ years in technical support or customer success for SaaS.
+• Proficiency in troubleshooting production issues and 
+  diagnosing ML performance.
+• Familiarity with APIs (JSON, REST, SOAP) and integration with 
+  CRMs or ATS tools.
+• Competency in logging, dashboard creation, and alerting tools.
+• Strong proficiency in Python.
+============================================================
+
+
+CANDIDATE PROFILE (extracted from resume):
+{
+  "candidate_name": "SAM TAYLOR",
+  "skills": [
+    "SQL",
+    "Salesforce",
+    "Gainsight",
+    "ZoomInfo",
+    "API",
+    "Relationship Management",
+    "Communication",
+    "Strategy"
+  ],
+  "total_years_experience": 6.0,
+  "experience": [
+    {
+      "title": "Technical Customer Success Manager",
+      "company": "Enterprise CRM",
+      "duration_years": 4.0,
+      "start_date": "January 2021",
+      "end_date": "January 2025",
+      "key_responsibilities": [
+        "Manage technical health for top-tier enterprise accounts",
+        "Lead business reviews and technical roadmap planning",
+        "Collaborate with engineering on product bug prioritizations"
+      ]
+    },
+    {
+      "title": "Customer Success Manager",
+      "company": "Startup Software",
+      "duration_years": 2.75,
+      "start_date": "March 2018",
+      "end_date": "December 2020",
+      "key_responsibilities": [
+        "Managed onboarding for 50+ mid-market clients",
+        "Provided basic troubleshooting guidance for API keys"
+      ]
+    }
+  ],
+  "education": {
+    "degree": null,
+    "field": null,
+    "institution": null
+  },
+  "certifications": [],
+  "domains": [
+    "SaaS",
+    "Customer Support",
+    "Cloud Infrastructure"
+  ]
+}
+
+TASK:
+Evaluate the candidate on three dimensions and return ONLY a JSON object.
+
+**CRITICAL: SKILL MATCHING INSTRUCTIONS**
+
+The candidate has these skills: [SQL, Salesforce, Gainsight, ZoomInfo, API, Relationship Management, Communication, Strategy]
+
+For skill_match, you MUST:
+1. Go through EACH skill in the candidate's list above
+2. For EACH skill, determine if it satisfies ANY JD requirement (even if wording differs)
+3. Use SEMANTIC matching:
+   - "Prometheus" satisfies "logging tools" and "alerting tools"
+   - "LangChain" satisfies "GenAI workflows"
+   - "REST" satisfies "APIs (JSON, REST, SOAP)"
+4. matched_skills = skills FROM THE CANDIDATE'S LIST that match JD requirements
+5. missing_skills = skills FROM THE JD that the candidate does NOT have
+
+**CRITICAL: PER-EXPERIENCE RELEVANCE SCORING**
+
+For experience_depth, you MUST:
+1. Evaluate EACH experience block INDIVIDUALLY
+2. For EACH, assign a relevance_score (0.0-1.0) based on:
+   - Does the role involve AI/GenAI, SaaS, technical support, or customer success?
+   - Does it involve Python, APIs, troubleshooting, or integrations?
+3. Calculate relevant_years = SUM of (duration_years * relevance_score)
+4. Base the final score on RELEVANT YEARS, not total years
+5. Career switchers with 10y total but 1y relevant should score LOW
+
+**CRITICAL: REQUIRED VS PREFERRED QUALIFICATIONS**
+
+If the JD has "Required" and "Preferred" sections:
+- Missing REQUIRED skills: heavy penalty (each missing = -0.15 from skill_match)
+- Missing PREFERRED skills: light penalty (each missing = -0.05)
+- Weight required skills 2x higher than preferred in final calculation
+
+**CRITICAL: FORMULA AND REASONING**
+
+For EACH dimension, include a "formula" key showing exact calculation.
+
+OUTPUT FORMAT:
+
+{
+  "skill_match": {
+    "score": 0.0,
+    "reasoning": "Brief explanation",
+    "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = X",
+    "matched_skills": ["skill1", "skill2"],
+    "missing_skills": ["skill3"]
+  },
+  "experience_depth": {
+    "score": 0.0,
+    "reasoning": "Brief explanation with relevant_years vs total_years",
+    "formula": "relevant_years = (role1_years * rel1) + (role2_years * rel2) = X. Score = min(1.0, X/3)",
+    "total_years": 0.0,
+    "relevant_years": 0.0,
+    "experience_breakdown": [
+      {"role": "Title", "years": 0.0, "relevance": 0.0, "relevance_reasoning": "Why"}
+    ]
+  },
+  "domain_fit": {
+    "score": 0.0,
+    "reasoning": "Brief explanation",
+    "formula": "domain_matches/total_required_domains = X"
+  },
+  "overall_assessment": "1-2 sentence summary"
+}
+
+SCORING GUIDELINES:
+
+1. **skill_match (0.0-1.0):**
+   - 1.0 = ALL required + most preferred
+   - 0.8 = ALL required, some preferred
+   - 0.6 = MOST required
+   - 0.4 = SOME required
+   - 0.0 = NO required skills
+
+2. **experience_depth (0.0-1.0):**
+   - Based on RELEVANT YEARS ONLY
+   - JD requires "3+ years" with 3+ relevant: ≥ 0.7
+   - Career switcher (10y total, 1y relevant): ≤ 0.4
+
+3. **domain_fit (0.0-1.0):**
+   - AI/ML + customer-facing = high
+   - Related domains = medium
+   - Unrelated = low
+
+Begin evaluation now:

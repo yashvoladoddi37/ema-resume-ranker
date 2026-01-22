@@ -1,0 +1,101 @@
+{
+  "id": "res_003_maya",
+  "candidate_name": "MAYA GUPTA",
+  "final_score": 0.85,
+  "parsed_data": {
+    "candidate_name": "MAYA GUPTA",
+    "skills": [
+      "Python",
+      "JavaScript",
+      "JSON-RPC",
+      "LangChain",
+      "Prompt Engineering",
+      "RAG",
+      "OpenAI API",
+      "Anthropic",
+      "ELK Stack",
+      "Jenkins",
+      "Docker",
+      "Terraform"
+    ],
+    "total_years_experience": 4.0,
+    "experience": [
+      {
+        "title": "Solutions Engineer",
+        "company": "GenAI Automate",
+        "duration_years": 3.0,
+        "start_date": "March 2022",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Configure and integrate AI/GenAI workflows for enterprise clients",
+          "Expert in LangChain and prompt engineering for RAG pipelines",
+          "Translate customer requirements into technical GenAI specs",
+          "Troubleshoot production LLM performance and hallucination issues"
+        ]
+      },
+      {
+        "title": "Systems Analyst",
+        "company": "Tech Solutions Ltd",
+        "duration_years": 1.67,
+        "start_date": "June 2020",
+        "end_date": "February 2022",
+        "key_responsibilities": [
+          "Integrated third-party APIs with internal ERP systems",
+          "Managed data mapping and REST integration flows"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Electrical Engineering & Computer Science",
+      "institution": "UC Berkeley"
+    },
+    "certifications": [],
+    "domains": [
+      "AI/ML",
+      "Automation",
+      "Cloud Infrastructure"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.8,
+      "reasoning": "The candidate has proficiency in Python, JSON-RPC, and experience with APIs, which aligns with the required skills. However, the candidate lacks direct experience with SOAP, CRM, or ATS tools integration.",
+      "matched_skills": [
+        "Python",
+        "JSON-RPC",
+        "APIs"
+      ],
+      "missing_skills": [
+        "SOAP",
+        "CRM integration",
+        "ATS tools integration"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.9,
+      "reasoning": "The candidate has 4 years of experience, exceeding the required 3+ years, with relevant experience in configuring and integrating AI/GenAI workflows, and troubleshooting production issues."
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate's background in AI/ML, automation, and experience in customer-facing roles aligns well with the AI Applications Engineer role."
+    },
+    "overall_assessment": "Maya Gupta is a strong candidate for the AI Applications Engineer role, with a good balance of technical skills, relevant experience, and domain alignment, making her a suitable fit for the position."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [
+    "Python",
+    "JSON-RPC",
+    "APIs"
+  ],
+  "missing_skills": [
+    "SOAP",
+    "CRM integration",
+    "ATS tools integration"
+  ],
+  "processing_time_seconds": 2.22
+}

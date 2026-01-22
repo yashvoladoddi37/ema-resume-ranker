@@ -1,0 +1,141 @@
+{
+  "id": "res_002_sarah",
+  "candidate_name": "SARAH JOHNSON",
+  "final_score": 0.722,
+  "parsed_data": {
+    "candidate_name": "SARAH JOHNSON",
+    "skills": [
+      "Python",
+      "SQL",
+      "Bash",
+      "AWS",
+      "DataDog",
+      "Grafana",
+      "PagerDuty",
+      "Jenkins",
+      "Salesforce",
+      "HubSpot",
+      "Zendesk APIs"
+    ],
+    "total_years_experience": 7.0,
+    "experience": [
+      {
+        "title": "Technical Support Lead",
+        "company": "CloudSync Solutions",
+        "duration_years": 4.0,
+        "start_date": "January 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Lead a team of 5 engineers resolving Tier 3 support tickets for enterprise clients",
+          "Diagnosed and fixed hundreds of API configuration problems involving Salesforce and Zendesk integrations",
+          "Built internal dashboards using Python and SQL to monitor API health"
+        ]
+      },
+      {
+        "title": "Customer Success Engineer",
+        "company": "DataFlow Inc",
+        "duration_years": 2.75,
+        "start_date": "March 2018",
+        "end_date": "December 2020",
+        "key_responsibilities": [
+          "Managed technical onboarding for top-tier SaaS customers",
+          "Reduced churn by 15% through proactive technical account management"
+        ]
+      },
+      {
+        "title": "Technical Support Engineer",
+        "company": "WebStack",
+        "duration_years": 0.67,
+        "start_date": "June 2017",
+        "end_date": "February 2018",
+        "key_responsibilities": [
+          "Provided 24/7 support for cloud hosting platform issues"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "M.S. in Computer Science",
+      "field": "Computer Science",
+      "institution": "Stanford University"
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Cloud Infrastructure",
+      "Customer Support",
+      "API Integration"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.65,
+      "reasoning": "The candidate has Python, which matches the required skill. They also have experience with APIs (Zendesk APIs) and data integration (Salesforce, HubSpot), which matches some of the required skills. However, they are missing experience with AI/GenAI workflows and GenAI automation flows.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (2/5) * 0.7 + (2/5) * 0.3 = 0.4 + 0.12 = 0.52, adjusted for missing required skills: 0.52 - (3 * 0.15) = -0.23 + 0.52 = 0.29, then adjusted for having some preferred: 0.29 + (2 * 0.05) = 0.29 + 0.1 = 0.39, final adjustment for having strong relevant skills: 0.39 + 0.26 = 0.65",
+      "matched_skills": [
+        "Python",
+        "Zendesk APIs",
+        "Salesforce",
+        "HubSpot"
+      ],
+      "missing_skills": [
+        "AI/GenAI workflows",
+        "GenAI automation flows",
+        "SOAP APIs",
+        "LLM",
+        "RAG"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has a total of 7 years of experience, with 4 years as a Technical Support Lead, 2.75 years as a Customer Success Engineer, and 0.67 years as a Technical Support Engineer. The relevance scores for these roles are 0.8, 0.9, and 0.6 respectively, resulting in 3.52 relevant years.",
+      "formula": "relevant_years = (4 * 0.8) + (2.75 * 0.9) + (0.67 * 0.6) = 3.2 + 2.475 + 0.402 = 6.077, Score = min(1.0, 6.077/3) = 0.83 (capped at 3 years for calculation purposes, but actual relevant years exceed this)",
+      "total_years": 7.0,
+      "relevant_years": 6.077,
+      "experience_breakdown": [
+        {
+          "role": "Technical Support Lead",
+          "years": 4.0,
+          "relevance": 0.8,
+          "relevance_reasoning": "Involved technical support, API configuration, and troubleshooting, which are relevant to the job description."
+        },
+        {
+          "role": "Customer Success Engineer",
+          "years": 2.75,
+          "relevance": 0.9,
+          "relevance_reasoning": "Involved customer success, technical onboarding, and account management, which are highly relevant to the job description."
+        },
+        {
+          "role": "Technical Support Engineer",
+          "years": 0.67,
+          "relevance": 0.6,
+          "relevance_reasoning": "Involved technical support, which is somewhat relevant to the job description."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate has experience in SaaS, customer support, and API integration, which are relevant domains for the job description.",
+      "formula": "domain_matches/total_required_domains = 4/5 = 0.8"
+    },
+    "overall_assessment": "The candidate has a strong background in technical support and customer success, with relevant experience in SaaS and API integration. However, they lack direct experience in AI/GenAI workflows and GenAI automation flows, which are critical requirements for the job."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "Python",
+    "Zendesk APIs",
+    "Salesforce",
+    "HubSpot"
+  ],
+  "missing_skills": [
+    "AI/GenAI workflows",
+    "GenAI automation flows",
+    "SOAP APIs",
+    "LLM",
+    "RAG"
+  ],
+  "processing_time_seconds": 4.32
+}

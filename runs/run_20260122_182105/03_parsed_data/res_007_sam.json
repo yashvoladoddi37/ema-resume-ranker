@@ -1,0 +1,53 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"SAM TAYLOR\",\n   \"skills\": [\n      \"SQL\",\n      \"Salesforce\",\n      \"Gainsight\",\n      \"ZoomInfo\",\n      \"API\",\n      \"Relationship Management\",\n      \"Communication\",\n      \"Strategy\"\n   ],\n   \"total_years_experience\": 6.0,\n   \"experience\": [\n      {\n         \"title\": \"Technical Customer Success Manager\",\n         \"company\": \"Enterprise CRM\",\n         \"duration_years\": 4.0,\n         \"start_date\": \"January 2021\",\n         \"end_date\": \"January 2025\",\n         \"key_responsibilities\": [\n            \"Manage technical health for top-tier enterprise accounts\",\n            \"Lead business reviews and technical roadmap planning\",\n            \"Collaborate with engineering on product bug prioritizations\"\n         ]\n      },\n      {\n         \"title\": \"Customer Success Manager\",\n         \"company\": \"Startup Software\",\n         \"duration_years\": 2.75,\n         \"start_date\": \"March 2018\",\n         \"end_date\": \"December 2020\",\n         \"key_responsibilities\": [\n            \"Managed onboarding for 50+ mid-market clients\",\n            \"Provided basic troubleshooting guidance for API keys\"\n         ]\n      }\n   ],\n   \"education\": {\n      \"degree\": null,\n      \"field\": null,\n      \"institution\": null\n   },\n   \"certifications\": [],\n   \"domains\": [\n      \"SaaS\",\n      \"Customer Support\",\n      \"Cloud Infrastructure\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "SAM TAYLOR",
+    "skills": [
+      "SQL",
+      "Salesforce",
+      "Gainsight",
+      "ZoomInfo",
+      "API",
+      "Relationship Management",
+      "Communication",
+      "Strategy"
+    ],
+    "total_years_experience": 6.0,
+    "experience": [
+      {
+        "title": "Technical Customer Success Manager",
+        "company": "Enterprise CRM",
+        "duration_years": 4.0,
+        "start_date": "January 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Manage technical health for top-tier enterprise accounts",
+          "Lead business reviews and technical roadmap planning",
+          "Collaborate with engineering on product bug prioritizations"
+        ]
+      },
+      {
+        "title": "Customer Success Manager",
+        "company": "Startup Software",
+        "duration_years": 2.75,
+        "start_date": "March 2018",
+        "end_date": "December 2020",
+        "key_responsibilities": [
+          "Managed onboarding for 50+ mid-market clients",
+          "Provided basic troubleshooting guidance for API keys"
+        ]
+      }
+    ],
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Customer Support",
+      "Cloud Infrastructure"
+    ]
+  }
+}

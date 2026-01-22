@@ -1,0 +1,24 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.0,\n     \"reasoning\": \"The candidate lacks all required skills such as proficiency in Python, APIs (JSON, REST, SOAP), and experience with ML performance troubleshooting.\",\n     \"matched_skills\": [],\n     \"missing_skills\": [\"Python\", \"APIs (JSON, REST, SOAP)\", \"ML performance troubleshooting\"]\n   },\n   \"experience_depth\": {\n     \"score\": 0.6,\n     \"reasoning\": \"The candidate has 6 years of experience, exceeding the required 3+ years, but the experience is not directly relevant to the AI Applications Engineer role.\"\n   },\n   \"domain_fit\": {\n     \"score\": 0.2,\n     \"reasoning\": \"The candidate's background in Financial Services and Banking is not directly related to AI/ML or customer-facing roles, resulting in a low domain fit.\"\n   },\n   \"overall_assessment\": \"The candidate lacks the required skills and domain experience for the AI Applications Engineer role, making them a less suitable fit.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.0,
+      "reasoning": "The candidate lacks all required skills such as proficiency in Python, APIs (JSON, REST, SOAP), and experience with ML performance troubleshooting.",
+      "matched_skills": [],
+      "missing_skills": [
+        "Python",
+        "APIs (JSON, REST, SOAP)",
+        "ML performance troubleshooting"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.6,
+      "reasoning": "The candidate has 6 years of experience, exceeding the required 3+ years, but the experience is not directly relevant to the AI Applications Engineer role."
+    },
+    "domain_fit": {
+      "score": 0.2,
+      "reasoning": "The candidate's background in Financial Services and Banking is not directly related to AI/ML or customer-facing roles, resulting in a low domain fit."
+    },
+    "overall_assessment": "The candidate lacks the required skills and domain experience for the AI Applications Engineer role, making them a less suitable fit."
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n       \"score\": 0.0,\n       \"reasoning\": \"The candidate does not have any skills that match the job description requirements, such as proficiency in Python, APIs, or experience with GenAI workflows.\",\n       \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/7 * 0.7 + 0/3 * 0.3 = 0\",\n       \"matched_skills\": [],\n       \"missing_skills\": [\"Python\", \"APIs (JSON, REST, SOAP)\", \"GenAI workflows\", \"logging tools\", \"alerting tools\"]\n   },\n   \"experience_depth\": {\n       \"score\": 0.0,\n       \"reasoning\": \"The candidate's experience is not relevant to the job description requirements, with no experience in AI/GenAI, SaaS, technical support, or customer success.\",\n       \"formula\": \"relevant_years = (role1_years * rel1) + (role2_years * rel2) = (4 * 0) + (2.5 * 0) = 0. Score = min(1.0, 0/3) = 0\",\n       \"total_years\": 6.5,\n       \"relevant_years\": 0.0,\n       \"experience_breakdown\": [\n           {\"role\": \"Senior Java Developer\", \"years\": 4.0, \"relevance\": 0.0, \"relevance_reasoning\": \"No experience in AI/GenAI, SaaS, technical support, or customer success\"},\n           {\"role\": \"Java Developer\", \"years\": 2.5, \"relevance\": 0.0, \"relevance_reasoning\": \"No experience in AI/GenAI, SaaS, technical support, or customer success\"}\n       ]\n   },\n   \"domain_fit\": {\n       \"score\": 0.0,\n       \"reasoning\": \"The candidate's domain experience is not relevant to the job description requirements, with no experience in AI/ML or customer-facing domains.\",\n       \"formula\": \"domain_matches/total_required_domains = 0/1 = 0\"\n   },\n   \"overall_assessment\": \"The candidate is not a good fit for the AI Applications Engineer role due to a lack of relevant skills and experience.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.0,
+      "reasoning": "The candidate does not have any skills that match the job description requirements, such as proficiency in Python, APIs, or experience with GenAI workflows.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/7 * 0.7 + 0/3 * 0.3 = 0",
+      "matched_skills": [],
+      "missing_skills": [
+        "Python",
+        "APIs (JSON, REST, SOAP)",
+        "GenAI workflows",
+        "logging tools",
+        "alerting tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.0,
+      "reasoning": "The candidate's experience is not relevant to the job description requirements, with no experience in AI/GenAI, SaaS, technical support, or customer success.",
+      "formula": "relevant_years = (role1_years * rel1) + (role2_years * rel2) = (4 * 0) + (2.5 * 0) = 0. Score = min(1.0, 0/3) = 0",
+      "total_years": 6.5,
+      "relevant_years": 0.0,
+      "experience_breakdown": [
+        {
+          "role": "Senior Java Developer",
+          "years": 4.0,
+          "relevance": 0.0,
+          "relevance_reasoning": "No experience in AI/GenAI, SaaS, technical support, or customer success"
+        },
+        {
+          "role": "Java Developer",
+          "years": 2.5,
+          "relevance": 0.0,
+          "relevance_reasoning": "No experience in AI/GenAI, SaaS, technical support, or customer success"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.0,
+      "reasoning": "The candidate's domain experience is not relevant to the job description requirements, with no experience in AI/ML or customer-facing domains.",
+      "formula": "domain_matches/total_required_domains = 0/1 = 0"
+    },
+    "overall_assessment": "The candidate is not a good fit for the AI Applications Engineer role due to a lack of relevant skills and experience."
+  }
+}

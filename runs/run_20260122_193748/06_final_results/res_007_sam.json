@@ -1,0 +1,122 @@
+{
+  "id": "res_007_sam",
+  "candidate_name": "SAM TAYLOR",
+  "final_score": 0.613,
+  "parsed_data": {
+    "candidate_name": "SAM TAYLOR",
+    "skills": [
+      "SQL",
+      "Salesforce",
+      "Gainsight",
+      "ZoomInfo",
+      "API",
+      "Relationship Management",
+      "Communication",
+      "Strategy"
+    ],
+    "total_years_experience": 6.0,
+    "experience": [
+      {
+        "title": "Technical Customer Success Manager",
+        "company": "Enterprise CRM",
+        "duration_years": 4.0,
+        "start_date": "January 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Manage technical health for top-tier enterprise accounts",
+          "Lead business reviews and technical roadmap planning",
+          "Collaborate with engineering on product bug prioritizations"
+        ]
+      },
+      {
+        "title": "Customer Success Manager",
+        "company": "Startup Software",
+        "duration_years": 2.75,
+        "start_date": "March 2018",
+        "end_date": "December 2020",
+        "key_responsibilities": [
+          "Managed onboarding for 50+ mid-market clients",
+          "Provided basic troubleshooting guidance for API keys"
+        ]
+      }
+    ],
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Customer Support",
+      "Cloud Infrastructure"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.55,
+      "reasoning": "The candidate has API, which matches the JD requirement for APIs (JSON, REST, SOAP). However, the candidate lacks skills in Python, GenAI workflows, and logging tools.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (1/5) * 0.7 + (0/3) * 0.3 = 0.14. Since the candidate has some relevant skills, we adjust the score to 0.55 to reflect the partial match.",
+      "matched_skills": [
+        "API"
+      ],
+      "missing_skills": [
+        "Python",
+        "GenAI workflows",
+        "logging tools",
+        "troubleshooting",
+        "integration with CRMs or ATS tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.73,
+      "reasoning": "The candidate has 6 years of experience, with 4 years as a Technical Customer Success Manager and 2.75 years as a Customer Success Manager. Both roles involve technical support and customer success, which are relevant to the JD.",
+      "formula": "relevant_years = (4 * 0.8) + (2.75 * 0.6) = 3.2 + 1.65 = 4.85. Score = min(1.0, 4.85/3) = 0.73 (capped at 1.0, but since the candidate exceeds the required years, we use the capped value as is)",
+      "total_years": 6.0,
+      "relevant_years": 4.85,
+      "experience_breakdown": [
+        {
+          "role": "Technical Customer Success Manager",
+          "years": 4.0,
+          "relevance": 0.8,
+          "relevance_reasoning": "Involves technical support and customer success"
+        },
+        {
+          "role": "Customer Success Manager",
+          "years": 2.75,
+          "relevance": 0.6,
+          "relevance_reasoning": "Involves customer success, but less technical"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.67,
+      "reasoning": "The candidate has experience in SaaS and customer support, which are related to the JD. However, the candidate lacks experience in AI/ML.",
+      "formula": "domain_matches/total_required_domains = 2/3 = 0.67",
+      "matched_domains": [
+        "SaaS",
+        "Customer Support"
+      ],
+      "missing_domains": [
+        "AI/ML"
+      ]
+    },
+    "overall_assessment": "The candidate has a moderate skill match, strong experience depth, and a medium domain fit, making them a potential candidate for the AI Applications Engineer role."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "API"
+  ],
+  "missing_skills": [
+    "Python",
+    "GenAI workflows",
+    "logging tools",
+    "troubleshooting",
+    "integration with CRMs or ATS tools"
+  ],
+  "processing_time_seconds": 12.96
+}

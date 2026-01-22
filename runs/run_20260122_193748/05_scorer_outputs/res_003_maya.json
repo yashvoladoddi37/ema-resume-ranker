@@ -1,0 +1,48 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n       \"score\": 0.85,\n       \"reasoning\": \"The candidate has most of the required skills, including proficiency in Python, APIs (JSON-RPC), and experience with GenAI workflows (LangChain, RAG). However, the candidate is missing explicit experience with SOAP APIs and CRM/ATS integrations.\",\n       \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85\",\n       \"matched_skills\": [\n           \"Python\",\n           \"JSON-RPC\",\n           \"LangChain\",\n           \"RAG\",\n           \"OpenAI API\"\n       ],\n       \"missing_skills\": [\n           \"SOAP\",\n           \"CRM/ATS integration\"\n       ]\n   },\n   \"experience_depth\": {\n       \"score\": 0.83,\n       \"reasoning\": \"The candidate has a total of 4 years of experience, with 3 years in a highly relevant role as a Solutions Engineer at GenAI Automate, and 1.67 years in a somewhat relevant role as a Systems Analyst at Tech Solutions Ltd.\",\n       \"formula\": \"relevant_years = (3 * 0.9) + (1.67 * 0.6) = 2.7 + 1.0 = 3.7. Score = min(1.0, 3.7/3) = 0.83\",\n       \"total_years\": 4.0,\n       \"relevant_years\": 3.7,\n       \"experience_breakdown\": [\n           {\n               \"role\": \"Solutions Engineer\",\n               \"years\": 3.0,\n               \"relevance\": 0.9,\n               \"relevance_reasoning\": \"Highly relevant due to experience with GenAI workflows and prompt engineering\"\n           },\n           {\n               \"role\": \"Systems Analyst\",\n               \"years\": 1.67,\n               \"relevance\": 0.6,\n               \"relevance_reasoning\": \"Somewhat relevant due to experience with API integration and data mapping\"\n           }\n       ]\n   },\n   \"domain_fit\": {\n       \"score\": 0.9,\n       \"reasoning\": \"The candidate has a strong fit with the required domains, including AI/ML and automation, and some experience with cloud infrastructure.\",\n       \"formula\": \"domain_matches/total_required_domains = 2/2 = 1.0, but considering some experience in cloud infrastructure, score = 0.9\"\n   },\n   \"overall_assessment\": \"The candidate is a strong fit for the AI Applications Engineer role, with a high level of skill matching, relevant experience, and domain fit. However, some minor gaps in skills and experience exist.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including proficiency in Python, APIs (JSON-RPC), and experience with GenAI workflows (LangChain, RAG). However, the candidate is missing explicit experience with SOAP APIs and CRM/ATS integrations.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "JSON-RPC",
+        "LangChain",
+        "RAG",
+        "OpenAI API"
+      ],
+      "missing_skills": [
+        "SOAP",
+        "CRM/ATS integration"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has a total of 4 years of experience, with 3 years in a highly relevant role as a Solutions Engineer at GenAI Automate, and 1.67 years in a somewhat relevant role as a Systems Analyst at Tech Solutions Ltd.",
+      "formula": "relevant_years = (3 * 0.9) + (1.67 * 0.6) = 2.7 + 1.0 = 3.7. Score = min(1.0, 3.7/3) = 0.83",
+      "total_years": 4.0,
+      "relevant_years": 3.7,
+      "experience_breakdown": [
+        {
+          "role": "Solutions Engineer",
+          "years": 3.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to experience with GenAI workflows and prompt engineering"
+        },
+        {
+          "role": "Systems Analyst",
+          "years": 1.67,
+          "relevance": 0.6,
+          "relevance_reasoning": "Somewhat relevant due to experience with API integration and data mapping"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate has a strong fit with the required domains, including AI/ML and automation, and some experience with cloud infrastructure.",
+      "formula": "domain_matches/total_required_domains = 2/2 = 1.0, but considering some experience in cloud infrastructure, score = 0.9"
+    },
+    "overall_assessment": "The candidate is a strong fit for the AI Applications Engineer role, with a high level of skill matching, relevant experience, and domain fit. However, some minor gaps in skills and experience exist."
+  }
+}

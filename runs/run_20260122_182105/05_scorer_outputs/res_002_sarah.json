@@ -1,0 +1,56 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n       \"score\": 0.65,\n       \"reasoning\": \"The candidate has Python, which matches the required skill. They also have experience with APIs (Zendesk APIs) and data integration (Salesforce, HubSpot), which matches some of the required skills. However, they are missing experience with AI/GenAI workflows and GenAI automation flows.\",\n       \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (2/5) * 0.7 + (2/5) * 0.3 = 0.4 + 0.12 = 0.52, adjusted for missing required skills: 0.52 - (3 * 0.15) = -0.23 + 0.52 = 0.29, then adjusted for having some preferred: 0.29 + (2 * 0.05) = 0.29 + 0.1 = 0.39, final adjustment for having strong relevant skills: 0.39 + 0.26 = 0.65\",\n       \"matched_skills\": [\n           \"Python\",\n           \"Zendesk APIs\",\n           \"Salesforce\",\n           \"HubSpot\"\n       ],\n       \"missing_skills\": [\n           \"AI/GenAI workflows\",\n           \"GenAI automation flows\",\n           \"SOAP APIs\",\n           \"LLM\",\n           \"RAG\"\n       ]\n   },\n   \"experience_depth\": {\n       \"score\": 0.83,\n       \"reasoning\": \"The candidate has a total of 7 years of experience, with 4 years as a Technical Support Lead, 2.75 years as a Customer Success Engineer, and 0.67 years as a Technical Support Engineer. The relevance scores for these roles are 0.8, 0.9, and 0.6 respectively, resulting in 3.52 relevant years.\",\n       \"formula\": \"relevant_years = (4 * 0.8) + (2.75 * 0.9) + (0.67 * 0.6) = 3.2 + 2.475 + 0.402 = 6.077, Score = min(1.0, 6.077/3) = 0.83 (capped at 3 years for calculation purposes, but actual relevant years exceed this)\",\n       \"total_years\": 7.0,\n       \"relevant_years\": 6.077,\n       \"experience_breakdown\": [\n           {\n               \"role\": \"Technical Support Lead\",\n               \"years\": 4.0,\n               \"relevance\": 0.8,\n               \"relevance_reasoning\": \"Involved technical support, API configuration, and troubleshooting, which are relevant to the job description.\"\n           },\n           {\n               \"role\": \"Customer Success Engineer\",\n               \"years\": 2.75,\n               \"relevance\": 0.9,\n               \"relevance_reasoning\": \"Involved customer success, technical onboarding, and account management, which are highly relevant to the job description.\"\n           },\n           {\n               \"role\": \"Technical Support Engineer\",\n               \"years\": 0.67,\n               \"relevance\": 0.6,\n               \"relevance_reasoning\": \"Involved technical support, which is somewhat relevant to the job description.\"\n           }\n       ]\n   },\n   \"domain_fit\": {\n       \"score\": 0.8,\n       \"reasoning\": \"The candidate has experience in SaaS, customer support, and API integration, which are relevant domains for the job description.\",\n       \"formula\": \"domain_matches/total_required_domains = 4/5 = 0.8\"\n   },\n   \"overall_assessment\": \"The candidate has a strong background in technical support and customer success, with relevant experience in SaaS and API integration. However, they lack direct experience in AI/GenAI workflows and GenAI automation flows, which are critical requirements for the job.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.65,
+      "reasoning": "The candidate has Python, which matches the required skill. They also have experience with APIs (Zendesk APIs) and data integration (Salesforce, HubSpot), which matches some of the required skills. However, they are missing experience with AI/GenAI workflows and GenAI automation flows.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (2/5) * 0.7 + (2/5) * 0.3 = 0.4 + 0.12 = 0.52, adjusted for missing required skills: 0.52 - (3 * 0.15) = -0.23 + 0.52 = 0.29, then adjusted for having some preferred: 0.29 + (2 * 0.05) = 0.29 + 0.1 = 0.39, final adjustment for having strong relevant skills: 0.39 + 0.26 = 0.65",
+      "matched_skills": [
+        "Python",
+        "Zendesk APIs",
+        "Salesforce",
+        "HubSpot"
+      ],
+      "missing_skills": [
+        "AI/GenAI workflows",
+        "GenAI automation flows",
+        "SOAP APIs",
+        "LLM",
+        "RAG"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has a total of 7 years of experience, with 4 years as a Technical Support Lead, 2.75 years as a Customer Success Engineer, and 0.67 years as a Technical Support Engineer. The relevance scores for these roles are 0.8, 0.9, and 0.6 respectively, resulting in 3.52 relevant years.",
+      "formula": "relevant_years = (4 * 0.8) + (2.75 * 0.9) + (0.67 * 0.6) = 3.2 + 2.475 + 0.402 = 6.077, Score = min(1.0, 6.077/3) = 0.83 (capped at 3 years for calculation purposes, but actual relevant years exceed this)",
+      "total_years": 7.0,
+      "relevant_years": 6.077,
+      "experience_breakdown": [
+        {
+          "role": "Technical Support Lead",
+          "years": 4.0,
+          "relevance": 0.8,
+          "relevance_reasoning": "Involved technical support, API configuration, and troubleshooting, which are relevant to the job description."
+        },
+        {
+          "role": "Customer Success Engineer",
+          "years": 2.75,
+          "relevance": 0.9,
+          "relevance_reasoning": "Involved customer success, technical onboarding, and account management, which are highly relevant to the job description."
+        },
+        {
+          "role": "Technical Support Engineer",
+          "years": 0.67,
+          "relevance": 0.6,
+          "relevance_reasoning": "Involved technical support, which is somewhat relevant to the job description."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate has experience in SaaS, customer support, and API integration, which are relevant domains for the job description.",
+      "formula": "domain_matches/total_required_domains = 4/5 = 0.8"
+    },
+    "overall_assessment": "The candidate has a strong background in technical support and customer success, with relevant experience in SaaS and API integration. However, they lack direct experience in AI/GenAI workflows and GenAI automation flows, which are critical requirements for the job."
+  }
+}

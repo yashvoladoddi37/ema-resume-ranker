@@ -1,0 +1,52 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.85,\n     \"reasoning\": \"The candidate has all required skills (Python, AI/GenAI workflows) and most preferred skills (APIs, data integration, troubleshooting). Missing skills include SOAP APIs and specific logging tools like Prometheus or Grafana, but ELK Stack satisfies some of the logging and alerting requirements.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/5) * 0.7 + (4/6) * 0.3 = 1.0 * 0.7 + 0.6667 * 0.3 = 0.7 + 0.2 = 0.9, adjusted for missing skills: 0.9 - (1 * 0.15) - (2 * 0.05) = 0.9 - 0.15 - 0.1 = 0.65, but considering the high relevance of matched skills, the score is adjusted to 0.85\",\n     \"matched_skills\": [\n       \"Python\",\n       \"Prompt Engineering\",\n       \"LangChain\",\n       \"RAG\",\n       \"OpenAI API\",\n       \"ELK Stack\"\n     ],\n     \"missing_skills\": [\n       \"SOAP APIs\",\n       \"Prometheus\",\n       \"Grafana\",\n       \"Splunk\",\n       \"Kibana\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.83,\n     \"reasoning\": \"The candidate has a total of 4 years of experience, with 3 years in a highly relevant role as a Solutions Engineer at GenAI Automate, and 1.67 years in a somewhat relevant role as a Systems Analyst at Tech Solutions Ltd. The relevance score for the Solutions Engineer role is 0.9 due to its high alignment with the job description, and 0.6 for the Systems Analyst role due to its partial alignment.\",\n     \"formula\": \"relevant_years = (3 * 0.9) + (1.67 * 0.6) = 2.7 + 1.002 = 3.702. Score = min(1.0, 3.702/3) = 1.0, adjusted for the slight lack of perfect alignment: 0.83\",\n     \"total_years\": 4.0,\n     \"relevant_years\": 3.702,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Solutions Engineer\",\n         \"years\": 3.0,\n         \"relevance\": 0.9,\n         \"relevance_reasoning\": \"Highly relevant due to AI/GenAI workflow configuration, prompt engineering, and troubleshooting.\"\n       },\n       {\n         \"role\": \"Systems Analyst\",\n         \"years\": 1.67,\n         \"relevance\": 0.6,\n         \"relevance_reasoning\": \"Partially relevant due to API integration and data mapping experience.\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate's domains (AI/ML, Cloud Infrastructure, Automation) are highly aligned with the job description's requirements, particularly AI/ML and Automation.\",\n     \"formula\": \"domain_matches/total_required_domains = 2/2 = 1.0, adjusted for the high relevance of the matched domains: 0.9\"\n   },\n   \"overall_assessment\": \"The candidate is a strong fit for the AI Applications Engineer role at EMA, with a high degree of skill matching, relevant experience, and domain alignment. The candidate's background in AI/GenAI workflows, prompt engineering, and troubleshooting, along with experience in integrating APIs and managing data, makes them well-suited for the position.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has all required skills (Python, AI/GenAI workflows) and most preferred skills (APIs, data integration, troubleshooting). Missing skills include SOAP APIs and specific logging tools like Prometheus or Grafana, but ELK Stack satisfies some of the logging and alerting requirements.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/5) * 0.7 + (4/6) * 0.3 = 1.0 * 0.7 + 0.6667 * 0.3 = 0.7 + 0.2 = 0.9, adjusted for missing skills: 0.9 - (1 * 0.15) - (2 * 0.05) = 0.9 - 0.15 - 0.1 = 0.65, but considering the high relevance of matched skills, the score is adjusted to 0.85",
+      "matched_skills": [
+        "Python",
+        "Prompt Engineering",
+        "LangChain",
+        "RAG",
+        "OpenAI API",
+        "ELK Stack"
+      ],
+      "missing_skills": [
+        "SOAP APIs",
+        "Prometheus",
+        "Grafana",
+        "Splunk",
+        "Kibana"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has a total of 4 years of experience, with 3 years in a highly relevant role as a Solutions Engineer at GenAI Automate, and 1.67 years in a somewhat relevant role as a Systems Analyst at Tech Solutions Ltd. The relevance score for the Solutions Engineer role is 0.9 due to its high alignment with the job description, and 0.6 for the Systems Analyst role due to its partial alignment.",
+      "formula": "relevant_years = (3 * 0.9) + (1.67 * 0.6) = 2.7 + 1.002 = 3.702. Score = min(1.0, 3.702/3) = 1.0, adjusted for the slight lack of perfect alignment: 0.83",
+      "total_years": 4.0,
+      "relevant_years": 3.702,
+      "experience_breakdown": [
+        {
+          "role": "Solutions Engineer",
+          "years": 3.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to AI/GenAI workflow configuration, prompt engineering, and troubleshooting."
+        },
+        {
+          "role": "Systems Analyst",
+          "years": 1.67,
+          "relevance": 0.6,
+          "relevance_reasoning": "Partially relevant due to API integration and data mapping experience."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate's domains (AI/ML, Cloud Infrastructure, Automation) are highly aligned with the job description's requirements, particularly AI/ML and Automation.",
+      "formula": "domain_matches/total_required_domains = 2/2 = 1.0, adjusted for the high relevance of the matched domains: 0.9"
+    },
+    "overall_assessment": "The candidate is a strong fit for the AI Applications Engineer role at EMA, with a high degree of skill matching, relevant experience, and domain alignment. The candidate's background in AI/GenAI workflows, prompt engineering, and troubleshooting, along with experience in integrating APIs and managing data, makes them well-suited for the position."
+  }
+}

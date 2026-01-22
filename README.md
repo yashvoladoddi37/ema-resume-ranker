@@ -34,15 +34,17 @@ Resume.txt
 
 ---
 
-## Performance Comparison
+## Performance Comparison (Strict Ground Truth)
 
 | Metric | V1 (Pure LLM) | V2 (Deterministic) | V3 (Hybrid) | Best |
 |--------|---------------|---------------------|-------------|------|
-| **nDCG@3** | 0.837 | 0.828 | **0.845** | V3 |
-| **Precision@1** | 1.000 | 1.000 | 1.000 | Tie |
+| **nDCG@3** | 0.717 | **0.965** | 0.867 | V2 |
+| **Precision@1** | 0.000 | **1.000** | 0.000 | V2 |
 | **Cost / 1k resumes** | ~$20.00 | $0.00 | ~$10.00 | V2 |
-| **Latency / resume** | ~3.5s | <0.1s | ~0.7s | V2 |
-| **Hallucination risk** | High | None | Low (grounded) | V2 |
+| **Latency / resume** | ~13s | <0.1s | ~5s | V2 |
+| **Hallucination risk** | High | None | Low | V2 |
+
+*Based on strict evaluation against specific "Required" vs "Preferred" JD sections.*
 
 ---
 

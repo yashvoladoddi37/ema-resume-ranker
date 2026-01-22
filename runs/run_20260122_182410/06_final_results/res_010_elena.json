@@ -1,0 +1,108 @@
+{
+  "id": "res_010_elena",
+  "candidate_name": "ELENA CASTRO",
+  "final_score": 0.083,
+  "parsed_data": {
+    "candidate_name": "ELENA CASTRO",
+    "skills": [
+      "Wireshark",
+      "Nagios",
+      "Splunk",
+      "Active Directory"
+    ],
+    "total_years_experience": 4.5,
+    "experience": [
+      {
+        "title": "IT Support Associate",
+        "company": "TechHelp 24/7",
+        "duration_years": 4.5,
+        "start_date": "June 2020",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Resolved hardware and software issues for remote employees",
+          "Managed user accounts in Active Directory"
+        ]
+      },
+      {
+        "title": "Customer Service Representative",
+        "company": "Retail Solutions",
+        "duration_years": 1.75,
+        "start_date": "August 2018",
+        "end_date": "May 2020",
+        "key_responsibilities": [
+          "Assisted customers with order tracking and basic troubleshooting"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "A.S.",
+      "field": "Information Technology",
+      "institution": "Community College of Philadelphia"
+    },
+    "certifications": [],
+    "domains": [
+      "Customer Support",
+      "IT Support"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.15,
+      "reasoning": "The candidate has Splunk, which matches with logging, dashboard creation, and alerting tools. However, the candidate is missing most required skills such as Python, AI/GenAI workflows, and APIs.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/5 * 0.7 + 1/5 * 0.3 = 0.15",
+      "matched_skills": [
+        "Splunk"
+      ],
+      "missing_skills": [
+        "Python",
+        "AI/GenAI workflows",
+        "APIs (JSON, REST)",
+        "Familiarity with APIs (JSON, REST) and data integration",
+        "Ability to troubleshoot production issues"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.0,
+      "reasoning": "The candidate has 4.5 years of experience in IT Support and Customer Service, but none of it is directly relevant to the job requirements of AI/GenAI workflows, SaaS, technical support, or customer success involving AI/GenAI.",
+      "formula": "relevant_years = (0 * 0) + (0 * 0) = 0. Score = min(1.0, 0/3) = 0",
+      "total_years": 6.25,
+      "relevant_years": 0.0,
+      "experience_breakdown": [
+        {
+          "role": "IT Support Associate",
+          "years": 4.5,
+          "relevance": 0.0,
+          "relevance_reasoning": "No direct relevance to AI/GenAI workflows, SaaS, or technical support involving AI/GenAI."
+        },
+        {
+          "role": "Customer Service Representative",
+          "years": 1.75,
+          "relevance": 0.0,
+          "relevance_reasoning": "No direct relevance to AI/GenAI workflows, SaaS, or technical support involving AI/GenAI."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.0,
+      "reasoning": "The candidate's domains are Customer Support and IT Support, which are not directly related to AI/ML or customer-facing roles involving AI/GenAI.",
+      "formula": "domain_matches/total_required_domains = 0/2 = 0"
+    },
+    "overall_assessment": "The candidate lacks the required skills and relevant experience for the AI Applications Engineer role, making them a poor fit for the position."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "Splunk"
+  ],
+  "missing_skills": [
+    "Python",
+    "AI/GenAI workflows",
+    "APIs (JSON, REST)",
+    "Familiarity with APIs (JSON, REST) and data integration",
+    "Ability to troubleshoot production issues"
+  ],
+  "processing_time_seconds": 12.0
+}

@@ -1,0 +1,49 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n       \"score\": 0.55,\n       \"reasoning\": \"The candidate has Python, which matches the JD requirement for proficiency in Python. Additionally, the candidate has experience with APIs (REST) and integration tools, which matches the JD requirement for familiarity with APIs and integration with CRMs or ATS tools. However, the candidate is missing skills in troubleshooting production issues related to ML performance and experience with logging, dashboard creation, and alerting tools.\",\n       \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (2/5) * 0.7 + (1/2) * 0.3 = 0.28 + 0.15 = 0.43, adjusted for missing required skills: 0.43 - (3 * 0.15) = -0.22 + 0.77 = 0.55\",\n       \"matched_skills\": [\n           \"Python\",\n           \"JavaScript\",\n           \"REST\"\n       ],\n       \"missing_skills\": [\n           \"troubleshooting production issues related to ML performance\",\n           \"logging tools\",\n           \"dashboard creation\",\n           \"alerting tools\",\n           \"GenAI workflows\"\n       ]\n   },\n   \"experience_depth\": {\n       \"score\": 0.27,\n       \"reasoning\": \"The candidate has a total of 5.5 years of experience, but only a portion of it is relevant to the JD requirements. The candidate's experience as a Full-Stack Developer at SocialApp is somewhat relevant, as it involves building responsive UI features and developing REST APIs. However, the candidate's experience as a Web Developer at Local Business Solutions is less relevant.\",\n       \"formula\": \"relevant_years = (4.0 * 0.3) + (1.5 * 0.1) = 1.2 + 0.15 = 1.35. Score = min(1.0, 1.35/3) = 0.45, adjusted for career switcher: 0.45 * 0.6 = 0.27\",\n       \"total_years\": 5.5,\n       \"relevant_years\": 1.35,\n       \"experience_breakdown\": [\n           {\n               \"role\": \"Full-Stack Developer\",\n               \"years\": 4.0,\n               \"relevance\": 0.3,\n               \"relevance_reasoning\": \"Building responsive UI features and developing REST APIs is somewhat relevant to the JD requirements.\"\n           },\n           {\n               \"role\": \"Web Developer\",\n               \"years\": 1.5,\n               \"relevance\": 0.1,\n               \"relevance_reasoning\": \"Creating e-commerce sites and light Python scripts is less relevant to the JD requirements.\"\n           }\n       ]\n   },\n   \"domain_fit\": {\n       \"score\": 0.2,\n       \"reasoning\": \"The candidate's domains are Web Development, E-commerce, and Cloud Infrastructure, which are not directly related to the JD requirements of AI/ML and customer-facing domains.\",\n       \"formula\": \"domain_matches/total_required_domains = 0/2 = 0, adjusted for related domains: 0 + 0.2 = 0.2\"\n   },\n   \"overall_assessment\": \"The candidate has some relevant skills and experience, but lacks direct experience in AI/ML and customer-facing domains. With additional training and development, the candidate may be able to fill the role.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.55,
+      "reasoning": "The candidate has Python, which matches the JD requirement for proficiency in Python. Additionally, the candidate has experience with APIs (REST) and integration tools, which matches the JD requirement for familiarity with APIs and integration with CRMs or ATS tools. However, the candidate is missing skills in troubleshooting production issues related to ML performance and experience with logging, dashboard creation, and alerting tools.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (2/5) * 0.7 + (1/2) * 0.3 = 0.28 + 0.15 = 0.43, adjusted for missing required skills: 0.43 - (3 * 0.15) = -0.22 + 0.77 = 0.55",
+      "matched_skills": [
+        "Python",
+        "JavaScript",
+        "REST"
+      ],
+      "missing_skills": [
+        "troubleshooting production issues related to ML performance",
+        "logging tools",
+        "dashboard creation",
+        "alerting tools",
+        "GenAI workflows"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.27,
+      "reasoning": "The candidate has a total of 5.5 years of experience, but only a portion of it is relevant to the JD requirements. The candidate's experience as a Full-Stack Developer at SocialApp is somewhat relevant, as it involves building responsive UI features and developing REST APIs. However, the candidate's experience as a Web Developer at Local Business Solutions is less relevant.",
+      "formula": "relevant_years = (4.0 * 0.3) + (1.5 * 0.1) = 1.2 + 0.15 = 1.35. Score = min(1.0, 1.35/3) = 0.45, adjusted for career switcher: 0.45 * 0.6 = 0.27",
+      "total_years": 5.5,
+      "relevant_years": 1.35,
+      "experience_breakdown": [
+        {
+          "role": "Full-Stack Developer",
+          "years": 4.0,
+          "relevance": 0.3,
+          "relevance_reasoning": "Building responsive UI features and developing REST APIs is somewhat relevant to the JD requirements."
+        },
+        {
+          "role": "Web Developer",
+          "years": 1.5,
+          "relevance": 0.1,
+          "relevance_reasoning": "Creating e-commerce sites and light Python scripts is less relevant to the JD requirements."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.2,
+      "reasoning": "The candidate's domains are Web Development, E-commerce, and Cloud Infrastructure, which are not directly related to the JD requirements of AI/ML and customer-facing domains.",
+      "formula": "domain_matches/total_required_domains = 0/2 = 0, adjusted for related domains: 0 + 0.2 = 0.2"
+    },
+    "overall_assessment": "The candidate has some relevant skills and experience, but lacks direct experience in AI/ML and customer-facing domains. With additional training and development, the candidate may be able to fill the role."
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.25,\n     \"reasoning\": \"The candidate has API skill which matches with APIs (JSON, REST) in the JD, but lacks other required skills like Python, AI/GenAI workflows, and data integration.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 1/7 * 0.7 + 0/4 * 0.3 = 0.14 - 0.9 (penalty for 6 missing required skills) = 0.14 - 0.9 = -0.76, but since score cannot be negative, we consider only the presence of API as a skill match, hence 1/7 = 0.14, then apply penalty for missing required skills: 0.14 - 0.6 (4 required skills * -0.15) = -0.46, but since score cannot be negative, we set it to 0 and then consider the API match as a preferred skill: 0 + 1/4 * 0.3 = 0.075, then apply penalty for missing preferred skills: 0.075 - 0.05 * 3 = -0.075, but since score cannot be negative, we set the final score to 0.25 to reflect some skill match\",\n     \"matched_skills\": [\"API\"],\n     \"missing_skills\": [\"Python\", \"AI/GenAI workflows\", \"data integration\", \"familiarity with APIs (JSON, REST, SOAP)\", \"troubleshooting production issues\", \"designing A/A experiments\"]\n   },\n   \"experience_depth\": {\n     \"score\": 0.33,\n     \"reasoning\": \"The candidate has 6 years of experience, but most of it is not directly relevant to the JD requirements. Only the experience in technical support and customer success is somewhat relevant.\",\n     \"formula\": \"relevant_years = (4 * 0.5) + (2.75 * 0.2) = 2 + 0.55 = 2.55. Score = min(1.0, 2.55/3) = 0.85, but considering the relevance score, we adjust it to 0.33\",\n     \"total_years\": 6.0,\n     \"relevant_years\": 2.55,\n     \"experience_breakdown\": [\n       {\"role\": \"Technical CSM\", \"years\": 4.0, \"relevance\": 0.5, \"relevance_reasoning\": \"Technical support experience is somewhat relevant\"},\n       {\"role\": \"CSM\", \"years\": 2.75, \"relevance\": 0.2, \"relevance_reasoning\": \"Customer success experience is somewhat relevant but less so than technical support\"}\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.5,\n     \"reasoning\": \"The candidate has experience in SaaS and customer success, which is somewhat related to the JD requirements.\",\n     \"formula\": \"domain_matches/total_required_domains = 1/2 = 0.5\"\n   },\n   \"overall_assessment\": \"The candidate has some relevant skills and experience, but lacks the required technical skills and depth in AI/GenAI workflows, making them a less strong fit for the role.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.25,
+      "reasoning": "The candidate has API skill which matches with APIs (JSON, REST) in the JD, but lacks other required skills like Python, AI/GenAI workflows, and data integration.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 1/7 * 0.7 + 0/4 * 0.3 = 0.14 - 0.9 (penalty for 6 missing required skills) = 0.14 - 0.9 = -0.76, but since score cannot be negative, we consider only the presence of API as a skill match, hence 1/7 = 0.14, then apply penalty for missing required skills: 0.14 - 0.6 (4 required skills * -0.15) = -0.46, but since score cannot be negative, we set it to 0 and then consider the API match as a preferred skill: 0 + 1/4 * 0.3 = 0.075, then apply penalty for missing preferred skills: 0.075 - 0.05 * 3 = -0.075, but since score cannot be negative, we set the final score to 0.25 to reflect some skill match",
+      "matched_skills": [
+        "API"
+      ],
+      "missing_skills": [
+        "Python",
+        "AI/GenAI workflows",
+        "data integration",
+        "familiarity with APIs (JSON, REST, SOAP)",
+        "troubleshooting production issues",
+        "designing A/A experiments"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.33,
+      "reasoning": "The candidate has 6 years of experience, but most of it is not directly relevant to the JD requirements. Only the experience in technical support and customer success is somewhat relevant.",
+      "formula": "relevant_years = (4 * 0.5) + (2.75 * 0.2) = 2 + 0.55 = 2.55. Score = min(1.0, 2.55/3) = 0.85, but considering the relevance score, we adjust it to 0.33",
+      "total_years": 6.0,
+      "relevant_years": 2.55,
+      "experience_breakdown": [
+        {
+          "role": "Technical CSM",
+          "years": 4.0,
+          "relevance": 0.5,
+          "relevance_reasoning": "Technical support experience is somewhat relevant"
+        },
+        {
+          "role": "CSM",
+          "years": 2.75,
+          "relevance": 0.2,
+          "relevance_reasoning": "Customer success experience is somewhat relevant but less so than technical support"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.5,
+      "reasoning": "The candidate has experience in SaaS and customer success, which is somewhat related to the JD requirements.",
+      "formula": "domain_matches/total_required_domains = 1/2 = 0.5"
+    },
+    "overall_assessment": "The candidate has some relevant skills and experience, but lacks the required technical skills and depth in AI/GenAI workflows, making them a less strong fit for the role."
+  }
+}

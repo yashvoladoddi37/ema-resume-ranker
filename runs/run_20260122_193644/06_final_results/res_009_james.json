@@ -1,0 +1,85 @@
+{
+  "id": "res_009_james",
+  "candidate_name": "JAMES WILSON",
+  "final_score": 0.22,
+  "parsed_data": {
+    "candidate_name": "JAMES WILSON",
+    "skills": [
+      "Java",
+      "SQL",
+      "Kotlin",
+      "Spring Boot",
+      "Hibernate",
+      "Oracle DB",
+      "Microservices"
+    ],
+    "total_years_experience": 6.0,
+    "experience": [
+      {
+        "title": "Senior Java Developer",
+        "company": "Banking Corp",
+        "duration_years": 4.0,
+        "start_date": "February 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built high-volume transaction processing systems in Spring Boot",
+          "Expert in Oracle DB and microservices reliability"
+        ]
+      },
+      {
+        "title": "Java Developer",
+        "company": "FinServ Systems",
+        "duration_years": 2.5,
+        "start_date": "July 2018",
+        "end_date": "January 2021",
+        "key_responsibilities": [
+          "Developed batch processing jobs for financial reporting",
+          "Maintained legacy Java EE applications"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "",
+      "field": "",
+      "institution": ""
+    },
+    "certifications": [],
+    "domains": [
+      "Financial Services",
+      "Banking"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.0,
+      "reasoning": "The candidate lacks all required skills such as proficiency in Python, APIs (JSON, REST, SOAP), and experience with ML performance troubleshooting.",
+      "matched_skills": [],
+      "missing_skills": [
+        "Python",
+        "APIs (JSON, REST, SOAP)",
+        "ML performance troubleshooting"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.6,
+      "reasoning": "The candidate has 6 years of experience, exceeding the required 3+ years, but the experience is not directly relevant to the AI Applications Engineer role."
+    },
+    "domain_fit": {
+      "score": 0.2,
+      "reasoning": "The candidate's background in Financial Services and Banking is not directly related to AI/ML or customer-facing roles, resulting in a low domain fit."
+    },
+    "overall_assessment": "The candidate lacks the required skills and domain experience for the AI Applications Engineer role, making them a less suitable fit."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [],
+  "missing_skills": [
+    "Python",
+    "APIs (JSON, REST, SOAP)",
+    "ML performance troubleshooting"
+  ],
+  "processing_time_seconds": 9.01
+}

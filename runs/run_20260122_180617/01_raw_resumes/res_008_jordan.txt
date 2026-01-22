@@ -1,0 +1,23 @@
+============================================================
+JORDAN LEE
+Frontend Developer
+============================================================
+
+SUMMARY
+-------
+3 years experience building interactive user interfaces with 
+React and TypeScript.
+
+EXPERIENCE
+----------
+Frontend Dev | Design Dynamics | March 2022 - Present
+• Built high-performance React components for design system.
+• Optimized frontend bundle sizes and accessibility.
+
+Junior Dev | Web Agency | June 2020 - February 2022
+• HTML/CSS slicing and jQuery maintenance.
+
+SKILLS
+------
+Frontend: React, TypeScript, Tailwind, Figma, Jest
+============================================================
