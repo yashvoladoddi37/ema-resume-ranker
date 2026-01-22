@@ -1,21 +1,37 @@
 import os
 import json
 import time
+import logging
 from datetime import datetime
 from src.deterministic_engine import DeterministicEngine
 from src.utils import calculate_metrics, load_resumes, load_job_description
+from src.config import config
+
+# Configure logging
+logging.basicConfig(level=config.LOG_LEVEL)
+logger = logging.getLogger(__name__)
 
 def run_evaluation():
-    print("🎯 Starting V2 Deterministic Evaluation...")
+    logger.info("🎯 Starting V2 Deterministic Evaluation...")
     engine = DeterministicEngine()
     
     # Load data
-    jd = load_job_description()
-    resumes = load_resumes()
+    try:
+        jd = load_job_description()
+        resumes = load_resumes()
+        logger.info(f"Loaded {len(resumes)} resumes and job description.")
+    except Exception as e:
+        logger.error(f"Failed to load data: {e}")
+        return
                 
     # Evaluate
     start_time = time.time()
-    results = engine.evaluate_batch(jd, resumes)
+    try:
+        results = engine.evaluate_batch(jd, resumes)
+    except Exception as e:
+        logger.error(f"Evaluation failed: {e}")
+        return
+        
     duration = time.time() - start_time
     
     # Create run directory
@@ -28,23 +44,29 @@ def run_evaluation():
         json.dump(results, f, indent=2)
         
     # Calculate metrics (using same ground truth)
-    with open("data/ground_truth.json", "r") as f:
-        ground_truth = json.load(f)
+    try:
+        with open("data/ground_truth.json", "r") as f:
+            ground_truth = json.load(f)
+            
+        # Prepare rankings for metrics
+        # Format: list of candidate IDs in ranked order
+        rankings = [r['candidate_id'] for r in results]
         
-    # Prepare rankings for metrics
-    # Format: list of candidate IDs in ranked order
-    rankings = [r['candidate_id'] for r in results]
-    
-    metrics = calculate_metrics(rankings, ground_truth)
-    
-    with open(f"{run_dir}/metrics.json", "w") as f:
-        json.dump(metrics, f, indent=2)
+        metrics = calculate_metrics(rankings, ground_truth)
         
-    print(f"\n✅ V2 Evaluation Complete!")
-    print(f"⏱️  Duration: {duration:.2f}s")
-    print(f"📊 nDCG@3: {metrics['ndcg_at_3']:.3f}")
-    print(f"📊 Precision@1: {metrics['p_at_1']:.3f}")
-    print(f"📂 Results saved to: {run_dir}")
+        with open(f"{run_dir}/metrics.json", "w") as f:
+            json.dump(metrics, f, indent=2)
+            
+        logger.info(f"\n✅ V2 Evaluation Complete!")
+        logger.info(f"⏱️  Duration: {duration:.2f}s")
+        logger.info(f"📊 nDCG@3: {metrics['ndcg_at_3']:.3f}")
+        logger.info(f"📊 Precision@1: {metrics['p_at_1']:.3f}")
+        logger.info(f"📂 Results saved to: {run_dir}")
+        
+    except FileNotFoundError:
+        logger.warning("Ground truth file not found. Metrics skipped.")
+    except Exception as e:
+        logger.error(f"Metric calculation failed: {e}")
 
 if __name__ == "__main__":
     run_evaluation()

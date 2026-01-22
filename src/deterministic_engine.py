@@ -1,8 +1,14 @@
 import os
 import json
+import logging
 from typing import Dict, Any, List
 from src.deterministic import DeterministicExtractor
 from src.scorers.semantic import SemanticScorer
+from src.config import config
+
+# Configure logging
+logging.basicConfig(level=config.LOG_LEVEL)
+logger = logging.getLogger(__name__)
 
 class DeterministicEngine:
     """
@@ -14,9 +20,10 @@ class DeterministicEngine:
         self.extractor = DeterministicExtractor()
         self.semantic_scorer = SemanticScorer()
         
-        # V2 Weights: Focus on verifiable facts (70%) vs semantic gist (30%)
-        self.weight_deterministic = 0.7
-        self.weight_semantic = 0.3
+        # V2 Weights from config
+        self.weight_deterministic = config.WEIGHT_DETERMINISTIC
+        self.weight_semantic = config.WEIGHT_SEMANTIC
+        logger.info(f"Initialized DeterministicEngine with weights: Det={self.weight_deterministic}, Sem={self.weight_semantic}")
         
     def evaluate(self, job_description: str, resume_text: str) -> Dict[str, Any]:
         """
