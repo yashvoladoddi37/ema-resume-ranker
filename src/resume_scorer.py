@@ -85,6 +85,10 @@ class ResumeScorer:
     ) -> str:
         """Build the LLM prompt for scoring."""
         
+        # Extract skills list for explicit cross-reference instruction
+        candidate_skills = parsed.get("skills", [])
+        skills_list = ", ".join(candidate_skills) if candidate_skills else "None listed"
+        
         return f"""You are evaluating a candidate for a job opening.
 
 JOB DESCRIPTION:
@@ -94,7 +98,27 @@ CANDIDATE PROFILE (extracted from resume):
 {json.dumps(parsed, indent=2)}
 
 TASK:
-Evaluate the candidate on three dimensions and return ONLY a JSON object:
+Evaluate the candidate on three dimensions and return ONLY a JSON object.
+
+**CRITICAL: SKILL MATCHING INSTRUCTIONS**
+
+The candidate has these skills: [{skills_list}]
+
+For skill_match, you MUST:
+1. Go through EACH skill in the candidate's list above
+2. For EACH skill, determine if it satisfies ANY JD requirement (even if wording differs)
+3. Use SEMANTIC matching, not exact string matching:
+   - "Prometheus" satisfies "logging tools" and "alerting tools"
+   - "Kibana" satisfies "dashboard creation"
+   - "Splunk" satisfies "logging tools"
+   - "LangChain" satisfies "GenAI workflows"
+   - "REST" satisfies "APIs (JSON, REST, SOAP)"
+4. matched_skills = skills FROM THE CANDIDATE'S LIST that match JD requirements
+5. missing_skills = skills FROM THE JD that the candidate does NOT have
+
+DO NOT list a skill as "missing" if the candidate has an equivalent tool.
+
+OUTPUT FORMAT:
 
 {{
   "skill_match": {{
@@ -123,9 +147,6 @@ SCORING GUIDELINES:
    - 0.4 = Has SOME required skills
    - 0.2 = Has FEW required skills
    - 0.0 = Has NO required skills
-   
-   - matched_skills: List skills from candidate that match JD requirements
-   - missing_skills: List important skills from JD the candidate lacks
 
 2. **experience_depth (0.0-1.0):**
    - Consider BOTH years AND relevance
