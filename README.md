@@ -95,44 +95,31 @@ graph TD
 
 To ensure a rigorous and fair assessment, we established a **Ground Truth Scoring Protocol** to manually label our synthetic dataset. This protocol eliminates subjective bias by using a strict mathematical formula to derive the "True" relevance score for each candidate.
 
-### Ground Truth Scoring Protocol
-We define the "True Relevance" ($R$) of a candidate $c$ given a job $j$ as a weighted sum of three distinct dimensions, minus specific penalty factors:
+### Ground Truth Reasoning
+To ensure fairness, we established a straightforward, subjective criteria for what constitutes a "Good", "Partial", or "Poor" match. This avoids over-engineering a complex formula and mirrors how a human recruiter intuitively segments candidates.
 
-$$ R(c, j) = (0.4 \times S_{hard}) + (0.3 \times E_{fit}) + (0.3 \times D_{align}) - P_{penalty} $$
+**1.0 — Good Match (Ideal Candidate)**
+*   **Rationale**: The candidate checks all the boxes. They have the required years of experience, a background in a highly relevant domain (e.g., AI/SaaS), and possess the critical technical skills listed in the JD.
+*   *Recruiter thought process*: "I definitely want to interview this person."
 
-Where:
-1.  **$S_{hard}$ (Hard Skills Score)**: The percentage of critical tech stack requirements present (e.g., Python, APIs, SQL).
-    *   *Scale*: 0.0 to 1.0 (Strict float calculation).
-2.  **$E_{fit}$ (Experience Fit)**: A binary-weighted score based on the "Seniority" requirement.
-    *   *Formula*: If $Years \ge Required$, score 1.0. If $Years < Required$, score $Years / Required$.
-3.  **$D_{align}$ (Domain Alignment)**: A categorical score for industry fit.
-    *   *Rubric*: 1.0 for "Direct Match" (e.g., AI/SaaS), 0.5 for "Adjacent" (e.g., General Web Dev), 0.0 for "Irrelevant".
-4.  **$P_{penalty}$ (Penalty Factors)**:
-    *   *Hallucination/Noise*: -0.5 if the resume is incoherent or a "keyword soup".
-    *   *Role Mismatch*: -0.3 if the candidate is senior but in a completely wrong role (e.g., Senior Sales applying for Engineering).
+**0.5 — Partial Match (Maybe)**
+*   **Rationale**: The candidate is promising but has a clear gap. They might be technically strong but junior (lacking the required years), or they might be a very senior engineer from a slightly different domain (e.g., standard Web Dev vs. AI). They could do the job, but it's not a slam-dunk.
+*   *Recruiter thought process*: "I'll put them in the pile to review if the top candidates don't work out."
 
-### Synthetic Data Archetypes
-Using this protocol, we designed specific archetypes to test the model's decision boundaries:
+**0.0 — Poor Match (No)**
+*   **Rationale**: The candidate is fundamentally misaligned. This includes applicants from completely irrelevant fields (e.g., Sales, non-technical roles), or "keyword stuffers" whose resumes satisfy boolean checks but lack any coherent narrative or genuine experience.
+*   *Recruiter thought process*: "Instant reject."
 
-| Archetype | $S_{hard}$ | $E_{fit}$ | $D_{align}$ | $P_{penalty}$ | **Ground Truth ($R$)** | **Test Goal** |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **A. The Perfect Match** | 1.0 | 1.0 | 1.0 | 0.0 | **1.00** | Can the model identify an ideal candidate? |
-| **B. Good, but Junior** | 1.0 | 0.5 | 1.0 | 0.0 | **0.85** | Does the model value skills highly even with lower years? |
-| **C. Irrelevant Senior** | 0.3 | 1.0 | 0.0 | 0.3 | **0.12** | Does the model penalize high experience in the *wrong* field? |
-| **D. Keyword Stuffer** | 1.0 | 0.0 | 0.0 | 0.5 | **0.00** | Can the model detect lack of semantic coherence? |
+### Labeled Examples
+We used this subjective logic to label our dataset:
 
-This structured approach allows us to objectively measure if the model's ranking ($R_{model}$) correlates with the ground truth ($R_{true}$).
-
-### Ground Truth Dataset Breakdown
-To maintain transparency, we explicitly document the rationale for each labeled resume in our test set:
-
-| Candidate | Archetype | Score ($R_{true}$) | Rationale (Formula Application) |
-| :--- | :--- | :--- | :--- |
-| **Maya Gupta** | **A. Perfect Match** | **1.0** | **Skills (1.0)**: Python, LangChain, RAG, OpenAI.<br>**Exp (1.0)**: 4yrs Solutions Eng (Perfect Role Match).<br>**Domain (1.0)**: GenAI/Automation.<br>*Rationale*: Perfect alignment with "Configure AI/GenAI workflows". |
-| **Priya Sharma** | **B. Good, but Junior** | **0.85** | **Skills (1.0)**: Python, PyTorch, Airflow.<br>**Exp (0.5)**: ~2yrs relevant (Junior).<br>**Domain (1.0)**: AI/ML Data Science.<br>*Rationale*: Technically qualified but falls short of "3+ years" seniority. |
-| **Sarah Johnson** | **C. Partial Match** | **0.5** | **Skills (0.5)**: Python, AWS, DataDog. **Missing**: GenAI/LLM.<br>**Exp (1.0)**: 7yrs Support Lead.<br>**Domain (0.5)**: SaaS Support (High) vs AI (Low).<br>*Rationale*: Can do the "Support" half of the job perfectly, but lacks the core "AI" capability. |
-| **Mike Rodriguez** | **D. Keyword Stuffer** | **0.0** | **Skills (0.3)**: Python (Web), React.<br>**Exp (0.0)**: Web Dev (Irrelevant).<br>**Penalty**: Keyword soup without context.<br>*Rationale*: Generic web developer lacking both AI and Enterprise Support experience. |
-| **Yashpreet** | **A. Perfect Match** | **1.0** | **Skills (1.0)**: Agentic AI, LangGraph, Golang.<br>**Note**: Resume author profile, labeled as ideal fit for "Universal AI Employee" context. |
+| Candidate | Score | Rationale |
+| :--- | :--- | :--- |
+| **Maya Gupta** | **1.0** | **Perfect Fit**. She has the exact seniority needed, her domain is practically identical to the JD, and she lists all the "Required" tech stack. |
+| **Yashpreet** | **1.0** | **Perfect Fit**. Highly relevant experience with Agentic AI and LangGraph, fitting the "Universal AI Employee" profile perfectly. |
+| **Priya Sharma** | **0.5** | **Junior Fit**. She has the right skills (Python, PyTorch) and domain, but only ~2 years experience where the role asks for more. The previous "0.85" score was over-complicating it; she's a "Maybe". |
+| **Sarah Johnson** | **0.5** | **Domain Gap**. Excellent seniority and "Support" experience, but lacks the specific "AI/GenAI" technical depth. She's a strong support engineer, just not an *AI* support engineer. |
+| **Mike Rodriguez** | **0.0** | **Irrelevant**. His resume is a collection of web development keywords with no substance or relevant experience. A clear mismatch. |
 
 ### Performance Results (Strict Ground Truth)
 
