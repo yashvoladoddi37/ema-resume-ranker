@@ -1,0 +1,48 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.55,\n     \"reasoning\": \"The candidate has Python, which matches the JD requirement for proficiency in Python. Additionally, the candidate has experience with APIs (JSON, REST, SOAP) through their work with REST APIs and integration with Stripe. However, the candidate lacks direct experience with GenAI workflows, logging tools, and alerting tools beyond CloudWatch and DataDog.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (2/5) * 0.7 + (2/3) * 0.3 = 0.28 + 0.2 = 0.48, adjusted for semantic matching and penalties\",\n     \"matched_skills\": [\n       \"Python\",\n       \"JavaScript\",\n       \"REST\"\n     ],\n     \"missing_skills\": [\n       \"GenAI workflows\",\n       \"logging tools\",\n       \"alerting tools\",\n       \"familiarity with CRMs or ATS tools\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.33,\n     \"reasoning\": \"The candidate has a total of 5.5 years of experience, but only a portion of it is relevant to the JD requirements. The candidate's experience as a Full-Stack Developer and Web Developer provides some relevance, particularly in terms of troubleshooting and integration, but lacks direct experience in AI/GenAI, SaaS, technical support, or customer success.\",\n     \"formula\": \"relevant_years = (4.0 * 0.2) + (1.5 * 0.1) = 0.8 + 0.15 = 0.95. Score = min(1.0, 0.95/3) = 0.317, adjusted for relevance\",\n     \"total_years\": 5.5,\n     \"relevant_years\": 0.95,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Full-Stack Developer\",\n         \"years\": 4.0,\n         \"relevance\": 0.2,\n         \"relevance_reasoning\": \"Some relevance due to experience with APIs and troubleshooting\"\n       },\n       {\n         \"role\": \"Web Developer\",\n         \"years\": 1.5,\n         \"relevance\": 0.1,\n         \"relevance_reasoning\": \"Limited relevance due to lack of direct experience with AI/GenAI or SaaS\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.4,\n     \"reasoning\": \"The candidate's domains include Web Development and E-commerce, which have some relation to the JD requirements but lack direct experience in AI/ML or customer-facing roles.\",\n     \"formula\": \"domain_matches/total_required_domains = 1/3 = 0.33, adjusted for semantic matching\"\n   },\n   \"overall_assessment\": \"The candidate has some relevant skills and experience but lacks direct experience in key areas such as GenAI workflows, logging tools, and alerting tools. With additional training or experience, the candidate may be a good fit for the role.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.55,
+      "reasoning": "The candidate has Python, which matches the JD requirement for proficiency in Python. Additionally, the candidate has experience with APIs (JSON, REST, SOAP) through their work with REST APIs and integration with Stripe. However, the candidate lacks direct experience with GenAI workflows, logging tools, and alerting tools beyond CloudWatch and DataDog.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (2/5) * 0.7 + (2/3) * 0.3 = 0.28 + 0.2 = 0.48, adjusted for semantic matching and penalties",
+      "matched_skills": [
+        "Python",
+        "JavaScript",
+        "REST"
+      ],
+      "missing_skills": [
+        "GenAI workflows",
+        "logging tools",
+        "alerting tools",
+        "familiarity with CRMs or ATS tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.33,
+      "reasoning": "The candidate has a total of 5.5 years of experience, but only a portion of it is relevant to the JD requirements. The candidate's experience as a Full-Stack Developer and Web Developer provides some relevance, particularly in terms of troubleshooting and integration, but lacks direct experience in AI/GenAI, SaaS, technical support, or customer success.",
+      "formula": "relevant_years = (4.0 * 0.2) + (1.5 * 0.1) = 0.8 + 0.15 = 0.95. Score = min(1.0, 0.95/3) = 0.317, adjusted for relevance",
+      "total_years": 5.5,
+      "relevant_years": 0.95,
+      "experience_breakdown": [
+        {
+          "role": "Full-Stack Developer",
+          "years": 4.0,
+          "relevance": 0.2,
+          "relevance_reasoning": "Some relevance due to experience with APIs and troubleshooting"
+        },
+        {
+          "role": "Web Developer",
+          "years": 1.5,
+          "relevance": 0.1,
+          "relevance_reasoning": "Limited relevance due to lack of direct experience with AI/GenAI or SaaS"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.4,
+      "reasoning": "The candidate's domains include Web Development and E-commerce, which have some relation to the JD requirements but lack direct experience in AI/ML or customer-facing roles.",
+      "formula": "domain_matches/total_required_domains = 1/3 = 0.33, adjusted for semantic matching"
+    },
+    "overall_assessment": "The candidate has some relevant skills and experience but lacks direct experience in key areas such as GenAI workflows, logging tools, and alerting tools. With additional training or experience, the candidate may be a good fit for the role."
+  }
+}

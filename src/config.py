@@ -11,6 +11,10 @@ class EngineConfig:
     GROQ_API_KEY: str = os.getenv("GROQ_API_KEY", "")
     GEMINI_API_KEY: str = os.getenv("GEMINI_API_KEY", "")
     
+    # Model Names
+    LLM_MODEL: str = os.getenv("LLM_MODEL", "llama-3.3-70b-versatile")
+    EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
+    
     # Validated Weights (V1 verified: 0.55/0.15/0.30)
     WEIGHT_SKILL: float = float(os.getenv("WEIGHT_SKILL", "0.55"))
     WEIGHT_EXPERIENCE: float = float(os.getenv("WEIGHT_EXPERIENCE", "0.15"))

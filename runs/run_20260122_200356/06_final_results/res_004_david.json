@@ -1,0 +1,128 @@
+{
+  "id": "res_004_david",
+  "candidate_name": "David Kim",
+  "final_score": 0.832,
+  "parsed_data": {
+    "candidate_name": "David Kim",
+    "skills": [
+      "Go",
+      "Python",
+      "SQL",
+      "REST",
+      "SOAP",
+      "Webhooks",
+      "AWS",
+      "S3",
+      "RDS",
+      "Prometheus",
+      "Kibana",
+      "Splunk",
+      "Git",
+      "Docker",
+      "Kubernetes"
+    ],
+    "total_years_experience": 6.5,
+    "experience": [
+      {
+        "title": "Integration Engineer",
+        "company": "DataBridge",
+        "duration_years": 5.0,
+        "start_date": "February 2021",
+        "end_date": "January 2026",
+        "key_responsibilities": [
+          "Troubleshoot produce issues related to complex API syncs",
+          "Diagnose performance bottlenecks in distributed data pipelines",
+          "Built monitoring alerts for API uptime and data latency"
+        ]
+      },
+      {
+        "title": "Backend Developer",
+        "company": "Core Systems",
+        "duration_years": 1.5,
+        "start_date": "July 2019",
+        "end_date": "January 2021",
+        "key_responsibilities": [
+          "Developed REST services and database schemas for SaaS platform",
+          "Integrated with various ATS and CRM tools via webhooks"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Computer Science",
+      "institution": "Seattle University"
+    },
+    "certifications": [],
+    "domains": [
+      "Cloud Infrastructure",
+      "SaaS",
+      "API Integration"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including Python, REST, and SOAP, as well as experience with APIs and integration tools. However, they are missing experience with GenAI workflows and troubleshooting ML performance.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "REST",
+        "SOAP",
+        "APIs",
+        "Prometheus",
+        "Kibana",
+        "Splunk"
+      ],
+      "missing_skills": [
+        "GenAI workflows",
+        "ML performance troubleshooting"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has 6.5 years of total experience, with 5 years as an Integration Engineer and 1.5 years as a Backend Developer. Their experience is highly relevant to the job, with a focus on API integration, troubleshooting, and data pipelines.",
+      "formula": "relevant_years = (5 * 0.9) + (1.5 * 0.7) = 4.5 + 1.05 = 5.55. Score = min(1.0, 5.55/3) = 0.83",
+      "total_years": 6.5,
+      "relevant_years": 5.55,
+      "experience_breakdown": [
+        {
+          "role": "Integration Engineer",
+          "years": 5,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant experience with API integration and troubleshooting"
+        },
+        {
+          "role": "Backend Developer",
+          "years": 1.5,
+          "relevance": 0.7,
+          "relevance_reasoning": "Relevant experience with REST services and database schemas"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate has experience in SaaS, API integration, and cloud infrastructure, which are related to the job requirements. However, they do not have direct experience in AI/ML or customer-facing roles.",
+      "formula": "domain_matches/total_required_domains = 2/3 = 0.67. Adjusted score based on relevance: 0.8"
+    },
+    "overall_assessment": "The candidate has a strong technical background and relevant experience in API integration and troubleshooting, making them a good fit for the AI Applications Engineer role. However, they may require additional training or experience in GenAI workflows and ML performance troubleshooting."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "Python",
+    "REST",
+    "SOAP",
+    "APIs",
+    "Prometheus",
+    "Kibana",
+    "Splunk"
+  ],
+  "missing_skills": [
+    "GenAI workflows",
+    "ML performance troubleshooting"
+  ],
+  "processing_time_seconds": 3.01
+}

@@ -1,0 +1,50 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"JAMES WILSON\",\n   \"skills\": [\n      \"Java\",\n      \"SQL\",\n      \"Kotlin\",\n      \"Spring Boot\",\n      \"Hibernate\",\n      \"Oracle DB\",\n      \"Microservices\"\n   ],\n   \"total_years_experience\": 4.08,\n   \"experience\": [\n      {\n         \"title\": \"Senior Java Developer\",\n         \"company\": \"Banking Corp\",\n         \"duration_years\": 4.92,\n         \"start_date\": \"February 2021\",\n         \"end_date\": \"January 2026\",\n         \"key_responsibilities\": [\n            \"Built high-volume transaction processing systems in Spring Boot\",\n            \"Expert in Oracle DB and microservices reliability\"\n         ]\n      },\n      {\n         \"title\": \"Java Developer\",\n         \"company\": \"FinServ Systems\",\n         \"duration_years\": 2.5,\n         \"start_date\": \"July 2018\",\n         \"end_date\": \"January 2021\",\n         \"key_responsibilities\": [\n            \"Developed batch processing jobs for financial reporting\",\n            \"Maintained legacy Java EE applications\"\n         ]\n      }\n   ],\n   \"education\": {\n      \"degree\": \"\",\n      \"field\": \"\",\n      \"institution\": \"\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n      \"Financial Services\",\n      \"Cloud Infrastructure\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "JAMES WILSON",
+    "skills": [
+      "Java",
+      "SQL",
+      "Kotlin",
+      "Spring Boot",
+      "Hibernate",
+      "Oracle DB",
+      "Microservices"
+    ],
+    "total_years_experience": 4.08,
+    "experience": [
+      {
+        "title": "Senior Java Developer",
+        "company": "Banking Corp",
+        "duration_years": 4.92,
+        "start_date": "February 2021",
+        "end_date": "January 2026",
+        "key_responsibilities": [
+          "Built high-volume transaction processing systems in Spring Boot",
+          "Expert in Oracle DB and microservices reliability"
+        ]
+      },
+      {
+        "title": "Java Developer",
+        "company": "FinServ Systems",
+        "duration_years": 2.5,
+        "start_date": "July 2018",
+        "end_date": "January 2021",
+        "key_responsibilities": [
+          "Developed batch processing jobs for financial reporting",
+          "Maintained legacy Java EE applications"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "",
+      "field": "",
+      "institution": ""
+    },
+    "certifications": [],
+    "domains": [
+      "Financial Services",
+      "Cloud Infrastructure"
+    ]
+  }
+}

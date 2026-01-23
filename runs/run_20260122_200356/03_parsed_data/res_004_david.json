@@ -1,0 +1,60 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"David Kim\",\n   \"skills\": [\n      \"Go\",\n      \"Python\",\n      \"SQL\",\n      \"REST\",\n      \"SOAP\",\n      \"Webhooks\",\n      \"AWS\",\n      \"S3\",\n      \"RDS\",\n      \"Prometheus\",\n      \"Kibana\",\n      \"Splunk\",\n      \"Git\",\n      \"Docker\",\n      \"Kubernetes\"\n   ],\n   \"total_years_experience\": 6.5,\n   \"experience\": [\n      {\n         \"title\": \"Integration Engineer\",\n         \"company\": \"DataBridge\",\n         \"duration_years\": 5.0,\n         \"start_date\": \"February 2021\",\n         \"end_date\": \"January 2026\",\n         \"key_responsibilities\": [\n            \"Troubleshoot produce issues related to complex API syncs\",\n            \"Diagnose performance bottlenecks in distributed data pipelines\",\n            \"Built monitoring alerts for API uptime and data latency\"\n         ]\n      },\n      {\n         \"title\": \"Backend Developer\",\n         \"company\": \"Core Systems\",\n         \"duration_years\": 1.5,\n         \"start_date\": \"July 2019\",\n         \"end_date\": \"January 2021\",\n         \"key_responsibilities\": [\n            \"Developed REST services and database schemas for SaaS platform\",\n            \"Integrated with various ATS and CRM tools via webhooks\"\n         ]\n      }\n   ],\n   \"education\": {\n      \"degree\": \"B.S.\",\n      \"field\": \"Computer Science\",\n      \"institution\": \"Seattle University\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n      \"Cloud Infrastructure\",\n      \"SaaS\",\n      \"API Integration\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "David Kim",
+    "skills": [
+      "Go",
+      "Python",
+      "SQL",
+      "REST",
+      "SOAP",
+      "Webhooks",
+      "AWS",
+      "S3",
+      "RDS",
+      "Prometheus",
+      "Kibana",
+      "Splunk",
+      "Git",
+      "Docker",
+      "Kubernetes"
+    ],
+    "total_years_experience": 6.5,
+    "experience": [
+      {
+        "title": "Integration Engineer",
+        "company": "DataBridge",
+        "duration_years": 5.0,
+        "start_date": "February 2021",
+        "end_date": "January 2026",
+        "key_responsibilities": [
+          "Troubleshoot produce issues related to complex API syncs",
+          "Diagnose performance bottlenecks in distributed data pipelines",
+          "Built monitoring alerts for API uptime and data latency"
+        ]
+      },
+      {
+        "title": "Backend Developer",
+        "company": "Core Systems",
+        "duration_years": 1.5,
+        "start_date": "July 2019",
+        "end_date": "January 2021",
+        "key_responsibilities": [
+          "Developed REST services and database schemas for SaaS platform",
+          "Integrated with various ATS and CRM tools via webhooks"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Computer Science",
+      "institution": "Seattle University"
+    },
+    "certifications": [],
+    "domains": [
+      "Cloud Infrastructure",
+      "SaaS",
+      "API Integration"
+    ]
+  }
+}

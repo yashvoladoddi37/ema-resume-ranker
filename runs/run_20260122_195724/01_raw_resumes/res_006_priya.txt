@@ -1,0 +1,27 @@
+============================================================
+PRIYA SHARMA
+Data Scientist
+============================================================
+
+SUMMARY
+-------
+Data Scientist with 5 years experience in predictive modeling, 
+NLP, and data pipelines.
+
+EXPERIENCE
+----------
+Senior Data Scientist | Analytics Lab | May 2021 - Present
+• Developed customer churn models using XGBoost and PyTorch.
+• Built NLP sentiment analysis pipelines for brand monitoring.
+• Managed data workflows using Apache Airflow.
+
+Data Analyst | Retail Insights | September 2019 - April 2021
+• Conducted A/B testing for pricing strategies.
+• Expert in SQL and Tableau for business intelligence.
+
+SKILLS
+------
+Languages: Python, SQL, R
+AI/ML: PyTorch, scikit-learn, NLP, Airflow, Pandas
+Tools: Jupyter, AWS S3, Snowflake
+============================================================

@@ -1,0 +1,56 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.85,\n     \"reasoning\": \"The candidate has most of the required skills, including Python, APIs (via Zendesk APIs), and experience with integration tools (Salesforce, HubSpot). However, they lack direct experience with GenAI workflows and specific logging tools like DataDog, Grafana, or PagerDuty, though their experience with similar tools (e.g., AWS, Jenkins) shows potential for quick adaptation.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85\",\n     \"matched_skills\": [\n       \"Python\",\n       \"Zendesk APIs\",\n       \"Salesforce\",\n       \"HubSpot\",\n       \"AWS\"\n     ],\n     \"missing_skills\": [\n       \"GenAI workflows\",\n       \"DataDog\",\n       \"Grafana\",\n       \"PagerDuty\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate has a strong background in technical support and customer success, with over 7 years of experience. Most of their experience is highly relevant to the job description, including leading a team in technical support, diagnosing API configuration problems, and building internal dashboards.\",\n     \"formula\": \"relevant_years = (4.0 * 0.9) + (2.75 * 0.8) + (0.67 * 0.6) = 3.6 + 2.2 + 0.4 = 6.2. Score = min(1.0, 6.2/3) = 0.9\",\n     \"total_years\": 7.0,\n     \"relevant_years\": 6.2,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Technical Support Lead\",\n         \"years\": 4.0,\n         \"relevance\": 0.9,\n         \"relevance_reasoning\": \"Highly relevant due to leadership in technical support and experience with API integrations.\"\n       },\n       {\n         \"role\": \"Customer Success Engineer\",\n         \"years\": 2.75,\n         \"relevance\": 0.8,\n         \"relevance_reasoning\": \"Relevant due to experience in customer success and technical account management.\"\n       },\n       {\n         \"role\": \"Technical Support Engineer\",\n         \"years\": 0.67,\n         \"relevance\": 0.6,\n         \"relevance_reasoning\": \"Somewhat relevant due to basic technical support experience.\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate's background in SaaS, customer support, and API integration aligns well with the job requirements. Their experience in managing technical onboarding and reducing churn also demonstrates a strong fit for the domain.\",\n     \"formula\": \"domain_matches/total_required_domains = 3/3 = 1.0, adjusted for minor gaps = 0.9\"\n   },\n   \"overall_assessment\": \"The candidate is a strong fit for the AI Applications Engineer position, with a solid background in technical support, customer success, and relevant technical skills. Their experience and domain fit suggest they could excel in the role with some additional training on GenAI workflows and specific tooling.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including Python, APIs (via Zendesk APIs), and experience with integration tools (Salesforce, HubSpot). However, they lack direct experience with GenAI workflows and specific logging tools like DataDog, Grafana, or PagerDuty, though their experience with similar tools (e.g., AWS, Jenkins) shows potential for quick adaptation.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "Zendesk APIs",
+        "Salesforce",
+        "HubSpot",
+        "AWS"
+      ],
+      "missing_skills": [
+        "GenAI workflows",
+        "DataDog",
+        "Grafana",
+        "PagerDuty"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.9,
+      "reasoning": "The candidate has a strong background in technical support and customer success, with over 7 years of experience. Most of their experience is highly relevant to the job description, including leading a team in technical support, diagnosing API configuration problems, and building internal dashboards.",
+      "formula": "relevant_years = (4.0 * 0.9) + (2.75 * 0.8) + (0.67 * 0.6) = 3.6 + 2.2 + 0.4 = 6.2. Score = min(1.0, 6.2/3) = 0.9",
+      "total_years": 7.0,
+      "relevant_years": 6.2,
+      "experience_breakdown": [
+        {
+          "role": "Technical Support Lead",
+          "years": 4.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to leadership in technical support and experience with API integrations."
+        },
+        {
+          "role": "Customer Success Engineer",
+          "years": 2.75,
+          "relevance": 0.8,
+          "relevance_reasoning": "Relevant due to experience in customer success and technical account management."
+        },
+        {
+          "role": "Technical Support Engineer",
+          "years": 0.67,
+          "relevance": 0.6,
+          "relevance_reasoning": "Somewhat relevant due to basic technical support experience."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate's background in SaaS, customer support, and API integration aligns well with the job requirements. Their experience in managing technical onboarding and reducing churn also demonstrates a strong fit for the domain.",
+      "formula": "domain_matches/total_required_domains = 3/3 = 1.0, adjusted for minor gaps = 0.9"
+    },
+    "overall_assessment": "The candidate is a strong fit for the AI Applications Engineer position, with a solid background in technical support, customer success, and relevant technical skills. Their experience and domain fit suggest they could excel in the role with some additional training on GenAI workflows and specific tooling."
+  }
+}

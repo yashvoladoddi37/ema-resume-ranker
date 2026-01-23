@@ -1,0 +1,1243 @@
+[
+  {
+    "id": "res_002_sarah",
+    "candidate_name": "SARAH JOHNSON",
+    "final_score": 0.873,
+    "parsed_data": {
+      "candidate_name": "SARAH JOHNSON",
+      "skills": [
+        "Python",
+        "SQL",
+        "Bash",
+        "AWS",
+        "DataDog",
+        "Grafana",
+        "PagerDuty",
+        "Jenkins",
+        "Salesforce",
+        "HubSpot",
+        "Zendesk APIs"
+      ],
+      "total_years_experience": 7.0,
+      "experience": [
+        {
+          "title": "Technical Support Lead",
+          "company": "CloudSync Solutions",
+          "duration_years": 4.0,
+          "start_date": "January 2021",
+          "end_date": "January 2025",
+          "key_responsibilities": [
+            "Lead a team of 5 engineers resolving Tier 3 support tickets for enterprise clients",
+            "Diagnosed and fixed hundreds of API configuration problems involving Salesforce and Zendesk integrations",
+            "Built internal dashboards using Python and SQL to monitor API health"
+          ]
+        },
+        {
+          "title": "Customer Success Engineer",
+          "company": "DataFlow Inc",
+          "duration_years": 2.75,
+          "start_date": "March 2018",
+          "end_date": "December 2020",
+          "key_responsibilities": [
+            "Managed technical onboarding for top-tier SaaS customers",
+            "Reduced churn by 15% through proactive technical account management"
+          ]
+        },
+        {
+          "title": "Technical Support Engineer",
+          "company": "WebStack",
+          "duration_years": 0.67,
+          "start_date": "June 2017",
+          "end_date": "February 2018",
+          "key_responsibilities": [
+            "Provided 24/7 support for cloud hosting platform issues"
+          ]
+        }
+      ],
+      "education": {
+        "degree": "M.S. in Computer Science",
+        "field": "Computer Science",
+        "institution": "Stanford University"
+      },
+      "certifications": [],
+      "domains": [
+        "SaaS",
+        "Cloud Infrastructure",
+        "Customer Support",
+        "API Integration"
+      ]
+    },
+    "dimension_scores": {
+      "skill_match": {
+        "score": 0.85,
+        "reasoning": "The candidate has most of the required skills, including Python, APIs (via Zendesk APIs), and experience with integration tools (Salesforce, HubSpot). However, they lack direct experience with GenAI workflows and specific logging tools like DataDog, Grafana, or PagerDuty, though their experience with similar tools (e.g., AWS, Jenkins) shows potential for quick adaptation.",
+        "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+        "matched_skills": [
+          "Python",
+          "Zendesk APIs",
+          "Salesforce",
+          "HubSpot",
+          "AWS"
+        ],
+        "missing_skills": [
+          "GenAI workflows",
+          "DataDog",
+          "Grafana",
+          "PagerDuty"
+        ]
+      },
+      "experience_depth": {
+        "score": 0.9,
+        "reasoning": "The candidate has a strong background in technical support and customer success, with over 7 years of experience. Most of their experience is highly relevant to the job description, including leading a team in technical support, diagnosing API configuration problems, and building internal dashboards.",
+        "formula": "relevant_years = (4.0 * 0.9) + (2.75 * 0.8) + (0.67 * 0.6) = 3.6 + 2.2 + 0.4 = 6.2. Score = min(1.0, 6.2/3) = 0.9",
+        "total_years": 7.0,
+        "relevant_years": 6.2,
+        "experience_breakdown": [
+          {
+            "role": "Technical Support Lead",
+            "years": 4.0,
+            "relevance": 0.9,
+            "relevance_reasoning": "Highly relevant due to leadership in technical support and experience with API integrations."
+          },
+          {
+            "role": "Customer Success Engineer",
+            "years": 2.75,
+            "relevance": 0.8,
+            "relevance_reasoning": "Relevant due to experience in customer success and technical account management."
+          },
+          {
+            "role": "Technical Support Engineer",
+            "years": 0.67,
+            "relevance": 0.6,
+            "relevance_reasoning": "Somewhat relevant due to basic technical support experience."
+          }
+        ]
+      },
+      "domain_fit": {
+        "score": 0.9,
+        "reasoning": "The candidate's background in SaaS, customer support, and API integration aligns well with the job requirements. Their experience in managing technical onboarding and reducing churn also demonstrates a strong fit for the domain.",
+        "formula": "domain_matches/total_required_domains = 3/3 = 1.0, adjusted for minor gaps = 0.9"
+      },
+      "overall_assessment": "The candidate is a strong fit for the AI Applications Engineer position, with a solid background in technical support, customer success, and relevant technical skills. Their experience and domain fit suggest they could excel in the role with some additional training on GenAI workflows and specific tooling."
+    },
+    "weights": {
+      "skill_match": 0.55,
+      "domain_fit": 0.3,
+      "experience_depth": 0.15
+    },
+    "matched_skills": [
+      "Python",
+      "Zendesk APIs",
+      "Salesforce",
+      "HubSpot",
+      "AWS"
+    ],
+    "missing_skills": [
+      "GenAI workflows",
+      "DataDog",
+      "Grafana",
+      "PagerDuty"
+    ],
+    "processing_time_seconds": 3.58
+  },
+  {
+    "id": "res_003_maya",
+    "candidate_name": "MAYA GUPTA",
+    "final_score": 0.862,
+    "parsed_data": {
+      "candidate_name": "MAYA GUPTA",
+      "skills": [
+        "Python",
+        "JavaScript",
+        "JSON-RPC",
+        "Prompt Engineering",
+        "LangChain",
+        "RAG",
+        "OpenAI API",
+        "Anthropic",
+        "ELK Stack",
+        "Jenkins",
+        "Docker",
+        "Terraform"
+      ],
+      "total_years_experience": 4.0,
+      "experience": [
+        {
+          "title": "Solutions Engineer",
+          "company": "GenAI Automate",
+          "duration_years": 3.0,
+          "start_date": "March 2022",
+          "end_date": "January 2025",
+          "key_responsibilities": [
+            "Configure and integrate AI/GenAI workflows for enterprise clients",
+            "Expert in LangChain and prompt engineering for RAG pipelines",
+            "Translate customer requirements into technical GenAI specs",
+            "Troubleshoot production LLM performance and hallucination issues"
+          ]
+        },
+        {
+          "title": "Systems Analyst",
+          "company": "Tech Solutions Ltd",
+          "duration_years": 1.67,
+          "start_date": "June 2020",
+          "end_date": "February 2022",
+          "key_responsibilities": [
+            "Integrated third-party APIs with internal ERP systems",
+            "Managed data mapping and REST integration flows"
+          ]
+        }
+      ],
+      "education": {
+        "degree": "B.S.",
+        "field": "Electrical Engineering & Computer Science",
+        "institution": "UC Berkeley"
+      },
+      "certifications": [],
+      "domains": [
+        "AI/ML",
+        "Cloud Infrastructure",
+        "Automation"
+      ]
+    },
+    "dimension_scores": {
+      "skill_match": {
+        "score": 0.85,
+        "reasoning": "The candidate has most of the required skills, including proficiency in Python, APIs, and experience with GenAI workflows through LangChain and RAG. However, the candidate is missing explicit experience with SOAP APIs and CRM/ATS integrations.",
+        "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+        "matched_skills": [
+          "Python",
+          "JSON-RPC",
+          "LangChain",
+          "RAG",
+          "OpenAI API",
+          "ELK Stack"
+        ],
+        "missing_skills": [
+          "SOAP",
+          "CRM/ATS integration"
+        ]
+      },
+      "experience_depth": {
+        "score": 0.83,
+        "reasoning": "The candidate has a total of 4 years of experience, with 3 years in a highly relevant role as a Solutions Engineer at GenAI Automate, and 1.67 years in a somewhat relevant role as a Systems Analyst at Tech Solutions Ltd. The relevance score for the first role is 0.9 due to its direct involvement in AI/GenAI and SaaS, while the second role scores 0.6 for its integration work.",
+        "formula": "relevant_years = (3 * 0.9) + (1.67 * 0.6) = 2.7 + 1.0 = 3.7. Score = min(1.0, 3.7/3) = 0.83",
+        "total_years": 4.0,
+        "relevant_years": 3.7,
+        "experience_breakdown": [
+          {
+            "role": "Solutions Engineer",
+            "years": 3.0,
+            "relevance": 0.9,
+            "relevance_reasoning": "Direct involvement in AI/GenAI and SaaS"
+          },
+          {
+            "role": "Systems Analyst",
+            "years": 1.67,
+            "relevance": 0.6,
+            "relevance_reasoning": "Integration work with APIs and ERP systems"
+          }
+        ]
+      },
+      "domain_fit": {
+        "score": 0.9,
+        "reasoning": "The candidate's domains include AI/ML, Cloud Infrastructure, and Automation, which are highly relevant to the job description's focus on AI applications and GenAI workflows.",
+        "formula": "domain_matches/total_required_domains = 2/2 = 1.0, adjusted for partial match in Cloud Infrastructure = 0.9"
+      },
+      "overall_assessment": "Maya Gupta is a strong candidate for the AI Applications Engineer position at EMA, with a high degree of skill match, relevant experience, and domain fit. However, some minor gaps in skills and experience exist, which could be addressed through training or further evaluation."
+    },
+    "weights": {
+      "skill_match": 0.55,
+      "domain_fit": 0.3,
+      "experience_depth": 0.15
+    },
+    "matched_skills": [
+      "Python",
+      "JSON-RPC",
+      "LangChain",
+      "RAG",
+      "OpenAI API",
+      "ELK Stack"
+    ],
+    "missing_skills": [
+      "SOAP",
+      "CRM/ATS integration"
+    ],
+    "processing_time_seconds": 3.2
+  },
+  {
+    "id": "res_006_priya",
+    "candidate_name": "Priya Sharma",
+    "final_score": 0.862,
+    "parsed_data": {
+      "candidate_name": "Priya Sharma",
+      "skills": [
+        "Python",
+        "SQL",
+        "R",
+        "PyTorch",
+        "scikit-learn",
+        "NLP",
+        "Airflow",
+        "Pandas",
+        "Jupyter",
+        "AWS S3",
+        "Snowflake",
+        "XGBoost",
+        "Tableau"
+      ],
+      "total_years_experience": 5.67,
+      "experience": [
+        {
+          "title": "Senior Data Scientist",
+          "company": "Analytics Lab",
+          "duration_years": 3.67,
+          "start_date": "May 2021",
+          "end_date": "January 2025",
+          "key_responsibilities": [
+            "Developed customer churn models using XGBoost and PyTorch",
+            "Built NLP sentiment analysis pipelines for brand monitoring",
+            "Managed data workflows using Apache Airflow"
+          ]
+        },
+        {
+          "title": "Data Analyst",
+          "company": "Retail Insights",
+          "duration_years": 1.67,
+          "start_date": "September 2019",
+          "end_date": "April 2021",
+          "key_responsibilities": [
+            "Conducted A/B testing for pricing strategies",
+            "Expert in SQL and Tableau for business intelligence"
+          ]
+        }
+      ],
+      "education": {
+        "degree": null,
+        "field": null,
+        "institution": null
+      },
+      "certifications": [],
+      "domains": [
+        "AI/ML",
+        "Data Science",
+        "Predictive Modeling",
+        "NLP",
+        "Business Intelligence"
+      ]
+    },
+    "dimension_scores": {
+      "skill_match": {
+        "score": 0.85,
+        "reasoning": "The candidate has Python, which matches the proficiency in Python requirement. Additionally, the candidate's experience with APIs (through skills like REST) and integration tools (like Airflow) aligns with the job requirements. However, the candidate lacks direct experience with GenAI workflows and customer success for SaaS, but has skills in NLP and data science that can be semantically matched to some requirements.",
+        "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (4/5) * 0.7 + (3/4) * 0.3 = 0.7 * 0.8 + 0.3 * 0.75 = 0.56 + 0.225 = 0.785, adjusted for missing skills to 0.85",
+        "matched_skills": [
+          "Python",
+          "Airflow",
+          "NLP",
+          "APIs (through REST)"
+        ],
+        "missing_skills": [
+          "Direct GenAI workflow experience",
+          "Customer success for SaaS"
+        ]
+      },
+      "experience_depth": {
+        "score": 0.83,
+        "reasoning": "The candidate has a total of 5.67 years of experience, with 3.67 years as a Senior Data Scientist and 1.67 years as a Data Analyst. The Senior Data Scientist role is highly relevant, involving the development of customer churn models, NLP sentiment analysis, and managing data workflows, which aligns well with the job requirements. The Data Analyst role, while less directly relevant, still involves skills like SQL and Tableau that are useful in a data-driven environment.",
+        "formula": "relevant_years = (3.67 * 0.9) + (1.67 * 0.6) = 3.303 + 1.002 = 4.305, Score = min(1.0, 4.305/3) = 0.835",
+        "total_years": 5.67,
+        "relevant_years": 4.305,
+        "experience_breakdown": [
+          {
+            "role": "Senior Data Scientist",
+            "years": 3.67,
+            "relevance": 0.9,
+            "relevance_reasoning": "Highly relevant due to involvement in NLP, data workflow management, and predictive modeling."
+          },
+          {
+            "role": "Data Analyst",
+            "years": 1.67,
+            "relevance": 0.6,
+            "relevance_reasoning": "Less directly relevant but still involves useful data analysis skills."
+          }
+        ]
+      },
+      "domain_fit": {
+        "score": 0.9,
+        "reasoning": "The candidate's domains include AI/ML, Data Science, Predictive Modeling, NLP, and Business Intelligence, which are highly relevant to the job requirements of working with AI applications and GenAI workflows.",
+        "formula": "domain_matches/total_required_domains = 4/5 = 0.8, adjusted for high relevance of matched domains to 0.9"
+      },
+      "overall_assessment": "The candidate, Priya Sharma, has a strong background in AI/ML and data science, with relevant experience and skills that align well with the job requirements. However, there are some gaps in direct experience with GenAI workflows and customer success for SaaS, which might require additional training or support."
+    },
+    "weights": {
+      "skill_match": 0.55,
+      "domain_fit": 0.3,
+      "experience_depth": 0.15
+    },
+    "matched_skills": [
+      "Python",
+      "Airflow",
+      "NLP",
+      "APIs (through REST)"
+    ],
+    "missing_skills": [
+      "Direct GenAI workflow experience",
+      "Customer success for SaaS"
+    ],
+    "processing_time_seconds": 13.09
+  },
+  {
+    "id": "res_004_david",
+    "candidate_name": "David Kim",
+    "final_score": 0.832,
+    "parsed_data": {
+      "candidate_name": "David Kim",
+      "skills": [
+        "Go",
+        "Python",
+        "SQL",
+        "REST",
+        "SOAP",
+        "Webhooks",
+        "AWS",
+        "S3",
+        "RDS",
+        "Prometheus",
+        "Kibana",
+        "Splunk",
+        "Git",
+        "Docker",
+        "Kubernetes"
+      ],
+      "total_years_experience": 5.0,
+      "experience": [
+        {
+          "title": "Integration Engineer",
+          "company": "DataBridge",
+          "duration_years": 4.0,
+          "start_date": "February 2021",
+          "end_date": "January 2025",
+          "key_responsibilities": [
+            "Troubleshoot produce issues related to complex API syncs",
+            "Diagnose performance bottlenecks in distributed data pipelines",
+            "Built monitoring alerts for API uptime and data latency"
+          ]
+        },
+        {
+          "title": "Backend Developer",
+          "company": "Core Systems",
+          "duration_years": 1.5,
+          "start_date": "July 2019",
+          "end_date": "January 2021",
+          "key_responsibilities": [
+            "Developed REST services and database schemas for SaaS platform",
+            "Integrated with various ATS and CRM tools via webhooks"
+          ]
+        }
+      ],
+      "education": {
+        "degree": "B.S.",
+        "field": "Computer Science",
+        "institution": "Seattle University"
+      },
+      "certifications": [],
+      "domains": [
+        "SaaS",
+        "Cloud Infrastructure",
+        "API Integration"
+      ]
+    },
+    "dimension_scores": {
+      "skill_match": {
+        "score": 0.85,
+        "reasoning": "The candidate has most of the required skills, including proficiency in Python, APIs (REST, SOAP), and experience with logging and alerting tools (Prometheus). However, the candidate lacks direct experience with GenAI workflows and ML performance diagnosis.",
+        "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+        "matched_skills": [
+          "Python",
+          "REST",
+          "SOAP",
+          "Prometheus"
+        ],
+        "missing_skills": [
+          "GenAI workflows",
+          "ML performance diagnosis"
+        ]
+      },
+      "experience_depth": {
+        "score": 0.83,
+        "reasoning": "The candidate has a total of 5 years of experience, with 4 years as an Integration Engineer and 1.5 years as a Backend Developer. The Integration Engineer role is highly relevant, with a relevance score of 0.9, while the Backend Developer role has a relevance score of 0.6.",
+        "formula": "relevant_years = (4 * 0.9) + (1.5 * 0.6) = 3.6 + 0.9 = 4.5. Score = min(1.0, 4.5/3) = 0.83",
+        "total_years": 5.0,
+        "relevant_years": 4.5,
+        "experience_breakdown": [
+          {
+            "role": "Integration Engineer",
+            "years": 4.0,
+            "relevance": 0.9,
+            "relevance_reasoning": "Highly relevant due to experience with API integrations, troubleshooting, and logging tools."
+          },
+          {
+            "role": "Backend Developer",
+            "years": 1.5,
+            "relevance": 0.6,
+            "relevance_reasoning": "Moderately relevant due to experience with REST services, database schemas, and integrations with ATS and CRM tools."
+          }
+        ]
+      },
+      "domain_fit": {
+        "score": 0.8,
+        "reasoning": "The candidate has experience in SaaS, cloud infrastructure, and API integration, which are related to the required domains of AI/ML and customer-facing technologies.",
+        "formula": "domain_matches/total_required_domains = 2/3 = 0.67. However, considering the candidate's experience in SaaS and API integration, the score is adjusted to 0.8."
+      },
+      "overall_assessment": "The candidate has a strong skill match, significant experience depth, and a good domain fit, making them a suitable candidate for the AI Applications Engineer position."
+    },
+    "weights": {
+      "skill_match": 0.55,
+      "domain_fit": 0.3,
+      "experience_depth": 0.15
+    },
+    "matched_skills": [
+      "Python",
+      "REST",
+      "SOAP",
+      "Prometheus"
+    ],
+    "missing_skills": [
+      "GenAI workflows",
+      "ML performance diagnosis"
+    ],
+    "processing_time_seconds": 3.05
+  },
+  {
+    "id": "res_001_yashpreet",
+    "candidate_name": "Yashpreet Voladoddi",
+    "final_score": 0.82,
+    "parsed_data": {
+      "candidate_name": "Yashpreet Voladoddi",
+      "skills": [
+        "Golang",
+        "Python",
+        "SQL",
+        "TypeScript",
+        "LLM",
+        "LangChain",
+        "LangGraph",
+        "Mistral 7B",
+        "Claude API",
+        "Prompt Engineering",
+        "RESTful API",
+        "AWS Lambda",
+        "DynamoDB",
+        "Terraform",
+        "Docker",
+        "Redis",
+        "Git",
+        "CI/CD",
+        "ONNX",
+        "ChromaDB"
+      ],
+      "total_years_experience": 1.75,
+      "experience": [
+        {
+          "title": "SDE & AI Engineer",
+          "company": "Kapi AI",
+          "duration_years": 0.5,
+          "start_date": "April 2025",
+          "end_date": "January 2026",
+          "key_responsibilities": [
+            "Developed core features for Golang-based agentic CLI platform",
+            "Architected privacy-first semantic search using Go and ONNX",
+            "Built LLM-powered automated documentation systems using ReAct framework"
+          ]
+        },
+        {
+          "title": "AI Engineer",
+          "company": "HeyCoach",
+          "duration_years": 0.75,
+          "start_date": "June 2024",
+          "end_date": "March 2025",
+          "key_responsibilities": [
+            "Developed AI-driven lead generation MVP using Mistral 7B",
+            "Integrated RESTful APIs with CRM handling 500+ leads/month",
+            "Built AI agent automating social media posts using LangGraph/Claude API"
+          ]
+        },
+        {
+          "title": "Backend AI Intern",
+          "company": "Lumio TV",
+          "duration_years": 0.5,
+          "start_date": "January 2024",
+          "end_date": "May 2024",
+          "key_responsibilities": [
+            "Built AWS Lambda RESTful APIs in Golang; integrated Redis caching",
+            "Provisioned infrastructure using Terraform for IaC"
+          ]
+        }
+      ],
+      "education": {
+        "degree": "B.Tech",
+        "field": "Computer Science",
+        "institution": "IIT Hyderabad"
+      },
+      "certifications": [],
+      "domains": [
+        "AI/ML",
+        "Cloud Infrastructure",
+        "SaaS"
+      ]
+    },
+    "dimension_scores": {
+      "skill_match": {
+        "score": 0.85,
+        "reasoning": "The candidate has most of the required skills, including proficiency in Python, RESTful API, and experience with APIs. However, they lack direct experience with troubleshooting production issues and diagnosing ML performance.",
+        "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (4/4) * 0.3 = 0.85",
+        "matched_skills": [
+          "Python",
+          "RESTful API",
+          "APIs",
+          "LangChain",
+          "Prompt Engineering"
+        ],
+        "missing_skills": [
+          "troubleshooting production issues",
+          "diagnosing ML performance"
+        ]
+      },
+      "experience_depth": {
+        "score": 0.55,
+        "reasoning": "The candidate has a total of 1.75 years of experience, with 1.25 years being relevant to the job description. Although they have experience in AI/GenAI and SaaS, the relevance score is not high due to the lack of direct experience in technical support or customer success.",
+        "formula": "relevant_years = (0.5 * 0.8) + (0.75 * 0.7) + (0.5 * 0.6) = 0.4 + 0.525 + 0.3 = 1.225. Score = min(1.0, 1.225/3) = 0.55",
+        "total_years": 1.75,
+        "relevant_years": 1.225,
+        "experience_breakdown": [
+          {
+            "role": "SDE & AI Engineer",
+            "years": 0.5,
+            "relevance": 0.8,
+            "relevance_reasoning": "Involved AI/GenAI and SaaS, but not technical support or customer success"
+          },
+          {
+            "role": "AI Engineer",
+            "years": 0.75,
+            "relevance": 0.7,
+            "relevance_reasoning": "Involved AI/GenAI and SaaS, with some experience in integrations"
+          },
+          {
+            "role": "Backend AI Intern",
+            "years": 0.5,
+            "relevance": 0.6,
+            "relevance_reasoning": "Involved AI/GenAI, but limited experience in SaaS or technical support"
+          }
+        ]
+      },
+      "domain_fit": {
+        "score": 0.9,
+        "reasoning": "The candidate has experience in AI/ML and SaaS, which are highly relevant to the job description.",
+        "formula": "domain_matches/total_required_domains = 2/2 = 1.0. However, considering the candidate's experience in customer-facing roles is limited, the score is adjusted to 0.9"
+      },
+      "overall_assessment": "The candidate has a strong skill set and domain fit, but lacks experience in technical support or customer success. With some training and development, they could be a good fit for the role."
+    },
+    "weights": {
+      "skill_match": 0.55,
+      "domain_fit": 0.3,
+      "experience_depth": 0.15
+    },
+    "matched_skills": [
+      "Python",
+      "RESTful API",
+      "APIs",
+      "LangChain",
+      "Prompt Engineering"
+    ],
+    "missing_skills": [
+      "troubleshooting production issues",
+      "diagnosing ML performance"
+    ],
+    "processing_time_seconds": 3.58
+  },
+  {
+    "id": "res_007_sam",
+    "candidate_name": "SAM TAYLOR",
+    "final_score": 0.52,
+    "parsed_data": {
+      "candidate_name": "SAM TAYLOR",
+      "skills": [
+        "SQL",
+        "Salesforce",
+        "Gainsight",
+        "ZoomInfo",
+        "API",
+        "Relationship Management",
+        "Communication",
+        "Strategy"
+      ],
+      "total_years_experience": 6.0,
+      "experience": [
+        {
+          "title": "Technical CSM",
+          "company": "Enterprise CRM",
+          "duration_years": 4.0,
+          "start_date": "January 2021",
+          "end_date": "January 2025",
+          "key_responsibilities": [
+            "Manage technical health for top-tier enterprise accounts",
+            "Lead business reviews and technical roadmap planning",
+            "Collaborate with engineering on product bug prioritizations"
+          ]
+        },
+        {
+          "title": "CSM",
+          "company": "Startup Software",
+          "duration_years": 2.75,
+          "start_date": "March 2018",
+          "end_date": "December 2020",
+          "key_responsibilities": [
+            "Managed onboarding for 50+ mid-market clients",
+            "Provided basic troubleshooting guidance for API keys"
+          ]
+        }
+      ],
+      "education": {
+        "degree": null,
+        "field": null,
+        "institution": null
+      },
+      "certifications": [],
+      "domains": [
+        "SaaS",
+        "Customer Success",
+        "Technical Account Management"
+      ]
+    },
+    "dimension_scores": {
+      "skill_match": {
+        "score": 0.4,
+        "reasoning": "The candidate has some relevant skills like API, but lacks critical skills like Python, GenAI, and troubleshooting experience.",
+        "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (1/5) * 0.7 + (1/3) * 0.3 = 0.23 + 0.1 = 0.33, adjusted for missing critical skills to 0.4",
+        "matched_skills": [
+          "API"
+        ],
+        "missing_skills": [
+          "Python",
+          "GenAI",
+          "troubleshooting",
+          "logging tools",
+          "SOAP"
+        ]
+      },
+      "experience_depth": {
+        "score": 0.6,
+        "reasoning": "The candidate has 6 years of experience, with 4 years in a Technical CSM role and 2.75 years in a CSM role, both of which have some relevance to the job description.",
+        "formula": "relevant_years = (4 * 0.8) + (2.75 * 0.6) = 3.2 + 1.65 = 4.85. Score = min(1.0, 4.85/3) = 0.6 (capped due to lack of direct AI/GenAI experience)",
+        "total_years": 6.0,
+        "relevant_years": 4.85,
+        "experience_breakdown": [
+          {
+            "role": "Technical CSM",
+            "years": 4.0,
+            "relevance": 0.8,
+            "relevance_reasoning": "Involves technical support and customer success, but lacks direct AI/GenAI experience"
+          },
+          {
+            "role": "CSM",
+            "years": 2.75,
+            "relevance": 0.6,
+            "relevance_reasoning": "Involves customer success, but lacks technical support and AI/GenAI experience"
+          }
+        ]
+      },
+      "domain_fit": {
+        "score": 0.7,
+        "reasoning": "The candidate has experience in SaaS, customer success, and technical account management, which are related to the job description.",
+        "formula": "domain_matches/total_required_domains = 2/3 = 0.67, rounded to 0.7"
+      },
+      "overall_assessment": "The candidate has some relevant skills and experience, but lacks critical skills like Python and GenAI experience. With proper training, they could be a good fit for the role."
+    },
+    "weights": {
+      "skill_match": 0.55,
+      "domain_fit": 0.3,
+      "experience_depth": 0.15
+    },
+    "matched_skills": [
+      "API"
+    ],
+    "missing_skills": [
+      "Python",
+      "GenAI",
+      "troubleshooting",
+      "logging tools",
+      "SOAP"
+    ],
+    "processing_time_seconds": 13.7
+  },
+  {
+    "id": "res_005_mike",
+    "candidate_name": "MIKE RODRIGUEZ",
+    "final_score": 0.472,
+    "parsed_data": {
+      "candidate_name": "MIKE RODRIGUEZ",
+      "skills": [
+        "Python",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Flask",
+        "React",
+        "Node.js",
+        "CloudWatch",
+        "DataDog",
+        "WordPress",
+        "PHP",
+        "Stripe"
+      ],
+      "total_years_experience": 5.5,
+      "experience": [
+        {
+          "title": "Full-Stack Developer",
+          "company": "SocialApp",
+          "duration_years": 4.0,
+          "start_date": "April 2021",
+          "end_date": "January 2025",
+          "key_responsibilities": [
+            "Built responsive UI features using React and Flask",
+            "Developed REST APIs for user profiles and social feeds",
+            "Integrated Stripe for payment processing"
+          ]
+        },
+        {
+          "title": "Web Developer",
+          "company": "Local Business Solutions",
+          "duration_years": 1.5,
+          "start_date": "August 2019",
+          "end_date": "March 2021",
+          "key_responsibilities": [
+            "Created e-commerce sites using WordPress and custom PHP",
+            "Light Python scripts for data entry automation"
+          ]
+        }
+      ],
+      "education": {
+        "degree": "M.Sc.",
+        "field": "Physics",
+        "institution": "Imperial College London"
+      },
+      "certifications": [],
+      "domains": [
+        "Web Development",
+        "E-commerce",
+        "Cloud Infrastructure"
+      ]
+    },
+    "dimension_scores": {
+      "skill_match": {
+        "score": 0.55,
+        "reasoning": "The candidate has Python, which matches the JD requirement for proficiency in Python. Additionally, the candidate has experience with APIs (JSON, REST, SOAP) through their work with REST APIs and integration with Stripe. However, the candidate lacks direct experience with GenAI workflows, logging tools, and alerting tools beyond CloudWatch and DataDog.",
+        "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (2/5) * 0.7 + (2/3) * 0.3 = 0.28 + 0.2 = 0.48, adjusted for semantic matching and penalties",
+        "matched_skills": [
+          "Python",
+          "JavaScript",
+          "REST"
+        ],
+        "missing_skills": [
+          "GenAI workflows",
+          "logging tools",
+          "alerting tools",
+          "familiarity with CRMs or ATS tools"
+        ]
+      },
+      "experience_depth": {
+        "score": 0.33,
+        "reasoning": "The candidate has a total of 5.5 years of experience, but only a portion of it is relevant to the JD requirements. The candidate's experience as a Full-Stack Developer and Web Developer provides some relevance, particularly in terms of troubleshooting and integration, but lacks direct experience in AI/GenAI, SaaS, technical support, or customer success.",
+        "formula": "relevant_years = (4.0 * 0.2) + (1.5 * 0.1) = 0.8 + 0.15 = 0.95. Score = min(1.0, 0.95/3) = 0.317, adjusted for relevance",
+        "total_years": 5.5,
+        "relevant_years": 0.95,
+        "experience_breakdown": [
+          {
+            "role": "Full-Stack Developer",
+            "years": 4.0,
+            "relevance": 0.2,
+            "relevance_reasoning": "Some relevance due to experience with APIs and troubleshooting"
+          },
+          {
+            "role": "Web Developer",
+            "years": 1.5,
+            "relevance": 0.1,
+            "relevance_reasoning": "Limited relevance due to lack of direct experience with AI/GenAI or SaaS"
+          }
+        ]
+      },
+      "domain_fit": {
+        "score": 0.4,
+        "reasoning": "The candidate's domains include Web Development and E-commerce, which have some relation to the JD requirements but lack direct experience in AI/ML or customer-facing roles.",
+        "formula": "domain_matches/total_required_domains = 1/3 = 0.33, adjusted for semantic matching"
+      },
+      "overall_assessment": "The candidate has some relevant skills and experience but lacks direct experience in key areas such as GenAI workflows, logging tools, and alerting tools. With additional training or experience, the candidate may be a good fit for the role."
+    },
+    "weights": {
+      "skill_match": 0.55,
+      "domain_fit": 0.3,
+      "experience_depth": 0.15
+    },
+    "matched_skills": [
+      "Python",
+      "JavaScript",
+      "REST"
+    ],
+    "missing_skills": [
+      "GenAI workflows",
+      "logging tools",
+      "alerting tools",
+      "familiarity with CRMs or ATS tools"
+    ],
+    "processing_time_seconds": 7.44
+  },
+  {
+    "id": "res_010_elena",
+    "candidate_name": "ELENA CASTRO",
+    "final_score": 0.275,
+    "parsed_data": {
+      "candidate_name": "ELENA CASTRO",
+      "skills": [
+        "Wireshark",
+        "Nagios",
+        "Splunk",
+        "Active Directory",
+        "System Administration",
+        "Customer Service",
+        "Troubleshooting",
+        "Network Analysis"
+      ],
+      "total_years_experience": 4.5,
+      "experience": [
+        {
+          "title": "IT Support Associate",
+          "company": "TechHelp 24/7",
+          "duration_years": 4.5,
+          "start_date": "June 2020",
+          "end_date": "January 2025",
+          "key_responsibilities": [
+            "Resolved hardware and software issues for remote employees",
+            "Managed user accounts in Active Directory"
+          ]
+        },
+        {
+          "title": "Customer Service Representative",
+          "company": "Retail Solutions",
+          "duration_years": 1.8,
+          "start_date": "August 2018",
+          "end_date": "May 2020",
+          "key_responsibilities": [
+            "Assisted customers with order tracking and basic troubleshooting"
+          ]
+        }
+      ],
+      "education": {
+        "degree": "A.S.",
+        "field": "Information Technology",
+        "institution": "Community College of Philadelphia"
+      },
+      "certifications": [],
+      "domains": [
+        "Customer Support",
+        "IT Support",
+        "System Administration"
+      ]
+    },
+    "dimension_scores": {
+      "skill_match": {
+        "score": 0.2,
+        "reasoning": "The candidate has some skills that match the job description, such as troubleshooting and customer service, but lacks most of the required technical skills like proficiency in Python, APIs, and GenAI.",
+        "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/7 * 0.7 + 2/4 * 0.3 = 0.2",
+        "matched_skills": [
+          "Troubleshooting",
+          "Customer Service"
+        ],
+        "missing_skills": [
+          "Python",
+          "APIs (JSON, REST, SOAP)",
+          "GenAI",
+          "Logging tools",
+          "Dashboard creation",
+          "Alerting tools"
+        ]
+      },
+      "experience_depth": {
+        "score": 0.3,
+        "reasoning": "The candidate has 4.5 years of experience, but most of it is not directly relevant to the job description. Only the customer service and troubleshooting aspects of the experience are relevant.",
+        "formula": "relevant_years = (4.5 * 0.2) + (1.8 * 0.1) = 0.9 + 0.18 = 1.08. Score = min(1.0, 1.08/3) = 0.36, adjusted for scoring guidelines to 0.3",
+        "total_years": 6.3,
+        "relevant_years": 1.08,
+        "experience_breakdown": [
+          {
+            "role": "IT Support Associate",
+            "years": 4.5,
+            "relevance": 0.2,
+            "relevance_reasoning": "Some aspects of IT support are relevant, but not directly related to AI/GenAI or SaaS"
+          },
+          {
+            "role": "Customer Service Representative",
+            "years": 1.8,
+            "relevance": 0.1,
+            "relevance_reasoning": "Customer service experience is somewhat relevant, but not directly related to technical aspects of the job"
+          }
+        ]
+      },
+      "domain_fit": {
+        "score": 0.4,
+        "reasoning": "The candidate's domains include customer support and IT support, which are somewhat related to the job description, but not a perfect fit.",
+        "formula": "domain_matches/total_required_domains = 1/3 = 0.33, adjusted for scoring guidelines to 0.4",
+        "matched_domains": [
+          "Customer Support"
+        ],
+        "missing_domains": [
+          "AI/ML",
+          "SaaS"
+        ]
+      },
+      "overall_assessment": "The candidate has some relevant skills and experience, but lacks most of the required technical skills and domain expertise. They may need significant training or upskilling to be successful in this role."
+    },
+    "weights": {
+      "skill_match": 0.55,
+      "domain_fit": 0.3,
+      "experience_depth": 0.15
+    },
+    "matched_skills": [
+      "Troubleshooting",
+      "Customer Service"
+    ],
+    "missing_skills": [
+      "Python",
+      "APIs (JSON, REST, SOAP)",
+      "GenAI",
+      "Logging tools",
+      "Dashboard creation",
+      "Alerting tools"
+    ],
+    "processing_time_seconds": 13.14
+  },
+  {
+    "id": "res_008_jordan",
+    "candidate_name": "Jordan Lee",
+    "final_score": 0.0,
+    "parsed_data": {
+      "candidate_name": "Jordan Lee",
+      "skills": [
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Figma",
+        "Jest",
+        "HTML",
+        "CSS",
+        "jQuery"
+      ],
+      "total_years_experience": 4.5,
+      "experience": [
+        {
+          "title": "Frontend Dev",
+          "company": "Design Dynamics",
+          "duration_years": 3.0,
+          "start_date": "March 2022",
+          "end_date": "January 2025",
+          "key_responsibilities": [
+            "Built high-performance React components for design system",
+            "Optimized frontend bundle sizes and accessibility"
+          ]
+        },
+        {
+          "title": "Junior Dev",
+          "company": "Web Agency",
+          "duration_years": 1.5,
+          "start_date": "June 2020",
+          "end_date": "February 2022",
+          "key_responsibilities": [
+            "HTML/CSS slicing",
+            "jQuery maintenance"
+          ]
+        }
+      ],
+      "education": {
+        "degree": "",
+        "field": "",
+        "institution": ""
+      },
+      "certifications": [],
+      "domains": [
+        "Frontend Development",
+        "Web Development"
+      ]
+    },
+    "dimension_scores": {
+      "skill_match": {
+        "score": 0.0,
+        "reasoning": "The candidate's skills do not match any of the required skills for the AI Applications Engineer position.",
+        "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/7 * 0.7 + 0/3 * 0.3 = 0",
+        "matched_skills": [],
+        "missing_skills": [
+          "Python",
+          "APIs (JSON, REST, SOAP)",
+          "troubleshooting",
+          "integrations",
+          "logging tools",
+          "dashboard creation",
+          "alerting tools",
+          "GenAI workflows"
+        ]
+      },
+      "experience_depth": {
+        "score": 0.0,
+        "reasoning": "The candidate's experience is not relevant to the AI Applications Engineer position, with no experience in AI/GenAI, SaaS, technical support, or customer success.",
+        "formula": "relevant_years = (role1_years * rel1) + (role2_years * rel2) = (3 * 0) + (1.5 * 0) = 0. Score = min(1.0, 0/3) = 0",
+        "total_years": 4.5,
+        "relevant_years": 0.0,
+        "experience_breakdown": [
+          {
+            "role": "Frontend Dev",
+            "years": 3.0,
+            "relevance": 0.0,
+            "relevance_reasoning": "No relevance to AI/GenAI, SaaS, technical support, or customer success"
+          },
+          {
+            "role": "Junior Dev",
+            "years": 1.5,
+            "relevance": 0.0,
+            "relevance_reasoning": "No relevance to AI/GenAI, SaaS, technical support, or customer success"
+          }
+        ]
+      },
+      "domain_fit": {
+        "score": 0.0,
+        "reasoning": "The candidate's domains are not relevant to the AI Applications Engineer position, with no experience in AI/ML or customer-facing roles.",
+        "formula": "domain_matches/total_required_domains = 0/2 = 0"
+      },
+      "overall_assessment": "The candidate is not a good fit for the AI Applications Engineer position due to a lack of relevant skills and experience."
+    },
+    "weights": {
+      "skill_match": 0.55,
+      "domain_fit": 0.3,
+      "experience_depth": 0.15
+    },
+    "matched_skills": [],
+    "missing_skills": [
+      "Python",
+      "APIs (JSON, REST, SOAP)",
+      "troubleshooting",
+      "integrations",
+      "logging tools",
+      "dashboard creation",
+      "alerting tools",
+      "GenAI workflows"
+    ],
+    "processing_time_seconds": 11.75
+  },
+  {
+    "id": "res_009_james",
+    "candidate_name": "JAMES WILSON",
+    "final_score": 0.0,
+    "parsed_data": {
+      "candidate_name": "JAMES WILSON",
+      "skills": [
+        "Java",
+        "SQL",
+        "Kotlin",
+        "Spring Boot",
+        "Hibernate",
+        "Oracle DB",
+        "Microservices"
+      ],
+      "total_years_experience": 6.0,
+      "experience": [
+        {
+          "title": "Senior Java Developer",
+          "company": "Banking Corp",
+          "duration_years": 4.0,
+          "start_date": "February 2021",
+          "end_date": "January 2025",
+          "key_responsibilities": [
+            "Built high-volume transaction processing systems in Spring Boot",
+            "Expert in Oracle DB and microservices reliability"
+          ]
+        },
+        {
+          "title": "Java Developer",
+          "company": "FinServ Systems",
+          "duration_years": 2.5,
+          "start_date": "July 2018",
+          "end_date": "January 2021",
+          "key_responsibilities": [
+            "Developed batch processing jobs for financial reporting",
+            "Maintained legacy Java EE applications"
+          ]
+        }
+      ],
+      "education": {
+        "degree": "",
+        "field": "",
+        "institution": ""
+      },
+      "certifications": [],
+      "domains": [
+        "Financial Services",
+        "Banking"
+      ]
+    },
+    "dimension_scores": {
+      "skill_match": {
+        "score": 0.0,
+        "reasoning": "The candidate does not have any skills that match the job description requirements, such as proficiency in Python, APIs, or experience with GenAI workflows.",
+        "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/7 * 0.7 + 0/3 * 0.3 = 0",
+        "matched_skills": [],
+        "missing_skills": [
+          "Python",
+          "APIs (JSON, REST, SOAP)",
+          "GenAI workflows",
+          "logging tools",
+          "dashboard creation",
+          "alerting tools"
+        ]
+      },
+      "experience_depth": {
+        "score": 0.0,
+        "reasoning": "The candidate's experience is not relevant to the job description requirements, with no experience in AI/GenAI, SaaS, technical support, or customer success.",
+        "formula": "relevant_years = (role1_years * rel1) + (role2_years * rel2) = (4 * 0) + (2.5 * 0) = 0. Score = min(1.0, 0/3) = 0",
+        "total_years": 6.5,
+        "relevant_years": 0.0,
+        "experience_breakdown": [
+          {
+            "role": "Senior Java Developer",
+            "years": 4.0,
+            "relevance": 0.0,
+            "relevance_reasoning": "No experience in AI/GenAI, SaaS, technical support, or customer success"
+          },
+          {
+            "role": "Java Developer",
+            "years": 2.5,
+            "relevance": 0.0,
+            "relevance_reasoning": "No experience in AI/GenAI, SaaS, technical support, or customer success"
+          }
+        ]
+      },
+      "domain_fit": {
+        "score": 0.0,
+        "reasoning": "The candidate's domain experience is not relevant to the job description requirements, with no experience in AI/ML or customer-facing domains.",
+        "formula": "domain_matches/total_required_domains = 0/1 = 0"
+      },
+      "overall_assessment": "The candidate is not a good fit for the AI Applications Engineer role due to a lack of relevant skills and experience."
+    },
+    "weights": {
+      "skill_match": 0.55,
+      "domain_fit": 0.3,
+      "experience_depth": 0.15
+    },
+    "matched_skills": [],
+    "missing_skills": [
+      "Python",
+      "APIs (JSON, REST, SOAP)",
+      "GenAI workflows",
+      "logging tools",
+      "dashboard creation",
+      "alerting tools"
+    ],
+    "processing_time_seconds": 11.33
+  }
+]

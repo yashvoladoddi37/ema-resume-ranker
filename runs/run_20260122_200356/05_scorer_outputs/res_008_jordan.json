@@ -1,0 +1,47 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n       \"score\": 0.0,\n       \"reasoning\": \"The candidate's skills do not match any of the required skills for the AI Applications Engineer role.\",\n       \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/7 * 0.7 + 0/3 * 0.3 = 0\",\n       \"matched_skills\": [],\n       \"missing_skills\": [\n           \"Python\",\n           \"APIs (JSON, REST, SOAP)\",\n           \"GenAI workflows\",\n           \"logging tools\",\n           \"alerting tools\",\n           \"troubleshooting production issues\",\n           \"diagnosing ML performance\"\n       ]\n   },\n   \"experience_depth\": {\n       \"score\": 0.0,\n       \"reasoning\": \"The candidate's experience is not relevant to the AI Applications Engineer role, with no experience in AI/GenAI, SaaS, technical support, or customer success.\",\n       \"formula\": \"relevant_years = (role1_years * rel1) + (role2_years * rel2) = (3.92 * 0) + (1.75 * 0) = 0. Score = min(1.0, 0/3) = 0\",\n       \"total_years\": 5.67,\n       \"relevant_years\": 0.0,\n       \"experience_breakdown\": [\n           {\n               \"role\": \"Frontend Dev\",\n               \"years\": 3.92,\n               \"relevance\": 0.0,\n               \"relevance_reasoning\": \"No relevance to AI/GenAI, SaaS, technical support, or customer success.\"\n           },\n           {\n               \"role\": \"Junior Dev\",\n               \"years\": 1.75,\n               \"relevance\": 0.0,\n               \"relevance_reasoning\": \"No relevance to AI/GenAI, SaaS, technical support, or customer success.\"\n           }\n       ]\n   },\n   \"domain_fit\": {\n       \"score\": 0.0,\n       \"reasoning\": \"The candidate's domains (Frontend Development, Web Development) do not match the required domain (AI/GenAI, SaaS, technical support, or customer success).\",\n       \"formula\": \"domain_matches/total_required_domains = 0/4 = 0\"\n   },\n   \"overall_assessment\": \"The candidate is not a good fit for the AI Applications Engineer role due to a lack of relevant skills and experience.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.0,
+      "reasoning": "The candidate's skills do not match any of the required skills for the AI Applications Engineer role.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/7 * 0.7 + 0/3 * 0.3 = 0",
+      "matched_skills": [],
+      "missing_skills": [
+        "Python",
+        "APIs (JSON, REST, SOAP)",
+        "GenAI workflows",
+        "logging tools",
+        "alerting tools",
+        "troubleshooting production issues",
+        "diagnosing ML performance"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.0,
+      "reasoning": "The candidate's experience is not relevant to the AI Applications Engineer role, with no experience in AI/GenAI, SaaS, technical support, or customer success.",
+      "formula": "relevant_years = (role1_years * rel1) + (role2_years * rel2) = (3.92 * 0) + (1.75 * 0) = 0. Score = min(1.0, 0/3) = 0",
+      "total_years": 5.67,
+      "relevant_years": 0.0,
+      "experience_breakdown": [
+        {
+          "role": "Frontend Dev",
+          "years": 3.92,
+          "relevance": 0.0,
+          "relevance_reasoning": "No relevance to AI/GenAI, SaaS, technical support, or customer success."
+        },
+        {
+          "role": "Junior Dev",
+          "years": 1.75,
+          "relevance": 0.0,
+          "relevance_reasoning": "No relevance to AI/GenAI, SaaS, technical support, or customer success."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.0,
+      "reasoning": "The candidate's domains (Frontend Development, Web Development) do not match the required domain (AI/GenAI, SaaS, technical support, or customer success).",
+      "formula": "domain_matches/total_required_domains = 0/4 = 0"
+    },
+    "overall_assessment": "The candidate is not a good fit for the AI Applications Engineer role due to a lack of relevant skills and experience."
+  }
+}
