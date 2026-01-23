@@ -80,6 +80,20 @@ V2 is reliable but inflexible:
 
 **V3 Goal:** Use V2 as the ground truth foundation, with LLM reasoning constrained to validated facts.
 
+### Qualitative Analysis: The Precision of Strictness
+
+V2 eliminates hallucination but introduces a new challenge: **Semantic Brittleness**.
+
+**Case Study 1: Sarah Johnson (Correct Rejection)**
+- **V2 Score**: **0.52** (Partial/Low)
+- **Why**: Her resume lacked the exact tokens for "GenAI" or "LLM" in the required section.
+- **Outcome**: Unlike V1, V2 correctly identified that while she is senior, she is not an *AI* engineer. The zero score in `ai_relevance` accurately reflected the hard constraint.
+
+**Case Study 2: The "Vocabulary Gap" (Maya vs. Variations)**
+- **V2 Score**: 0.633 (Maya)
+- **Problem**: If a candidate says "built retrieval systems" instead of "RAG", V2's regex might miss it entirely.
+- **Outcome**: High precision, lower recall for semantically equivalent but lexically distinct terms.
+
 ---
 
 ## Usage
