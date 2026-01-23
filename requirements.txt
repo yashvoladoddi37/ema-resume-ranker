@@ -2,10 +2,6 @@
 groq>=0.9.0
 python-dotenv>=1.0.0
 
-# Web / UI
-streamlit>=1.30.0
-plotly>=5.18.0
-
 # Data & Analysis
 scikit-learn>=1.2.0
 pandas>=2.0.0
