@@ -155,6 +155,18 @@ python evaluate_v3.py
 ```
 This will output the ranked list of candidates, their final scores, and the detailed breakdown of the ensemble logic.
 
+### Case Study: The Hybrid Correction
+
+The power of V3 is best illustrated by how it handled **Sarah Johnson**, a strong candidate who was over-scored by V1 and under-scored by V2.
+
+| Stage | Score | Reasoning |
+| :--- | :--- | :--- |
+| **V1 (LLM)** | **0.785** | *Over-optimistic*: Credits her "transferable skills" in support as full engineering experience. |
+| **V2 (Deterministic)** | **0.517** | *Strict*: Heavily penalized for missing exact GenAI keywords and zero "AI Relevance". |
+| **V3 (Hybrid)** | **0.678** | **Balanced**: The deterministic engine acted as a factual anchor, pulling the inflated LLM score down to a realistic level that reflects her potential (0.5-0.7 range) without dismissing her entirely. |
+
+**Conclusion**: V3 successfully mitigates the "hallucination risk" of LLMs while retaining the semantic understanding that V2 lacks for other candidates.
+
 ---
 
 ## Final Conclusion
