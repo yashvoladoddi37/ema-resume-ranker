@@ -99,12 +99,22 @@ Example: Sarah Johnson (Support Engineer) was ranked highly (0.843) despite lack
 
 A previous bug where "Present" was interpreted as "January 2025" (instead of 2026) caused negative duration calculations for current roles, severely penalizing candidates like Yashpreet. Fixing this improved his score from 0.820 to 0.832 and ranking from #5 to #3.
 
-#### 3. **Expensive**
+#### 3. **Expensive** 
 
 - 1,000 resumes = $20
 - 10,000 resumes = $200
 
 For batch processing, this doesn't scale.
+
+### Qualitative Analysis: The "Reasoning" Trap
+
+While the LLM provides detailed justifications, it often falls into the trap of being "too helpful," finding transferable skills where strict requirements exist.
+
+**Case Study: Sarah Johnson (False Positive)**
+- **Role**: Support Lead (no structural AI experience)
+- **V1 Score**: **0.843** (Very High)
+- **LLM Reasoning**: *"Experience in API troubleshooting is transferable to AI workflows. Her leadership in support roles indicates potential for senior engineering management."*
+- **Reality**: The role requires *immediate* contribution to GenAI pipelines. The LLM's optimism led to a false positive ranking, placing her above candidates with actual relevant coding experience.
 
 ---
 
