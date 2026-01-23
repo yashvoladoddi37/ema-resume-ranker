@@ -1,0 +1,584 @@
+[
+  {
+    "final_score": 0.733,
+    "llm_score": 0.8,
+    "deterministic_score": 0.633,
+    "reasoning": "The candidate, Maya Gupta, has a strong background in AI solutions engineering with a focus on Generative AI and automation flows, which aligns well with the job requirements. Although the verified facts indicate a mismatch in the years of experience, the candidate's skills and experience in configuring and integrating AI/GenAI workflows, prompt engineering, and API integration are highly relevant to the role. However, the candidate lacks direct experience in troubleshooting production issues and SaaS technical support.",
+    "matched_skills": [
+      "api",
+      "python",
+      "json",
+      "rest",
+      "production",
+      "langchain",
+      "prompt engineering",
+      "genai",
+      "llm",
+      "integration"
+    ],
+    "missing_skills": [
+      "troubleshooting",
+      "saas",
+      "technical support"
+    ],
+    "det_extracts": {
+      "years_experience": 10.0,
+      "matched_required_skills": [
+        "api",
+        "python",
+        "json",
+        "rest",
+        "production"
+      ],
+      "matched_preferred_skills": [
+        "langchain",
+        "prompt engineering",
+        "genai",
+        "llm",
+        "integration"
+      ],
+      "missing_required_skills": [
+        "troubleshooting",
+        "saas",
+        "technical support"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.545,
+      "ai_relevance_score": 1.0,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.618,
+      "semantic_similarity": 0.669
+    },
+    "candidate_id": "res_003_maya",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.688,
+    "llm_score": 0.8,
+    "deterministic_score": 0.52,
+    "reasoning": "The candidate, Sarah Johnson, has a strong background in technical support and SaaS, with over 7 years of experience, which aligns well with the job requirements. Her proficiency in troubleshooting production issues, APIs, and data integration, as well as her strong Python skills, make her a suitable fit for the AI Applications Engineer role. However, the lack of explicit mention of JSON and REST skills is a notable gap.",
+    "matched_skills": [
+      "api",
+      "python",
+      "troubleshooting",
+      "saas",
+      "technical support",
+      "integration",
+      "aws"
+    ],
+    "missing_skills": [
+      "json",
+      "rest"
+    ],
+    "det_extracts": {
+      "years_experience": 15.0,
+      "matched_required_skills": [
+        "api",
+        "python",
+        "troubleshooting",
+        "saas",
+        "technical support",
+        "production"
+      ],
+      "matched_preferred_skills": [
+        "integration",
+        "aws"
+      ],
+      "missing_required_skills": [
+        "json",
+        "rest"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.568,
+      "ai_relevance_score": 0.0,
+      "support_relevance_score": 0.435,
+      "deterministic_final": 0.514,
+      "semantic_similarity": 0.533
+    },
+    "candidate_id": "res_002_sarah",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.682,
+    "llm_score": 0.7,
+    "deterministic_score": 0.656,
+    "reasoning": "The candidate has relevant experience in AI support and technical success, with a strong background in software engineering, and has worked with APIs, troubleshooting, and technical support, which aligns with the job requirements. However, the candidate lacks direct experience with JSON, REST, and SOAP APIs, as well as logging, dashboard creation, and alerting tools. The candidate's proficiency in Python and experience with GenAI are notable strengths.",
+    "matched_skills": [
+      "api",
+      "python",
+      "troubleshooting",
+      "technical support",
+      "genai",
+      "saas"
+    ],
+    "missing_skills": [
+      "json",
+      "rest",
+      "soap",
+      "logging tools",
+      "dashboard creation",
+      "alerting tools"
+    ],
+    "det_extracts": {
+      "years_experience": 12.0,
+      "matched_required_skills": [
+        "api",
+        "python",
+        "troubleshooting",
+        "saas",
+        "technical support",
+        "production"
+      ],
+      "matched_preferred_skills": [
+        "llm",
+        "genai"
+      ],
+      "missing_required_skills": [
+        "json",
+        "rest"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.568,
+      "ai_relevance_score": 0.486,
+      "support_relevance_score": 0.694,
+      "deterministic_final": 0.663,
+      "semantic_similarity": 0.638
+    },
+    "candidate_id": "res_test_A",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.625,
+    "llm_score": 0.7,
+    "deterministic_score": 0.512,
+    "reasoning": "The candidate has a strong background in AI and backend development, with relevant experience in integrating APIs, working with LLMs, and building scalable services, which aligns with the job requirements. However, the candidate lacks direct experience in technical support, troubleshooting production issues, and working with SaaS platforms, which are critical skills for the AI Applications Engineer role. The candidate's proficiency in Python, API integration, and prompt engineering are notable strengths.",
+    "matched_skills": [
+      "api",
+      "python",
+      "llm",
+      "prompt engineering",
+      "aws"
+    ],
+    "missing_skills": [
+      "troubleshooting",
+      "json",
+      "rest",
+      "saas",
+      "technical support",
+      "production"
+    ],
+    "det_extracts": {
+      "years_experience": 6.0,
+      "matched_required_skills": [
+        "api",
+        "python"
+      ],
+      "matched_preferred_skills": [
+        "langchain",
+        "prompt engineering",
+        "aws",
+        "ml",
+        "llm",
+        "crm"
+      ],
+      "missing_required_skills": [
+        "troubleshooting",
+        "json",
+        "rest",
+        "saas",
+        "technical support",
+        "production"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.304,
+      "ai_relevance_score": 0.876,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.497,
+      "semantic_similarity": 0.545
+    },
+    "candidate_id": "res_001_yashpreet",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.611,
+    "llm_score": 0.7,
+    "deterministic_score": 0.477,
+    "reasoning": "The candidate has relevant experience in building and troubleshooting backend integrations, data sync pipelines, and proficiency in APIs, which aligns with the job requirements. However, the candidate lacks direct experience in technical support or customer success for SaaS, and there is no explicit mention of JSON, production issues, or GenAI automation flows. The candidate's skills in logging tools like Prometheus and Kibana can be considered a match for the required competency in logging, dashboard creation, and alerting tools.",
+    "matched_skills": [
+      "api",
+      "python",
+      "troubleshooting",
+      "rest",
+      "saas",
+      "aws",
+      "ats",
+      "integration",
+      "soap",
+      "crm",
+      "logging tools"
+    ],
+    "missing_skills": [
+      "json",
+      "production",
+      "technical support",
+      "GenAI automation flows"
+    ],
+    "det_extracts": {
+      "years_experience": 11.0,
+      "matched_required_skills": [
+        "api",
+        "python",
+        "troubleshooting",
+        "rest",
+        "saas"
+      ],
+      "matched_preferred_skills": [
+        "aws",
+        "ats",
+        "integration",
+        "soap",
+        "crm"
+      ],
+      "missing_required_skills": [
+        "json",
+        "production",
+        "technical support"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.545,
+      "ai_relevance_score": 0.0,
+      "support_relevance_score": 0.081,
+      "deterministic_final": 0.434,
+      "semantic_similarity": 0.577
+    },
+    "candidate_id": "res_004_david",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.513,
+    "llm_score": 0.6,
+    "deterministic_score": 0.383,
+    "reasoning": "The candidate, Priya Sharma, has a strong background in data science and machine learning, with relevant experience in Python, PyTorch, and NLP, which aligns with the AI Applications Engineer role. However, the candidate lacks direct experience in technical support, SaaS, and API integration, which are critical requirements for the position. The candidate's experience in managing data workflows using Apache Airflow and proficiency in Python can be considered as a partial match for the workflow configuration and troubleshooting aspects of the role.",
+    "matched_skills": [
+      "python",
+      "ml",
+      "nlp",
+      "airflow",
+      "data pipelines"
+    ],
+    "missing_skills": [
+      "api",
+      "json",
+      "rest",
+      "saas",
+      "technical support",
+      "troubleshooting",
+      "production issues"
+    ],
+    "det_extracts": {
+      "years_experience": 7.0,
+      "matched_required_skills": [
+        "python"
+      ],
+      "matched_preferred_skills": [
+        "aws",
+        "ml"
+      ],
+      "missing_required_skills": [
+        "api",
+        "json",
+        "troubleshooting",
+        "rest",
+        "saas",
+        "technical support",
+        "production"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.13,
+      "ai_relevance_score": 0.396,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.331,
+      "semantic_similarity": 0.503
+    },
+    "candidate_id": "res_006_priya",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.397,
+    "llm_score": 0.4,
+    "deterministic_score": 0.392,
+    "reasoning": "The candidate has relevant experience in technical customer success and account management, with skills in API troubleshooting and CRM integration, which partially aligns with the job requirements. However, the candidate lacks critical skills in Python, JSON, REST, and production issue resolution, which are essential for the AI Applications Engineer role. The candidate's experience in managing technical health and collaborating with engineering teams is a positive aspect, but the skill gap in technical areas is a significant concern.",
+    "matched_skills": [
+      "api",
+      "saas",
+      "troubleshooting",
+      "crm"
+    ],
+    "missing_skills": [
+      "python",
+      "json",
+      "rest",
+      "technical support",
+      "production"
+    ],
+    "det_extracts": {
+      "years_experience": 8.0,
+      "matched_required_skills": [
+        "api",
+        "saas",
+        "troubleshooting"
+      ],
+      "matched_preferred_skills": [
+        "crm"
+      ],
+      "missing_required_skills": [
+        "python",
+        "json",
+        "rest",
+        "technical support",
+        "production"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.284,
+      "ai_relevance_score": 0.105,
+      "support_relevance_score": 0.105,
+      "deterministic_final": 0.356,
+      "semantic_similarity": 0.476
+    },
+    "candidate_id": "res_007_sam",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.373,
+    "llm_score": 0.4,
+    "deterministic_score": 0.332,
+    "reasoning": "The candidate has relevant experience in building web applications with Python and has worked with REST APIs, which is a partial match for the required API skills. However, the candidate lacks direct experience in troubleshooting production issues, SaaS, and technical support, which are critical requirements for the AI Applications Engineer role. The candidate's experience with CloudWatch and DataDog can be considered as a match for logging and dashboard creation skills.",
+    "matched_skills": [
+      "python",
+      "rest",
+      "logging"
+    ],
+    "missing_skills": [
+      "api",
+      "troubleshooting",
+      "json",
+      "saas",
+      "technical support",
+      "production"
+    ],
+    "det_extracts": {
+      "years_experience": 11.0,
+      "matched_required_skills": [
+        "python",
+        "rest"
+      ],
+      "matched_preferred_skills": [],
+      "missing_required_skills": [
+        "api",
+        "troubleshooting",
+        "json",
+        "saas",
+        "technical support",
+        "production"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.175,
+      "ai_relevance_score": 0.091,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.288,
+      "semantic_similarity": 0.436
+    },
+    "candidate_id": "res_005_mike",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.28,
+    "llm_score": 0.2,
+    "deterministic_score": 0.4,
+    "reasoning": "The candidate has experience in technical support and troubleshooting, which aligns with some aspects of the AI Applications Engineer role, but lacks critical skills such as proficiency in APIs, Python, and SaaS, making them a less strong fit for the position. The candidate's background in IT support and customer service is relevant, but the gap in required technical skills is significant. The candidate's experience with tools like Wireshark, Nagios, and Splunk demonstrates some familiarity with technical tools, but not the specific ones required for the role.",
+    "matched_skills": [
+      "troubleshooting",
+      "technical support"
+    ],
+    "missing_skills": [
+      "api",
+      "python",
+      "json",
+      "rest",
+      "saas",
+      "production"
+    ],
+    "det_extracts": {
+      "years_experience": 10.0,
+      "matched_required_skills": [
+        "troubleshooting",
+        "technical support"
+      ],
+      "matched_preferred_skills": [],
+      "missing_required_skills": [
+        "api",
+        "python",
+        "json",
+        "rest",
+        "saas",
+        "production"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.175,
+      "ai_relevance_score": 0.215,
+      "support_relevance_score": 0.43,
+      "deterministic_final": 0.399,
+      "semantic_similarity": 0.404
+    },
+    "candidate_id": "res_010_elena",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.278,
+    "llm_score": 0.2,
+    "deterministic_score": 0.396,
+    "reasoning": "The candidate has some relevant experience with REST APIs, which is a partial match for the API integration requirement, but lacks critical skills in troubleshooting, Python, and SaaS experience, making them a less strong fit for the AI Applications Engineer role. The candidate's background in software development is notable, but the gap in required skills is significant. The candidate's 8 years of experience is also not accurately reflected in their resume, which claims 3 years of experience.",
+    "matched_skills": [
+      "api",
+      "rest"
+    ],
+    "missing_skills": [
+      "troubleshooting",
+      "python",
+      "json",
+      "saas",
+      "technical support",
+      "production"
+    ],
+    "det_extracts": {
+      "years_experience": 8.0,
+      "matched_required_skills": [
+        "api",
+        "rest"
+      ],
+      "matched_preferred_skills": [],
+      "missing_required_skills": [
+        "troubleshooting",
+        "python",
+        "json",
+        "saas",
+        "technical support",
+        "production"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.175,
+      "ai_relevance_score": 0.235,
+      "support_relevance_score": 0.118,
+      "deterministic_final": 0.341,
+      "semantic_similarity": 0.524
+    },
+    "candidate_id": "res_test_B",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.221,
+    "llm_score": 0.2,
+    "deterministic_score": 0.253,
+    "reasoning": "The candidate has 6 years of experience in building high-performance Java backends, but lacks direct experience in AI applications, SaaS, and technical support, which are crucial for the AI Applications Engineer role. Although the candidate's expertise in Java and microservices reliability could be transferable, the absence of skills like Python, API integration, and troubleshooting production issues are significant gaps. The candidate's experience with Oracle DB and Spring Boot may be tangentially relevant, but it does not directly align with the job requirements.",
+    "matched_skills": [
+      "microservices reliability"
+    ],
+    "missing_skills": [
+      "api",
+      "python",
+      "json",
+      "troubleshooting",
+      "rest",
+      "saas",
+      "technical support",
+      "production"
+    ],
+    "det_extracts": {
+      "years_experience": 6,
+      "matched_required_skills": [],
+      "matched_preferred_skills": [],
+      "missing_required_skills": [
+        "api",
+        "python",
+        "json",
+        "troubleshooting",
+        "rest",
+        "saas",
+        "technical support",
+        "production"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.0,
+      "ai_relevance_score": 0.0,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.2,
+      "semantic_similarity": 0.377
+    },
+    "candidate_id": "res_009_james",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.178,
+    "llm_score": 0.1,
+    "deterministic_score": 0.295,
+    "reasoning": "The candidate's background as a frontend developer with experience in building interactive user interfaces does not directly align with the AI Applications Engineer role, which requires proficiency in troubleshooting production issues, diagnosing ML performance, and working with APIs and Python. Although the candidate has 6 years of experience, the skills listed on the resume do not match the required skills for the position. The candidate's experience with React and TypeScript may be transferable to some extent, but it is not a direct match for the role.",
+    "matched_skills": [],
+    "missing_skills": [
+      "api",
+      "python",
+      "json",
+      "troubleshooting",
+      "rest",
+      "saas",
+      "technical support",
+      "production"
+    ],
+    "det_extracts": {
+      "years_experience": 6.0,
+      "matched_required_skills": [],
+      "matched_preferred_skills": [],
+      "missing_required_skills": [
+        "api",
+        "python",
+        "json",
+        "troubleshooting",
+        "rest",
+        "saas",
+        "technical support",
+        "production"
+      ]
+    },
+    "det_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.0,
+      "ai_relevance_score": 0.435,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.287,
+      "semantic_similarity": 0.315
+    },
+    "candidate_id": "res_008_jordan",
+    "candidate_name": "unknown"
+  }
+]

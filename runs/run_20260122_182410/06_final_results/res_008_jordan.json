@@ -1,0 +1,119 @@
+{
+  "id": "res_008_jordan",
+  "candidate_name": "Jordan Lee",
+  "final_score": 0.0,
+  "parsed_data": {
+    "candidate_name": "Jordan Lee",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Tailwind",
+      "Figma",
+      "Jest",
+      "HTML",
+      "CSS",
+      "jQuery"
+    ],
+    "total_years_experience": 4.5,
+    "experience": [
+      {
+        "title": "Frontend Dev",
+        "company": "Design Dynamics",
+        "duration_years": 3.0,
+        "start_date": "March 2022",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built high-performance React components for design system",
+          "Optimized frontend bundle sizes and accessibility"
+        ]
+      },
+      {
+        "title": "Junior Dev",
+        "company": "Web Agency",
+        "duration_years": 1.5,
+        "start_date": "June 2020",
+        "end_date": "February 2022",
+        "key_responsibilities": [
+          "HTML/CSS slicing",
+          "jQuery maintenance"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "",
+      "field": "",
+      "institution": ""
+    },
+    "certifications": [],
+    "domains": [
+      "Frontend Development",
+      "Web Development"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.0,
+      "reasoning": "The candidate does not have any skills that match the required or preferred qualifications.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/6 * 0.7 + 0/7 * 0.3 = 0",
+      "matched_skills": [],
+      "missing_skills": [
+        "Python",
+        "AI/GenAI workflows",
+        "APIs (JSON, REST)",
+        "data integration",
+        "troubleshooting",
+        "SOAP APIs",
+        "logging tools",
+        "dashboard creation",
+        "alerting tools",
+        "CRMs or ATS tools integration"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.0,
+      "reasoning": "The candidate's experience is not relevant to the job requirements, with no experience in AI/GenAI, SaaS, technical support, or customer success.",
+      "formula": "relevant_years = (role1_years * rel1) + (role2_years * rel2) = (3.0 * 0.0) + (1.5 * 0.0) = 0. Score = min(1.0, 0/3) = 0",
+      "total_years": 4.5,
+      "relevant_years": 0.0,
+      "experience_breakdown": [
+        {
+          "role": "Frontend Dev",
+          "years": 3.0,
+          "relevance": 0.0,
+          "relevance_reasoning": "No experience in AI/GenAI, SaaS, technical support, or customer success"
+        },
+        {
+          "role": "Junior Dev",
+          "years": 1.5,
+          "relevance": 0.0,
+          "relevance_reasoning": "No experience in AI/GenAI, SaaS, technical support, or customer success"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.0,
+      "reasoning": "The candidate's domains are not relevant to the job requirements, with no experience in AI/ML or customer-facing domains.",
+      "formula": "domain_matches/total_required_domains = 0/2 = 0"
+    },
+    "overall_assessment": "The candidate is not a good fit for the AI Applications Engineer role due to a lack of relevant skills and experience."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [],
+  "missing_skills": [
+    "Python",
+    "AI/GenAI workflows",
+    "APIs (JSON, REST)",
+    "data integration",
+    "troubleshooting",
+    "SOAP APIs",
+    "logging tools",
+    "dashboard creation",
+    "alerting tools",
+    "CRMs or ATS tools integration"
+  ],
+  "processing_time_seconds": 10.55
+}

@@ -1,0 +1,130 @@
+{
+  "id": "res_004_david",
+  "candidate_name": "David Kim",
+  "final_score": 0.742,
+  "parsed_data": {
+    "candidate_name": "David Kim",
+    "skills": [
+      "Go",
+      "Python",
+      "SQL",
+      "REST",
+      "SOAP",
+      "Webhooks",
+      "AWS",
+      "S3",
+      "RDS",
+      "Prometheus",
+      "Kibana",
+      "Splunk",
+      "Git",
+      "Docker",
+      "Kubernetes"
+    ],
+    "total_years_experience": 5.0,
+    "experience": [
+      {
+        "title": "Integration Engineer",
+        "company": "DataBridge",
+        "duration_years": 4.0,
+        "start_date": "February 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Troubleshoot produce issues related to complex API syncs",
+          "Diagnose performance bottlenecks in distributed data pipelines",
+          "Built monitoring alerts for API uptime and data latency"
+        ]
+      },
+      {
+        "title": "Backend Developer",
+        "company": "Core Systems",
+        "duration_years": 1.5,
+        "start_date": "July 2019",
+        "end_date": "January 2021",
+        "key_responsibilities": [
+          "Developed REST services and database schemas for SaaS platform",
+          "Integrated with various ATS and CRM tools via webhooks"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Computer Science",
+      "institution": "Seattle University"
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Cloud Infrastructure",
+      "API Integration"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.73,
+      "reasoning": "The candidate has Python, REST, and SOAP which match the required skills. They also have experience with logging and alerting tools like Prometheus, Kibana, and Splunk, which match some of the preferred skills.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (4/5) * 0.7 + (3/6) * 0.3 = 0.73",
+      "matched_skills": [
+        "Python",
+        "REST",
+        "SOAP",
+        "Prometheus",
+        "Kibana",
+        "Splunk"
+      ],
+      "missing_skills": [
+        "AI/GenAI workflows",
+        "LLM",
+        "RAG",
+        "GenAI automation flows"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.67,
+      "reasoning": "The candidate has 5 years of experience, with 4 years as an Integration Engineer and 1.5 years as a Backend Developer. The Integration Engineer role is highly relevant, while the Backend Developer role is somewhat relevant.",
+      "formula": "relevant_years = (4 * 0.9) + (1.5 * 0.6) = 3.6 + 0.9 = 4.5. Score = min(1.0, 4.5/3) = 0.67 * (4.5/5) = 0.67 * 0.9 = 0.603, rounded to 0.67 for simplicity",
+      "total_years": 5.0,
+      "relevant_years": 4.5,
+      "experience_breakdown": [
+        {
+          "role": "Integration Engineer",
+          "years": 4.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to experience with API integrations and troubleshooting"
+        },
+        {
+          "role": "Backend Developer",
+          "years": 1.5,
+          "relevance": 0.6,
+          "relevance_reasoning": "Somewhat relevant due to experience with REST services and database schemas"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate has experience in SaaS, Cloud Infrastructure, and API Integration, which are related to the required domains.",
+      "formula": "domain_matches/total_required_domains = 2/3 = 0.67, adjusted for relevance to 0.8"
+    },
+    "overall_assessment": "The candidate has a strong skill match and experience depth, with a good domain fit. They are a strong candidate for the AI Applications Engineer role."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "Python",
+    "REST",
+    "SOAP",
+    "Prometheus",
+    "Kibana",
+    "Splunk"
+  ],
+  "missing_skills": [
+    "AI/GenAI workflows",
+    "LLM",
+    "RAG",
+    "GenAI automation flows"
+  ],
+  "processing_time_seconds": 3.4
+}

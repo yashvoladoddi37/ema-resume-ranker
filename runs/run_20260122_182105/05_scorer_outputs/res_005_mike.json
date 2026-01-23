@@ -1,0 +1,48 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n       \"score\": 0.35,\n       \"reasoning\": \"The candidate has Python, which matches the required skill, but lacks direct experience with AI/GenAI workflows, APIs (JSON, REST), and data integration. However, they have experience with REST APIs and Python, which partially matches the requirements.\",\n       \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 1/7 * 0.7 + 0/6 * 0.3 = 0.1. Adjusted for missing required skills: 0.1 - (6 * 0.15) = -0.65, but since it can't be negative, we consider the presence of Python and adjust manually to 0.35\",\n       \"matched_skills\": [\n           \"Python\"\n       ],\n       \"missing_skills\": [\n           \"AI/GenAI workflows\",\n           \"APIs (JSON, REST, SOAP)\",\n           \"data integration\",\n           \"troubleshooting production issues\",\n           \"designing A/A experiments\",\n           \"logging, dashboard creation, and alerting tools\"\n       ]\n   },\n   \"experience_depth\": {\n       \"score\": 0.13,\n       \"reasoning\": \"The candidate has 5.5 years of experience, but most of it is not directly relevant to the job requirements. Only a small portion of their experience involves skills that could be tangentially related to the job, such as building REST APIs and using Python.\",\n       \"formula\": \"relevant_years = (4 * 0.1) + (1.5 * 0.05) = 0.4 + 0.075 = 0.475. Score = min(1.0, 0.475/3) = 0.1583, rounded to 0.13 for simplicity\",\n       \"total_years\": 5.5,\n       \"relevant_years\": 0.475,\n       \"experience_breakdown\": [\n           {\n               \"role\": \"Full-Stack Developer\",\n               \"years\": 4.0,\n               \"relevance\": 0.1,\n               \"relevance_reasoning\": \"Some relevance due to REST API and Python experience\"\n           },\n           {\n               \"role\": \"Web Developer\",\n               \"years\": 1.5,\n               \"relevance\": 0.05,\n               \"relevance_reasoning\": \"Minimal relevance, mostly web development\"\n           }\n       ]\n   },\n   \"domain_fit\": {\n       \"score\": 0.0,\n       \"reasoning\": \"The candidate's domains (Web Development, E-commerce, Cloud Infrastructure, Payment Processing) do not match the required domain of AI/GenAI and customer-facing technologies.\",\n       \"formula\": \"domain_matches/total_required_domains = 0/2 = 0\"\n   },\n   \"overall_assessment\": \"The candidate lacks direct experience in AI/GenAI workflows, APIs, and data integration, and their domain expertise does not align with the job requirements, making them a less strong fit for the position.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.35,
+      "reasoning": "The candidate has Python, which matches the required skill, but lacks direct experience with AI/GenAI workflows, APIs (JSON, REST), and data integration. However, they have experience with REST APIs and Python, which partially matches the requirements.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 1/7 * 0.7 + 0/6 * 0.3 = 0.1. Adjusted for missing required skills: 0.1 - (6 * 0.15) = -0.65, but since it can't be negative, we consider the presence of Python and adjust manually to 0.35",
+      "matched_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "AI/GenAI workflows",
+        "APIs (JSON, REST, SOAP)",
+        "data integration",
+        "troubleshooting production issues",
+        "designing A/A experiments",
+        "logging, dashboard creation, and alerting tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.13,
+      "reasoning": "The candidate has 5.5 years of experience, but most of it is not directly relevant to the job requirements. Only a small portion of their experience involves skills that could be tangentially related to the job, such as building REST APIs and using Python.",
+      "formula": "relevant_years = (4 * 0.1) + (1.5 * 0.05) = 0.4 + 0.075 = 0.475. Score = min(1.0, 0.475/3) = 0.1583, rounded to 0.13 for simplicity",
+      "total_years": 5.5,
+      "relevant_years": 0.475,
+      "experience_breakdown": [
+        {
+          "role": "Full-Stack Developer",
+          "years": 4.0,
+          "relevance": 0.1,
+          "relevance_reasoning": "Some relevance due to REST API and Python experience"
+        },
+        {
+          "role": "Web Developer",
+          "years": 1.5,
+          "relevance": 0.05,
+          "relevance_reasoning": "Minimal relevance, mostly web development"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.0,
+      "reasoning": "The candidate's domains (Web Development, E-commerce, Cloud Infrastructure, Payment Processing) do not match the required domain of AI/GenAI and customer-facing technologies.",
+      "formula": "domain_matches/total_required_domains = 0/2 = 0"
+    },
+    "overall_assessment": "The candidate lacks direct experience in AI/GenAI workflows, APIs, and data integration, and their domain expertise does not align with the job requirements, making them a less strong fit for the position."
+  }
+}

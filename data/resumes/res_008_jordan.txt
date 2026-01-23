@@ -10,12 +10,13 @@ React and TypeScript.
 
 EXPERIENCE
 ----------
-Frontend Dev | Design Dynamics | 2022 - Present
+Frontend Dev | Design Dynamics | May 2022 - Present
 • Built high-performance React components for design system.
 • Optimized frontend bundle sizes and accessibility.
 
-Junior Dev | Web Agency | 2020 - 2022
+Junior Dev | Web Agency | January 2020 - April 2022
 • HTML/CSS slicing and jQuery maintenance.
+
 
 SKILLS
 ------

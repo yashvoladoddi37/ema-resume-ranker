@@ -1,0 +1,114 @@
+{
+  "id": "res_009_james",
+  "candidate_name": "JAMES WILSON",
+  "final_score": 0.0,
+  "parsed_data": {
+    "candidate_name": "JAMES WILSON",
+    "skills": [
+      "Java",
+      "SQL",
+      "Kotlin",
+      "Spring Boot",
+      "Hibernate",
+      "Oracle DB",
+      "Microservices"
+    ],
+    "total_years_experience": 6.0,
+    "experience": [
+      {
+        "title": "Senior Java Developer",
+        "company": "Banking Corp",
+        "duration_years": 4.0,
+        "start_date": "February 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Built high-volume transaction processing systems in Spring Boot",
+          "Expert in Oracle DB and microservices reliability"
+        ]
+      },
+      {
+        "title": "Java Developer",
+        "company": "FinServ Systems",
+        "duration_years": 2.5,
+        "start_date": "July 2018",
+        "end_date": "January 2021",
+        "key_responsibilities": [
+          "Developed batch processing jobs for financial reporting",
+          "Maintained legacy Java EE applications"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "",
+      "field": "",
+      "institution": ""
+    },
+    "certifications": [],
+    "domains": [
+      "Financial Services",
+      "Banking"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.0,
+      "reasoning": "The candidate does not have any skills that match the required or preferred qualifications.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/7 * 0.7 + 0/6 * 0.3 = 0",
+      "matched_skills": [],
+      "missing_skills": [
+        "Python",
+        "AI/GenAI workflows",
+        "APIs (JSON, REST)",
+        "Data integration",
+        "Troubleshooting production issues",
+        "Diagnosing ML performance issues",
+        "CRMs or ATS tools integration",
+        "Logging, dashboard creation, and alerting tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.0,
+      "reasoning": "The candidate's experience is not relevant to the job requirements, with no experience in AI/GenAI, SaaS, technical support, or customer success.",
+      "formula": "relevant_years = (role1_years * rel1) + (role2_years * rel2) = (4 * 0) + (2.5 * 0) = 0. Score = min(1.0, 0/3) = 0",
+      "total_years": 6.5,
+      "relevant_years": 0.0,
+      "experience_breakdown": [
+        {
+          "role": "Senior Java Developer",
+          "years": 4.0,
+          "relevance": 0.0,
+          "relevance_reasoning": "No experience in AI/GenAI, SaaS, technical support, or customer success."
+        },
+        {
+          "role": "Java Developer",
+          "years": 2.5,
+          "relevance": 0.0,
+          "relevance_reasoning": "No experience in AI/GenAI, SaaS, technical support, or customer success."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.0,
+      "reasoning": "The candidate's domain experience is not relevant to the job requirements, with no experience in AI/ML or customer-facing domains.",
+      "formula": "domain_matches/total_required_domains = 0/1 = 0"
+    },
+    "overall_assessment": "The candidate is not a good fit for the AI Applications Engineer role due to a lack of relevant skills and experience."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [],
+  "missing_skills": [
+    "Python",
+    "AI/GenAI workflows",
+    "APIs (JSON, REST)",
+    "Data integration",
+    "Troubleshooting production issues",
+    "Diagnosing ML performance issues",
+    "CRMs or ATS tools integration",
+    "Logging, dashboard creation, and alerting tools"
+  ],
+  "processing_time_seconds": 12.84
+}

@@ -10,9 +10,10 @@ for financial institutions.
 
 EXPERIENCE
 ----------
-Senior Java Developer | Banking Corp | 2021 - Present
+Senior Java Developer | Banking Corp | June 2021 - Present
 • Built high-volume transaction processing systems in Spring Boot.
 • Expert in Oracle DB and microservices reliability.
+
 
 SKILLS
 ------

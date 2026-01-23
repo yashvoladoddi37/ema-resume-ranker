@@ -1,0 +1,155 @@
+{
+  "id": "res_001_yashpreet",
+  "candidate_name": "Yashpreet Voladoddi",
+  "final_score": 0.805,
+  "parsed_data": {
+    "candidate_name": "Yashpreet Voladoddi",
+    "skills": [
+      "Golang",
+      "Python",
+      "SQL",
+      "TypeScript",
+      "LLM",
+      "LangChain",
+      "LangGraph",
+      "Mistral 7B",
+      "Claude API",
+      "Prompt Engineering",
+      "RESTful API",
+      "AWS Lambda",
+      "DynamoDB",
+      "Terraform",
+      "Docker",
+      "Redis",
+      "Git",
+      "CI/CD",
+      "ONNX",
+      "ChromaDB"
+    ],
+    "total_years_experience": 1.75,
+    "experience": [
+      {
+        "title": "SDE & AI Engineer",
+        "company": "Kapi AI",
+        "duration_years": 0.75,
+        "start_date": "April 2024",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Developed core features for Golang-based agentic CLI platform",
+          "Architected privacy-first semantic search using Go and ONNX",
+          "Built LLM-powered automated documentation systems using ReAct framework"
+        ]
+      },
+      {
+        "title": "AI Engineer",
+        "company": "HeyCoach",
+        "duration_years": 0.75,
+        "start_date": "June 2024",
+        "end_date": "March 2025",
+        "key_responsibilities": [
+          "Developed AI-driven lead generation MVP using Mistral 7B",
+          "Integrated RESTful APIs with CRM handling 500+ leads/month",
+          "Built AI agent automating social media posts using LangGraph/Claude API"
+        ]
+      },
+      {
+        "title": "Backend AI Intern",
+        "company": "Lumio TV",
+        "duration_years": 0.25,
+        "start_date": "January 2024",
+        "end_date": "May 2024",
+        "key_responsibilities": [
+          "Built AWS Lambda RESTful APIs in Golang; integrated Redis caching",
+          "Provisioned infrastructure using Terraform for IaC"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.Tech",
+      "field": "Computer Science",
+      "institution": "IIT Hyderabad"
+    },
+    "certifications": [],
+    "domains": [
+      "AI/ML",
+      "Cloud Infrastructure",
+      "SaaS"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including Python, AI/GenAI workflows (LLM, LangChain, LangGraph), and APIs (RESTful API). However, they are missing experience with SOAP APIs and specific logging, dashboard creation, and alerting tools like Prometheus, Grafana, Splunk, or Kibana.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (4/6) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "LLM",
+        "LangChain",
+        "LangGraph",
+        "RESTful API",
+        "Prompt Engineering"
+      ],
+      "missing_skills": [
+        "SOAP APIs",
+        "Prometheus",
+        "Grafana",
+        "Splunk",
+        "Kibana"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.45,
+      "reasoning": "The candidate has a total of 1.75 years of experience, but only about 1.5 years are relevant to the job description. Their experience in AI/GenAI, SaaS, and technical roles is limited, but they have worked with relevant technologies like LLM, LangChain, and RESTful APIs.",
+      "formula": "relevant_years = (0.75 * 0.8) + (0.75 * 0.9) + (0.25 * 0.6) = 1.5. Score = min(1.0, 1.5/3) = 0.45",
+      "total_years": 1.75,
+      "relevant_years": 1.5,
+      "experience_breakdown": [
+        {
+          "role": "SDE & AI Engineer",
+          "years": 0.75,
+          "relevance": 0.8,
+          "relevance_reasoning": "Involved AI/GenAI and technical role, but limited SaaS experience"
+        },
+        {
+          "role": "AI Engineer",
+          "years": 0.75,
+          "relevance": 0.9,
+          "relevance_reasoning": "Involved AI/GenAI, SaaS, and technical role with relevant technologies"
+        },
+        {
+          "role": "Backend AI Intern",
+          "years": 0.25,
+          "relevance": 0.6,
+          "relevance_reasoning": "Involved AI/GenAI, but limited SaaS and technical role experience"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate has a strong fit with the AI/ML domain and some experience with customer-facing roles, which is a good match for the job description.",
+      "formula": "domain_matches/total_required_domains = 2/2 = 1.0, but considering some missing aspects, score = 0.9"
+    },
+    "overall_assessment": "The candidate has a strong skill match and domain fit, but limited experience depth. They are a promising candidate, but may require additional training or mentorship to fill the experience gap."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "Python",
+    "LLM",
+    "LangChain",
+    "LangGraph",
+    "RESTful API",
+    "Prompt Engineering"
+  ],
+  "missing_skills": [
+    "SOAP APIs",
+    "Prometheus",
+    "Grafana",
+    "Splunk",
+    "Kibana"
+  ],
+  "processing_time_seconds": 3.86
+}

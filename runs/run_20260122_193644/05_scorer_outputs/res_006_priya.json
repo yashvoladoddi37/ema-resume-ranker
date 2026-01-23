@@ -1,0 +1,26 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.6,\n     \"reasoning\": \"The candidate has Python, which is a required skill, but lacks direct experience with APIs (JSON, REST, SOAP), CRMs, or ATS tools. However, they have a strong background in data science and AI/ML, which could be transferable.\",\n     \"matched_skills\": [\n       \"Python\"\n     ],\n     \"missing_skills\": [\n       \"APIs (JSON, REST, SOAP)\",\n       \"CRMs or ATS tools\",\n       \"logging, dashboard creation, and alerting tools\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.8,\n     \"reasoning\": \"The candidate has 5.5 years of experience, exceeding the required 3+ years. Although their experience is more focused on data science and less on technical support or customer success, their senior role and management of data workflows demonstrate relevant depth.\"\n   },\n   \"domain_fit\": {\n     \"score\": 0.8,\n     \"reasoning\": \"The candidate's background in AI/ML and data science aligns well with the role domain. Their experience in managing data workflows and developing customer churn models using XGBoost and PyTorch shows a strong foundation in AI applications.\"\n   },\n   \"overall_assessment\": \"Priya Sharma is a strong candidate with a solid background in AI/ML and data science, but may require some upskilling in specific technical areas such as APIs and customer-facing technical support. Their experience depth and domain fit are notable strengths.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.6,
+      "reasoning": "The candidate has Python, which is a required skill, but lacks direct experience with APIs (JSON, REST, SOAP), CRMs, or ATS tools. However, they have a strong background in data science and AI/ML, which could be transferable.",
+      "matched_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "APIs (JSON, REST, SOAP)",
+        "CRMs or ATS tools",
+        "logging, dashboard creation, and alerting tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.8,
+      "reasoning": "The candidate has 5.5 years of experience, exceeding the required 3+ years. Although their experience is more focused on data science and less on technical support or customer success, their senior role and management of data workflows demonstrate relevant depth."
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate's background in AI/ML and data science aligns well with the role domain. Their experience in managing data workflows and developing customer churn models using XGBoost and PyTorch shows a strong foundation in AI applications."
+    },
+    "overall_assessment": "Priya Sharma is a strong candidate with a solid background in AI/ML and data science, but may require some upskilling in specific technical areas such as APIs and customer-facing technical support. Their experience depth and domain fit are notable strengths."
+  }
+}

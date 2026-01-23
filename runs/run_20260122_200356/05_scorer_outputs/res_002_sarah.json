@@ -1,0 +1,54 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.85,\n     \"reasoning\": \"The candidate has most of the required skills, including Python, APIs, and experience with troubleshooting and integrations. However, they lack direct experience with GenAI workflows and ML performance diagnosis.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85\",\n     \"matched_skills\": [\n       \"Python\",\n       \"APIs (via Zendesk APIs)\",\n       \"troubleshooting\",\n       \"integrations (via Salesforce and Zendesk)\",\n       \"logging tools (via DataDog and Grafana)\"\n     ],\n     \"missing_skills\": [\n       \"GenAI workflows\",\n       \"ML performance diagnosis\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate has a strong background in technical support and customer success, with 8.5 years of total experience and approximately 6.5 years of relevant experience. Their experience in leading a team and resolving complex API issues is particularly valuable.\",\n     \"formula\": \"relevant_years = (5.0 * 0.9) + (2.75 * 0.8) + (0.67 * 0.6) = 6.5. Score = min(1.0, 6.5/3) = 0.9\",\n     \"total_years\": 8.5,\n     \"relevant_years\": 6.5,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Technical Support Lead\",\n         \"years\": 5.0,\n         \"relevance\": 0.9,\n         \"relevance_reasoning\": \"Highly relevant due to API troubleshooting and team leadership experience\"\n       },\n       {\n         \"role\": \"Customer Success Engineer\",\n         \"years\": 2.75,\n         \"relevance\": 0.8,\n         \"relevance_reasoning\": \"Relevant due to experience in technical onboarding and account management\"\n       },\n       {\n         \"role\": \"Technical Support Engineer\",\n         \"years\": 0.67,\n         \"relevance\": 0.6,\n         \"relevance_reasoning\": \"Somewhat relevant due to general technical support experience\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.8,\n     \"reasoning\": \"The candidate has experience in SaaS, customer support, and API integration, which are all relevant domains for the AI Applications Engineer role. However, they lack direct experience in AI/ML.\",\n     \"formula\": \"domain_matches/total_required_domains = 3/4 = 0.8\"\n   },\n   \"overall_assessment\": \"The candidate is a strong fit for the AI Applications Engineer role, with a good balance of technical skills, experience, and domain knowledge. However, they may require some additional training or support to fill gaps in their skills and experience.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including Python, APIs, and experience with troubleshooting and integrations. However, they lack direct experience with GenAI workflows and ML performance diagnosis.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "APIs (via Zendesk APIs)",
+        "troubleshooting",
+        "integrations (via Salesforce and Zendesk)",
+        "logging tools (via DataDog and Grafana)"
+      ],
+      "missing_skills": [
+        "GenAI workflows",
+        "ML performance diagnosis"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.9,
+      "reasoning": "The candidate has a strong background in technical support and customer success, with 8.5 years of total experience and approximately 6.5 years of relevant experience. Their experience in leading a team and resolving complex API issues is particularly valuable.",
+      "formula": "relevant_years = (5.0 * 0.9) + (2.75 * 0.8) + (0.67 * 0.6) = 6.5. Score = min(1.0, 6.5/3) = 0.9",
+      "total_years": 8.5,
+      "relevant_years": 6.5,
+      "experience_breakdown": [
+        {
+          "role": "Technical Support Lead",
+          "years": 5.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to API troubleshooting and team leadership experience"
+        },
+        {
+          "role": "Customer Success Engineer",
+          "years": 2.75,
+          "relevance": 0.8,
+          "relevance_reasoning": "Relevant due to experience in technical onboarding and account management"
+        },
+        {
+          "role": "Technical Support Engineer",
+          "years": 0.67,
+          "relevance": 0.6,
+          "relevance_reasoning": "Somewhat relevant due to general technical support experience"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate has experience in SaaS, customer support, and API integration, which are all relevant domains for the AI Applications Engineer role. However, they lack direct experience in AI/ML.",
+      "formula": "domain_matches/total_required_domains = 3/4 = 0.8"
+    },
+    "overall_assessment": "The candidate is a strong fit for the AI Applications Engineer role, with a good balance of technical skills, experience, and domain knowledge. However, they may require some additional training or support to fill gaps in their skills and experience."
+  }
+}

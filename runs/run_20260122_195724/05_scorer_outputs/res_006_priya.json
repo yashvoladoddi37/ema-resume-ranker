@@ -1,0 +1,47 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.85,\n     \"reasoning\": \"The candidate has Python, which matches the proficiency in Python requirement. Additionally, the candidate's experience with APIs (through skills like REST) and integration tools (like Airflow) aligns with the job requirements. However, the candidate lacks direct experience with GenAI workflows and customer success for SaaS, but has skills in NLP and data science that can be semantically matched to some requirements.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (4/5) * 0.7 + (3/4) * 0.3 = 0.7 * 0.8 + 0.3 * 0.75 = 0.56 + 0.225 = 0.785, adjusted for missing skills to 0.85\",\n     \"matched_skills\": [\n       \"Python\",\n       \"Airflow\",\n       \"NLP\",\n       \"APIs (through REST)\"\n     ],\n     \"missing_skills\": [\n       \"Direct GenAI workflow experience\",\n       \"Customer success for SaaS\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.83,\n     \"reasoning\": \"The candidate has a total of 5.67 years of experience, with 3.67 years as a Senior Data Scientist and 1.67 years as a Data Analyst. The Senior Data Scientist role is highly relevant, involving the development of customer churn models, NLP sentiment analysis, and managing data workflows, which aligns well with the job requirements. The Data Analyst role, while less directly relevant, still involves skills like SQL and Tableau that are useful in a data-driven environment.\",\n     \"formula\": \"relevant_years = (3.67 * 0.9) + (1.67 * 0.6) = 3.303 + 1.002 = 4.305, Score = min(1.0, 4.305/3) = 0.835\",\n     \"total_years\": 5.67,\n     \"relevant_years\": 4.305,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Senior Data Scientist\",\n         \"years\": 3.67,\n         \"relevance\": 0.9,\n         \"relevance_reasoning\": \"Highly relevant due to involvement in NLP, data workflow management, and predictive modeling.\"\n       },\n       {\n         \"role\": \"Data Analyst\",\n         \"years\": 1.67,\n         \"relevance\": 0.6,\n         \"relevance_reasoning\": \"Less directly relevant but still involves useful data analysis skills.\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate's domains include AI/ML, Data Science, Predictive Modeling, NLP, and Business Intelligence, which are highly relevant to the job requirements of working with AI applications and GenAI workflows.\",\n     \"formula\": \"domain_matches/total_required_domains = 4/5 = 0.8, adjusted for high relevance of matched domains to 0.9\"\n   },\n   \"overall_assessment\": \"The candidate, Priya Sharma, has a strong background in AI/ML and data science, with relevant experience and skills that align well with the job requirements. However, there are some gaps in direct experience with GenAI workflows and customer success for SaaS, which might require additional training or support.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has Python, which matches the proficiency in Python requirement. Additionally, the candidate's experience with APIs (through skills like REST) and integration tools (like Airflow) aligns with the job requirements. However, the candidate lacks direct experience with GenAI workflows and customer success for SaaS, but has skills in NLP and data science that can be semantically matched to some requirements.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (4/5) * 0.7 + (3/4) * 0.3 = 0.7 * 0.8 + 0.3 * 0.75 = 0.56 + 0.225 = 0.785, adjusted for missing skills to 0.85",
+      "matched_skills": [
+        "Python",
+        "Airflow",
+        "NLP",
+        "APIs (through REST)"
+      ],
+      "missing_skills": [
+        "Direct GenAI workflow experience",
+        "Customer success for SaaS"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has a total of 5.67 years of experience, with 3.67 years as a Senior Data Scientist and 1.67 years as a Data Analyst. The Senior Data Scientist role is highly relevant, involving the development of customer churn models, NLP sentiment analysis, and managing data workflows, which aligns well with the job requirements. The Data Analyst role, while less directly relevant, still involves skills like SQL and Tableau that are useful in a data-driven environment.",
+      "formula": "relevant_years = (3.67 * 0.9) + (1.67 * 0.6) = 3.303 + 1.002 = 4.305, Score = min(1.0, 4.305/3) = 0.835",
+      "total_years": 5.67,
+      "relevant_years": 4.305,
+      "experience_breakdown": [
+        {
+          "role": "Senior Data Scientist",
+          "years": 3.67,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to involvement in NLP, data workflow management, and predictive modeling."
+        },
+        {
+          "role": "Data Analyst",
+          "years": 1.67,
+          "relevance": 0.6,
+          "relevance_reasoning": "Less directly relevant but still involves useful data analysis skills."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate's domains include AI/ML, Data Science, Predictive Modeling, NLP, and Business Intelligence, which are highly relevant to the job requirements of working with AI applications and GenAI workflows.",
+      "formula": "domain_matches/total_required_domains = 4/5 = 0.8, adjusted for high relevance of matched domains to 0.9"
+    },
+    "overall_assessment": "The candidate, Priya Sharma, has a strong background in AI/ML and data science, with relevant experience and skills that align well with the job requirements. However, there are some gaps in direct experience with GenAI workflows and customer success for SaaS, which might require additional training or support."
+  }
+}

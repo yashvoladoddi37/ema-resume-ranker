@@ -1,0 +1,48 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.55,\n     \"reasoning\": \"The candidate has Python, which matches the JD requirement for strong proficiency in Python. Additionally, the candidate has experience with APIs (JSON, REST, SOAP) through their work with REST APIs and integration with Stripe. However, the candidate lacks direct experience with GenAI workflows, logging tools, and alerting tools beyond CloudWatch and DataDog.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (2/5) * 0.7 + (2/3) * 0.3 = 0.55\",\n     \"matched_skills\": [\n       \"Python\",\n       \"REST\"\n     ],\n     \"missing_skills\": [\n       \"GenAI workflows\",\n       \"logging tools\",\n       \"alerting tools\",\n       \"SOAP\",\n       \"JSON\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.35,\n     \"reasoning\": \"The candidate has a total of 4.5 years of experience but lacks direct experience in AI/GenAI, SaaS, technical support, or customer success. Their experience as a Full-Stack Developer and Web Developer has some relevance, particularly in terms of working with APIs and troubleshooting.\",\n     \"formula\": \"relevant_years = (4.75 * 0.2) + (1.75 * 0.1) = 0.95 + 0.175 = 1.125. Score = min(1.0, 1.125/3) = 0.375, adjusted for relevance to 0.35\",\n     \"total_years\": 4.5,\n     \"relevant_years\": 1.125,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Full-Stack Developer\",\n         \"years\": 4.75,\n         \"relevance\": 0.2,\n         \"relevance_reasoning\": \"Some relevance due to API work and troubleshooting\"\n       },\n       {\n         \"role\": \"Web Developer\",\n         \"years\": 1.75,\n         \"relevance\": 0.1,\n         \"relevance_reasoning\": \"Limited relevance, mostly web development\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.2,\n     \"reasoning\": \"The candidate's domains are mostly unrelated to AI/GenAI and customer-facing roles, with the exception of some experience that could be tangentially related to integration and troubleshooting.\",\n     \"formula\": \"domain_matches/total_required_domains = 0/3 = 0, adjusted for some tangential experience to 0.2\"\n   },\n   \"overall_assessment\": \"The candidate has some relevant skills and experience but lacks direct experience in AI/GenAI, SaaS, technical support, or customer success, making them a less strong fit for the role.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.55,
+      "reasoning": "The candidate has Python, which matches the JD requirement for strong proficiency in Python. Additionally, the candidate has experience with APIs (JSON, REST, SOAP) through their work with REST APIs and integration with Stripe. However, the candidate lacks direct experience with GenAI workflows, logging tools, and alerting tools beyond CloudWatch and DataDog.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (2/5) * 0.7 + (2/3) * 0.3 = 0.55",
+      "matched_skills": [
+        "Python",
+        "REST"
+      ],
+      "missing_skills": [
+        "GenAI workflows",
+        "logging tools",
+        "alerting tools",
+        "SOAP",
+        "JSON"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.35,
+      "reasoning": "The candidate has a total of 4.5 years of experience but lacks direct experience in AI/GenAI, SaaS, technical support, or customer success. Their experience as a Full-Stack Developer and Web Developer has some relevance, particularly in terms of working with APIs and troubleshooting.",
+      "formula": "relevant_years = (4.75 * 0.2) + (1.75 * 0.1) = 0.95 + 0.175 = 1.125. Score = min(1.0, 1.125/3) = 0.375, adjusted for relevance to 0.35",
+      "total_years": 4.5,
+      "relevant_years": 1.125,
+      "experience_breakdown": [
+        {
+          "role": "Full-Stack Developer",
+          "years": 4.75,
+          "relevance": 0.2,
+          "relevance_reasoning": "Some relevance due to API work and troubleshooting"
+        },
+        {
+          "role": "Web Developer",
+          "years": 1.75,
+          "relevance": 0.1,
+          "relevance_reasoning": "Limited relevance, mostly web development"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.2,
+      "reasoning": "The candidate's domains are mostly unrelated to AI/GenAI and customer-facing roles, with the exception of some experience that could be tangentially related to integration and troubleshooting.",
+      "formula": "domain_matches/total_required_domains = 0/3 = 0, adjusted for some tangential experience to 0.2"
+    },
+    "overall_assessment": "The candidate has some relevant skills and experience but lacks direct experience in AI/GenAI, SaaS, technical support, or customer success, making them a less strong fit for the role."
+  }
+}

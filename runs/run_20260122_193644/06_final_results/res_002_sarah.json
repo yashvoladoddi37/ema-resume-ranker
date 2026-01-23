@@ -1,0 +1,112 @@
+{
+  "id": "res_002_sarah",
+  "candidate_name": "SARAH JOHNSON",
+  "final_score": 0.81,
+  "parsed_data": {
+    "candidate_name": "SARAH JOHNSON",
+    "skills": [
+      "Python",
+      "SQL",
+      "Bash",
+      "AWS",
+      "DataDog",
+      "Grafana",
+      "PagerDuty",
+      "Jenkins",
+      "Salesforce",
+      "HubSpot",
+      "Zendesk APIs"
+    ],
+    "total_years_experience": 7.0,
+    "experience": [
+      {
+        "title": "Technical Support Lead",
+        "company": "CloudSync Solutions",
+        "duration_years": 4.0,
+        "start_date": "January 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Lead a team of 5 engineers resolving Tier 3 support tickets for enterprise clients",
+          "Diagnosed and fixed hundreds of API configuration problems involving Salesforce and Zendesk integrations",
+          "Built internal dashboards using Python and SQL to monitor API health"
+        ]
+      },
+      {
+        "title": "Customer Success Engineer",
+        "company": "DataFlow Inc",
+        "duration_years": 2.75,
+        "start_date": "March 2018",
+        "end_date": "December 2020",
+        "key_responsibilities": [
+          "Managed technical onboarding for top-tier SaaS customers",
+          "Reduced churn by 15% through proactive technical account management"
+        ]
+      },
+      {
+        "title": "Technical Support Engineer",
+        "company": "WebStack",
+        "duration_years": 0.67,
+        "start_date": "June 2017",
+        "end_date": "February 2018",
+        "key_responsibilities": [
+          "Provided 24/7 support for cloud hosting platform issues"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "M.S. in Computer Science",
+      "field": "Computer Science",
+      "institution": "Stanford University"
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Cloud Infrastructure",
+      "Customer Support",
+      "API Integration"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.8,
+      "reasoning": "The candidate has proficiency in Python, APIs, and experience with integration tools like Salesforce and Zendesk, which are crucial for the role. However, the candidate lacks direct experience with GenAI, ML performance diagnosis, and specific logging tools mentioned in the job description.",
+      "matched_skills": [
+        "Python",
+        "APIs",
+        "Salesforce",
+        "Zendesk APIs"
+      ],
+      "missing_skills": [
+        "GenAI",
+        "ML performance diagnosis",
+        "SOAP"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.9,
+      "reasoning": "The candidate has a total of 7 years of experience, with 4 years as a Technical Support Lead and 2.75 years as a Customer Success Engineer, which exceeds the required 3+ years of experience in technical support or customer success for SaaS. The relevance of the experience is also high, given the candidate's background in API configuration, integration, and customer-facing roles."
+    },
+    "domain_fit": {
+      "score": 0.7,
+      "reasoning": "The candidate's background in SaaS, cloud infrastructure, customer support, and API integration aligns well with the role of an AI Applications Engineer, although direct experience in AI/ML is lacking. The candidate's experience in technical support and customer success also demonstrates an ability to work in a customer-facing role, which is beneficial for the position."
+    },
+    "overall_assessment": "Sarah Johnson is a strong candidate for the AI Applications Engineer role, with a good balance of technical skills, relevant experience, and domain alignment, although some additional training in GenAI and ML performance diagnosis may be necessary."
+  },
+  "weights": {
+    "skill_match": 0.5,
+    "experience_depth": 0.3,
+    "domain_fit": 0.2
+  },
+  "matched_skills": [
+    "Python",
+    "APIs",
+    "Salesforce",
+    "Zendesk APIs"
+  ],
+  "missing_skills": [
+    "GenAI",
+    "ML performance diagnosis",
+    "SOAP"
+  ],
+  "processing_time_seconds": 2.67
+}

@@ -1,0 +1,67 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"SARAH JOHNSON\",\n   \"skills\": [\n       \"Python\",\n       \"SQL\",\n       \"Bash\",\n       \"AWS\",\n       \"DataDog\",\n       \"Grafana\",\n       \"PagerDuty\",\n       \"Jenkins\",\n       \"Salesforce\",\n       \"HubSpot\",\n       \"Zendesk APIs\"\n   ],\n   \"total_years_experience\": 8.5,\n   \"experience\": [\n       {\n           \"title\": \"Technical Support Lead\",\n           \"company\": \"CloudSync Solutions\",\n           \"duration_years\": 5.0,\n           \"start_date\": \"January 2021\",\n           \"end_date\": \"January 2026\",\n           \"key_responsibilities\": [\n               \"Lead a team of 5 engineers resolving Tier 3 support tickets for enterprise clients\",\n               \"Diagnosed and fixed hundreds of API configuration problems involving Salesforce and Zendesk integrations\",\n               \"Built internal dashboards using Python and SQL to monitor API health\"\n           ]\n       },\n       {\n           \"title\": \"Customer Success Engineer\",\n           \"company\": \"DataFlow Inc\",\n           \"duration_years\": 2.75,\n           \"start_date\": \"March 2018\",\n           \"end_date\": \"December 2020\",\n           \"key_responsibilities\": [\n               \"Managed technical onboarding for top-tier SaaS customers\",\n               \"Reduced churn by 15% through proactive technical account management\"\n           ]\n       },\n       {\n           \"title\": \"Technical Support Engineer\",\n           \"company\": \"WebStack\",\n           \"duration_years\": 0.67,\n           \"start_date\": \"June 2017\",\n           \"end_date\": \"February 2018\",\n           \"key_responsibilities\": [\n               \"Provided 24/7 support for cloud hosting platform issues\"\n           ]\n       }\n   ],\n   \"education\": {\n       \"degree\": \"M.S. in Computer Science\",\n       \"field\": \"Computer Science\",\n       \"institution\": \"Stanford University\"\n   },\n   \"certifications\": [],\n   \"domains\": [\n       \"SaaS\",\n       \"Cloud Infrastructure\",\n       \"Customer Support\",\n       \"API Integration\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "SARAH JOHNSON",
+    "skills": [
+      "Python",
+      "SQL",
+      "Bash",
+      "AWS",
+      "DataDog",
+      "Grafana",
+      "PagerDuty",
+      "Jenkins",
+      "Salesforce",
+      "HubSpot",
+      "Zendesk APIs"
+    ],
+    "total_years_experience": 8.5,
+    "experience": [
+      {
+        "title": "Technical Support Lead",
+        "company": "CloudSync Solutions",
+        "duration_years": 5.0,
+        "start_date": "January 2021",
+        "end_date": "January 2026",
+        "key_responsibilities": [
+          "Lead a team of 5 engineers resolving Tier 3 support tickets for enterprise clients",
+          "Diagnosed and fixed hundreds of API configuration problems involving Salesforce and Zendesk integrations",
+          "Built internal dashboards using Python and SQL to monitor API health"
+        ]
+      },
+      {
+        "title": "Customer Success Engineer",
+        "company": "DataFlow Inc",
+        "duration_years": 2.75,
+        "start_date": "March 2018",
+        "end_date": "December 2020",
+        "key_responsibilities": [
+          "Managed technical onboarding for top-tier SaaS customers",
+          "Reduced churn by 15% through proactive technical account management"
+        ]
+      },
+      {
+        "title": "Technical Support Engineer",
+        "company": "WebStack",
+        "duration_years": 0.67,
+        "start_date": "June 2017",
+        "end_date": "February 2018",
+        "key_responsibilities": [
+          "Provided 24/7 support for cloud hosting platform issues"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "M.S. in Computer Science",
+      "field": "Computer Science",
+      "institution": "Stanford University"
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Cloud Infrastructure",
+      "Customer Support",
+      "API Integration"
+    ]
+  }
+}

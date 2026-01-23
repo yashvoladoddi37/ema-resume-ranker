@@ -1,0 +1,122 @@
+{
+  "id": "res_004_david",
+  "candidate_name": "David Kim",
+  "final_score": 0.832,
+  "parsed_data": {
+    "candidate_name": "David Kim",
+    "skills": [
+      "Go",
+      "Python",
+      "SQL",
+      "REST",
+      "SOAP",
+      "Webhooks",
+      "AWS",
+      "S3",
+      "RDS",
+      "Prometheus",
+      "Kibana",
+      "Splunk",
+      "Git",
+      "Docker",
+      "Kubernetes"
+    ],
+    "total_years_experience": 5.0,
+    "experience": [
+      {
+        "title": "Integration Engineer",
+        "company": "DataBridge",
+        "duration_years": 4.0,
+        "start_date": "February 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Troubleshoot produce issues related to complex API syncs",
+          "Diagnose performance bottlenecks in distributed data pipelines",
+          "Built monitoring alerts for API uptime and data latency"
+        ]
+      },
+      {
+        "title": "Backend Developer",
+        "company": "Core Systems",
+        "duration_years": 1.5,
+        "start_date": "July 2019",
+        "end_date": "January 2021",
+        "key_responsibilities": [
+          "Developed REST services and database schemas for SaaS platform",
+          "Integrated with various ATS and CRM tools via webhooks"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Computer Science",
+      "institution": "Seattle University"
+    },
+    "certifications": [],
+    "domains": [
+      "Cloud Infrastructure",
+      "SaaS",
+      "API Integration"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including Python, REST, and SOAP, as well as experience with APIs and integration tools. However, they lack direct experience with GenAI workflows.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (4/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "REST",
+        "SOAP",
+        "APIs",
+        "Webhooks"
+      ],
+      "missing_skills": [
+        "GenAI workflows"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has 5 years of experience, with 4 years as an Integration Engineer and 1.5 years as a Backend Developer. Both roles have high relevance to the job description, with experience in API integration, troubleshooting, and SaaS platforms.",
+      "formula": "relevant_years = (4 * 0.9) + (1.5 * 0.8) = 3.6 + 1.2 = 4.8. Score = min(1.0, 4.8/3) = 0.83",
+      "total_years": 5.0,
+      "relevant_years": 4.8,
+      "experience_breakdown": [
+        {
+          "role": "Integration Engineer",
+          "years": 4.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to experience with API integration and troubleshooting."
+        },
+        {
+          "role": "Backend Developer",
+          "years": 1.5,
+          "relevance": 0.8,
+          "relevance_reasoning": "Relevant due to experience with SaaS platforms and API development."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate has experience in SaaS, API integration, and cloud infrastructure, which are related to the job description. However, they lack direct experience in AI/ML.",
+      "formula": "domain_matches/total_required_domains = 2/3 = 0.67, adjusted for relevance = 0.8"
+    },
+    "overall_assessment": "The candidate has a strong technical background and relevant experience, but may require some training in GenAI workflows. Overall, they are a good fit for the role."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "Python",
+    "REST",
+    "SOAP",
+    "APIs",
+    "Webhooks"
+  ],
+  "missing_skills": [
+    "GenAI workflows"
+  ],
+  "processing_time_seconds": 13.02
+}

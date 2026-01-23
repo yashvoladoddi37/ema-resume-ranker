@@ -10,9 +10,10 @@ web applications. Expert in frontend and backend technologies.
 
 EXPERIENCE
 ----------
-Software Developer | WebBuild | 2022 - Present
+Software Developer | WebBuild | March 2022 - Present
 • Built React frontends and Node.js backends.
 • Integrated REST APIs for e-commerce platforms. (3 years)
+
 
 SKILLS
 ------

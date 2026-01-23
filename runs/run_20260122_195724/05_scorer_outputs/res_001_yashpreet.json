@@ -1,0 +1,54 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.85,\n     \"reasoning\": \"The candidate has most of the required skills, including proficiency in Python, RESTful API, and experience with APIs. However, they lack direct experience with troubleshooting production issues and diagnosing ML performance.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (4/4) * 0.3 = 0.85\",\n     \"matched_skills\": [\n       \"Python\",\n       \"RESTful API\",\n       \"APIs\",\n       \"LangChain\",\n       \"Prompt Engineering\"\n     ],\n     \"missing_skills\": [\n       \"troubleshooting production issues\",\n       \"diagnosing ML performance\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.55,\n     \"reasoning\": \"The candidate has a total of 1.75 years of experience, with 1.25 years being relevant to the job description. Although they have experience in AI/GenAI and SaaS, the relevance score is not high due to the lack of direct experience in technical support or customer success.\",\n     \"formula\": \"relevant_years = (0.5 * 0.8) + (0.75 * 0.7) + (0.5 * 0.6) = 0.4 + 0.525 + 0.3 = 1.225. Score = min(1.0, 1.225/3) = 0.55\",\n     \"total_years\": 1.75,\n     \"relevant_years\": 1.225,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"SDE & AI Engineer\",\n         \"years\": 0.5,\n         \"relevance\": 0.8,\n         \"relevance_reasoning\": \"Involved AI/GenAI and SaaS, but not technical support or customer success\"\n       },\n       {\n         \"role\": \"AI Engineer\",\n         \"years\": 0.75,\n         \"relevance\": 0.7,\n         \"relevance_reasoning\": \"Involved AI/GenAI and SaaS, with some experience in integrations\"\n       },\n       {\n         \"role\": \"Backend AI Intern\",\n         \"years\": 0.5,\n         \"relevance\": 0.6,\n         \"relevance_reasoning\": \"Involved AI/GenAI, but limited experience in SaaS or technical support\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate has experience in AI/ML and SaaS, which are highly relevant to the job description.\",\n     \"formula\": \"domain_matches/total_required_domains = 2/2 = 1.0. However, considering the candidate's experience in customer-facing roles is limited, the score is adjusted to 0.9\"\n   },\n   \"overall_assessment\": \"The candidate has a strong skill set and domain fit, but lacks experience in technical support or customer success. With some training and development, they could be a good fit for the role.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including proficiency in Python, RESTful API, and experience with APIs. However, they lack direct experience with troubleshooting production issues and diagnosing ML performance.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (4/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "RESTful API",
+        "APIs",
+        "LangChain",
+        "Prompt Engineering"
+      ],
+      "missing_skills": [
+        "troubleshooting production issues",
+        "diagnosing ML performance"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.55,
+      "reasoning": "The candidate has a total of 1.75 years of experience, with 1.25 years being relevant to the job description. Although they have experience in AI/GenAI and SaaS, the relevance score is not high due to the lack of direct experience in technical support or customer success.",
+      "formula": "relevant_years = (0.5 * 0.8) + (0.75 * 0.7) + (0.5 * 0.6) = 0.4 + 0.525 + 0.3 = 1.225. Score = min(1.0, 1.225/3) = 0.55",
+      "total_years": 1.75,
+      "relevant_years": 1.225,
+      "experience_breakdown": [
+        {
+          "role": "SDE & AI Engineer",
+          "years": 0.5,
+          "relevance": 0.8,
+          "relevance_reasoning": "Involved AI/GenAI and SaaS, but not technical support or customer success"
+        },
+        {
+          "role": "AI Engineer",
+          "years": 0.75,
+          "relevance": 0.7,
+          "relevance_reasoning": "Involved AI/GenAI and SaaS, with some experience in integrations"
+        },
+        {
+          "role": "Backend AI Intern",
+          "years": 0.5,
+          "relevance": 0.6,
+          "relevance_reasoning": "Involved AI/GenAI, but limited experience in SaaS or technical support"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate has experience in AI/ML and SaaS, which are highly relevant to the job description.",
+      "formula": "domain_matches/total_required_domains = 2/2 = 1.0. However, considering the candidate's experience in customer-facing roles is limited, the score is adjusted to 0.9"
+    },
+    "overall_assessment": "The candidate has a strong skill set and domain fit, but lacks experience in technical support or customer success. With some training and development, they could be a good fit for the role."
+  }
+}

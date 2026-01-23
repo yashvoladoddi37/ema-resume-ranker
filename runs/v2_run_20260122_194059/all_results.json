@@ -1,0 +1,402 @@
+[
+  {
+    "final_score": 0.656,
+    "deterministic_score": 0.663,
+    "semantic_score": 0.6382161378860474,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.568,
+      "ai_relevance_score": 0.486,
+      "support_relevance_score": 0.694,
+      "deterministic_final": 0.663,
+      "semantic_similarity": 0.638
+    },
+    "extracts": {
+      "years_experience": 19,
+      "matched_required_skills": [
+        "technical support",
+        "python",
+        "api",
+        "production",
+        "troubleshooting",
+        "saas"
+      ],
+      "matched_preferred_skills": [
+        "llm",
+        "genai"
+      ],
+      "missing_required_skills": [
+        "rest",
+        "json"
+      ]
+    },
+    "candidate_id": "res_test_A",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.633,
+    "deterministic_score": 0.618,
+    "semantic_score": 0.6686887145042419,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.545,
+      "ai_relevance_score": 1.0,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.618,
+      "semantic_similarity": 0.669
+    },
+    "extracts": {
+      "years_experience": 14,
+      "matched_required_skills": [
+        "json",
+        "python",
+        "api",
+        "production",
+        "rest"
+      ],
+      "matched_preferred_skills": [
+        "prompt engineering",
+        "langchain",
+        "genai",
+        "integration",
+        "llm"
+      ],
+      "missing_required_skills": [
+        "technical support",
+        "saas",
+        "troubleshooting"
+      ]
+    },
+    "candidate_id": "res_003_maya",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.52,
+    "deterministic_score": 0.514,
+    "semantic_score": 0.5331243276596069,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.568,
+      "ai_relevance_score": 0.0,
+      "support_relevance_score": 0.435,
+      "deterministic_final": 0.514,
+      "semantic_similarity": 0.533
+    },
+    "extracts": {
+      "years_experience": 22,
+      "matched_required_skills": [
+        "technical support",
+        "python",
+        "api",
+        "production",
+        "troubleshooting",
+        "saas"
+      ],
+      "matched_preferred_skills": [
+        "aws",
+        "integration"
+      ],
+      "missing_required_skills": [
+        "rest",
+        "json"
+      ]
+    },
+    "candidate_id": "res_002_sarah",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.512,
+    "deterministic_score": 0.497,
+    "semantic_score": 0.545479416847229,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.304,
+      "ai_relevance_score": 0.876,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.497,
+      "semantic_similarity": 0.545
+    },
+    "extracts": {
+      "years_experience": 6.0,
+      "matched_required_skills": [
+        "python",
+        "api"
+      ],
+      "matched_preferred_skills": [
+        "prompt engineering",
+        "ml",
+        "langchain",
+        "aws",
+        "llm",
+        "crm"
+      ],
+      "missing_required_skills": [
+        "json",
+        "technical support",
+        "production",
+        "troubleshooting",
+        "rest",
+        "saas"
+      ]
+    },
+    "candidate_id": "res_001_yashpreet",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.477,
+    "deterministic_score": 0.434,
+    "semantic_score": 0.5771259069442749,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.545,
+      "ai_relevance_score": 0.0,
+      "support_relevance_score": 0.081,
+      "deterministic_final": 0.434,
+      "semantic_similarity": 0.577
+    },
+    "extracts": {
+      "years_experience": 16,
+      "matched_required_skills": [
+        "python",
+        "api",
+        "troubleshooting",
+        "rest",
+        "saas"
+      ],
+      "matched_preferred_skills": [
+        "crm",
+        "soap",
+        "integration",
+        "aws",
+        "ats"
+      ],
+      "missing_required_skills": [
+        "technical support",
+        "json",
+        "production"
+      ]
+    },
+    "candidate_id": "res_004_david",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.4,
+    "deterministic_score": 0.399,
+    "semantic_score": 0.403944194316864,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.175,
+      "ai_relevance_score": 0.215,
+      "support_relevance_score": 0.43,
+      "deterministic_final": 0.399,
+      "semantic_similarity": 0.404
+    },
+    "extracts": {
+      "years_experience": 10.0,
+      "matched_required_skills": [
+        "technical support",
+        "troubleshooting"
+      ],
+      "matched_preferred_skills": [],
+      "missing_required_skills": [
+        "json",
+        "python",
+        "api",
+        "production",
+        "rest",
+        "saas"
+      ]
+    },
+    "candidate_id": "res_010_elena",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.396,
+    "deterministic_score": 0.341,
+    "semantic_score": 0.5237289071083069,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.175,
+      "ai_relevance_score": 0.235,
+      "support_relevance_score": 0.118,
+      "deterministic_final": 0.341,
+      "semantic_similarity": 0.524
+    },
+    "extracts": {
+      "years_experience": 11,
+      "matched_required_skills": [
+        "rest",
+        "api"
+      ],
+      "matched_preferred_skills": [],
+      "missing_required_skills": [
+        "json",
+        "technical support",
+        "python",
+        "production",
+        "troubleshooting",
+        "saas"
+      ]
+    },
+    "candidate_id": "res_test_B",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.392,
+    "deterministic_score": 0.356,
+    "semantic_score": 0.4756220579147339,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.284,
+      "ai_relevance_score": 0.105,
+      "support_relevance_score": 0.105,
+      "deterministic_final": 0.356,
+      "semantic_similarity": 0.476
+    },
+    "extracts": {
+      "years_experience": 14,
+      "matched_required_skills": [
+        "api",
+        "saas",
+        "troubleshooting"
+      ],
+      "matched_preferred_skills": [
+        "crm"
+      ],
+      "missing_required_skills": [
+        "json",
+        "technical support",
+        "python",
+        "production",
+        "rest"
+      ]
+    },
+    "candidate_id": "res_007_sam",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.383,
+    "deterministic_score": 0.331,
+    "semantic_score": 0.5031543970108032,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.13,
+      "ai_relevance_score": 0.396,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.331,
+      "semantic_similarity": 0.503
+    },
+    "extracts": {
+      "years_experience": 12,
+      "matched_required_skills": [
+        "python"
+      ],
+      "matched_preferred_skills": [
+        "aws",
+        "ml"
+      ],
+      "missing_required_skills": [
+        "json",
+        "technical support",
+        "api",
+        "production",
+        "troubleshooting",
+        "rest",
+        "saas"
+      ]
+    },
+    "candidate_id": "res_006_priya",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.332,
+    "deterministic_score": 0.288,
+    "semantic_score": 0.43564388155937195,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.175,
+      "ai_relevance_score": 0.091,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.288,
+      "semantic_similarity": 0.436
+    },
+    "extracts": {
+      "years_experience": 15,
+      "matched_required_skills": [
+        "python",
+        "rest"
+      ],
+      "matched_preferred_skills": [],
+      "missing_required_skills": [
+        "json",
+        "technical support",
+        "api",
+        "production",
+        "troubleshooting",
+        "saas"
+      ]
+    },
+    "candidate_id": "res_005_mike",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.295,
+    "deterministic_score": 0.287,
+    "semantic_score": 0.31526249647140503,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.0,
+      "ai_relevance_score": 0.435,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.287,
+      "semantic_similarity": 0.315
+    },
+    "extracts": {
+      "years_experience": 9,
+      "matched_required_skills": [],
+      "matched_preferred_skills": [],
+      "missing_required_skills": [
+        "json",
+        "technical support",
+        "python",
+        "api",
+        "production",
+        "troubleshooting",
+        "rest",
+        "saas"
+      ]
+    },
+    "candidate_id": "res_008_jordan",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.253,
+    "deterministic_score": 0.2,
+    "semantic_score": 0.37732386589050293,
+    "breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.0,
+      "ai_relevance_score": 0.0,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.2,
+      "semantic_similarity": 0.377
+    },
+    "extracts": {
+      "years_experience": 11,
+      "matched_required_skills": [],
+      "matched_preferred_skills": [],
+      "missing_required_skills": [
+        "json",
+        "technical support",
+        "python",
+        "api",
+        "production",
+        "troubleshooting",
+        "rest",
+        "saas"
+      ]
+    },
+    "candidate_id": "res_009_james",
+    "candidate_name": "unknown"
+  }
+]

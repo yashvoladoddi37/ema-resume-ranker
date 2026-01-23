@@ -1,0 +1,46 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.85,\n     \"reasoning\": \"The candidate has most of the required skills, including proficiency in Python, APIs (REST, SOAP), and experience with logging and alerting tools (Prometheus). However, the candidate lacks direct experience with GenAI workflows.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85\",\n     \"matched_skills\": [\n       \"Python\",\n       \"REST\",\n       \"SOAP\",\n       \"Prometheus\"\n     ],\n     \"missing_skills\": [\n       \"GenAI workflows\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.83,\n     \"reasoning\": \"The candidate has a total of 5 years of experience, with 4 years as an Integration Engineer and 1.5 years as a Backend Developer. The Integration Engineer role is highly relevant, with a relevance score of 0.9, while the Backend Developer role has a relevance score of 0.7.\",\n     \"formula\": \"relevant_years = (4 * 0.9) + (1.5 * 0.7) = 3.6 + 1.05 = 4.65. Score = min(1.0, 4.65/3) = 0.83\",\n     \"total_years\": 5.0,\n     \"relevant_years\": 4.65,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Integration Engineer\",\n         \"years\": 4.0,\n         \"relevance\": 0.9,\n         \"relevance_reasoning\": \"Highly relevant due to experience with API integrations and troubleshooting.\"\n       },\n       {\n         \"role\": \"Backend Developer\",\n         \"years\": 1.5,\n         \"relevance\": 0.7,\n         \"relevance_reasoning\": \"Moderately relevant due to experience with REST services and database schemas.\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.8,\n     \"reasoning\": \"The candidate has experience in SaaS and API integration, which are related to the required domains of AI/ML and customer-facing technologies.\",\n     \"formula\": \"domain_matches/total_required_domains = 2/3 = 0.67, adjusted for moderate relevance = 0.8\"\n   },\n   \"overall_assessment\": \"The candidate is a strong fit for the AI Applications Engineer role, with a high level of skill matching and experience depth. However, the candidate may require some training in GenAI workflows to fully meet the job requirements.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including proficiency in Python, APIs (REST, SOAP), and experience with logging and alerting tools (Prometheus). However, the candidate lacks direct experience with GenAI workflows.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "REST",
+        "SOAP",
+        "Prometheus"
+      ],
+      "missing_skills": [
+        "GenAI workflows"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has a total of 5 years of experience, with 4 years as an Integration Engineer and 1.5 years as a Backend Developer. The Integration Engineer role is highly relevant, with a relevance score of 0.9, while the Backend Developer role has a relevance score of 0.7.",
+      "formula": "relevant_years = (4 * 0.9) + (1.5 * 0.7) = 3.6 + 1.05 = 4.65. Score = min(1.0, 4.65/3) = 0.83",
+      "total_years": 5.0,
+      "relevant_years": 4.65,
+      "experience_breakdown": [
+        {
+          "role": "Integration Engineer",
+          "years": 4.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to experience with API integrations and troubleshooting."
+        },
+        {
+          "role": "Backend Developer",
+          "years": 1.5,
+          "relevance": 0.7,
+          "relevance_reasoning": "Moderately relevant due to experience with REST services and database schemas."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate has experience in SaaS and API integration, which are related to the required domains of AI/ML and customer-facing technologies.",
+      "formula": "domain_matches/total_required_domains = 2/3 = 0.67, adjusted for moderate relevance = 0.8"
+    },
+    "overall_assessment": "The candidate is a strong fit for the AI Applications Engineer role, with a high level of skill matching and experience depth. However, the candidate may require some training in GenAI workflows to fully meet the job requirements."
+  }
+}

@@ -11,19 +11,20 @@ APIs, cloud infrastructure, and data integration issues.
 
 EXPERIENCE
 ----------
-Technical Support Lead | CloudSync Solutions | 2021 - Present
+Technical Support Lead | CloudSync Solutions | March 2021 - Present
 • Lead a team of 5 engineers resolving Tier 3 support tickets for 
   enterprise clients.
 • Diagnosed and fixed hundreds of API configuration problems involving 
   Salesforce and Zendesk integrations.
 • Built internal dashboards using Python and SQL to monitor API health.
 
-Customer Success Engineer | DataFlow Inc | 2018 - 2021
+Customer Success Engineer | DataFlow Inc | June 2018 - February 2021
 • Managed technical onboarding for top-tier SaaS customers.
 • Reduced churn by 15% through proactive technical account management.
 
-Technical Support Engineer | WebStack | 2017 - 2018
+Technical Support Engineer | WebStack | August 2017 - May 2018
 • Provided 24/7 support for cloud hosting platform issues.
+
 
 SKILLS
 ------

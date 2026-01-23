@@ -1,0 +1,119 @@
+{
+  "id": "res_010_elena",
+  "candidate_name": "ELENA CASTRO",
+  "final_score": 0.275,
+  "parsed_data": {
+    "candidate_name": "ELENA CASTRO",
+    "skills": [
+      "Wireshark",
+      "Nagios",
+      "Splunk",
+      "Active Directory",
+      "System Administration",
+      "Customer Service",
+      "Troubleshooting",
+      "Network Analysis"
+    ],
+    "total_years_experience": 4.5,
+    "experience": [
+      {
+        "title": "IT Support Associate",
+        "company": "TechHelp 24/7",
+        "duration_years": 4.5,
+        "start_date": "June 2020",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Resolved hardware and software issues for remote employees",
+          "Managed user accounts in Active Directory"
+        ]
+      },
+      {
+        "title": "Customer Service Representative",
+        "company": "Retail Solutions",
+        "duration_years": 1.75,
+        "start_date": "August 2018",
+        "end_date": "May 2020",
+        "key_responsibilities": [
+          "Assisted customers with order tracking and basic troubleshooting"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "A.S.",
+      "field": "Information Technology",
+      "institution": "Community College of Philadelphia"
+    },
+    "certifications": [],
+    "domains": [
+      "Customer Support",
+      "IT Support",
+      "System Administration"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.2,
+      "reasoning": "The candidate has some skills that match the job description, such as troubleshooting and customer service, but lacks most of the required technical skills like Python, APIs, and GenAI workflows.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 0/7 * 0.7 + 2/4 * 0.3 = 0.2",
+      "matched_skills": [
+        "Troubleshooting",
+        "Customer Service"
+      ],
+      "missing_skills": [
+        "Python",
+        "APIs",
+        "GenAI workflows",
+        "logging tools",
+        "alerting tools",
+        "CRMs",
+        "ATS tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.3,
+      "reasoning": "The candidate has 4.5 years of experience, but most of it is not directly relevant to the job description. Only the IT Support Associate role has some relevance, but it's not a perfect match.",
+      "formula": "relevant_years = (4.5 * 0.2) + (1.75 * 0.1) = 0.9 + 0.175 = 1.075. Score = min(1.0, 1.075/3) = 0.358, rounded to 0.3 for simplicity",
+      "total_years": 6.25,
+      "relevant_years": 1.075,
+      "experience_breakdown": [
+        {
+          "role": "IT Support Associate",
+          "years": 4.5,
+          "relevance": 0.2,
+          "relevance_reasoning": "Some technical skills, but not directly related to AI/GenAI or SaaS"
+        },
+        {
+          "role": "Customer Service Representative",
+          "years": 1.75,
+          "relevance": 0.1,
+          "relevance_reasoning": "Customer-facing experience, but not technical"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.4,
+      "reasoning": "The candidate's domains are somewhat related to the job description, with customer support and IT support being relevant, but not a perfect match.",
+      "formula": "domain_matches/total_required_domains = 2/3 = 0.67, but considering the lack of direct AI/ML experience, adjusted to 0.4"
+    },
+    "overall_assessment": "The candidate has some relevant skills and experience, but lacks the required technical expertise and direct experience in AI/GenAI and SaaS, making them a less strong fit for the role."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "Troubleshooting",
+    "Customer Service"
+  ],
+  "missing_skills": [
+    "Python",
+    "APIs",
+    "GenAI workflows",
+    "logging tools",
+    "alerting tools",
+    "CRMs",
+    "ATS tools"
+  ],
+  "processing_time_seconds": 12.99
+}

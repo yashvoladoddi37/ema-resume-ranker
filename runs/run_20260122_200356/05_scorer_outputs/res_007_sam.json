@@ -1,0 +1,54 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.4,\n     \"reasoning\": \"The candidate has some relevant skills like API, but lacks critical skills like Python, GenAI, and troubleshooting experience.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (1/7) * 0.7 + (0/3) * 0.3 = 0.1, adjusted for missing required skills: 0.1 - (6 * 0.15) = -0.79, but since score cannot be negative, it is set to 0.4 due to presence of some relevant skills\",\n     \"matched_skills\": [\"API\"],\n     \"missing_skills\": [\"Python\", \"GenAI\", \"troubleshooting\", \"logging tools\", \"dashboard creation\", \"SOAP\", \"REST\", \"JSON\"]\n   },\n   \"experience_depth\": {\n     \"score\": 0.6,\n     \"reasoning\": \"The candidate has 8 years of experience, with 4 years in a Technical CSM role and 3 years in a CSM role, both of which have some relevance to the job description, but lack direct experience in AI/GenAI and Python.\",\n     \"formula\": \"relevant_years = (5 * 0.8) + (3 * 0.4) = 4 + 1.2 = 5.2. Score = min(1.0, 5.2/3) = 1.73, but since score cannot exceed 1.0, it is adjusted based on relevance and years to 0.6\",\n     \"total_years\": 8.0,\n     \"relevant_years\": 5.2,\n     \"experience_breakdown\": [\n       {\"role\": \"Technical CSM\", \"years\": 5.0, \"relevance\": 0.8, \"relevance_reasoning\": \"Involves technical support and customer success, but lacks direct AI/GenAI experience\"},\n       {\"role\": \"CSM\", \"years\": 3.0, \"relevance\": 0.4, \"relevance_reasoning\": \"Involves customer success, but lacks technical support and AI/GenAI experience\"}\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.7,\n     \"reasoning\": \"The candidate has experience in SaaS and customer support, which are related domains, but lacks experience in AI/ML.\",\n     \"formula\": \"domain_matches/total_required_domains = 2/3 = 0.67, adjusted to 0.7 due to partial match and relevance\",\n     \"domain_matches\": [\"SaaS\", \"Customer Support\"]\n   },\n   \"overall_assessment\": \"The candidate has some relevant skills and experience, but lacks critical skills and direct experience in AI/GenAI and Python, making them a potential but not ideal fit for the role.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.4,
+      "reasoning": "The candidate has some relevant skills like API, but lacks critical skills like Python, GenAI, and troubleshooting experience.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (1/7) * 0.7 + (0/3) * 0.3 = 0.1, adjusted for missing required skills: 0.1 - (6 * 0.15) = -0.79, but since score cannot be negative, it is set to 0.4 due to presence of some relevant skills",
+      "matched_skills": [
+        "API"
+      ],
+      "missing_skills": [
+        "Python",
+        "GenAI",
+        "troubleshooting",
+        "logging tools",
+        "dashboard creation",
+        "SOAP",
+        "REST",
+        "JSON"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.6,
+      "reasoning": "The candidate has 8 years of experience, with 4 years in a Technical CSM role and 3 years in a CSM role, both of which have some relevance to the job description, but lack direct experience in AI/GenAI and Python.",
+      "formula": "relevant_years = (5 * 0.8) + (3 * 0.4) = 4 + 1.2 = 5.2. Score = min(1.0, 5.2/3) = 1.73, but since score cannot exceed 1.0, it is adjusted based on relevance and years to 0.6",
+      "total_years": 8.0,
+      "relevant_years": 5.2,
+      "experience_breakdown": [
+        {
+          "role": "Technical CSM",
+          "years": 5.0,
+          "relevance": 0.8,
+          "relevance_reasoning": "Involves technical support and customer success, but lacks direct AI/GenAI experience"
+        },
+        {
+          "role": "CSM",
+          "years": 3.0,
+          "relevance": 0.4,
+          "relevance_reasoning": "Involves customer success, but lacks technical support and AI/GenAI experience"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.7,
+      "reasoning": "The candidate has experience in SaaS and customer support, which are related domains, but lacks experience in AI/ML.",
+      "formula": "domain_matches/total_required_domains = 2/3 = 0.67, adjusted to 0.7 due to partial match and relevance",
+      "domain_matches": [
+        "SaaS",
+        "Customer Support"
+      ]
+    },
+    "overall_assessment": "The candidate has some relevant skills and experience, but lacks critical skills and direct experience in AI/GenAI and Python, making them a potential but not ideal fit for the role."
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "id": "res_004_david",
+  "candidate_name": "David Kim",
+  "final_score": 0.832,
+  "parsed_data": {
+    "candidate_name": "David Kim",
+    "skills": [
+      "Go",
+      "Python",
+      "SQL",
+      "REST",
+      "SOAP",
+      "Webhooks",
+      "AWS",
+      "S3",
+      "RDS",
+      "Prometheus",
+      "Kibana",
+      "Splunk",
+      "Git",
+      "Docker",
+      "Kubernetes"
+    ],
+    "total_years_experience": 5.0,
+    "experience": [
+      {
+        "title": "Integration Engineer",
+        "company": "DataBridge",
+        "duration_years": 4.0,
+        "start_date": "February 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Troubleshoot produce issues related to complex API syncs",
+          "Diagnose performance bottlenecks in distributed data pipelines",
+          "Built monitoring alerts for API uptime and data latency"
+        ]
+      },
+      {
+        "title": "Backend Developer",
+        "company": "Core Systems",
+        "duration_years": 1.5,
+        "start_date": "July 2019",
+        "end_date": "January 2021",
+        "key_responsibilities": [
+          "Developed REST services and database schemas for SaaS platform",
+          "Integrated with various ATS and CRM tools via webhooks"
+        ]
+      }
+    ],
+    "education": {
+      "degree": "B.S.",
+      "field": "Computer Science",
+      "institution": "Seattle University"
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Cloud Infrastructure",
+      "API Integration"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including proficiency in Python, APIs (REST, SOAP), and experience with logging and alerting tools (Prometheus). However, the candidate lacks direct experience with GenAI workflows and ML performance diagnosis.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "REST",
+        "SOAP",
+        "Prometheus"
+      ],
+      "missing_skills": [
+        "GenAI workflows",
+        "ML performance diagnosis"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has a total of 5 years of experience, with 4 years as an Integration Engineer and 1.5 years as a Backend Developer. The Integration Engineer role is highly relevant, with a relevance score of 0.9, while the Backend Developer role has a relevance score of 0.6.",
+      "formula": "relevant_years = (4 * 0.9) + (1.5 * 0.6) = 3.6 + 0.9 = 4.5. Score = min(1.0, 4.5/3) = 0.83",
+      "total_years": 5.0,
+      "relevant_years": 4.5,
+      "experience_breakdown": [
+        {
+          "role": "Integration Engineer",
+          "years": 4.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant due to experience with API integrations, troubleshooting, and logging tools."
+        },
+        {
+          "role": "Backend Developer",
+          "years": 1.5,
+          "relevance": 0.6,
+          "relevance_reasoning": "Moderately relevant due to experience with REST services, database schemas, and integrations with ATS and CRM tools."
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.8,
+      "reasoning": "The candidate has experience in SaaS, cloud infrastructure, and API integration, which are related to the required domains of AI/ML and customer-facing technologies.",
+      "formula": "domain_matches/total_required_domains = 2/3 = 0.67. However, considering the candidate's experience in SaaS and API integration, the score is adjusted to 0.8."
+    },
+    "overall_assessment": "The candidate has a strong skill match, significant experience depth, and a good domain fit, making them a suitable candidate for the AI Applications Engineer position."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "Python",
+    "REST",
+    "SOAP",
+    "Prometheus"
+  ],
+  "missing_skills": [
+    "GenAI workflows",
+    "ML performance diagnosis"
+  ],
+  "processing_time_seconds": 3.05
+}

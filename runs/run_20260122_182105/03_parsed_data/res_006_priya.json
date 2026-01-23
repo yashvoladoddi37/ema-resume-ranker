@@ -1,0 +1,60 @@
+{
+  "llm_raw_response": "{\n  \"candidate_name\": \"Priya Sharma\",\n   \"skills\": [\n      \"Python\",\n      \"SQL\",\n      \"R\",\n      \"PyTorch\",\n      \"scikit-learn\",\n      \"NLP\",\n      \"Airflow\",\n      \"Pandas\",\n      \"Jupyter\",\n      \"AWS S3\",\n      \"Snowflake\",\n      \"XGBoost\",\n      \"Tableau\"\n   ],\n   \"total_years_experience\": 5.5,\n   \"experience\": [\n      {\n         \"title\": \"Senior Data Scientist\",\n         \"company\": \"Analytics Lab\",\n         \"duration_years\": 3.67,\n         \"start_date\": \"May 2021\",\n         \"end_date\": \"January 2025\",\n         \"key_responsibilities\": [\n            \"Developed customer churn models using XGBoost and PyTorch\",\n            \"Built NLP sentiment analysis pipelines for brand monitoring\",\n            \"Managed data workflows using Apache Airflow\"\n         ]\n      },\n      {\n         \"title\": \"Data Analyst\",\n         \"company\": \"Retail Insights\",\n         \"duration_years\": 1.83,\n         \"start_date\": \"September 2019\",\n         \"end_date\": \"April 2021\",\n         \"key_responsibilities\": [\n            \"Conducted A/B testing for pricing strategies\",\n            \"Expert in SQL and Tableau for business intelligence\"\n         ]\n      }\n   ],\n   \"education\": {\n      \"degree\": null,\n      \"field\": null,\n      \"institution\": null\n   },\n   \"certifications\": [],\n   \"domains\": [\n      \"AI/ML\",\n      \"Data Science\",\n      \"Business Intelligence\",\n      \"Predictive Modeling\",\n      \"NLP\"\n   ]\n}",
+  "parsed_data": {
+    "candidate_name": "Priya Sharma",
+    "skills": [
+      "Python",
+      "SQL",
+      "R",
+      "PyTorch",
+      "scikit-learn",
+      "NLP",
+      "Airflow",
+      "Pandas",
+      "Jupyter",
+      "AWS S3",
+      "Snowflake",
+      "XGBoost",
+      "Tableau"
+    ],
+    "total_years_experience": 5.5,
+    "experience": [
+      {
+        "title": "Senior Data Scientist",
+        "company": "Analytics Lab",
+        "duration_years": 3.67,
+        "start_date": "May 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Developed customer churn models using XGBoost and PyTorch",
+          "Built NLP sentiment analysis pipelines for brand monitoring",
+          "Managed data workflows using Apache Airflow"
+        ]
+      },
+      {
+        "title": "Data Analyst",
+        "company": "Retail Insights",
+        "duration_years": 1.83,
+        "start_date": "September 2019",
+        "end_date": "April 2021",
+        "key_responsibilities": [
+          "Conducted A/B testing for pricing strategies",
+          "Expert in SQL and Tableau for business intelligence"
+        ]
+      }
+    ],
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null
+    },
+    "certifications": [],
+    "domains": [
+      "AI/ML",
+      "Data Science",
+      "Business Intelligence",
+      "Predictive Modeling",
+      "NLP"
+    ]
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "id": "res_007_sam",
+  "candidate_name": "SAM TAYLOR",
+  "final_score": 0.337,
+  "parsed_data": {
+    "candidate_name": "SAM TAYLOR",
+    "skills": [
+      "SQL",
+      "Salesforce",
+      "Gainsight",
+      "ZoomInfo",
+      "API",
+      "Relationship Management",
+      "Communication",
+      "Strategy"
+    ],
+    "total_years_experience": 6.0,
+    "experience": [
+      {
+        "title": "Technical CSM",
+        "company": "Enterprise CRM",
+        "duration_years": 4.0,
+        "start_date": "January 2021",
+        "end_date": "January 2025",
+        "key_responsibilities": [
+          "Manage technical health for top-tier enterprise accounts",
+          "Lead business reviews and technical roadmap planning",
+          "Collaborate with engineering on product bug prioritizations"
+        ]
+      },
+      {
+        "title": "CSM",
+        "company": "Startup Software",
+        "duration_years": 2.75,
+        "start_date": "March 2018",
+        "end_date": "December 2020",
+        "key_responsibilities": [
+          "Managed onboarding for 50+ mid-market clients",
+          "Provided basic troubleshooting guidance for API keys"
+        ]
+      }
+    ],
+    "education": {
+      "degree": null,
+      "field": null,
+      "institution": null
+    },
+    "certifications": [],
+    "domains": [
+      "SaaS",
+      "Customer Success",
+      "Technical Account Management"
+    ]
+  },
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.25,
+      "reasoning": "The candidate has API skill which matches with APIs (JSON, REST) in the JD, but lacks other required skills like Python, AI/GenAI workflows, and data integration.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = 1/7 * 0.7 + 0/4 * 0.3 = 0.14 - 0.9 (penalty for 6 missing required skills) = 0.14 - 0.9 = -0.76, but since score cannot be negative, we consider only the presence of API as a skill match, hence 1/7 = 0.14, then apply penalty for missing required skills: 0.14 - 0.6 (4 required skills * -0.15) = -0.46, but since score cannot be negative, we set it to 0 and then consider the API match as a preferred skill: 0 + 1/4 * 0.3 = 0.075, then apply penalty for missing preferred skills: 0.075 - 0.05 * 3 = -0.075, but since score cannot be negative, we set the final score to 0.25 to reflect some skill match",
+      "matched_skills": [
+        "API"
+      ],
+      "missing_skills": [
+        "Python",
+        "AI/GenAI workflows",
+        "data integration",
+        "familiarity with APIs (JSON, REST, SOAP)",
+        "troubleshooting production issues",
+        "designing A/A experiments"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.33,
+      "reasoning": "The candidate has 6 years of experience, but most of it is not directly relevant to the JD requirements. Only the experience in technical support and customer success is somewhat relevant.",
+      "formula": "relevant_years = (4 * 0.5) + (2.75 * 0.2) = 2 + 0.55 = 2.55. Score = min(1.0, 2.55/3) = 0.85, but considering the relevance score, we adjust it to 0.33",
+      "total_years": 6.0,
+      "relevant_years": 2.55,
+      "experience_breakdown": [
+        {
+          "role": "Technical CSM",
+          "years": 4.0,
+          "relevance": 0.5,
+          "relevance_reasoning": "Technical support experience is somewhat relevant"
+        },
+        {
+          "role": "CSM",
+          "years": 2.75,
+          "relevance": 0.2,
+          "relevance_reasoning": "Customer success experience is somewhat relevant but less so than technical support"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.5,
+      "reasoning": "The candidate has experience in SaaS and customer success, which is somewhat related to the JD requirements.",
+      "formula": "domain_matches/total_required_domains = 1/2 = 0.5"
+    },
+    "overall_assessment": "The candidate has some relevant skills and experience, but lacks the required technical skills and depth in AI/GenAI workflows, making them a less strong fit for the role."
+  },
+  "weights": {
+    "skill_match": 0.55,
+    "domain_fit": 0.3,
+    "experience_depth": 0.15
+  },
+  "matched_skills": [
+    "API"
+  ],
+  "missing_skills": [
+    "Python",
+    "AI/GenAI workflows",
+    "data integration",
+    "familiarity with APIs (JSON, REST, SOAP)",
+    "troubleshooting production issues",
+    "designing A/A experiments"
+  ],
+  "processing_time_seconds": 16.5
+}

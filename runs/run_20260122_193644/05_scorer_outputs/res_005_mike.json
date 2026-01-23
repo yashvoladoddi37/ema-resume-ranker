@@ -1,0 +1,26 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.4,\n     \"reasoning\": \"The candidate has Python as a required skill but lacks experience in APIs (JSON, REST, SOAP), ML performance diagnosis, and logging/dashboard creation tools.\",\n     \"matched_skills\": [\"Python\"],\n     \"missing_skills\": [\"APIs (JSON, REST, SOAP)\", \"ML performance diagnosis\", \"logging/dashboard creation tools\"]\n   },\n   \"experience_depth\": {\n     \"score\": 0.8,\n     \"reasoning\": \"The candidate has 5.5 years of experience, exceeding the required 3+ years, but the experience is more focused on web development rather than AI applications or technical support.\"\n   },\n   \"domain_fit\": {\n     \"score\": 0.2,\n     \"reasoning\": \"The candidate's background is primarily in web development, which is not directly related to AI applications or the required domain.\"\n   },\n   \"overall_assessment\": \"The candidate has some relevant skills and sufficient experience, but their background does not strongly align with the AI applications domain, making them a less ideal fit for the role.\"\n}",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.4,
+      "reasoning": "The candidate has Python as a required skill but lacks experience in APIs (JSON, REST, SOAP), ML performance diagnosis, and logging/dashboard creation tools.",
+      "matched_skills": [
+        "Python"
+      ],
+      "missing_skills": [
+        "APIs (JSON, REST, SOAP)",
+        "ML performance diagnosis",
+        "logging/dashboard creation tools"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.8,
+      "reasoning": "The candidate has 5.5 years of experience, exceeding the required 3+ years, but the experience is more focused on web development rather than AI applications or technical support."
+    },
+    "domain_fit": {
+      "score": 0.2,
+      "reasoning": "The candidate's background is primarily in web development, which is not directly related to AI applications or the required domain."
+    },
+    "overall_assessment": "The candidate has some relevant skills and sufficient experience, but their background does not strongly align with the AI applications domain, making them a less ideal fit for the role."
+  }
+}

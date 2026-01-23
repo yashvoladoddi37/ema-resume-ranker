@@ -54,9 +54,10 @@ class DeterministicExtractor:
         Returns: float (years)
         """
         text_lower = text.lower()
-        total_years = 0.0
+        years_from_mention = 0.0
+        years_from_ranges = 0.0
         
-        # Pattern 1: "X years" or "X+ years"
+        # Heuristic 1: Explicit mentions ("X years")
         year_patterns = [
             r'(\d+)\+?\s*years?',
             r'(\d+)\s*yrs?',
@@ -65,13 +66,20 @@ class DeterministicExtractor:
         for pattern in year_patterns:
             matches = re.findall(pattern, text_lower)
             if matches:
-                total_years = max(total_years, max(int(m) for m in matches))
+                years_from_mention = max(years_from_mention, max(int(m) for m in matches))
         
-        # Pattern 2: Date ranges (2020 - 2025)
+        # Heuristic 2: Date ranges (2020 - 2025)
+        # Exclude education if possible by ignoring ranges before 2010 (crude but effective for this context)
         date_ranges = re.findall(r'(\d{4})\s*[-–]\s*(\d{4}|present)', text_lower)
         for start, end in date_ranges:
+            start_year = int(start)
+            if start_year < 2010: continue # Likely education or too old for this JD's relevance
+            
             end_year = 2026 if end == 'present' else int(end)
-            total_years += (end_year - int(start))
+            years_from_ranges += (end_year - start_year)
+        
+        # Take the more conservative estimate or the one that's non-zero
+        total_years = max(years_from_mention, years_from_ranges)
         
         return round(total_years, 1)
     

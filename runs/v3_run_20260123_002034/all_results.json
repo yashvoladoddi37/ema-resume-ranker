@@ -1,0 +1,246 @@
+[
+  {
+    "final_score": 0.752,
+    "v1_score": 0.83,
+    "v2_score": 0.634,
+    "v1_breakdown": "**Final Score: 0.830**\n\n**Breakdown:**\n\n\u2022 **Skill Match** (55%): 0.80\n  \u2192 Contributes 0.440 to final score\n  \u2192 The candidate has most required skills, including proficiency in Python, APIs, and GenAI workflows, with skills like LangChain and Prompt Engineering matching JD requirements.\n\n\u2022 **Experience Depth** (15%): 0.80\n  \u2192 Contributes 0.120 to final score\n  \u2192 The candidate has 4 years of experience, exceeding the 3+ years requirement, with relevant experience in GenAI workflows and customer-facing roles.\n\n\u2022 **Domain Fit** (30%): 0.90\n  \u2192 Contributes 0.270 to final score\n  \u2192 The candidate's background in AI/ML and experience in customer-facing roles aligns well with the AI Applications Engineer role.\n\n**Matched Skills (5):** Python, JSON-RPC, LangChain, Prompt Engineering, ELK Stack\n**Missing Skills (2):** SOAP, CRM integration\n\n**Total Experience:** 4.0 years\n\n**Overall:** The candidate is a strong fit for the AI Applications Engineer role, with a good balance of required skills, relevant experience, and domain alignment.",
+    "v2_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.545,
+      "ai_relevance_score": 1.0,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.618,
+      "semantic_similarity": 0.67
+    },
+    "reasoning": "Ensemble Score: 60.0% V1 (0.83) + 40.0% V2 (0.634)",
+    "matched_skills": [
+      "api",
+      "rest",
+      "json",
+      "Python",
+      "python",
+      "LangChain",
+      "JSON-RPC",
+      "Prompt Engineering",
+      "production",
+      "ELK Stack"
+    ],
+    "candidate_id": "res_003_maya",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.678,
+    "v1_score": 0.785,
+    "v2_score": 0.517,
+    "v1_breakdown": "**Final Score: 0.785**\n\n**Breakdown:**\n\n\u2022 **Skill Match** (55%): 0.80\n  \u2192 Contributes 0.440 to final score\n  \u2192 The candidate has most required skills, including proficiency in Python, APIs, and experience with integration tools like Salesforce and Zendesk APIs, but lacks direct experience with GenAI workflows and ML performance diagnosis.\n\n\u2022 **Experience Depth** (15%): 0.90\n  \u2192 Contributes 0.135 to final score\n  \u2192 The candidate has 7.5 years of experience, exceeding the 3+ years requirement, with relevant experience in technical support and customer success for SaaS companies.\n\n\u2022 **Domain Fit** (30%): 0.70\n  \u2192 Contributes 0.210 to final score\n  \u2192 The candidate's background in SaaS technical support and customer success aligns moderately well with the AI Applications Engineer role, but lacks direct experience in AI/ML engineering.\n\n**Matched Skills (3):** Python, Salesforce, Zendesk APIs\n**Missing Skills (2):** GenAI workflows, ML performance diagnosis\n\n**Total Experience:** 7.5 years\n\n**Overall:** The candidate is a strong fit for the AI Applications Engineer role due to their extensive experience in technical support and customer success, but may require additional training in GenAI workflows and ML performance diagnosis.",
+    "v2_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.568,
+      "ai_relevance_score": 0.0,
+      "support_relevance_score": 0.423,
+      "deterministic_final": 0.512,
+      "semantic_similarity": 0.53
+    },
+    "reasoning": "Ensemble Score: 60.0% V1 (0.785) + 40.0% V2 (0.517)",
+    "matched_skills": [
+      "Salesforce",
+      "api",
+      "technical support",
+      "Zendesk APIs",
+      "Python",
+      "python",
+      "production",
+      "saas",
+      "troubleshooting"
+    ],
+    "candidate_id": "res_002_sarah",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.661,
+    "v1_score": 0.785,
+    "v2_score": 0.476,
+    "v1_breakdown": "**Final Score: 0.785**\n\n**Breakdown:**\n\n\u2022 **Skill Match** (55%): 0.80\n  \u2192 Contributes 0.440 to final score\n  \u2192 The candidate has most required skills, including proficiency in Python, REST, and SOAP, as well as experience with logging and dashboard creation tools like Prometheus and Kibana.\n\n\u2022 **Experience Depth** (15%): 0.90\n  \u2192 Contributes 0.135 to final score\n  \u2192 The candidate has 5 years of experience, exceeding the required 3+ years, with relevant experience in integration and troubleshooting.\n\n\u2022 **Domain Fit** (30%): 0.70\n  \u2192 Contributes 0.210 to final score\n  \u2192 The candidate's background in SaaS and API integration aligns moderately well with the AI Applications Engineer role, although direct AI/ML experience is limited.\n\n**Matched Skills (5):** Python, REST, SOAP, Prometheus, Kibana\n**Missing Skills (2):** GenAI workflows, ML performance diagnosis\n\n**Total Experience:** 5.0 years\n\n**Overall:** David Kim is a strong candidate with a good balance of technical skills and relevant experience, but may require additional training in GenAI workflows and ML performance diagnosis.",
+    "v2_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.545,
+      "ai_relevance_score": 0.0,
+      "support_relevance_score": 0.079,
+      "deterministic_final": 0.434,
+      "semantic_similarity": 0.575
+    },
+    "reasoning": "Ensemble Score: 60.0% V1 (0.785) + 40.0% V2 (0.476)",
+    "matched_skills": [
+      "SOAP",
+      "Kibana",
+      "api",
+      "REST",
+      "rest",
+      "Prometheus",
+      "Python",
+      "python",
+      "saas",
+      "troubleshooting"
+    ],
+    "candidate_id": "res_004_david",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.654,
+    "v1_score": 0.838,
+    "v2_score": 0.379,
+    "v1_breakdown": "**Final Score: 0.838**\n\n**Breakdown:**\n\n\u2022 **Skill Match** (55%): 0.80\n  \u2192 Contributes 0.440 to final score\n  \u2192 The candidate has Python, which matches the proficiency in Python requirement, and also has skills like PyTorch and scikit-learn that can be related to ML performance and GenAI workflows, but lacks direct experience with APIs like JSON, REST, SOAP and integration with CRMs or ATS tools.\n\n\u2022 **Experience Depth** (15%): 0.85\n  \u2192 Contributes 0.128 to final score\n  \u2192 The candidate has 5.5 years of experience, exceeding the required 3+ years, with relevant experience in data science and senior roles, indicating strong experience depth.\n\n\u2022 **Domain Fit** (30%): 0.90\n  \u2192 Contributes 0.270 to final score\n  \u2192 The candidate's background in AI/ML and data science aligns well with the AI Applications Engineer role, and their experience in customer-facing roles is also relevant.\n\n**Matched Skills (3):** Python, PyTorch, scikit-learn\n**Missing Skills (2):** APIs (JSON, REST, SOAP), CRMs or ATS tools integration\n\n**Total Experience:** 5.5 years\n\n**Overall:** The candidate is a strong fit for the AI Applications Engineer role, with a good balance of technical skills, experience, and domain alignment, but may require some training on specific APIs and integration tools.",
+    "v2_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.13,
+      "ai_relevance_score": 0.385,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.329,
+      "semantic_similarity": 0.496
+    },
+    "reasoning": "Ensemble Score: 60.0% V1 (0.838) + 40.0% V2 (0.379)",
+    "matched_skills": [
+      "scikit-learn",
+      "Python",
+      "python",
+      "PyTorch"
+    ],
+    "candidate_id": "res_006_priya",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.63,
+    "v1_score": 0.71,
+    "v2_score": 0.509,
+    "v1_breakdown": "**Final Score: 0.710**\n\n**Breakdown:**\n\n\u2022 **Skill Match** (55%): 0.80\n  \u2192 Contributes 0.440 to final score\n  \u2192 The candidate has skills that match most of the JD requirements, including proficiency in Python, RESTful API, and experience with GenAI workflows through LangChain and LangGraph.\n\n\u2022 **Experience Depth** (15%): 0.20\n  \u2192 Contributes 0.030 to final score\n  \u2192 The candidate has only 1.5 years of experience, which is significantly less than the 3+ years required by the JD, and most of their experience is in junior or intern roles.\n\n\u2022 **Domain Fit** (30%): 0.80\n  \u2192 Contributes 0.240 to final score\n  \u2192 The candidate has a strong background in AI/ML and experience with GenAI workflows, which is a good fit for the AI Applications Engineer role.\n\n**Matched Skills (6):** Python, RESTful API, LangChain, LangGraph, Mistral 7B, Claude API\n**Missing Skills (4):** SOAP, troubleshooting production issues, logging tools, dashboard creation\n\n**Total Experience:** 1.5 years\n\n**Overall:** The candidate has a good skill set and domain fit, but lacks the required experience, making them a potential candidate for the role with additional training and development.",
+    "v2_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.304,
+      "ai_relevance_score": 0.854,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.492,
+      "semantic_similarity": 0.549
+    },
+    "reasoning": "Ensemble Score: 60.0% V1 (0.71) + 40.0% V2 (0.509)",
+    "matched_skills": [
+      "RESTful API",
+      "api",
+      "Mistral 7B",
+      "Python",
+      "python",
+      "LangChain",
+      "Claude API",
+      "LangGraph"
+    ],
+    "candidate_id": "res_001_yashpreet",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.465,
+    "v1_score": 0.52,
+    "v2_score": 0.383,
+    "v1_breakdown": "**Final Score: 0.520**\n\n**Breakdown:**\n\n\u2022 **Skill Match** (55%): 0.40\n  \u2192 Contributes 0.220 to final score\n  \u2192 The candidate has some relevant skills like API keys, but lacks critical skills like Python, GenAI workflows, and logging tools.\n\n\u2022 **Experience Depth** (15%): 0.80\n  \u2192 Contributes 0.120 to final score\n  \u2192 The candidate has 6 years of experience, exceeding the required 3+ years, with relevant experience in technical support and customer success.\n\n\u2022 **Domain Fit** (30%): 0.60\n  \u2192 Contributes 0.180 to final score\n  \u2192 The candidate's background in SaaS and customer success is somewhat related to the AI Applications Engineer role, but lacks direct experience in AI/ML.\n\n**Matched Skills (1):** API keys\n**Missing Skills (4):** Python, GenAI workflows, logging tools, dashboard creation\n\n**Total Experience:** 6.0 years\n\n**Overall:** The candidate has relevant experience, but lacks critical skills for the AI Applications Engineer role, making them a potential fit with additional training.",
+    "v2_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.284,
+      "ai_relevance_score": 0.102,
+      "support_relevance_score": 0.102,
+      "deterministic_final": 0.354,
+      "semantic_similarity": 0.451
+    },
+    "reasoning": "Ensemble Score: 60.0% V1 (0.52) + 40.0% V2 (0.383)",
+    "matched_skills": [
+      "saas",
+      "API keys",
+      "api",
+      "troubleshooting"
+    ],
+    "candidate_id": "res_007_sam",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.365,
+    "v1_score": 0.385,
+    "v2_score": 0.336,
+    "v1_breakdown": "**Final Score: 0.385**\n\n**Breakdown:**\n\n\u2022 **Skill Match** (55%): 0.40\n  \u2192 Contributes 0.220 to final score\n  \u2192 The candidate has Python, which matches the proficiency in Python requirement, and REST APIs experience, which aligns with APIs (JSON, REST, SOAP) requirement, but lacks direct experience with GenAI workflows, ML performance diagnosis, and logging tools.\n\n\u2022 **Experience Depth** (15%): 0.70\n  \u2192 Contributes 0.105 to final score\n  \u2192 The candidate has 5.75 years of experience, exceeding the 3+ years requirement, but the experience is more focused on web development rather than technical support or customer success for SaaS.\n\n\u2022 **Domain Fit** (30%): 0.20\n  \u2192 Contributes 0.060 to final score\n  \u2192 The candidate's background in web development does not closely align with the AI Applications Engineer role, which requires experience in AI/ML and customer-facing technical support.\n\n**Matched Skills (4):** Python, Flask, React, Node.js\n**Missing Skills (3):** GenAI workflows, ML performance diagnosis, logging tools\n\n**Total Experience:** 5.8 years\n\n**Overall:** The candidate has some relevant skills and sufficient experience, but lacks a strong background in AI/ML and customer-facing technical support, making them a less strong fit for the AI Applications Engineer role.",
+    "v2_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.175,
+      "ai_relevance_score": 0.088,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.288,
+      "semantic_similarity": 0.45
+    },
+    "reasoning": "Ensemble Score: 60.0% V1 (0.385) + 40.0% V2 (0.336)",
+    "matched_skills": [
+      "rest",
+      "Node.js",
+      "Flask",
+      "Python",
+      "python",
+      "React"
+    ],
+    "candidate_id": "res_005_mike",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.35,
+    "v1_score": 0.32,
+    "v2_score": 0.396,
+    "v1_breakdown": "**Final Score: 0.320**\n\n**Breakdown:**\n\n\u2022 **Skill Match** (55%): 0.20\n  \u2192 Contributes 0.110 to final score\n  \u2192 The candidate has some skills like Splunk that can be used for logging tools, but lacks most required skills like proficiency in APIs, Python, and GenAI workflows.\n\n\u2022 **Experience Depth** (15%): 0.60\n  \u2192 Contributes 0.090 to final score\n  \u2192 The candidate has 6.75 years of experience, which exceeds the required 3+ years, but the experience is not highly relevant to the AI Applications Engineer role.\n\n\u2022 **Domain Fit** (30%): 0.40\n  \u2192 Contributes 0.120 to final score\n  \u2192 The candidate's background in customer support and technical support is somewhat related to the role, but lacks direct experience in AI or ML engineering.\n\n**Matched Skills (1):** Splunk\n**Missing Skills (4):** APIs (JSON, REST, SOAP), Python, GenAI workflows, troubleshooting ML performance\n\n**Total Experience:** 6.8 years\n\n**Overall:** The candidate has some relevant experience, but lacks the required technical skills for the AI Applications Engineer role, making them a less strong fit.",
+    "v2_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.175,
+      "ai_relevance_score": 0.208,
+      "support_relevance_score": 0.417,
+      "deterministic_final": 0.395,
+      "semantic_similarity": 0.399
+    },
+    "reasoning": "Ensemble Score: 60.0% V1 (0.32) + 40.0% V2 (0.396)",
+    "matched_skills": [
+      "technical support",
+      "troubleshooting",
+      "Splunk"
+    ],
+    "candidate_id": "res_010_elena",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.238,
+    "v1_score": 0.23,
+    "v2_score": 0.25,
+    "v1_breakdown": "**Final Score: 0.230**\n\n**Breakdown:**\n\n\u2022 **Skill Match** (55%): 0.20\n  \u2192 Contributes 0.110 to final score\n  \u2192 The candidate lacks direct experience with AI/GenAI workflows, APIs, and logging tools, but has some transferable skills like SQL and microservices.\n\n\u2022 **Experience Depth** (15%): 0.60\n  \u2192 Contributes 0.090 to final score\n  \u2192 The candidate has 4.5 years of experience, exceeding the 3+ years requirement, but the experience is in a different domain and role.\n\n\u2022 **Domain Fit** (30%): 0.10\n  \u2192 Contributes 0.030 to final score\n  \u2192 The candidate's background in financial services and banking is unrelated to AI applications engineering.\n\n**Matched Skills (1):** SQL\n**Missing Skills (5):** Python, APIs (JSON, REST, SOAP), logging tools, dashboard creation, GenAI workflows\n\n**Total Experience:** 4.5 years\n\n**Overall:** The candidate lacks the required skills and domain experience for the AI Applications Engineer role, but has some transferable skills and relevant years of experience.",
+    "v2_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.0,
+      "ai_relevance_score": 0.0,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.2,
+      "semantic_similarity": 0.368
+    },
+    "reasoning": "Ensemble Score: 60.0% V1 (0.23) + 40.0% V2 (0.25)",
+    "matched_skills": [
+      "SQL"
+    ],
+    "candidate_id": "res_009_james",
+    "candidate_name": "unknown"
+  },
+  {
+    "final_score": 0.153,
+    "v1_score": 0.06,
+    "v2_score": 0.292,
+    "v1_breakdown": "**Final Score: 0.060**\n\n**Breakdown:**\n\n\u2022 **Skill Match** (55%): 0.00\n  \u2192 Contributes 0.000 to final score\n  \u2192 The candidate's skills do not align with the job requirements, lacking proficiency in APIs, ML, and GenAI.\n\n\u2022 **Experience Depth** (15%): 0.40\n  \u2192 Contributes 0.060 to final score\n  \u2192 The candidate has 5 years of experience, but it is not directly relevant to the AI Applications Engineer role, lacking technical support or customer success experience.\n\n\u2022 **Domain Fit** (30%): 0.00\n  \u2192 Contributes 0.000 to final score\n  \u2192 The candidate's background in frontend development does not align with the AI Applications Engineer role, which requires AI/ML and customer-facing experience.\n\n**Matched Skills (0):** None\n**Missing Skills (7):** APIs (JSON, REST, SOAP), Python, ML, GenAI, logging tools, dashboard creation, alerting tools\n\n**Total Experience:** 5.0 years\n\n**Overall:** The candidate is not a strong fit for the AI Applications Engineer role due to a lack of relevant skills and experience.",
+    "v2_breakdown": {
+      "experience_score": 1.0,
+      "skill_coverage_score": 0.0,
+      "ai_relevance_score": 0.417,
+      "support_relevance_score": 0.0,
+      "deterministic_final": 0.283,
+      "semantic_similarity": 0.315
+    },
+    "reasoning": "Ensemble Score: 60.0% V1 (0.06) + 40.0% V2 (0.292)",
+    "matched_skills": [],
+    "candidate_id": "res_008_jordan",
+    "candidate_name": "unknown"
+  }
+]

@@ -1,0 +1,49 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.85,\n     \"reasoning\": \"The candidate has all required skills and most preferred skills, with a strong background in AI/GenAI workflows and proficiency in Python.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/5) * 0.7 + (2/4) * 0.3 = 0.85\",\n     \"matched_skills\": [\n       \"Python\",\n       \"JSON-RPC\",\n       \"Prompt Engineering\",\n       \"LangChain\",\n       \"RAG\"\n     ],\n     \"missing_skills\": [\n       \"SOAP APIs\",\n       \"CRMs or ATS tools integration\",\n       \"Proficiency in diagnosing ML performance issues\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.83,\n     \"reasoning\": \"The candidate has 4 years of experience, with 3 years in a highly relevant role as a Solutions Engineer and 1.67 years in a moderately relevant role as a Systems Analyst.\",\n     \"formula\": \"relevant_years = (3 * 0.9) + (1.67 * 0.6) = 2.7 + 1.0 = 3.7. Score = min(1.0, 3.7/3) = 0.83\",\n     \"total_years\": 4.0,\n     \"relevant_years\": 3.7,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Solutions Engineer\",\n         \"years\": 3.0,\n         \"relevance\": 0.9,\n         \"relevance_reasoning\": \"Highly relevant role with AI/GenAI workflows and technical support\"\n       },\n       {\n         \"role\": \"Systems Analyst\",\n         \"years\": 1.67,\n         \"relevance\": 0.6,\n         \"relevance_reasoning\": \"Moderately relevant role with API integration and data mapping\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 0.9,\n     \"reasoning\": \"The candidate has a strong background in AI/ML and automation, with experience in customer-facing roles.\",\n     \"formula\": \"domain_matches/total_required_domains = 2/2 = 1.0, adjusted for moderate relevance in cloud infrastructure = 0.9\"\n   },\n   \"overall_assessment\": \"Maya Gupta is a strong candidate for the AI Applications Engineer role, with a high skill match, deep experience in relevant domains, and a strong fit for the required domains.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has all required skills and most preferred skills, with a strong background in AI/GenAI workflows and proficiency in Python.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/5) * 0.7 + (2/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "JSON-RPC",
+        "Prompt Engineering",
+        "LangChain",
+        "RAG"
+      ],
+      "missing_skills": [
+        "SOAP APIs",
+        "CRMs or ATS tools integration",
+        "Proficiency in diagnosing ML performance issues"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.83,
+      "reasoning": "The candidate has 4 years of experience, with 3 years in a highly relevant role as a Solutions Engineer and 1.67 years in a moderately relevant role as a Systems Analyst.",
+      "formula": "relevant_years = (3 * 0.9) + (1.67 * 0.6) = 2.7 + 1.0 = 3.7. Score = min(1.0, 3.7/3) = 0.83",
+      "total_years": 4.0,
+      "relevant_years": 3.7,
+      "experience_breakdown": [
+        {
+          "role": "Solutions Engineer",
+          "years": 3.0,
+          "relevance": 0.9,
+          "relevance_reasoning": "Highly relevant role with AI/GenAI workflows and technical support"
+        },
+        {
+          "role": "Systems Analyst",
+          "years": 1.67,
+          "relevance": 0.6,
+          "relevance_reasoning": "Moderately relevant role with API integration and data mapping"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 0.9,
+      "reasoning": "The candidate has a strong background in AI/ML and automation, with experience in customer-facing roles.",
+      "formula": "domain_matches/total_required_domains = 2/2 = 1.0, adjusted for moderate relevance in cloud infrastructure = 0.9"
+    },
+    "overall_assessment": "Maya Gupta is a strong candidate for the AI Applications Engineer role, with a high skill match, deep experience in relevant domains, and a strong fit for the required domains."
+  }
+}

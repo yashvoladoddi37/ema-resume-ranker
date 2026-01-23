@@ -1,0 +1,48 @@
+{
+  "llm_raw_response": "{\n  \"skill_match\": {\n     \"score\": 0.85,\n     \"reasoning\": \"The candidate has most of the required skills, including Python, JSON-RPC (satisfies APIs), and experience with GenAI workflows through LangChain and Prompt Engineering. Missing skills include direct experience with SOAP and specific CRM/ATS integration, but the candidate has worked with APIs and integration tools.\",\n     \"formula\": \"required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85\",\n     \"matched_skills\": [\n       \"Python\",\n       \"JSON-RPC\",\n       \"LangChain\",\n       \"Prompt Engineering\",\n       \"RAG\"\n     ],\n     \"missing_skills\": [\n       \"SOAP\",\n       \"direct CRM/ATS integration experience\"\n     ]\n   },\n   \"experience_depth\": {\n     \"score\": 0.93,\n     \"reasoning\": \"The candidate has 4 years of experience, with all of it being highly relevant to the job description. The role of Solutions Engineer at GenAI Automate directly involves AI/GenAI, SaaS, technical support, and customer success, making it highly relevant.\",\n     \"formula\": \"relevant_years = (4 * 0.95) = 3.8. Score = min(1.0, 3.8/3) = 0.93\",\n     \"total_years\": 5.67,\n     \"relevant_years\": 4.78,\n     \"experience_breakdown\": [\n       {\n         \"role\": \"Solutions Engineer\",\n         \"years\": 4.0,\n         \"relevance\": 0.95,\n         \"relevance_reasoning\": \"Direct involvement in AI/GenAI, SaaS, and customer success\"\n       },\n       {\n         \"role\": \"Systems Analyst\",\n         \"years\": 1.67,\n         \"relevance\": 0.8,\n         \"relevance_reasoning\": \"Involvement in API integration and technical support\"\n       }\n     ]\n   },\n   \"domain_fit\": {\n     \"score\": 1.0,\n     \"reasoning\": \"The candidate's domains include AI/ML and Automation, which are directly relevant to the job description, indicating a perfect fit.\",\n     \"formula\": \"domain_matches/total_required_domains = 2/2 = 1.0\"\n   },\n   \"overall_assessment\": \"Maya Gupta is a highly qualified candidate with a strong background in AI/GenAI, SaaS, and customer success, making her a very good fit for the AI Applications Engineer role at EMA.\"\n }",
+  "dimension_scores": {
+    "skill_match": {
+      "score": 0.85,
+      "reasoning": "The candidate has most of the required skills, including Python, JSON-RPC (satisfies APIs), and experience with GenAI workflows through LangChain and Prompt Engineering. Missing skills include direct experience with SOAP and specific CRM/ATS integration, but the candidate has worked with APIs and integration tools.",
+      "formula": "required_matches/total_required * 0.7 + preferred_matches/total_preferred * 0.3 = (5/6) * 0.7 + (3/4) * 0.3 = 0.85",
+      "matched_skills": [
+        "Python",
+        "JSON-RPC",
+        "LangChain",
+        "Prompt Engineering",
+        "RAG"
+      ],
+      "missing_skills": [
+        "SOAP",
+        "direct CRM/ATS integration experience"
+      ]
+    },
+    "experience_depth": {
+      "score": 0.93,
+      "reasoning": "The candidate has 4 years of experience, with all of it being highly relevant to the job description. The role of Solutions Engineer at GenAI Automate directly involves AI/GenAI, SaaS, technical support, and customer success, making it highly relevant.",
+      "formula": "relevant_years = (4 * 0.95) = 3.8. Score = min(1.0, 3.8/3) = 0.93",
+      "total_years": 5.67,
+      "relevant_years": 4.78,
+      "experience_breakdown": [
+        {
+          "role": "Solutions Engineer",
+          "years": 4.0,
+          "relevance": 0.95,
+          "relevance_reasoning": "Direct involvement in AI/GenAI, SaaS, and customer success"
+        },
+        {
+          "role": "Systems Analyst",
+          "years": 1.67,
+          "relevance": 0.8,
+          "relevance_reasoning": "Involvement in API integration and technical support"
+        }
+      ]
+    },
+    "domain_fit": {
+      "score": 1.0,
+      "reasoning": "The candidate's domains include AI/ML and Automation, which are directly relevant to the job description, indicating a perfect fit.",
+      "formula": "domain_matches/total_required_domains = 2/2 = 1.0"
+    },
+    "overall_assessment": "Maya Gupta is a highly qualified candidate with a strong background in AI/GenAI, SaaS, and customer success, making her a very good fit for the AI Applications Engineer role at EMA."
+  }
+}
