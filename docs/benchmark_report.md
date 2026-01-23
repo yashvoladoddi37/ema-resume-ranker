@@ -9,9 +9,9 @@
 
 | Approach | nDCG@3 | Precision@1 | Recall@3 | Speed | Cost |
 |----------|--------|-------------|----------|-------|------|
-| **V1 (Pure LLM)** | 0.717 | 0.000 | 0.500 | Slow (~13s/resume) | High (2 calls) |
+| **V1 (Pure LLM)** | **0.899** | **1.000** | 0.500 | Slow (~13s/resume) | High (2 calls) |
 | **V2 (Deterministic)** | **0.965** 🏆 | **1.000** | **1.000** | **Fast (0.03s)** | **Zero** |
-| **V3 (Hybrid)** | 0.867 | 0.000 | 0.500 | Medium (5-9s) | Low (1 call) |
+| **V3 (Hybrid)** | 0.832 | **1.000** | 0.500 | Medium (5-9s) | Low (1 call) |
 
 ## Analysis
 
