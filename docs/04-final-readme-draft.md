@@ -36,8 +36,9 @@ A synthetic dataset of **10 resumes** was curated to represent three tiers of ca
 ### Key Metrics
 | Metric | Result | Target | Significance |
 |--------|--------|--------|--------------|
-| **nDCG@3** | **0.94** | >0.85 | Measures ranking quality for the top 3 spots. |
+| **nDCG@3** | **0.83** | >0.85 | Measures ranking quality for the top 3 spots. |
 | **Precision@1** | **100%** | 100% | Accuracy of the #1 ranked candidate. |
+| **Recall@3** | **50%** | 100% | Percentage of top candidates found. |
 | **Pairwise Accuracy** | **93%** | >90% | Reliability in comparing any two candidates. |
 
 ### Semantic Safety Audit

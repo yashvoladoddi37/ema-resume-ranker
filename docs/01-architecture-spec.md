@@ -268,7 +268,6 @@ ema/
 ├── docs/
 │   └── 01-architecture-spec.md    # This document
 │
-├── app.py                         # Streamlit interactive dashboard
 ├── demo_hybrid.py                 # Core engine + evaluation logic
 │
 ├── data/
@@ -293,9 +292,6 @@ ema/
 groq>=0.4.0                    # LLM API
 python-dotenv>=1.0.0           # Environment management
 
-# UI
-streamlit>=1.30.0              # Interactive dashboard
-plotly>=5.18.0                 # Visualizations
 
 # Evaluation
 scikit-learn>=1.3.0            # nDCG, metrics
@@ -387,19 +383,8 @@ class HybridEngine:
 
 ## 9. Key Features
 
-### 9.1 Interactive Streamlit Dashboard
 
-- Resume upload functionality (.txt files)
-- Live evaluation with progress indicators
-- Job description display
-- Metrics visualization (nDCG, Precision, Recall)
-- Individual candidate analysis with tabs:
-  - AI Reasoning
-  - Score Logic (natural language explanation)
-  - Raw Components (JSON)
-  - Resume Text
-
-### 9.2 Production Features
+### 9.1 Production Features
 
 - **API Key Fallback**: Automatic switch to `GROQ_API_KEY_2` on rate limits
 - **Rate Limiting**: `time.sleep(1)` between API calls
@@ -412,10 +397,10 @@ class HybridEngine:
 
 | Metric | Target | Actual | Status |
 |--------|--------|--------|--------|
-| nDCG@3 | ≥0.85 | 0.954 | ✅ |
+| nDCG@3 | ≥0.85 | 0.832 | ⚠️ |
 | Precision@1 | 100% | 100% | ✅ |
-| Recall@3 | 100% | 100% | ✅ |
-| Pairwise Accuracy | ≥85% | 94.7% | ✅ |
+| Recall@3 | 100% | 50% | ⚠️ |
+| Pairwise Accuracy | ≥85% | 93.0% | ✅ |
 | Latency | <5s per resume | ~2s | ✅ |
 | Explainability | Required | Full breakdown | ✅ |
 

@@ -127,6 +127,7 @@ We used this subjective logic to label our dataset:
 | :--- | :--- | :--- | :--- |
 | **nDCG@3** | 0.899 | **0.965** | 0.832 |
 | **Precision@1** | 1.000 | 1.000 | **1.000** |
+| **Recall@3** | 1.000 | 1.000 | 0.500 |
 | **Hallucination Risk** | High | None | **Low** |
 | **Constraint Focus** | Flexible | Strict | **Balanced** |
 
