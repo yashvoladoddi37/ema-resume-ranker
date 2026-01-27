@@ -1,4 +1,4 @@
-# Resume Matcher V3: Parallel Ensemble Hybrid
+# Resume Matcher V3: Parallel Ensemble Hybrid (mirrors v3-hybrid branch)
 
 > **Version 3 of 3** — Parallel Ensemble of LLM Reasoning (V1) and Deterministic Fact-Checking (V2)
 
